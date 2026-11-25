@@ -1,0 +1,79 @@
+wealthy|badavlat|a
+arrival hall|kelish zali|n
+pilgrimage|ziyorat|n
+harmony|uyg'unlik|n
+honesty|halollik|n
+kindness|mehribonlik|n
+loneliness|yolg'izlik|n
+sadness|qayg'u|n
+silliness|telbalik|n
+strengthen|kuchaytirmoq|v
+weaken|zaiflashtirmoq|v
+shorten|qisqartirmoq|v
+lengthen|uzaytirib bermoq|v
+widen|kengaytirib bermoq|v
+brighten|yoritmoq|v
+darken|qoraytirmoq|v
+soften|yumshatmoq|v
+frighteningly|qo'rqinchli tarzda|d
+rename|nomini o'zgartirmoq|v
+rebuild|qayta qurmoq|v
+rewrite|qayta yozmoq|v
+retell|qayta hikoya qilmoq|v
+replay|qayta o'ynatmoq|v
+reread|qayta o'qimoq|v
+overeat|ko'p yeb qo'ymoq|v
+oversleep|uxlab qolmoq|v
+misunderstand|noto'g'ri tushunmoq|v
+mislead|chalg'itmoq|v
+disagreeable|yoqimsiz (xulqi)|a
+dishonest|nohalol|a
+impolite|odobsiz|a
+unkind|bag'ritosh|a
+unfriendly|do'stona bo'lmagan|a
+unusually|odatdan tashqari|d
+uncertain|noaniq|a
+unclear|tushunarsiz|a
+unsafe|xavfli (nobexatar)|a
+untidy|beparvo kiyingan|a
+unlucky|omadsiz|a
+unpopular|ommabop emas|a
+unwell|tobi yo'q|a
+upside down|teskari|d
+inside out|ichi tashqariga|d
+homesick|vatanini sog'ingan|a
+jet lag|vaqt farqidan charchoq|n
+check-in|ro'yxatdan o'tish (aeroport)|n
+boarding pass|bort talon|n
+round trip|borib-kelish|n
+one-way|bir tomonlama|a
+seatbelt|xavfsizlik kamari|n
+speed limit|tezlik chegarasi|n
+traffic jam|tirbandlik|n
+traffic light|svetofor|n
+bus stop|avtobus bekati|n
+post office|pochta bo'limi|n
+police station|politsiya bo'limi|n
+fire station|o't o'chirish qismi|n
+city hall|shahar hokimiyati|n
+town square|shahar maydoni|n
+shopping centre|savdo markazi (Britaniya)|n
+car park|avtoturargoh (Britaniya)|n
+petrol|benzin|n
+fuel tank|yoqilg'i baki|n
+flat tyre|teshilgan shina|n
+driving licence|haydovchilik guvohnomasi|n
+first aid|birinchi yordam|n
+blood pressure|qon bosimi|n
+heart attack|yurak xuruji|n
+sore throat|tomoq og'rig'i|n
+runny nose|tumov|n
+stomachache|qorin og'rig'i|n
+prescription|retsept (dori)|n
+appointment card|qabul kartochkasi|n
+waiting room|kutish zali|n
+operating room|operatsiya xonasi|n
+recovery room|reanimatsiya xonasi|n
+greeting|salomlashish|n
+farewell|xayrlashuv|n
+handshake|qo'l berib ko'rishish|n

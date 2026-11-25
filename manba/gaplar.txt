@@ -1,0 +1,241 @@
+I am a student.|Men talabaman.
+She is my sister.|U mening singlim.
+This is my house.|Bu mening uyim.
+We are friends.|Biz do'stmiz.
+They are at home.|Ular uyda.
+My name is Ali.|Mening ismim Ali.
+The water is cold.|Suv sovuq.
+The tea is hot.|Choy issiq.
+I like apples.|Men olmani yoqtiraman.
+I love my family.|Men oilamni sevaman.
+He has a car.|Uning mashinasi bor.
+I have two brothers.|Mening ikkita akam bor.
+I want some water.|Men bir oz suv xohlayman.
+We eat bread every day.|Biz har kuni non yeymiz.
+She drinks milk in the morning.|U ertalab sut ichadi.
+The book is on the table.|Kitob stol ustida.
+The cat is under the chair.|Mushuk stul ostida.
+My father is a doctor.|Otam shifokor.
+My mother is a teacher.|Onam o'qituvchi.
+This room is very big.|Bu xona juda katta.
+That car is old.|Ana u mashina eski.
+The weather is good today.|Bugun ob-havo yaxshi.
+It is very hot today.|Bugun juda issiq.
+I go to school every day.|Men har kuni maktabga boraman.
+He works in a hospital.|U kasalxonada ishlaydi.
+We live in a small village.|Biz kichik qishloqda yashaymiz.
+They speak English.|Ular ingliz tilida gapirishadi.
+I read a book every night.|Men har kecha kitob o'qiyman.
+She writes a letter to her friend.|U do'stiga xat yozadi.
+Open the door, please.|Iltimos, eshikni oching.
+Close the window, please.|Iltimos, derazani yoping.
+Sit down, please.|Iltimos, o'tiring.
+Where is the bank?|Bank qayerda?
+Where do you live?|Siz qayerda yashaysiz?
+What is your name?|Ismingiz nima?
+How are you?|Qalaysiz?
+How old are you?|Necha yoshdasiz?
+What time is it?|Soat necha bo'ldi?
+Who is that man?|Ana u erkak kim?
+Why are you sad?|Nega xafasiz?
+When do you get up?|Siz qachon turasiz?
+I get up at seven o'clock.|Men soat yettida turaman.
+I don't understand.|Men tushunmayapman.
+I don't know.|Men bilmayman.
+Can you help me?|Menga yordam bera olasizmi?
+Can I ask a question?|Savol bersam bo'ladimi?
+I can swim.|Men suza olaman.
+She can speak three languages.|U uchta tilda gapira oladi.
+I can't find my keys.|Men kalitlarimni topa olmayapman.
+Do you like coffee?|Siz qahvani yoqtirasizmi?
+Yes, I do.|Ha, yoqtiraman.
+Does he play football?|U futbol o'ynaydimi?
+My brother plays football on Sunday.|Akam yakshanba kuni futbol o'ynaydi.
+We watch television in the evening.|Biz kechqurun televizor ko'ramiz.
+The children are in the garden.|Bolalar bog'da.
+There is a park near my house.|Uyim yaqinida park bor.
+There are five people in my family.|Oilamda besh kishi bor.
+I need a new phone.|Menga yangi telefon kerak.
+This bag is very expensive.|Bu sumka juda qimmat.
+These shoes are cheap.|Bu poyabzallar arzon.
+How much is this shirt?|Bu ko'ylak qancha turadi?
+I am hungry.|Men ochman.
+I am very tired today.|Bugun men juda charchadim.
+She is happy because she won.|U g'alaba qozongani uchun baxtli.
+The shop opens at nine.|Do'kon soat to'qqizda ochiladi.
+The bus is late again.|Avtobus yana kechikdi.
+I usually walk to work.|Men odatda ishga piyoda boraman.
+He always drinks tea after lunch.|U doim tushlikdan keyin choy ichadi.
+We never eat meat on Monday.|Biz dushanba kuni hech qachon go'sht yemaymiz.
+I sometimes cook dinner.|Men ba'zan kechki ovqat pishiraman.
+My sister often visits us.|Singlim bizni tez-tez ziyorat qiladi.
+I am reading a book now.|Men hozir kitob o'qiyapman.
+She is cooking in the kitchen.|U oshxonada ovqat pishiryapti.
+They are playing in the park.|Ular parkda o'ynashyapti.
+It is raining outside.|Tashqarida yomg'ir yog'yapti.
+What are you doing?|Nima qilyapsiz?
+I am waiting for the bus.|Men avtobusni kutyapman.
+Listen to me, please.|Iltimos, meni tinglang.
+Look at the sky.|Osmonga qarang.
+The sun is very bright.|Quyosh juda yorqin.
+Birds can fly.|Qushlar ucha oladi.
+Dogs are friendly animals.|Itlar do'stona hayvonlar.
+I went to the market yesterday.|Men kecha bozorga bordim.
+She bought a new dress.|U yangi ko'ylak sotib oldi.
+We watched a good film last night.|Biz kecha kechqurun yaxshi film ko'rdik.
+He came home late.|U uyga kech keldi.
+I saw your brother in the city.|Men akangizni shaharda ko'rdim.
+They lived in Tashkent for ten years.|Ular o'n yil Toshkentda yashashdi.
+I called my mother this morning.|Men bugun ertalab onamga qo'ng'iroq qildim.
+Did you sleep well?|Yaxshi uxladingizmi?
+I didn't see him.|Men uni ko'rmadim.
+She was at work yesterday.|U kecha ishda edi.
+We were very happy.|Biz juda baxtli edik.
+The weather was cold last week.|O'tgan hafta havo sovuq edi.
+I lost my wallet.|Men hamyonimni yo'qotib qo'ydim.
+He found a job in a big company.|U katta kompaniyadan ish topdi.
+I forgot his name.|Men uning ismini unutib qo'ydim.
+I will call you tomorrow.|Ertaga sizga qo'ng'iroq qilaman.
+We will travel to Samarkand next month.|Keyingi oy Samarqandga sayohat qilamiz.
+It will rain tonight.|Bugun kechqurun yomg'ir yog'adi.
+I am going to learn English.|Men ingliz tilini o'rganmoqchiman.
+She is going to buy a car.|U mashina sotib olmoqchi.
+What will you do tomorrow?|Ertaga nima qilasiz?
+I want to be a doctor.|Men shifokor bo'lishni xohlayman.
+I would like a cup of tea.|Men bir piyola choy ichmoqchiman.
+Would you like some coffee?|Qahva ichasizmi?
+You should drink more water.|Siz ko'proq suv ichishingiz kerak.
+You must study every day.|Siz har kuni o'qishingiz shart.
+We have to wait here.|Biz shu yerda kutishimiz kerak.
+I don't have to work today.|Bugun ishlashim shart emas.
+Can you speak more slowly?|Sekinroq gapira olasizmi?
+Please repeat the question.|Iltimos, savolni takrorlang.
+How do you say this in English?|Buni inglizchada qanday aytasiz?
+What does this word mean?|Bu so'z nimani anglatadi?
+My English is not very good.|Mening ingliz tilim unchalik yaxshi emas.
+I am learning new words every day.|Men har kuni yangi so'zlar o'rganyapman.
+This lesson is easy.|Bu dars oson.
+That question was difficult.|U savol qiyin edi.
+My brother is taller than me.|Akamning bo'yi mendan balandroq.
+This car is faster than that one.|Bu mashina anavisidan tezroq.
+Tashkent is bigger than my village.|Toshkent mening qishlog'imdan kattaroq.
+This is the best restaurant in the city.|Bu shahardagi eng yaxshi restoran.
+Winter is the coldest season.|Qish eng sovuq fasl.
+English is more difficult than Russian.|Ingliz tili rus tilidan qiyinroq.
+The train is faster than the bus.|Poyezd avtobusdan tezroq.
+I have never been to London.|Men hech qachon Londonda bo'lmaganman.
+Have you ever seen the sea?|Siz hech dengizni ko'rganmisiz?
+She has already finished her homework.|U allaqachon uy vazifasini tugatgan.
+We have lived here since 2010.|Biz bu yerda 2010-yildan beri yashaymiz.
+I have known him for five years.|Men uni besh yildan beri bilaman.
+He hasn't arrived yet.|U hali yetib kelmagan.
+If it rains, we will stay at home.|Agar yomg'ir yog'sa, uyda qolamiz.
+If you study hard, you will pass the exam.|Agar qattiq o'qisangiz, imtihondan o'tasiz.
+If I had money, I would buy a house.|Agar pulim bo'lganida, uy sotib olardim.
+I think you are right.|Menimcha, siz haqsiz.
+I don't think so.|Men unday deb o'ylamayman.
+I agree with you.|Men siz bilan roziman.
+I'm sorry, I was wrong.|Kechirasiz, men noto'g'ri edim.
+Thank you for your help.|Yordamingiz uchun rahmat.
+Nice to meet you.|Tanishganimdan xursandman.
+See you tomorrow.|Ertaga ko'rishguncha.
+Have a nice day.|Kuningiz yaxshi o'tsin.
+The meeting starts at ten.|Yig'ilish soat o'nda boshlanadi.
+The museum is closed on Monday.|Muzey dushanba kuni yopiq.
+I am looking for a hotel.|Men mehmonxona qidiryapman.
+Turn left at the corner.|Burchakdan chapga buriling.
+Go straight and turn right.|To'g'ri yuring va o'ngga buriling.
+The station is not far from here.|Bekat bu yerdan uzoq emas.
+How can I get to the airport?|Aeroportga qanday borsam bo'ladi?
+I need a ticket to Bukhara.|Menga Buxoroga chipta kerak.
+The plane leaves at six.|Samolyot soat oltida uchadi.
+My friend is waiting for me.|Do'stim meni kutyapti.
+I have a headache.|Boshim og'riyapti.
+You should see a doctor.|Siz shifokorga ko'rinishingiz kerak.
+She feels better today.|U bugun o'zini yaxshiroq his qilyapti.
+Wash your hands before dinner.|Kechki ovqatdan oldin qo'lingizni yuving.
+Don't forget your umbrella.|Soyaboningizni unutmang.
+Be careful, the road is wet.|Ehtiyot bo'ling, yo'l ho'l.
+The food in this cafe is delicious.|Bu kafedagi ovqat mazali.
+Can I see the menu, please?|Menyuni ko'rsam bo'ladimi?
+I would like to pay the bill.|Hisobni to'lamoqchiman.
+This soup is too salty.|Bu sho'rva juda sho'r.
+We usually have breakfast at eight.|Biz odatda soat sakkizda nonushta qilamiz.
+My favorite fruit is melon.|Mening sevimli mevam qovun.
+Uzbek bread is famous.|O'zbek noni mashhur.
+My grandmother makes the best plov.|Buvim eng yaxshi palovni tayyorlaydi.
+We celebrate Navruz in spring.|Biz Navro'zni bahorda nishonlaymiz.
+Spring is my favorite season.|Bahor mening sevimli faslim.
+In summer the days are long.|Yozda kunlar uzun bo'ladi.
+It snows a lot in winter.|Qishda ko'p qor yog'adi.
+The mountains are beautiful in autumn.|Kuzda tog'lar go'zal bo'ladi.
+I want to visit many countries.|Men ko'p mamlakatlarga borishni xohlayman.
+Learning a language takes time.|Til o'rganish vaqt talab qiladi.
+Practice makes perfect.|Mashq qilish mukammallikka olib keladi.
+Reading helps you learn new words.|O'qish yangi so'zlarni o'rganishga yordam beradi.
+Don't be afraid of mistakes.|Xatolardan qo'rqmang.
+Every mistake is a lesson.|Har bir xato bu dars.
+I made a mistake in this sentence.|Men bu gapda xato qildim.
+Please check my answer.|Iltimos, javobimni tekshiring.
+Your pronunciation is getting better.|Talaffuzingiz yaxshilanmoqda.
+I listen to English songs every day.|Men har kuni inglizcha qo'shiqlar tinglayman.
+She watches films without subtitles.|U filmlarni subtitrsiz tomosha qiladi.
+He speaks English very well.|U ingliz tilida juda yaxshi gapiradi.
+I want to improve my speaking.|Men nutqimni yaxshilamoqchiman.
+It is important to practice speaking.|Gapirishni mashq qilish muhim.
+Could you explain this again?|Buni yana bir bor tushuntirib bera olasizmi?
+I'm not sure about the answer.|Javobga ishonchim komil emas.
+Let's start the lesson.|Darsni boshlaylik.
+Let's go to the park together.|Keling, birga parkka boraylik.
+Why don't we take a taxi?|Nega taksiga o'tirmaymiz?
+What do you do in your free time?|Bo'sh vaqtingizda nima qilasiz?
+I like reading and swimming.|Men kitob o'qish va suzishni yoqtiraman.
+My hobby is taking photos.|Mening sevimli mashg'ulotim surat olish.
+He is interested in history.|U tarixga qiziqadi.
+I am good at math.|Men matematikadan yaxshiman.
+She is afraid of dogs.|U itlardan qo'rqadi.
+We are proud of our country.|Biz mamlakatimiz bilan faxrlanamiz.
+The film was very interesting.|Film juda qiziqarli edi.
+I was bored at the meeting.|Yig'ilishda zerikib qoldim.
+This is the man who helped me.|Bu menga yordam bergan odam.
+The book that I read was good.|Men o'qigan kitob yaxshi edi.
+I know where he lives.|Men uning qayerda yashashini bilaman.
+Tell me what you want.|Menga nima xohlayotganingizni ayting.
+He said that he was tired.|U charchaganini aytdi.
+She asked me where I worked.|U mendan qayerda ishlashimni so'radi.
+The house was built in 1990.|Uy 1990-yilda qurilgan.
+English is spoken in many countries.|Ingliz tilida ko'p mamlakatlarda gapiriladi.
+The letter was sent yesterday.|Xat kecha yuborildi.
+I used to live in Fergana.|Men ilgari Farg'onada yashardim.
+I am used to getting up early.|Men erta turishga o'rganganman.
+I enjoy learning English.|Men ingliz tilini o'rganishdan zavqlanaman.
+I stopped smoking last year.|Men o'tgan yili chekishni tashladim.
+I'm looking forward to the holiday.|Men ta'tilni intiqlik bilan kutyapman.
+It depends on the weather.|Bu ob-havoga bog'liq.
+I have been waiting for an hour.|Men bir soatdan beri kutyapman.
+How long have you been learning English?|Ingliz tilini qancha vaqtdan beri o'rganyapsiz?
+He was reading when I called.|Men qo'ng'iroq qilganimda u kitob o'qiyotgan edi.
+While I was walking, it started to rain.|Men yurib ketayotganimda yomg'ir yog'a boshladi.
+By the time we arrived, the film had started.|Biz yetib kelganimizda film boshlangan edi.
+I wish I could speak English fluently.|Qani endi ingliz tilida ravon gapira olsam.
+You had better leave now.|Hozir ketganingiz ma'qul.
+Although it was cold, we went out.|Sovuq bo'lsa ham, biz tashqariga chiqdik.
+Because of the rain, the game was cancelled.|Yomg'ir sababli o'yin bekor qilindi.
+Unless you hurry, you will miss the train.|Shoshilmasangiz, poyezdga ulgurmaysiz.
+The more you practice, the better you speak.|Qancha ko'p mashq qilsangiz, shuncha yaxshi gapirasiz.
+Success needs patience and hard work.|Muvaffaqiyat sabr va mehnat talab qiladi.
+Technology changes our lives quickly.|Texnologiya hayotimizni tez o'zgartiradi.
+Protecting the environment is our duty.|Atrof-muhitni himoya qilish bizning burchimiz.
+Many young people want to study abroad.|Ko'plab yoshlar chet elda o'qishni xohlaydi.
+Healthy food gives you energy.|Sog'lom ovqat sizga quvvat beradi.
+Regular exercise is good for your health.|Muntazam mashq sog'ligingiz uchun foydali.
+Reading books improves your vocabulary.|Kitob o'qish so'z boyligingizni oshiradi.
+I'm sorry for being late.|Kechikkanim uchun uzr.
+Could you tell me the way to the museum?|Muzeyga boradigan yo'lni aytib bera olasizmi?
+I'd like to book a room for two nights.|Ikki kechaga xona bron qilmoqchiman.
+The price includes breakfast.|Narxga nonushta kiradi.
+We need to make a decision today.|Biz bugun qaror qabul qilishimiz kerak.
+Her opinion is very important to me.|Uning fikri men uchun juda muhim.
+The teacher explained the rule clearly.|O'qituvchi qoidani aniq tushuntirdi.
+I'm trying to remember his phone number.|Men uning telefon raqamini eslashga harakat qilyapman.
+It was the most beautiful day of my life.|Bu hayotimdagi eng go'zal kun edi.

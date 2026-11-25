@@ -1,0 +1,689 @@
+I|men|p
+you|sen, siz|p
+he|u (erkak)|p
+she|u (ayol)|p
+it|u (narsa)|p
+we|biz|p
+they|ular|p
+this|bu|p
+that|u, ana u|p
+what|nima|p
+who|kim|p
+yes|ha|x
+no|yo'q|x
+and|va|c
+but|lekin|c
+hello|salom|x
+goodbye|xayr|x
+please|iltimos|x
+thanks|rahmat|x
+sorry|kechirasiz|x
+man|erkak|n
+woman|ayol|n
+child|bola|n
+boy|o'g'il bola|n
+girl|qiz bola|n
+friend|do'st|n
+family|oila|n
+mother|ona|n
+father|ota|n
+brother|aka, uka|n
+sister|opa, singil|n
+name|ism|n
+house|uy|n
+room|xona|n
+door|eshik|n
+window|deraza|n
+table|stol|n
+chair|stul|n
+water|suv|n
+food|ovqat|n
+bread|non|n
+tea|choy|n
+milk|sut|n
+apple|olma|n
+be|bo'lmoq|v
+have|ega bo'lmoq|v
+go|bormoq|v
+come|kelmoq|v
+eat|yemoq|v
+drink|ichmoq|v
+see|ko'rmoq|v
+want|xohlamoq|v
+like|yoqtirmoq|v
+love|sevmoq|v
+know|bilmoq|v
+do|qilmoq|v
+good|yaxshi|a
+bad|yomon|a
+big|katta|a
+small|kichik|a
+new|yangi|a
+old|eski, keksa|a
+hot|issiq|a
+cold|sovuq|a
+one|bir|x
+two|ikki|x
+three|uch|x
+four|to'rt|x
+five|besh|x
+six|olti|x
+seven|yetti|x
+eight|sakkiz|x
+nine|to'qqiz|x
+ten|o'n|x
+me|meni, menga|p
+him|uni, unga (erkak)|p
+her|uni, uning (ayol)|p
+us|bizni, bizga|p
+them|ularni, ularga|p
+my|mening|p
+your|sening, sizning|p
+his|uning (erkak)|p
+our|bizning|p
+their|ularning|p
+these|bular|p
+those|ana ular|p
+where|qayerda|d
+when|qachon|d
+why|nega, nima uchun|d
+how|qanday|d
+which|qaysi|p
+not|emas|d
+or|yoki|c
+because|chunki|c
+if|agar|c
+so|shuning uchun|c
+in|ichida, -da|r
+on|ustida|r
+at|-da (joyda)|r
+to|-ga, tomon|r
+from|-dan|r
+with|bilan|r
+for|uchun|r
+about|haqida|r
+under|ostida|r
+after|keyin|r
+before|oldin|r
+here|bu yerda|d
+there|u yerda|d
+now|hozir|d
+today|bugun|d
+tomorrow|ertaga|d
+yesterday|kecha|d
+very|juda|d
+also|ham|d
+again|yana, qaytadan|d
+only|faqat|d
+always|doim|d
+never|hech qachon|d
+often|tez-tez|d
+sometimes|ba'zan|d
+say|aytmoq|v
+get|olmoq, erishmoq|v
+make|yasamoq, qilmoq|v
+think|o'ylamoq|v
+look|qaramoq|v
+give|bermoq|v
+take|olib ketmoq|v
+use|ishlatmoq|v
+find|topmoq|v
+tell|aytib bermoq|v
+ask|so'ramoq|v
+work|ishlamoq|v
+feel|his qilmoq|v
+try|harakat qilmoq|v
+call|qo'ng'iroq qilmoq|v
+need|kerak bo'lmoq|v
+help|yordam bermoq|v
+live|yashamoq|v
+sleep|uxlamoq|v
+read|o'qimoq|v
+write|yozmoq|v
+speak|gapirmoq|v
+listen|tinglamoq|v
+hear|eshitmoq|v
+learn|o'rganmoq|v
+teach|o'rgatmoq|v
+understand|tushunmoq|v
+open|ochmoq|v
+close|yopmoq|v
+start|boshlamoq|v
+stop|to'xtamoq|v
+wait|kutmoq|v
+walk|yurmoq|v
+run|yugurmoq|v
+sit|o'tirmoq|v
+stand|turmoq|v
+buy|sotib olmoq|v
+sell|sotmoq|v
+pay|to'lamoq|v
+play|o'ynamoq|v
+watch|tomosha qilmoq|v
+put|qo'ymoq|v
+bring|olib kelmoq|v
+send|yubormoq|v
+meet|uchrashmoq|v
+show|ko'rsatmoq|v
+child|bola|n
+people|odamlar|n
+person|shaxs, odam|n
+baby|chaqaloq|n
+parent|ota-ona|n
+son|o'g'il|n
+daughter|qiz (farzand)|n
+husband|er|n
+wife|xotin, rafiqa|n
+grandmother|buvi|n
+grandfather|bobo|n
+teacher|o'qituvchi|n
+student|talaba|n
+doctor|shifokor|n
+home|uy (o'z uyi)|n
+bed|karavot|n
+kitchen|oshxona|n
+bathroom|hammom|n
+wall|devor|n
+floor|pol; qavat|n
+city|shahar|n
+village|qishloq|n
+country|mamlakat|n
+street|ko'cha|n
+road|yo'l|n
+school|maktab|n
+shop|do'kon|n
+market|bozor|n
+hospital|kasalxona|n
+bank|bank|n
+park|park, istirohat bog'i|n
+office|ofis, idora|n
+car|mashina|n
+bus|avtobus|n
+train|poyezd|n
+plane|samolyot|n
+bike|velosiped|n
+ticket|chipta|n
+meat|go'sht|n
+fish|baliq|n
+egg|tuxum|n
+coffee|qahva|n
+sugar|shakar|n
+salt|tuz|n
+rice|guruch|n
+fruit|meva|n
+vegetable|sabzavot|n
+breakfast|nonushta|n
+lunch|tushlik|n
+dinner|kechki ovqat|n
+time|vaqt|n
+day|kun|n
+night|tun|n
+morning|ertalab|n
+evening|kechqurun|n
+week|hafta|n
+month|oy|n
+year|yil|n
+hour|soat (vaqt)|n
+minute|daqiqa|n
+money|pul|n
+price|narx|n
+job|ish|n
+book|kitob|n
+pen|ruchka|n
+paper|qog'oz|n
+letter|xat; harf|n
+word|so'z|n
+sentence|gap|n
+language|til|n
+question|savol|n
+lesson|dars|n
+phone|telefon|n
+computer|kompyuter|n
+picture|rasm|n
+music|musiqa|n
+song|qo'shiq|n
+film|film|n
+game|o'yin|n
+sport|sport|n
+ball|to'p|n
+head|bosh|n
+face|yuz|n
+eye|ko'z|n
+ear|quloq|n
+nose|burun|n
+mouth|og'iz|n
+hand|qo'l|n
+leg|oyoq|n
+hair|soch|n
+heart|yurak|n
+body|tana|n
+tooth|tish|n
+sun|quyosh|n
+moon|oy (osmondagi)|n
+star|yulduz|n
+sky|osmon|n
+weather|ob-havo|n
+rain|yomg'ir|n
+snow|qor|n
+wind|shamol|n
+tree|daraxt|n
+flower|gul|n
+animal|hayvon|n
+dog|it|n
+cat|mushuk|n
+horse|ot|n
+cow|sigir|n
+bird|qush|n
+sea|dengiz|n
+river|daryo|n
+mountain|tog'|n
+world|dunyo|n
+color|rang|n
+red|qizil|a
+blue|ko'k|a
+green|yashil|a
+yellow|sariq|a
+black|qora|a
+white|oq|a
+long|uzun|a
+short|qisqa|a
+tall|baland bo'yli|a
+high|baland|a
+low|past|a
+warm|iliq|a
+fast|tez|a
+slow|sekin|a
+easy|oson|a
+difficult|qiyin|a
+beautiful|go'zal|a
+happy|baxtli|a
+sad|xafa|a
+tired|charchagan|a
+hungry|och (qorni)|a
+rich|boy|a
+poor|kambag'al|a
+right|to'g'ri; o'ng|a
+wrong|noto'g'ri|a
+left|chap|a
+full|to'la|a
+empty|bo'sh|a
+cheap|arzon|a
+expensive|qimmat|a
+dirty|iflos|a
+free|bepul; erkin|a
+busy|band|a
+ready|tayyor|a
+important|muhim|a
+different|boshqacha|a
+same|bir xil|a
+other|boshqa|a
+first|birinchi|x
+second|ikkinchi; soniya|x
+last|oxirgi|a
+next|keyingi|a
+many|ko'p (sanaladigan)|a
+much|ko'p|a
+more|ko'proq|d
+little|kichkina; oz|a
+all|hammasi|p
+every|har bir|x
+some|bir oz, ba'zi|x
+any|har qanday|x
+nothing|hech narsa|p
+something|nimadir|p
+everything|hamma narsa|p
+someone|kimdir|p
+everyone|hamma|p
+thing|narsa|n
+place|joy|n
+way|yo'l, usul|n
+life|hayot|n
+problem|muammo|n
+idea|g'oya, fikr|n
+story|hikoya|n
+number|raqam, son|n
+can|qila olmoq|v
+must|shart, majbur|v
+should|kerak (maslahat)|v
+will|-adi (kelasi zamon)|v
+cook|ovqat pishirmoq|v
+clean|tozalamoq|v
+wash|yuvmoq|v
+swim|suzmoq|v
+drive|haydamoq|v
+fly|uchmoq|v
+travel|sayohat qilmoq|v
+visit|tashrif buyurmoq|v
+sing|qo'shiq aytmoq|v
+dance|raqsga tushmoq|v
+draw|chizmoq|v
+cry|yig'lamoq|v
+laugh|kulmoq|v
+smile|jilmaymoq|v
+win|g'olib bo'lmoq, yutmoq|v
+lose|yutqazmoq|v
+leave|tark etmoq, ketmoq|v
+finish|tugatmoq|v
+begin|boshlanmoq|v
+become|bo'lib qolmoq|v
+change|o'zgartirmoq|v
+move|harakatlanmoq|v
+turn|burilmoq|v
+keep|saqlamoq|v
+hold|ushlab turmoq|v
+remember|eslamoq|v
+forget|unutmoq|v
+believe|ishonmoq|v
+mean|anglatmoq|v
+let|ruxsat bermoq|v
+study|ta'lim olmoq|v
+answer|javob bermoq|v
+repeat|takrorlamoq|v
+count|sanamoq|v
+choose|tanlamoq|v
+decide|qaror qilmoq|v
+hope|umid qilmoq|v
+agree|rozi bo'lmoq|v
+grow|o'smoq|v
+build|qurmoq|v
+break|sindirmoq|v
+cut|kesmoq|v
+carry|ko'tarib yurmoq|v
+fall|yiqilmoq|v
+catch|tutmoq|v
+throw|uloqtirmoq|v
+die|o'lmoq|v
+up|yuqoriga|d
+down|pastga|d
+out|tashqariga|d
+over|ustidan|r
+between|orasida|r
+near|yaqinida|r
+behind|orqasida|r
+without|-siz|r
+too|ham; haddan tashqari|d
+already|allaqachon|d
+still|hali ham|d
+just|endigina, shunchaki|d
+soon|tez orada|d
+late|kech|a
+early|erta|a
+hundred|yuz (son)|x
+thousand|ming|x
+well|yaxshi (tarzda)|d
+would|-ar edi|v
+could|qila olardi|v
+may|mumkin|v
+might|balki|v
+shirt|ko'ylak|n
+shoes|poyabzal, tufli|n
+clothes|kiyim|n
+hat|shlyapa, bosh kiyim|n
+coat|palto|n
+bag|sumka|n
+box|quti|n
+key|kalit|n
+cup|piyola, chashka|n
+glass|stakan; shisha|n
+plate|tarelka|n
+knife|pichoq|n
+spoon|qoshiq|n
+fork|vilka|n
+bottle|shisha (idish)|n
+soap|sovun|n
+towel|sochiq|n
+garden|bog'|n
+farm|ferma|n
+lake|ko'l|n
+island|orol|n
+forest|o'rmon|n
+field|dala|n
+grass|o't (maysa)|n
+stone|tosh|n
+fire|olov|n
+air|havo|n
+earth|yer|n
+hill|tepalik|n
+beach|sohil, plyaj|n
+weekend|dam olish kunlari|n
+holiday|bayram; ta'til|n
+birthday|tug'ilgan kun|n
+party|ziyofat; partiya|n
+gift|sovg'a|n
+news|yangiliklar|n
+newspaper|gazeta|n
+magazine|jurnal|n
+television|televizor|n
+radio|radio|n
+internet|internet|n
+email|elektron pochta|n
+message|xabar|n
+photo|surat|n
+camera|kamera|n
+map|xarita|n
+hotel|mehmonxona|n
+restaurant|restoran|n
+cafe|kafe|n
+airport|aeroport|n
+station|bekat, vokzal|n
+bridge|ko'prik|n
+building|bino|n
+mosque|masjid|n
+library|kutubxona|n
+museum|muzey|n
+cinema|kinoteatr|n
+theater|teatr|n
+university|universitet|n
+class|sinf|n
+homework|uy vazifasi|n
+test|test, sinov|n
+exam|imtihon|n
+mistake|xato|n
+example|misol|n
+page|sahifa|n
+dictionary|lug'at|n
+pencil|qalam|n
+desk|parta, yozuv stoli|n
+board|doska|n
+uncle|amaki, tog'a|n
+aunt|xola, amma|n
+cousin|amakivachcha|n
+neighbor|qo'shni|n
+guest|mehmon|n
+boss|boshliq|n
+worker|ishchi|n
+driver|haydovchi|n
+farmer|dehqon|n
+police|politsiya|n
+soldier|askar|n
+king|qirol, podshoh|n
+queen|qirolicha|n
+nurse|hamshira|n
+engineer|muhandis|n
+chef|oshpaz|n
+singer|qo'shiqchi|n
+writer|yozuvchi|n
+artist|rassom|n
+player|o'yinchi|n
+pilot|uchuvchi|n
+lawyer|advokat|n
+manager|menejer|n
+customer|mijoz|n
+eleven|o'n bir|x
+twelve|o'n ikki|x
+thirteen|o'n uch|x
+fourteen|o'n to'rt|x
+fifteen|o'n besh|x
+sixteen|o'n olti|x
+seventeen|o'n yetti|x
+eighteen|o'n sakkiz|x
+nineteen|o'n to'qqiz|x
+twenty|yigirma|x
+thirty|o'ttiz|x
+forty|qirq|x
+fifty|ellik|x
+sixty|oltmish|x
+seventy|yetmish|x
+eighty|sakson|x
+ninety|to'qson|x
+million|million|x
+third|uchinchi|x
+Monday|dushanba|n
+Tuesday|seshanba|n
+Wednesday|chorshanba|n
+Thursday|payshanba|n
+Friday|juma|n
+Saturday|shanba|n
+Sunday|yakshanba|n
+January|yanvar|n
+February|fevral|n
+March|mart|n
+April|aprel|n
+June|iyun|n
+July|iyul|n
+August|avgust|n
+September|sentyabr|n
+October|oktyabr|n
+November|noyabr|n
+December|dekabr|n
+spring|bahor|n
+summer|yoz|n
+autumn|kuz|n
+winter|qish|n
+season|fasl|n
+north|shimol|n
+south|janub|n
+east|sharq|n
+west|g'arb|n
+center|markaz|n
+middle|o'rta|n
+top|tepa|n
+bottom|tub, past qism|n
+front|old tomon|n
+back|orqa|n
+side|tomon|n
+end|oxir|n
+part|qism|n
+group|guruh|n
+kind|tur; mehribon|n
+fact|fakt, dalil|n
+half|yarim|n
+inside|ichida|d
+outside|tashqarida|d
+around|atrofida|r
+across|narigi tomonga|r
+through|orqali|r
+into|ichiga|r
+away|uzoqqa|d
+far|uzoq|a
+together|birga|d
+maybe|balki|d
+really|haqiqatan|d
+quickly|tez|d
+slowly|sekin|d
+usually|odatda|d
+almost|deyarli|d
+enough|yetarli|d
+quite|ancha|d
+even|hatto|d
+ever|qachondir|d
+yet|hali|d
+once|bir marta|d
+twice|ikki marta|d
+then|keyin, so'ng|d
+later|keyinroq|d
+during|davomida|r
+until|-gacha|r
+since|-dan beri|r
+while|-ayotganda|c
+than|-dan ko'ra|c
+as|kabi; sifatida|c
+whose|kimning|p
+anything|biror narsa|p
+nobody|hech kim|p
+myself|o'zim|p
+yourself|o'zing, o'zingiz|p
+own|o'z|a
+another|yana bir|x
+such|bunday|x
+both|ikkalasi|p
+each|har biri|x
+few|bir nechta, oz|a
+most|eng ko'p|d
+less|kamroq|d
+sure|ishonchli, aniq|a
+health|sog'liq|n
+ill|kasal|a
+sick|betob|a
+pain|og'riq|n
+medicine|dori|n
+fever|isitma|n
+blood|qon|n
+bone|suyak|n
+skin|teri|n
+finger|barmoq|n
+neck|bo'yin|n
+stomach|oshqozon, qorin|n
+knee|tizza|n
+shoulder|yelka|n
+lip|lab|n
+tongue|til (a'zo)|n
+beard|soqol|n
+arm|qo'l (yelkadan)|n
+foot|oyoq panjasi|n
+voice|ovoz|n
+dream|tush; orzu|n
+fun|maroq, qiziqarli narsa|n
+joke|hazil|n
+smell|hid|n
+taste|ta'm|n
+sound|tovush|n
+noise|shovqin|n
+light|yorug'lik; yengil|n
+dark|qorong'i|a
+bright|yorqin|a
+quiet|jim, sokin|a
+loud|baland (ovoz)|a
+heavy|og'ir|a
+soft|yumshoq|a
+strong|kuchli|a
+weak|kuchsiz|a
+fat|semiz|a
+thin|ozg'in; yupqa|a
+wide|keng|a
+narrow|tor|a
+deep|chuqur|a
+round|dumaloq|a
+flat|tekis|a
+sweet|shirin|a
+sour|nordon|a
+bitter|achchiq (ta'm)|a
+salty|sho'r|a
+fresh|yangi uzilgan, toza|a
+delicious|mazali|a
+nice|yoqimli|a
+friendly|do'stona|a
+funny|kulgili|a
+interesting|qiziqarli|a
+boring|zerikarli|a
+famous|mashhur|a
+favorite|sevimli|a
+angry|jahli chiqqan|a
+afraid|qo'rqqan|a
+alone|yolg'iz|a
+married|turmush qurgan|a
+dead|o'lik|a
+alive|tirik|a
+safe|xavfsiz|a
+dangerous|xavfli|a
+possible|mumkin bo'lgan|a
+real|haqiqiy|a
+true|rost|a
+false|yolg'on|a
+public|ommaviy|a
+private|shaxsiy|a
+main|asosiy|a
+whole|butun|a
+thirsty|chanqagan|a
+young|yosh|a
+hard|qattiq; qiyin|a

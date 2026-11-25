@@ -1,0 +1,1462 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>3000 Soʻz</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: one-column workbook (max 760px) under a sticky lapis "tile band" carrying the brand, progress and five stage tabs. */
+:root {
+  --bg: #EDF1F4; --surface: #FFFFFF; --surface-2: #F4F7F9; --ink: #13202A; --muted: #586974; --line: #D3DCE3;
+  --band: #17357A; --band-ink: #F2F6FF; --band-muted: #B3C5EE; --band-line: rgba(255,255,255,.16);
+  --accent: #1F4FA8; --accent-ink: #FFFFFF; --accent-soft: #E1E9F8;
+  --teal: #0E7C75; --teal-soft: #DCF0EE;
+  --saffron: #B8740F; --saffron-soft: #FAEDD6;
+  --good: #1B7A44; --good-soft: #DCF1E4; --bad: #B4381F; --bad-soft: #F8E0DA;
+  --shadow: 0 1px 2px rgba(19,32,42,.06), 0 8px 24px rgba(19,32,42,.07);
+  --f-display: 'Unbounded', 'Manrope', system-ui, sans-serif;
+  --f-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --r: 14px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0B141B; --surface: #13202A; --surface-2: #192833; --ink: #E4ECF1; --muted: #93A5B1; --line: #273947;
+  --band: #0D2150; --band-ink: #EEF3FF; --band-muted: #9FB4E4; --band-line: rgba(255,255,255,.12);
+  --accent: #7FA6F2; --accent-ink: #0A1630; --accent-soft: #1A2D52;
+  --teal: #52C5BA; --teal-soft: #113431;
+  --saffron: #EDB256; --saffron-soft: #382A12;
+  --good: #5ACB8C; --good-soft: #133220; --bad: #F2836B; --bad-soft: #3A1C16;
+  --shadow: 0 1px 2px rgba(0,0,0,.35), 0 10px 28px rgba(0,0,0,.28);
+  color-scheme: dark;
+} }
+:root[data-theme="dark"] {
+  --bg: #0B141B; --surface: #13202A; --surface-2: #192833; --ink: #E4ECF1; --muted: #93A5B1; --line: #273947;
+  --band: #0D2150; --band-ink: #EEF3FF; --band-muted: #9FB4E4; --band-line: rgba(255,255,255,.12);
+  --accent: #7FA6F2; --accent-ink: #0A1630; --accent-soft: #1A2D52;
+  --teal: #52C5BA; --teal-soft: #113431;
+  --saffron: #EDB256; --saffron-soft: #382A12;
+  --good: #5ACB8C; --good-soft: #133220; --bad: #F2836B; --bad-soft: #3A1C16;
+  --shadow: 0 1px 2px rgba(0,0,0,.35), 0 10px 28px rgba(0,0,0,.28);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { background: var(--bg); color: var(--ink); margin: 0; }
+body { font-family: var(--f-body); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--band); }
+button, select, textarea, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.gut { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 760px; margin: 0 auto; }
+
+/* ---------- Band ---------- */
+.band {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background-color: var(--band); color: var(--band-ink);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.09' stroke-width='1.2'%3E%3Crect x='11' y='11' width='14' height='14'/%3E%3Crect x='11' y='11' width='14' height='14' transform='rotate(45 18 18)'/%3E%3Cpath d='M0 18h4M32 18h4M18 0v4M18 32v4'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 36px 36px;
+  box-shadow: 0 1px 0 var(--band-line);
+}
+.band-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 12px 6px; }
+.brand { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
+.brand .n { font-family: var(--f-display); font-weight: 700; font-size: 1.35rem; letter-spacing: -.01em; }
+.brand .t { font-family: var(--f-display); font-weight: 500; font-size: 1rem; }
+.brand small { display: block; font-family: var(--f-body); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--band-muted); }
+.meter { text-align: right; font-variant-numeric: tabular-nums; min-width: 120px; }
+.meter b { font-family: var(--f-display); font-weight: 600; font-size: 1rem; }
+.meter span { color: var(--band-muted); font-size: .85rem; }
+.mbar { height: 5px; border-radius: 3px; background: rgba(255,255,255,.16); overflow: hidden; margin-top: 4px; }
+.mbar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #55D0C4, #F1B654); border-radius: 3px; transition: width .4s; }
+.tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tabs a {
+  flex: 1 0 auto; text-align: center; text-decoration: none; color: var(--band-muted);
+  padding: 9px 10px 11px; font-weight: 700; font-size: .88rem; border-bottom: 3px solid transparent; white-space: nowrap;
+}
+.tabs a[aria-current="page"] { color: var(--band-ink); border-bottom-color: #F1B654; }
+.tabs a:hover { color: var(--band-ink); }
+
+/* ---------- Base ---------- */
+main { padding-block: 20px 64px; }
+.view { display: flex; flex-direction: column; gap: 18px; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+h1 { font-family: var(--f-display); font-weight: 700; font-size: 1.55rem; letter-spacing: -.01em; }
+h2 { font-family: var(--f-display); font-weight: 600; font-size: 1.05rem; margin-top: 10px; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.small { font-size: .85rem; }
+.eyebrow { font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); box-shadow: var(--shadow); padding: 20px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.row.between { justify-content: space-between; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 16px;
+  border-radius: 11px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-weight: 700; font-size: .95rem; text-align: center;
+}
+.btn:hover:not(:disabled) { border-color: var(--accent); }
+.btn:disabled { opacity: .5; cursor: default; }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn.primary:hover:not(:disabled) { filter: brightness(1.07); }
+.btn.lg { min-height: 54px; font-size: 1.02rem; padding: 12px 20px; }
+.btn.sm { min-height: 36px; padding: 6px 12px; font-size: .85rem; }
+.btn.ghost { background: transparent; }
+.btn svg, .icon svg { width: 20px; height: 20px; flex: none; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: .8rem; font-weight: 700; background: var(--surface-2); border: 1px solid var(--line); color: var(--muted); }
+.chip.teal { background: var(--teal-soft); color: var(--teal); border-color: transparent; }
+.chip.saffron { background: var(--saffron-soft); color: var(--saffron); border-color: transparent; }
+.chip.blue { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
+button.chip { cursor: pointer; }
+.spk { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--accent); flex: none; }
+.spk:hover { border-color: var(--accent); }
+.spk svg { width: 20px; height: 20px; }
+.note { font-size: .88rem; color: var(--muted); background: var(--surface-2); border-radius: 10px; padding: 10px 12px; }
+.note.warn { background: var(--saffron-soft); color: var(--ink); }
+
+/* ---------- Home ---------- */
+.hero { display: flex; flex-direction: column; gap: 10px; }
+.hero .big { font-family: var(--f-display); font-weight: 700; font-size: clamp(2.6rem, 10vw, 3.8rem); line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.hero .of { font-family: var(--f-display); font-weight: 500; font-size: 1.05rem; color: var(--muted); margin-left: 8px; }
+.levels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.lv { display: flex; flex-direction: column; gap: 5px; }
+.lv .track { height: 10px; border-radius: 5px; background: var(--surface-2); border: 1px solid var(--line); overflow: hidden; }
+.lv .track i { display: block; height: 100%; width: 0; background: var(--teal); transition: width .4s; }
+.lv:nth-child(2) .track i { background: var(--accent); }
+.lv:nth-child(3) .track i { background: var(--saffron); }
+.lv span { font-size: .75rem; color: var(--muted); font-weight: 700; font-variant-numeric: tabular-nums; }
+.actions { display: grid; grid-template-columns: 1fr; gap: 10px; }
+@media (min-width: 560px) { .actions { grid-template-columns: 1.4fr 1fr; } }
+.actions .btn { flex-direction: column; gap: 2px; }
+.actions .btn small { font-weight: 600; font-size: .78rem; opacity: .8; }
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (min-width: 620px) { .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+.stat b { font-family: var(--f-display); font-weight: 600; font-size: 1.4rem; font-variant-numeric: tabular-nums; }
+.stat span { font-size: .78rem; color: var(--muted); font-weight: 600; }
+.stages { display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--line); }
+.stage { display: grid; grid-template-columns: 40px 1fr auto; gap: 12px; align-items: center; padding: 12px 2px; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; }
+.stage .k { font-family: var(--f-display); font-weight: 700; color: var(--accent); font-size: 1.05rem; }
+.stage b { display: block; }
+.stage small { color: var(--muted); font-size: .85rem; }
+.stage .go { color: var(--muted); font-size: 1.2rem; }
+.stage:hover b { color: var(--accent); }
+.weak { display: flex; flex-direction: column; gap: 14px; }
+.weak h3 { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-family: var(--f-body); font-weight: 800; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.notes { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.notes li { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: .92rem; }
+.notes s { color: var(--bad); text-decoration-thickness: 2px; }
+.notes ins { color: var(--good); text-decoration: none; font-weight: 700; }
+.settings { display: flex; flex-direction: column; gap: 12px; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.seg button { border: 0; background: var(--surface); padding: 8px 12px; font-weight: 700; font-size: .85rem; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+.caps { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ---------- Words ---------- */
+.lesson-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: wrap; }
+.lgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)); gap: 6px; }
+.lgrid button { min-height: 40px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); font-weight: 700; font-size: .82rem; font-variant-numeric: tabular-nums; color: var(--muted); }
+.lgrid button.done { background: var(--teal-soft); color: var(--teal); border-color: transparent; }
+.lgrid button.part { background: var(--saffron-soft); color: var(--saffron); border-color: transparent; }
+.lgrid button.cur { border: 2px solid var(--accent); color: var(--accent); }
+.lgrid .lvl { grid-column: 1 / -1; font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+.wlist { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
+.wlist li { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.wlist .no { font-size: .75rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.wlist .en { font-weight: 800; font-size: 1.05rem; }
+.wlist .uz { color: var(--muted); font-size: .92rem; }
+.wlist .pos { font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--teal); margin-left: 6px; }
+.qtop { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.qbar { height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; flex: 1; }
+.qbar i { display: block; height: 100%; background: var(--accent); width: 0; transition: width .3s; }
+.qcount { font-size: .85rem; color: var(--muted); font-weight: 700; font-variant-numeric: tabular-nums; }
+.prompt-lbl { font-size: .8rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.qword { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; min-height: 72px; }
+.qword .w { font-family: var(--f-display); font-weight: 600; font-size: clamp(1.9rem, 7.5vw, 3rem); line-height: 1.1; letter-spacing: -.015em; overflow-wrap: anywhere; }
+.qword .w.uz { color: var(--ink); }
+.qword .posl { font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); }
+.listen-big { width: 92px; height: 92px; border-radius: 50%; border: 0; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; }
+.listen-big svg { width: 40px; height: 40px; }
+.opts { display: grid; grid-template-columns: 1fr; gap: 10px; }
+@media (min-width: 560px) { .opts { grid-template-columns: 1fr 1fr; } }
+.opt {
+  display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: center; text-align: left;
+  min-height: 58px; padding: 10px 14px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--surface); font-weight: 700; font-size: 1.05rem;
+}
+.opt .k { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 7px; background: var(--surface-2); color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; }
+.opt:hover:not(:disabled) { border-color: var(--accent); }
+.opt:disabled { cursor: default; }
+.opt.ok { border-color: var(--good); background: var(--good-soft); }
+.opt.ok .k { background: var(--good); color: var(--surface); }
+.opt.no { border-color: var(--bad); background: var(--bad-soft); }
+.opt.no .k { background: var(--bad); color: var(--surface); }
+.opt.dim { opacity: .55; }
+.feedback { min-height: 24px; font-weight: 700; }
+.feedback.ok { color: var(--good); }
+.feedback.no { color: var(--bad); }
+.result-num { font-family: var(--f-display); font-weight: 700; font-size: 2.8rem; line-height: 1; font-variant-numeric: tabular-nums; }
+
+/* ---------- Sentences ---------- */
+.focusbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.focusbar label { font-size: .8rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+select { min-height: 40px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); padding: 6px 10px; font-weight: 700; max-width: 100%; }
+.uzs { font-family: var(--f-display); font-weight: 500; font-size: clamp(1.2rem, 4.6vw, 1.6rem); line-height: 1.3; overflow-wrap: anywhere; }
+.ens { font-family: var(--f-display); font-weight: 500; font-size: clamp(1.15rem, 4.4vw, 1.5rem); line-height: 1.3; color: var(--accent); overflow-wrap: anywhere; }
+.slots { min-height: 64px; border: 2px dashed var(--line); border-radius: 12px; padding: 10px; display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start; }
+.slots.ok { border-style: solid; border-color: var(--good); background: var(--good-soft); }
+.slots.no { border-style: solid; border-color: var(--bad); background: var(--bad-soft); }
+.slots .ph { color: var(--muted); font-size: .9rem; align-self: center; }
+.tiles { display: flex; flex-wrap: wrap; gap: 8px; }
+.tile { min-height: 42px; padding: 6px 14px; border-radius: 10px; border: 1.5px solid var(--line); border-bottom-width: 3px; background: var(--surface); font-weight: 700; font-size: 1rem; }
+.tile:hover:not(:disabled) { border-color: var(--accent); }
+.tile.used { visibility: hidden; }
+textarea { width: 100%; min-height: 96px; resize: vertical; border-radius: 12px; border: 1.5px solid var(--line); background: var(--surface); padding: 12px 14px; font-size: 1.08rem; line-height: 1.45; }
+textarea:focus { border-color: var(--accent); outline: none; }
+.diff { display: flex; flex-wrap: wrap; gap: 4px 6px; font-size: 1.12rem; font-weight: 700; line-height: 1.6; }
+.diff span { padding: 0 4px; border-radius: 6px; }
+.diff .ok { color: var(--good); background: var(--good-soft); }
+.diff .miss { color: var(--bad); background: var(--bad-soft); text-decoration: underline wavy; text-underline-offset: 4px; }
+.diff .extra { color: var(--saffron); background: var(--saffron-soft); text-decoration: line-through; }
+.legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: .78rem; color: var(--muted); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.score { display: flex; align-items: baseline; gap: 10px; }
+.score b { font-family: var(--f-display); font-size: 2rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.score.good b { color: var(--good); } .score.mid b { color: var(--saffron); } .score.low b { color: var(--bad); }
+.ai { border-top: 1px solid var(--line); padding-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+.ai h3 .icon svg { width: 16px; height: 16px; display: block; }
+.ai h3 { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); font-weight: 800; font-family: var(--f-body); display: flex; align-items: center; gap: 8px; }
+.ai ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.ai li { background: var(--surface-2); border-radius: 10px; padding: 10px 12px; font-size: .95rem; }
+.ai li .pair { font-weight: 800; }
+.ai li s { color: var(--bad); text-decoration-thickness: 2px; }
+.ai li ins { color: var(--good); text-decoration: none; }
+.dots { display: inline-flex; gap: 4px; }
+.dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); animation: blink 1.2s infinite; }
+.dots i:nth-child(2) { animation-delay: .2s; } .dots i:nth-child(3) { animation-delay: .4s; }
+@keyframes blink { 0%, 80%, 100% { opacity: .25; } 40% { opacity: 1; } }
+.mic {
+  width: 104px; height: 104px; border-radius: 50%; border: 0; background: var(--accent); color: var(--accent-ink);
+  display: grid; place-items: center; box-shadow: 0 0 0 0 var(--accent-soft); transition: box-shadow .3s;
+}
+.mic svg { width: 44px; height: 44px; }
+.mic.on { background: var(--bad); animation: pulse 1.4s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 var(--bad-soft); } 70% { box-shadow: 0 0 0 22px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+.micwrap { display: flex; flex-direction: column; align-items: center; gap: 10px; padding-block: 6px; }
+.live { min-height: 28px; text-align: center; font-size: 1.08rem; font-weight: 700; overflow-wrap: anywhere; }
+.live em { color: var(--muted); font-style: normal; font-weight: 500; }
+.plan { display: flex; flex-direction: column; gap: 10px; }
+.plan-h { display: flex; flex-direction: column; gap: 2px; }
+.plan-h b { font-family: var(--f-display); font-weight: 600; }
+.plan-g { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.plan-i { display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); text-decoration: none; color: inherit; min-width: 0; }
+.plan-i .small { color: var(--muted); font-weight: 700; line-height: 1.25; }
+.plan-i b { font-family: var(--f-display); font-weight: 600; font-variant-numeric: tabular-nums; }
+.plan-i .track { display: block; height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
+.plan-i .track i { display: block; height: 100%; background: var(--accent); }
+.plan-i.done { border-color: var(--good); background: var(--good-soft); }
+.plan-i.done .track i { background: var(--good); }
+.rules { border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); }
+.rules > summary { cursor: pointer; padding: 14px 16px; font-weight: 800; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.rules > summary::-webkit-details-marker { display: none; }
+.rules > summary::after { content: "+"; font-family: var(--f-display); font-size: 1.2rem; color: var(--accent); }
+.rules[open] > summary::after { content: "–"; }
+.rules ol { margin: 0; padding: 0 16px 16px; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.rules li { display: flex; flex-direction: column; gap: 6px; padding-top: 12px; border-top: 1px solid var(--line); }
+.rules .ex { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.rules .ex .en { font-weight: 800; color: var(--accent); }
+.rules .ex .uz { color: var(--muted); font-size: .9rem; }
+.rules .spk { width: 32px; height: 32px; }
+.rules .spk svg { width: 16px; height: 16px; }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(18px + env(safe-area-inset-bottom, 0px)); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 10px; font-weight: 700; font-size: .9rem; z-index: 20; max-width: calc(100% - 32px); }
+.loading { padding: 40px 0; text-align: center; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+</style>
+
+<header class="band">
+  <div class="gut"><div class="wrap band-top">
+    <div class="brand"><span class="n">3000</span><span class="t">Soʻz<small>ingliz tili</small></span></div>
+    <div class="meter" aria-label="Oʻrganilgan soʻzlar"><b id="mCount">0</b><span> / 3000</span><div class="mbar"><i id="mBar"></i></div></div>
+  </div></div>
+  <nav class="gut" aria-label="Boʻlimlar"><div class="wrap tabs">
+    <a href="#bosh" data-v="bosh">Bosh</a>
+    <a href="#sozlar" data-v="sozlar">Soʻzlar</a>
+    <a href="#gaplar" data-v="gaplar">Gaplar</a>
+    <a href="#tarjima" data-v="tarjima">Tarjima</a>
+    <a href="#talaffuz" data-v="talaffuz">Talaffuz</a>
+  </div></nav>
+</header>
+
+<main class="gut"><div class="wrap">
+
+<section id="v-bosh" class="view">
+  <div class="hero">
+    <div class="eyebrow" id="hLevel">A1 · Boshlangʻich daraja</div>
+    <div><span class="big" id="hCount">0</span><span class="of">/ 3000 soʻz oʻrganildi</span></div>
+    <div class="levels" id="hLevels">
+      <div class="lv"><div class="track"><i></i></div><span>A1 · 1–1000</span></div>
+      <div class="lv"><div class="track"><i></i></div><span>A2 · 1001–2000</span></div>
+      <div class="lv"><div class="track"><i></i></div><span>B1 · 2001–3000</span></div>
+    </div>
+  </div>
+  <div class="actions">
+    <button class="btn primary lg" id="hLesson" type="button">1-darsni boshlash<small>20 ta yangi soʻz · 4 variantli test</small></button>
+    <button class="btn lg" id="hReview" type="button">Takrorlash<small>Bugun takrorlanadigan soʻz yoʻq</small></button>
+  </div>
+  <div class="plan" id="hPlan" aria-label="Bugungi reja"></div>
+  <div class="stats" id="hStats">
+    <div class="stat"><b id="sToday">0</b><span>Bugungi javoblar</span></div>
+    <div class="stat"><b id="sAcc">–</b><span>Bugun toʻgʻri</span></div>
+    <div class="stat"><b id="sStreak">0</b><span>Ketma-ket kunlar</span></div>
+    <div class="stat"><b id="sStrong">0</b><span>Mustahkam soʻzlar</span></div>
+  </div>
+
+  <h2>Toʻrt bosqich</h2>
+  <div class="stages">
+    <a class="stage" href="#sozlar"><span class="k">1</span><span><b>Soʻzlar</b><small>Soʻz va pastda 4 ta variant. Har darsda 20 ta soʻz, jami 150 dars.</small></span><span class="go">›</span></a>
+    <a class="stage" href="#gaplar"><span class="k">2</span><span><b>Gaplar</b><small>Oʻrgangan soʻzlaringiz bilan gap tuzish: soʻzlarni toʻgʻri tartibga qoʻyasiz. Shu yerda 10 ta asosiy grammatika qoidasi ham bor.</small></span><span class="go">›</span></a>
+    <a class="stage" href="#tarjima"><span class="k">3</span><span><b>Tarjima</b><small>Oʻzbekcha gap beriladi, siz uni inglizcha yozasiz. Xatolar oʻzbekcha tushuntiriladi.</small></span><span class="go">›</span></a>
+    <a class="stage" href="#talaffuz"><span class="k">4</span><span><b>Talaffuz</b><small>Oʻzbekcha gapni inglizcha ovoz chiqarib aytasiz. Ovozingiz tahlil qilinadi.</small></span><span class="go">›</span></a>
+  </div>
+
+  <h2>Kamchiliklarim</h2>
+  <div class="weak" id="hWeak"><p class="muted">Mashq qilganingiz sari bu yerda xato qiladigan soʻzlaringiz, talaffuzda qiynalgan soʻzlaringiz va grammatik eslatmalar paydo boʻladi.</p></div>
+
+  <h2>Sozlamalar</h2>
+  <div class="settings">
+    <div class="row"><span class="small muted" style="min-width:120px">Ovoz</span>
+      <div class="seg" role="group" aria-label="Ovoz manbai"><button type="button" data-voice="auto" aria-pressed="true">Claude ovozi</button><button type="button" data-voice="browser" aria-pressed="false">Brauzer ovozi</button></div>
+    </div>
+    <div class="row"><span class="small muted" style="min-width:120px">Darajam</span>
+      <div class="seg" role="group" aria-label="Mening darajam"><button type="button" data-lvl="beginner" aria-pressed="true">Boshlangʻich</button><button type="button" data-lvl="intermediate" aria-pressed="false">Oʻrta</button></div>
+    </div>
+    <p class="small muted">Boshlangʻich rejimda gaplar qisqa va oddiy boʻladi, ovoz sekinroq chiqadi, testda avval inglizcha soʻz koʻrsatilib, oʻzi ham eshittiriladi.</p>
+    <div class="caps" id="caps"></div>
+    <p class="small muted" id="syncNote">Natijalar shu brauzerda saqlanadi.</p>
+  </div>
+</section>
+
+<section id="v-sozlar" class="view" hidden>
+  <div class="lesson-head">
+    <div><div class="eyebrow" id="lhEyebrow">A1 · Boshlangʻich</div><h1 id="lhTitle">1-dars</h1><div class="small muted" id="lhSub">Soʻzlar #1–#20</div></div>
+    <button class="btn sm" id="lhPick" type="button" aria-expanded="false">Barcha darslar</button>
+  </div>
+  <div id="lessonGrid" class="lgrid" hidden></div>
+  <div id="szBody"><div class="loading">Soʻzlar yuklanmoqda…</div></div>
+</section>
+
+<section id="v-gaplar" class="view" hidden>
+  <div><div class="eyebrow">2-bosqich</div><h1>Gap tuzish</h1><p class="muted small">Oʻzbekcha gapni oʻqing va inglizcha soʻzlarni toʻgʻri tartibda bosing.</p></div>
+  <details class="rules" id="gRules"></details>
+  <div class="focusbar" id="gFocusBar"></div>
+  <div id="gBody"><div class="loading">Yuklanmoqda…</div></div>
+</section>
+
+<section id="v-tarjima" class="view" hidden>
+  <div><div class="eyebrow">3-bosqich</div><h1>Tarjima</h1><p class="muted small">Gapni inglizcha yozing. Bir nechta toʻgʻri variant boʻlishi mumkin, Claude ularni ham qabul qiladi.</p></div>
+  <details class="rules" id="tRules"></details>
+  <div class="focusbar" id="tFocusBar"></div>
+  <div id="tBody"><div class="loading">Yuklanmoqda…</div></div>
+</section>
+
+<section id="v-talaffuz" class="view" hidden>
+  <div><div class="eyebrow">4-bosqich</div><h1>Talaffuz</h1><p class="muted small">Mikrofonni bosing va gapni inglizcha ayting. Dastur nima eshitganini koʻrsatadi va kamchiliklaringizni aytadi.</p></div>
+  <div class="row">
+    <div class="seg" role="group" aria-label="Mashq turi"><button type="button" data-pmode="translate" aria-pressed="true">Tarjima qilib ayting</button><button type="button" data-pmode="read" aria-pressed="false">Oʻqib bering</button></div>
+  </div>
+  <div class="focusbar" id="pFocusBar"></div>
+  <div id="pBody"><div class="loading">Yuklanmoqda…</div></div>
+</section>
+
+</div></main>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(() => {
+'use strict';
+
+/* ================= helpers ================= */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+function h(tag, props, ...kids) {
+  const e = document.createElement(tag);
+  if (props) for (const [k, v] of Object.entries(props)) {
+    if (v == null || v === false) continue;
+    if (k === 'class') e.className = v;
+    else if (k === 'text') e.textContent = v;
+    else if (k === 'svg') e.innerHTML = v; // static icon markup only
+    else if (k.startsWith('on') && typeof v === 'function') e.addEventListener(k.slice(2), v);
+    else e.setAttribute(k, v === true ? '' : String(v));
+  }
+  for (const k of kids.flat(3)) if (k != null && k !== false) e.append(k instanceof Node ? k : String(k));
+  return e;
+}
+const clear = el => { while (el.firstChild) el.removeChild(el.firstChild); return el; };
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
+const today = () => Math.floor((Date.now() - new Date().getTimezoneOffset() * 60000) / 86400000);
+const str = (v, max = 400) => (typeof v === 'string' ? v : v == null ? '' : String(v)).slice(0, max);
+let toastT;
+function toast(msg) { const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => { t.hidden = true; }, 3200); }
+
+const ICON = {
+  speak: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.2v5.6h3.6L12.5 19V5L7.6 9.2H4z" fill="currentColor"/><path d="M15.5 8.6a4.6 4.6 0 0 1 0 6.8M18 6a8.3 8.3 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>',
+  slow: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.2v5.6h3.6L12.5 19V5L7.6 9.2H4z" fill="currentColor"/><path d="M16 10.5a2.2 2.2 0 0 1 0 3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>',
+  mic: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3" fill="currentColor"/><path d="M5.5 11.2a6.5 6.5 0 0 0 13 0M12 17.7V21" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>',
+  stop: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="6.5" width="11" height="11" rx="2.5" fill="currentColor"/></svg>',
+  spark: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" fill="currentColor"/></svg>'
+};
+
+/* ================= constants ================= */
+const LESSON = 20;
+const LEVELS = [
+  { code: 'A1', uz: 'Boshlangʻich', from: 0, to: 1000 },
+  { code: 'A2', uz: 'Oʻrta-boshlangʻich', from: 1000, to: 2000 },
+  { code: 'B1', uz: 'Oʻrta', from: 2000, to: 3000 }
+];
+const INTERVAL = [0, 1, 3, 7, 16, 35];
+const POS = { n: 'ot', v: 'feʼl', a: 'sifat', d: 'ravish', p: 'olmosh', r: 'predlog', c: 'bogʻlovchi', x: 'boshqa' };
+const levelOf = i => LEVELS[Math.min(2, Math.floor(i / 1000))];
+const levelOfLesson = li => levelOf(li * LESSON);
+const isBeg = () => state.settings.lvl !== 'intermediate';
+const RULES = [
+  { t: 'Gap tartibi: kim + nima qiladi + nimani', d: 'Oʻzbekchada feʼl gap oxirida keladi, inglizchada esa egadan keyin darhol keladi.', ex: [['I eat apples.', 'Men olma yeyman.'], ['She reads books.', 'U kitob oʻqiydi.']] },
+  { t: 'am / is / are = «-man, -san, -dir»', d: 'Oʻzbekchada «Men talabaman» deymiz. Inglizchada «boʻlmoq» feʼli albatta yoziladi: I am, you/we/they are, he/she/it is.', ex: [['I am a student.', 'Men talabaman.'], ['They are at home.', 'Ular uyda.']] },
+  { t: 'a / an / the', d: 'Bitta narsa haqida gapirganda a qoʻyiladi (unli tovushdan oldin an: an apple). Maʼlum, aniq narsa oldidan the qoʻyiladi.', ex: [['He has a car.', 'Uning mashinasi bor.'], ['Open the door, please.', 'Iltimos, eshikni oching.']] },
+  { t: 'Koʻplik: -s', d: 'Oʻzbekchadagi -lar oʻrniga -s qoʻshiladi. Sondan keyin ham -s qoladi: «ikkita kitob» = two books.', ex: [['I have two brothers.', 'Mening ikkita akam bor.']] },
+  { t: 'he / she / it + feʼl + s', d: 'Hozirgi oddiy zamonda he, she, it bilan feʼlga -s qoʻshiladi: I work, lekin he works.', ex: [['He works in a hospital.', 'U kasalxonada ishlaydi.'], ['She drinks milk in the morning.', 'U ertalab sut ichadi.']] },
+  { t: "Inkor: don't / doesn't / not", d: "Feʼldan oldin don't qoʻyiladi, he/she/it bilan doesn't. am/is/are dan keyin esa shunchaki not.", ex: [["I don't know.", 'Men bilmayman.'], ['My English is not very good.', 'Mening ingliz tilim unchalik yaxshi emas.']] },
+  { t: 'Savol: Do / Does … ?', d: 'Savolda Do (he/she/it bilan Does) gap boshiga chiqadi. am/is/are bilan esa ega va feʼl joy almashadi.', ex: [['Do you like coffee?', 'Siz qahvani yoqtirasizmi?'], ['Where is the bank?', 'Bank qayerda?']] },
+  { t: 'Egalik: my, your, his, her, our, their', d: 'Oʻzbekchadagi -im, -ing, -i qoʻshimchalari oʻrniga otdan oldin alohida soʻz qoʻyiladi.', ex: [['This is my house.', 'Bu mening uyim.']] },
+  { t: 'in / on / at / to', d: 'Oʻzbekchada -da, -ga soʻz oxiriga qoʻshiladi. Inglizchada ular alohida soʻz boʻlib, otdan oldin keladi.', ex: [['I go to school every day.', 'Men har kuni maktabga boraman.'], ['The book is on the table.', 'Kitob stol ustida.']] },
+  { t: 'Oʻtgan zamon: -ed', d: 'Koʻp feʼllarga -ed qoʻshiladi: work → worked. Ayrim feʼllar boshqacha oʻzgaradi, ularni yodlash kerak: go → went, see → saw.', ex: [['I went to the market yesterday.', 'Men kecha bozorga bordim.']] }
+];
+function renderRules(id) {
+  const d = $('#' + id); if (!d) return;
+  clear(d);
+  d.append(h('summary', null, h('span', null, 'Asosiy grammatika', h('span', { class: 'small muted', text: ' · 10 ta qoida, misollar bilan' }))));
+  d.append(h('ol', null, RULES.map((r, k) => h('li', null,
+    h('b', { text: (k + 1) + '. ' + r.t }),
+    h('span', { class: 'small', text: r.d }),
+    r.ex.map(([en, uz]) => h('div', { class: 'ex' }, spkBtn(en, 'Eshitish'), h('span', { class: 'en', lang: 'en', text: en }), h('span', { class: 'uz', text: '— ' + uz })))
+  ))));
+}
+
+/* ================= state ================= */
+const LSKEY = 'ingliz3000:v1';
+const DEF = () => ({ v: 1, updated: 0, cur: 0, words: {}, lessons: {}, days: {}, pron: {}, notes: [], gen: {}, settings: { voice: 'auto', pmode: 'translate', focus: -1, lvl: 'beginner' } });
+let state = DEF();
+function normalizeState(s) {
+  const d = DEF();
+  if (!s || typeof s !== 'object') return d;
+  for (const k of Object.keys(d)) if (s[k] !== undefined && typeof s[k] === typeof d[k]) d[k] = s[k];
+  d.settings = Object.assign(DEF().settings, s.settings || {});
+  if (!Array.isArray(d.notes)) d.notes = [];
+  d.cur = clamp(Number(d.cur) || 0, 0, 149);
+  return d;
+}
+function loadLocal() { try { const raw = localStorage.getItem(LSKEY); if (raw) state = normalizeState(JSON.parse(raw)); } catch (e) { /* storage unavailable */ } }
+function saveLocal() { try { localStorage.setItem(LSKEY, JSON.stringify(state)); } catch (e) { /* ignore */ } }
+let docRef = null, saving = false, saveAgain = false, saveT = null;
+function touch() { state.updated = Date.now(); saveLocal(); if (docRef) { clearTimeout(saveT); saveT = setTimeout(flush, 1800); } }
+async function flush() {
+  if (!docRef) return;
+  if (saving) { saveAgain = true; return; }
+  saving = true;
+  try { await docRef.set(JSON.parse(JSON.stringify(state))); setSync(true); }
+  catch (e) { setSync(false); if (e && ['invalid_argument', 'revoked', 'not_granted', 'capability_disabled'].includes(e.code)) docRef = null; }
+  finally { saving = false; if (saveAgain) { saveAgain = false; flush(); } }
+}
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden' && docRef) { clearTimeout(saveT); flush(); } });
+function setSync(ok) { const n = $('#syncNote'); if (n) n.textContent = ok ? 'Natijalar hisobingizda saqlanadi: boshqa qurilmada ochsangiz ham davom etadi.' : 'Bulutga saqlab boʻlmadi, natijalar shu brauzerda turibdi.'; }
+
+function dayRec() { const k = String(today()); if (!state.days[k]) state.days[k] = { a: 0, c: 0, s: 0, p: 0 }; const keys = Object.keys(state.days); if (keys.length > 70) keys.sort((a, b) => a - b).slice(0, keys.length - 70).forEach(x => delete state.days[x]); return state.days[k]; }
+function wget(i) { return state.words[i]; }
+function wset(i, box, due, seenAdd, wrongAdd) {
+  const w = state.words[i] || [0, 0, 0, 0];
+  w[0] = box; w[1] = due; w[2] = (w[2] || 0) + (seenAdd || 0); w[3] = (w[3] || 0) + (wrongAdd || 0);
+  state.words[i] = w;
+}
+const learnedCount = () => Object.values(state.words).filter(w => w[0] >= 1).length;
+const strongCount = () => Object.values(state.words).filter(w => w[0] >= 4).length;
+const dueList = () => Object.entries(state.words).filter(([, w]) => w[0] >= 1 && w[1] <= today()).sort((a, b) => a[1][1] - b[1][1]).map(([i]) => +i);
+function streak() {
+  const t = today(); let n = 0;
+  let d = (state.days[t] && (state.days[t].a || state.days[t].s || state.days[t].p)) ? t : t - 1;
+  while (state.days[d] && (state.days[d].a || state.days[d].s || state.days[d].p)) { n++; d--; }
+  return n;
+}
+
+/* ================= data ================= */
+let W = [], N = 0, BANK = [];
+const IDX = new Map();
+const IRR = { am: 'be', is: 'be', are: 'be', was: 'be', were: 'be', been: 'be', being: 'be', has: 'have', had: 'have', does: 'do', did: 'do', done: 'do', went: 'go', gone: 'go', came: 'come', saw: 'see', seen: 'see', bought: 'buy', made: 'make', said: 'say', found: 'find', lost: 'lose', forgot: 'forget', forgotten: 'forget', knew: 'know', known: 'know', built: 'build', sent: 'send', spoke: 'speak', spoken: 'speak', began: 'begin', begun: 'begin', took: 'take', taken: 'take', gave: 'give', given: 'give', got: 'get', told: 'tell', thought: 'think', felt: 'feel', left: 'leave', met: 'meet', ran: 'run', sat: 'sit', stood: 'stand', wrote: 'write', written: 'write', ate: 'eat', eaten: 'eat', drank: 'drink', slept: 'sleep', won: 'win', children: 'child', men: 'man', women: 'woman', teeth: 'tooth', feet: 'foot', better: 'good', best: 'good', kept: 'keep', held: 'hold', brought: 'bring', caught: 'catch', taught: 'teach', fell: 'fall', grew: 'grow', broke: 'break', paid: 'pay', heard: 'hear', understood: 'understand', spent: 'spend', woke: 'wake', wore: 'wear', mice: 'mouse', lives: 'life', wives: 'wife', bigger: 'big', taller: 'tall', faster: 'fast', coldest: 'cold' };
+function lemma(t) {
+  t = String(t).toLowerCase().replace(/[^a-z'-]/g, '').replace(/^'+|'+$/g, '');
+  if (!t) return -1;
+  if (IRR[t]) t = IRR[t];
+  if (IDX.has(t)) return IDX.get(t);
+  const c = [];
+  if (t.endsWith("'s")) c.push(t.slice(0, -2));
+  if (t.endsWith('ies')) c.push(t.slice(0, -3) + 'y');
+  if (t.endsWith('es')) c.push(t.slice(0, -2));
+  if (t.endsWith('s')) c.push(t.slice(0, -1));
+  if (t.endsWith('ied')) c.push(t.slice(0, -3) + 'y');
+  if (t.endsWith('ed')) { c.push(t.slice(0, -2), t.slice(0, -1)); if (/(.)\1ed$/.test(t)) c.push(t.slice(0, -3)); }
+  if (t.endsWith('ing')) { const b = t.slice(0, -3); c.push(b, b + 'e'); if (/(.)\1$/.test(b)) c.push(b.slice(0, -1)); }
+  if (t.endsWith('er')) c.push(t.slice(0, -2), t.slice(0, -1));
+  if (t.endsWith('est')) c.push(t.slice(0, -3), t.slice(0, -2));
+  if (t.endsWith('ly')) c.push(t.slice(0, -2));
+  for (const x of c) if (IDX.has(x)) return IDX.get(x);
+  return -1;
+}
+function analyze(en) {
+  const idxs = [];
+  for (const raw of en.split(/\s+/)) {
+    for (const part of raw.replace(/n't/gi, ' not').replace(/'(m|re|ve|ll|d)\b/gi, ' $1').split(/\s+/)) {
+      const i = lemma(part); if (i >= 0 && !idxs.includes(i)) idxs.push(i);
+    }
+  }
+  return { idxs, max: idxs.length ? Math.max(...idxs) : 0 };
+}
+
+/* ---------- text comparison ---------- */
+const CONTR = { "i'm": 'i am', "you're": 'you are', "we're": 'we are', "they're": 'they are', "he's": 'he is', "she's": 'she is', "it's": 'it is', "that's": 'that is', "what's": 'what is', "there's": 'there is', "where's": 'where is', "who's": 'who is', "let's": 'let us', "i've": 'i have', "you've": 'you have', "we've": 'we have', "they've": 'they have', "i'll": 'i will', "you'll": 'you will', "he'll": 'he will', "she'll": 'she will', "we'll": 'we will', "they'll": 'they will', "it'll": 'it will', "i'd": 'i would', "you'd": 'you would', "he'd": 'he would', "she'd": 'she would', "we'd": 'we would', "they'd": 'they would', "don't": 'do not', "doesn't": 'does not', "didn't": 'did not', "can't": 'can not', cannot: 'can not', "won't": 'will not', "isn't": 'is not', "aren't": 'are not', "wasn't": 'was not', "weren't": 'were not', "haven't": 'have not', "hasn't": 'has not', "hadn't": 'had not', "shouldn't": 'should not', "couldn't": 'could not', "wouldn't": 'would not', "mustn't": 'must not', "o'clock": 'oclock', ok: 'okay' };
+const ONES = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+const TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+const num2w = n => n < 20 ? ONES[n] : TENS[Math.floor(n / 10)] + (n % 10 ? ' ' + ONES[n % 10] : '');
+function toks(s) {
+  s = String(s).toLowerCase().replace(/[’‘`´ʼ]/g, "'").replace(/[^a-z0-9'\s-]/g, ' ').replace(/-/g, ' ');
+  const out = [];
+  for (let t of s.split(/\s+/)) {
+    t = t.replace(/^'+|'+$/g, '');
+    if (!t) continue;
+    if (CONTR[t]) { out.push(...CONTR[t].split(' ')); continue; }
+    if (/^\d+$/.test(t) && +t < 100) { out.push(...num2w(+t).split(' ')); continue; }
+    out.push(t);
+  }
+  return out;
+}
+function align(T, U) {
+  const n = T.length, m = U.length;
+  const dp = Array.from({ length: n + 1 }, () => new Int16Array(m + 1));
+  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--) dp[i][j] = T[i] === U[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+  const tm = new Array(n).fill(false), um = new Array(m).fill(false);
+  let i = 0, j = 0;
+  while (i < n && j < m) { if (T[i] === U[j]) { tm[i] = um[j] = true; i++; j++; } else if (dp[i + 1][j] >= dp[i][j + 1]) i++; else j++; }
+  const match = dp[0][0];
+  return { tm, um, match, score: n + m ? Math.round(200 * match / (n + m)) : 0 };
+}
+function subPairs(T, U, tm, um) {
+  const res = []; let i = 0, j = 0, guard = 0;
+  while ((i < T.length || j < U.length) && guard++ < 500) {
+    const a = [], b = [];
+    while (i < T.length && !tm[i]) a.push(T[i++]);
+    while (j < U.length && !um[j]) b.push(U[j++]);
+    for (let k = 0; k < Math.max(a.length, b.length); k++) res.push({ t: a[k] || '', u: b[k] || '' });
+    if (i < T.length || j < U.length) { i++; j++; }
+  }
+  return res;
+}
+// Render a sentence word-by-word, colouring each word by whether its tokens were matched.
+function diffView(text, matchedFlags, cls) {
+  const wrap = h('div', { class: 'diff' });
+  let p = 0;
+  for (const word of String(text).split(/\s+/).filter(Boolean)) {
+    const n = toks(word).length;
+    const flags = matchedFlags.slice(p, p + n); p += n;
+    const ok = n === 0 || flags.every(Boolean);
+    wrap.append(h('span', { class: ok ? 'ok' : cls, text: word }));
+  }
+  return wrap;
+}
+function legend(items) { return h('div', { class: 'legend' }, items.map(([c, t]) => h('span', null, h('i', { style: 'background:' + c }), t))); }
+function verdict(score) {
+  if (score >= 100) return ['good', 'Aʼlo! Hammasi toʻgʻri.'];
+  if (score >= 80) return ['good', 'Deyarli toʻgʻri.'];
+  if (score >= 50) return ['mid', 'Yaxshi urinish, lekin xatolar bor.'];
+  return ['low', 'Yana bir bor urinib koʻring.'];
+}
+const STOP = new Set(['a', 'an', 'the', 'to', 'of', 'in', 'on', 'at', 'is', 'am', 'are', 'and', 'it', 'i']);
+
+/* ================= capabilities ================= */
+let sampleCap = null, ttsCap = null, dictCap = null, permCap = null;
+let micMode = 'none'; // 'dictation' | 'webspeech' | 'none'
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+if (SR) micMode = 'webspeech';
+
+function initCaps() {
+  const C = window.claude;
+  if (!C || typeof C.use !== 'function') { renderCaps(); return; }
+  const use = n => C.use(n).catch(() => null);
+  use('sample').then(s => { sampleCap = s; renderCaps(); refreshView(); });
+  use('tts').then(t => { ttsCap = t; renderCaps(); });
+  use('permissions').then(p => { permCap = p; });
+  use('dictation').then(d => { if (d) { dictCap = d; micMode = 'dictation'; wireDictation(); } renderCaps(); refreshView(); });
+  Promise.all([use('db'), use('user')]).then(async ([db, user]) => {
+    if (!db || !user) return;
+    let uid = null;
+    try { uid = await user.id(); } catch (e) { uid = null; }
+    if (!uid) return;
+    let ref;
+    try { ref = db.doc('data/users/' + uid + '/progress'); } catch (e) { return; }
+    try {
+      const snap = await Promise.race([ref.get(), new Promise((_, rej) => setTimeout(() => rej({ code: 'timeout' }), 10000))]);
+      docRef = ref;
+      if (snap && snap.exists) {
+        const remote = normalizeState(snap.data());
+        if ((remote.updated || 0) > (state.updated || 0)) { state = remote; saveLocal(); if (sz.mode === 'intro') sz.lesson = state.cur; renderAll(); }
+        else if ((state.updated || 0) > (remote.updated || 0)) flush();
+      } else if (state.updated) flush();
+      setSync(true);
+    } catch (e) { setSync(false); }
+  });
+}
+async function sampleGranted() {
+  if (!permCap) return false;
+  try { return (await permCap.state('sample')) === 'granted'; } catch (e) { return false; }
+}
+function sampleErr(e) {
+  const c = e && e.code;
+  if (['not_granted', 'sampling_disabled', 'not_declared', 'capability_disabled', 'capability_removed'].includes(c)) { sampleCap = null; renderCaps(); return 'Claude tahlili oʻchirilgan. Uni artifact menyusidagi Permissions boʻlimidan yoqishingiz mumkin.'; }
+  if (c === 'rate_limited') return 'Hozir soʻrovlar juda koʻp. Bir ozdan keyin qayta urinib koʻring.';
+  if (c === 'invalid_json' || c === 'empty_completion') return 'Claude javobini oʻqib boʻlmadi. Qayta urinib koʻring.';
+  if (c === 'session_expired') return 'Claude.ai ga qayta kiring.';
+  if (c === 'cancelled') return '';
+  return 'Claude bilan aloqa uzildi. Qayta urinib koʻring.';
+}
+const LEARNER = () => isBeg()
+  ? 'The student is an absolute beginner (A0-A1): write the Uzbek explanations very simply, without grammar terms (or explain a term in plain words), and always show the correct English.'
+  : 'The student is an intermediate learner (A2-B1).';
+function askClaude(prompt) { return sampleCap.json(prompt, { modelTier: 'default', effort: 'low' }); }
+
+/* ---------- speech out ---------- */
+let enVoice = null;
+function pickVoice() {
+  if (!('speechSynthesis' in window)) return;
+  const vs = speechSynthesis.getVoices();
+  enVoice = vs.find(v => /^en[-_]US/i.test(v.lang) && /google|samantha|aria|jenny|natural/i.test(v.name)) || vs.find(v => /^en[-_]US/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang)) || null;
+}
+if ('speechSynthesis' in window) { pickVoice(); speechSynthesis.addEventListener && speechSynthesis.addEventListener('voiceschanged', pickVoice); }
+function browserSpeak(text, rate) {
+  if (!('speechSynthesis' in window)) { toast('Bu brauzerda ovoz chiqarish ishlamaydi.'); return; }
+  try {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US'; u.rate = 0.95 * (rate || 1);
+    if (enVoice) u.voice = enVoice;
+    speechSynthesis.speak(u);
+  } catch (e) { toast('Ovozni chiqarib boʻlmadi.'); }
+}
+const canSpeak = () => !!ttsCap || ('speechSynthesis' in window);
+function speak(text, rate) {
+  if (!text) return;
+  rate = Math.max(0.7, (rate || 1) * (isBeg() ? 0.88 : 1));
+  if (ttsCap && state.settings.voice !== 'browser') {
+    ttsCap.speak(text, { language: 'en', rate }).catch(e => {
+      const c = e && e.code;
+      if (c === 'stopped') return;
+      if (c === 'not_granted' || c === 'unavailable') { ttsCap = null; renderCaps(); }
+      browserSpeak(text, rate);
+    });
+  } else browserSpeak(text, rate);
+}
+function spkBtn(text, label, rate) {
+  return h('button', { class: 'spk', type: 'button', 'aria-label': label || 'Eshitish', title: label || 'Eshitish', svg: rate && rate < 1 ? ICON.slow : ICON.speak, onclick: e => { e.stopPropagation(); speak(text, rate); } });
+}
+
+/* ================= router ================= */
+const VIEWS = ['bosh', 'sozlar', 'gaplar', 'tarjima', 'talaffuz'];
+let view = 'bosh';
+function route() {
+  const v = (location.hash || '').replace('#', '');
+  view = VIEWS.includes(v) ? v : 'bosh';
+  for (const id of VIEWS) $('#v-' + id).hidden = id !== view;
+  $$('.tabs a').forEach(a => a.setAttribute('aria-current', a.dataset.v === view ? 'page' : 'false'));
+  if (view !== 'talaffuz') stopMic();
+  refreshView();
+  window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', route);
+function go(v) { if (location.hash === '#' + v) route(); else location.hash = v; }
+function refreshView() {
+  renderHeader();
+  if (!N) return;
+  if (view === 'bosh') renderHome();
+  else if (view === 'sozlar') renderSozlar();
+  else if (view === 'gaplar') renderGaplar();
+  else if (view === 'tarjima') renderTarjima();
+  else if (view === 'talaffuz') renderTalaffuz();
+}
+function renderAll() { refreshView(); }
+
+/* ================= header + home ================= */
+function renderHeader() {
+  const n = learnedCount();
+  $('#mCount').textContent = n;
+  $('#mBar').style.width = (n / 30) + '%';
+}
+function renderCaps() {
+  const box = $('#caps'); if (!box) return;
+  clear(box);
+  const item = (ok, on, off) => h('span', { class: 'chip ' + (ok ? 'teal' : '') , text: ok ? on : off });
+  box.append(
+    item(!!sampleCap, 'Claude tahlili: yoqilgan', 'Claude tahlili: mavjud emas'),
+    item(micMode !== 'none', 'Mikrofon: bor', 'Mikrofon: mavjud emas'),
+    item(canSpeak(), ttsCap ? 'Ovoz: Claude' : 'Ovoz: brauzer', 'Ovoz: yoʻq')
+  );
+  $$('[data-voice]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.voice === state.settings.voice)));
+  $$('[data-lvl]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lvl === (isBeg() ? 'beginner' : 'intermediate'))));
+}
+$$('[data-voice]').forEach(b => b.addEventListener('click', () => { state.settings.voice = b.dataset.voice; touch(); renderCaps(); speak('Hello! Let us learn English.'); }));
+$$('[data-lvl]').forEach(b => b.addEventListener('click', () => {
+  state.settings.lvl = b.dataset.lvl; deckVer++; touch(); renderCaps(); refreshView();
+  toast(isBeg() ? 'Boshlangʻich rejim: oddiyroq gaplar va sekinroq ovoz.' : 'Oʻrta daraja rejimi yoqildi.');
+}));
+function renderPlan(d) {
+  const box = clear($('#hPlan'));
+  const g = isBeg() ? { a: 40, s: 5, p: 3 } : { a: 60, s: 10, p: 5 };
+  const items = [['Soʻz testi', d.a || 0, g.a, 'sozlar'], ['Gap va tarjima', d.s || 0, g.s, 'gaplar'], ['Talaffuz', d.p || 0, g.p, 'talaffuz']];
+  box.append(h('div', { class: 'plan-h' }, h('b', { text: 'Bugungi reja' }), h('span', { class: 'small muted', text: 'Har kuni bitta dars qilsangiz, 3000 soʻzni taxminan 5 oyda oʻrganasiz.' })));
+  box.append(h('div', { class: 'plan-g' }, items.map(([t, v, goal, to]) => {
+    const done = v >= goal;
+    return h('a', { class: 'plan-i' + (done ? ' done' : ''), href: '#' + to },
+      h('span', { class: 'small', text: t }),
+      h('b', { text: Math.min(v, goal) + ' / ' + goal + (done ? ' ✓' : '') }),
+      h('span', { class: 'track' }, h('i', { style: 'width:' + Math.round(100 * Math.min(1, v / goal)) + '%' })));
+  })));
+}
+
+function renderHome() {
+  const n = learnedCount();
+  $('#hCount').textContent = n;
+  const lv = levelOfLesson(state.cur);
+  $('#hLevel').textContent = lv.code + ' · ' + lv.uz + ' daraja';
+  const fills = $$('#hLevels .track i');
+  LEVELS.forEach((L, k) => {
+    let c = 0; for (const [i, w] of Object.entries(state.words)) if (w[0] >= 1 && +i >= L.from && +i < L.to) c++;
+    fills[k].style.width = (c / 10) + '%';
+  });
+  const li = state.cur;
+  const b = $('#hLesson'); clear(b);
+  b.append((li + 1) + '-darsni boshlash', h('small', { text: 'Soʻzlar #' + (li * LESSON + 1) + '–#' + Math.min(N, li * LESSON + LESSON) + ' · 4 variantli test' }));
+  const due = dueList().length;
+  const r = $('#hReview'); clear(r);
+  r.append('Takrorlash', h('small', { text: due ? due + ' ta soʻz takrorlashni kutyapti' : 'Bugun takrorlanadigan soʻz yoʻq' }));
+  r.disabled = !due;
+  const d = state.days[today()] || { a: 0, c: 0 };
+  $('#sToday').textContent = d.a + (d.s || 0) + (d.p || 0);
+  $('#sAcc').textContent = d.a ? Math.round(100 * d.c / d.a) + '%' : '–';
+  $('#sStreak').textContent = streak();
+  $('#sStrong').textContent = strongCount();
+  renderPlan(d);
+  renderWeak();
+  renderCaps();
+}
+$('#hLesson').addEventListener('click', () => { sz.lesson = state.cur; sz.mode = 'intro'; go('sozlar'); });
+$('#hReview').addEventListener('click', () => { startReview(); go('sozlar'); });
+
+function renderWeak() {
+  const box = clear($('#hWeak'));
+  const weak = Object.entries(state.words).filter(([, w]) => w[3] > 0).map(([i, w]) => ({ i: +i, r: w[3] / Math.max(1, w[2]), w: w[3] })).sort((a, b) => b.r - a.r || b.w - a.w).slice(0, 14);
+  const pron = Object.entries(state.pron).sort((a, b) => b[1] - a[1]).slice(0, 14);
+  const notes = state.notes.slice(-6).reverse();
+  if (!weak.length && !pron.length && !notes.length) {
+    box.append(h('p', { class: 'muted', text: 'Hozircha kamchilik topilmadi. Mashq qilganingiz sari bu yerda xato qiladigan soʻzlaringiz, talaffuzda qiynalgan soʻzlaringiz va grammatik eslatmalar paydo boʻladi.' }));
+    return;
+  }
+  if (weak.length) box.append(h('div', null, h('h3', { text: 'Koʻp xato qilinadigan soʻzlar' }), h('div', { class: 'chips' }, weak.map(x => h('button', { class: 'chip saffron', type: 'button', title: 'Eshitish', text: W[x.i][0] + ' — ' + W[x.i][1], onclick: () => speak(W[x.i][0]) })))));
+  if (pron.length) box.append(h('div', null, h('h3', { text: 'Talaffuzda qiynalgan soʻzlar' }), h('div', { class: 'chips' }, pron.map(([w, c]) => h('button', { class: 'chip blue', type: 'button', title: 'Toʻgʻri talaffuzni eshitish', text: w + ' ×' + c, onclick: () => speak(w, 0.8) })))));
+  if (notes.length) box.append(h('div', null, h('h3', { text: 'Claude eslatmalari' }), h('ul', { class: 'notes' }, notes.map(nt => h('li', null,
+    nt.wrong || nt.right ? [h('s', { text: nt.wrong || '' }), nt.wrong && nt.right ? ' → ' : '', h('ins', { text: nt.right || '' }), nt.why ? h('div', { class: 'small muted', text: nt.why }) : null] : h('span', { text: nt.why || '' })
+  )))));
+}
+function addNotes(list) {
+  for (const n of list) if (n && (n.why || n.right)) state.notes.push({ wrong: str(n.wrong, 120), right: str(n.right, 120), why: str(n.why, 260) });
+  if (state.notes.length > 30) state.notes = state.notes.slice(-30);
+}
+
+/* ================= words (lesson + quiz) ================= */
+const sz = { mode: 'intro', lesson: 0, quiz: null };
+const lessonIds = li => { const a = []; for (let i = li * LESSON; i < Math.min(N, li * LESSON + LESSON); i++) a.push(i); return a; };
+const keyOf = s => String(s).toLowerCase().split(/[,;(]/)[0].trim();
+function distractors(w) {
+  const pos = W[w][2], used = new Set([keyOf(W[w][0]), keyOf(W[w][1])]), out = [];
+  const lo = Math.max(0, w - 220), hi = Math.min(N - 1, w + 220);
+  for (let t = 0; out.length < 3 && t < 600; t++) {
+    const c = t < 400 ? lo + Math.floor(Math.random() * (hi - lo + 1)) : Math.floor(Math.random() * N);
+    if (c === w || out.includes(c)) continue;
+    if (t < 300 && W[c][2] !== pos) continue;
+    const k0 = keyOf(W[c][0]), k1 = keyOf(W[c][1]);
+    if (used.has(k0) || used.has(k1)) continue;
+    used.add(k0); used.add(k1); out.push(c);
+  }
+  return out;
+}
+function makeQ(w, type) { return { w, type, opts: shuffle([w, ...distractors(w)]) }; }
+function startLesson(li) {
+  const ids = lessonIds(li);
+  // Beginners first recognise the English word (and hear it), then recall it from Uzbek.
+  const first = isBeg() ? 'en2uz' : 'uz2en', second = isBeg() ? 'uz2en' : 'en2uz';
+  const r1 = shuffle(ids).map(w => makeQ(w, first));
+  const r2 = shuffle(ids).map(w => makeQ(w, canSpeak() && Math.random() < (isBeg() ? 0.15 : 0.35) ? 'listen' : second));
+  sz.quiz = { kind: 'lesson', lesson: li, queue: [...r1, ...r2], pos: 0, miss: new Set(), right: 0, asked: 0, answered: false };
+  sz.mode = 'quiz';
+}
+function startReview() {
+  const due = dueList().slice(0, 25);
+  if (!due.length) { toast('Takrorlanadigan soʻz yoʻq.'); return; }
+  sz.quiz = { kind: 'review', queue: shuffle(due).map(w => makeQ(w, Math.random() < 0.5 ? 'uz2en' : 'en2uz')), pos: 0, miss: new Set(), first: new Set(), right: 0, asked: 0, answered: false };
+  sz.mode = 'quiz';
+}
+
+function renderLessonGrid() {
+  const g = clear($('#lessonGrid'));
+  const total = Math.ceil(N / LESSON);
+  for (let li = 0; li < total; li++) {
+    if (li % 50 === 0) { const L = levelOfLesson(li); g.append(h('div', { class: 'lvl', text: L.code + ' · ' + L.uz + ' · ' + (li + 1) + '–' + Math.min(total, li + 50) + '-darslar' })); }
+    const sc = state.lessons[li];
+    const cls = li === state.cur ? 'cur' : sc >= 80 ? 'done' : sc != null ? 'part' : '';
+    g.append(h('button', { type: 'button', class: cls, title: (li + 1) + '-dars' + (sc != null ? ' · ' + sc + '%' : ''), text: li + 1, onclick: () => { sz.lesson = li; sz.mode = 'intro'; $('#lessonGrid').hidden = true; $('#lhPick').setAttribute('aria-expanded', 'false'); renderSozlar(); window.scrollTo(0, 0); } }));
+  }
+}
+$('#lhPick').addEventListener('click', () => {
+  const g = $('#lessonGrid'); g.hidden = !g.hidden;
+  $('#lhPick').setAttribute('aria-expanded', String(!g.hidden));
+  if (!g.hidden) renderLessonGrid();
+});
+
+function renderSozlar() {
+  const isReview = sz.mode !== 'intro' && sz.quiz && sz.quiz.kind === 'review';
+  const li = isReview ? null : (sz.mode === 'intro' ? sz.lesson : sz.quiz ? sz.quiz.lesson : sz.lesson);
+  if (isReview) {
+    $('#lhEyebrow').textContent = 'Takrorlash';
+    $('#lhTitle').textContent = 'Eski soʻzlarni takrorlash';
+    $('#lhSub').textContent = 'Unutilayotgan soʻzlar oraliqli takrorlash usulida qaytariladi';
+  } else {
+    const L = levelOfLesson(li);
+    $('#lhEyebrow').textContent = L.code + ' · ' + L.uz;
+    $('#lhTitle').textContent = (li + 1) + '-dars';
+    $('#lhSub').textContent = 'Soʻzlar #' + (li * LESSON + 1) + '–#' + Math.min(N, li * LESSON + LESSON) + (state.lessons[li] != null ? ' · eng yaxshi natija ' + state.lessons[li] + '%' : '');
+  }
+  if (!$('#lessonGrid').hidden) renderLessonGrid();
+  const body = clear($('#szBody'));
+  if (sz.mode === 'quiz' && sz.quiz) return renderQuiz(body);
+  if (sz.mode === 'result' && sz.quiz) return renderResult(body);
+  renderIntro(body, sz.lesson);
+}
+
+function renderIntro(body, li) {
+  const ids = lessonIds(li);
+  const card = h('div', { class: 'card' },
+    h('div', { class: 'row between' }, h('div', null, h('div', { class: 'prompt-lbl', text: 'Avval tanishib chiqing' }), h('p', { class: 'small muted', text: 'Har bir soʻzni eshiting va tarjimasini oʻqing. Keyin test boshlanadi.' })),
+      canSpeak() ? h('button', { class: 'btn sm', type: 'button', text: 'Hammasini eshitish', onclick: () => playList(ids.map(i => W[i][0])) }) : null),
+    h('ol', { class: 'wlist' }, ids.map(i => h('li', null,
+      h('span', { class: 'no', text: '#' + (i + 1) }),
+      h('div', { style: 'min-width:0' }, h('div', null, h('span', { class: 'en', text: W[i][0] }), h('span', { class: 'pos', text: POS[W[i][2]] || '' })), h('div', { class: 'uz', text: W[i][1] })),
+      canSpeak() ? spkBtn(W[i][0], W[i][0] + ' soʻzini eshitish') : h('span')
+    ))),
+    h('div', { class: 'row' },
+      h('button', { class: 'btn primary lg', type: 'button', text: 'Testni boshlash', onclick: () => { startLesson(li); renderSozlar(); window.scrollTo(0, 0); } }),
+      dueList().length ? h('button', { class: 'btn lg', type: 'button', text: 'Takrorlash (' + dueList().length + ')', onclick: () => { startReview(); renderSozlar(); } }) : null
+    )
+  );
+  body.append(card);
+}
+let playTimer = null;
+function playList(words) {
+  clearTimeout(playTimer);
+  let k = 0;
+  const step = () => { if (k >= words.length || view !== 'sozlar') return; browserOrClaudeSeq(words[k++]); playTimer = setTimeout(step, 1700); };
+  step();
+}
+function browserOrClaudeSeq(w) { speak(w); }
+
+let advanceT = null;
+function renderQuiz(body) {
+  const q = sz.quiz;
+  if (q.pos >= q.queue.length) return finishQuiz();
+  const it = q.queue[q.pos];
+  const w = W[it.w];
+  q.answered = false;
+  const pct = Math.round(100 * q.pos / q.queue.length);
+  let promptEl, label;
+  if (it.type === 'uz2en') {
+    label = 'Inglizchasini toping';
+    promptEl = h('div', { class: 'qword' }, h('span', { class: 'w uz', text: w[1] }), h('span', { class: 'posl', text: POS[w[2]] || '' }));
+  } else if (it.type === 'en2uz') {
+    label = 'Tarjimasini toping';
+    promptEl = h('div', { class: 'qword' }, h('span', { class: 'w', lang: 'en', text: w[0] }), canSpeak() ? spkBtn(w[0]) : null);
+  } else {
+    label = 'Eshiting va tarjimasini toping';
+    promptEl = h('div', { class: 'qword' }, h('button', { class: 'listen-big', type: 'button', 'aria-label': 'Soʻzni eshitish', svg: ICON.speak, onclick: () => speak(w[0]) }), h('span', { class: 'small muted', text: 'Tugmani bosib soʻzni eshiting' }));
+  }
+  const showEn = it.type === 'uz2en';
+  const fb = h('div', { class: 'feedback', 'aria-live': 'polite' });
+  const advance = () => { clearTimeout(advanceT); if (sz.quiz !== q || q.queue[q.pos] !== it || view !== 'sozlar') return; q.pos++; renderSozlar(); };
+  const next = h('button', { class: 'btn primary', type: 'button', text: 'Davom etish', hidden: true, onclick: advance });
+  const opts = h('div', { class: 'opts' }, it.opts.map((o, k) => h('button', { class: 'opt', type: 'button', 'data-o': o, lang: showEn ? 'en' : null, onclick: () => answer(o) }, h('span', { class: 'k', text: k + 1 }), h('span', { text: showEn ? W[o][0] : W[o][1] }))));
+  function answer(o) {
+    if (q.answered) return;
+    q.answered = true;
+    const ok = o === it.w;
+    const rec = dayRec(); rec.a++; if (ok) rec.c++;
+    $$('.opt', opts).forEach(b => {
+      b.disabled = true;
+      const v = +b.dataset.o;
+      if (v === it.w) b.classList.add('ok'); else if (v === o) b.classList.add('no'); else b.classList.add('dim');
+    });
+    if (q.kind === 'review' && !q.first.has(it.w)) {
+      q.first.add(it.w);
+      const cur = wget(it.w) || [1, 0, 0, 0];
+      if (ok) { const box = Math.min(5, cur[0] + 1); wset(it.w, box, today() + INTERVAL[box], 1, 0); }
+      else wset(it.w, 1, today() + 1, 1, 1);
+    } else if (q.kind === 'lesson') {
+      const cur = wget(it.w) || [0, 0, 0, 0];
+      wset(it.w, cur[0], cur[1], 1, ok ? 0 : 1);
+    }
+    if (ok) {
+      q.right++;
+      fb.className = 'feedback ok'; fb.textContent = 'Toʻgʻri! ' + w[0] + ' — ' + w[1];
+      if (it.type !== 'en2uz' && canSpeak()) speak(w[0]);
+      clearTimeout(advanceT);
+      advanceT = setTimeout(advance, it.type === 'uz2en' ? 1100 : 800);
+    } else {
+      q.miss.add(it.w);
+      q.queue.splice(Math.min(q.queue.length, q.pos + 4), 0, makeQ(it.w, it.type === 'listen' ? 'en2uz' : it.type));
+      fb.className = 'feedback no'; fb.textContent = 'Toʻgʻri javob: ' + w[0] + ' — ' + w[1];
+      if (canSpeak()) speak(w[0]);
+      next.hidden = false; next.focus();
+    }
+    touch();
+    $('#szBody .qbar i').style.width = Math.round(100 * (q.pos + 1) / q.queue.length) + '%';
+  }
+  const card = h('div', { class: 'card' },
+    h('div', { class: 'qtop' }, h('div', { class: 'qbar' }, h('i', { style: 'width:' + pct + '%' })), h('span', { class: 'qcount', text: (q.pos + 1) + ' / ' + q.queue.length })),
+    h('div', { class: 'prompt-lbl', text: label }),
+    promptEl, opts, fb,
+    h('div', { class: 'row between' }, next, h('button', { class: 'btn ghost sm', type: 'button', text: 'Testni toʻxtatish', onclick: () => { clearTimeout(advanceT); sz.mode = 'intro'; sz.quiz = null; renderSozlar(); } }))
+  );
+  body.append(card);
+  if (it.type === 'listen' || (it.type === 'en2uz' && isBeg())) setTimeout(() => { if (sz.quiz === q && q.queue[q.pos] === it && !q.answered) speak(w[0]); }, 250);
+  quizKeys = k => { if (!q.answered && k >= 1 && k <= it.opts.length) answer(it.opts[k - 1]); else if (q.answered && !next.hidden && k === 0) next.click(); };
+}
+let quizKeys = null;
+document.addEventListener('keydown', e => {
+  if (view !== 'sozlar' || sz.mode !== 'quiz' || !quizKeys) return;
+  if (e.target && /^(TEXTAREA|INPUT|SELECT)$/.test(e.target.tagName)) return;
+  if (/^[1-4]$/.test(e.key)) { quizKeys(+e.key); e.preventDefault(); }
+  else if (e.key === 'Enter' && !(e.target && e.target.tagName === 'BUTTON')) { e.preventDefault(); quizKeys(0); }
+});
+
+function finishQuiz() {
+  const q = sz.quiz;
+  if (q.kind === 'lesson' && !q.finished) {
+    q.finished = true;
+    const ids = lessonIds(q.lesson);
+    for (const i of ids) {
+      const cur = wget(i) || [0, 0, 0, 0];
+      const missed = q.miss.has(i);
+      const box = Math.max(cur[0], 1);
+      wset(i, box, missed ? today() : today() + 1, 0, 0);
+    }
+    const score = Math.round(100 * (ids.length - ids.filter(i => q.miss.has(i)).length) / ids.length);
+    q.score = score;
+    state.lessons[q.lesson] = Math.max(state.lessons[q.lesson] || 0, score);
+    if (q.lesson === state.cur && state.cur < Math.ceil(N / LESSON) - 1) state.cur++;
+    state.settings.focus = q.lesson;
+    touch();
+  } else if (q.kind === 'review' && !q.finished) {
+    q.finished = true;
+    q.score = Math.round(100 * (q.first.size - [...q.first].filter(i => q.miss.has(i)).length) / Math.max(1, q.first.size));
+    touch();
+  }
+  sz.mode = 'result';
+  renderSozlar();
+}
+function renderResult(body) {
+  const q = sz.quiz;
+  const missed = [...q.miss];
+  const card = h('div', { class: 'card' },
+    h('div', { class: 'prompt-lbl', text: q.kind === 'lesson' ? (q.lesson + 1) + '-dars yakunlandi' : 'Takrorlash yakunlandi' }),
+    h('div', { class: 'score ' + (q.score >= 80 ? 'good' : q.score >= 50 ? 'mid' : 'low') }, h('b', { text: q.score + '%' }), h('span', { class: 'muted', text: 'soʻz birinchi urinishda toʻgʻri topildi' })),
+    missed.length ? h('div', null, h('p', { class: 'small muted', text: 'Xato qilingan soʻzlar (ular tezroq takrorlanadi):' }), h('div', { class: 'chips' }, missed.map(i => h('button', { class: 'chip saffron', type: 'button', text: W[i][0] + ' — ' + W[i][1], onclick: () => speak(W[i][0]) })))) : h('p', { class: 'feedback ok', text: 'Birorta ham xato yoʻq. Zoʻr!' }),
+    h('div', { class: 'row' },
+      q.kind === 'lesson' ? h('button', { class: 'btn primary', type: 'button', text: 'Shu soʻzlar bilan gap tuzish', onclick: () => { state.settings.focus = q.lesson; touch(); mods.gaplar.li = -2; go('gaplar'); if (sampleCap && !(state.gen[q.lesson] || []).length) generate(q.lesson, 'gaplar'); } }) : null,
+      q.kind === 'lesson' ? h('button', { class: 'btn', type: 'button', text: (state.cur + 1) + '-darsga oʻtish', onclick: () => { sz.lesson = state.cur; sz.mode = 'intro'; sz.quiz = null; renderSozlar(); window.scrollTo(0, 0); } }) : null,
+      h('button', { class: 'btn', type: 'button', text: 'Qayta ishlash', onclick: () => { if (q.kind === 'lesson') startLesson(q.lesson); else startReview(); renderSozlar(); } })
+    )
+  );
+  body.append(card);
+}
+
+/* ================= sentence decks ================= */
+const mods = { gaplar: { li: -1, ver: -1, deck: [], i: 0 }, tarjima: { li: -1, ver: -1, deck: [], i: 0 }, talaffuz: { li: -1, ver: -1, deck: [], i: 0 } };
+let deckVer = 0;
+const MOD_OFFSET = { gaplar: 0, tarjima: 1, talaffuz: 2 };
+function focusLesson() {
+  const f = state.settings.focus;
+  if (typeof f === 'number' && f >= 0 && f < Math.ceil(N / LESSON)) return f;
+  return Math.max(0, state.cur - 1);
+}
+function buildDeck(li) {
+  const focus = new Set(lessonIds(li));
+  const gen = (state.gen[li] || []).map((s, k) => ({ en: s.en, uz: s.uz, src: 'claude', id: 'g' + li + '_' + k, ...analyze(s.en) }));
+  if (isBeg()) {
+    // The bank is ordered from easiest to hardest; beginners only see the easy end, which grows with each lesson.
+    const cap = clamp(45 + state.cur * 5, 25, BANK.length);
+    const pool = BANK.filter(s => s.n < cap).map(s => ({ s, f: s.idxs.filter(i => focus.has(i)).length }));
+    return [...gen, ...pool.filter(x => x.f > 0).map(x => x.s), ...pool.filter(x => x.f === 0).map(x => x.s)];
+  }
+  const limit = Math.max(state.cur * LESSON + 250, 400);
+  let bank =BANK.map(s => ({ s, f: s.idxs.filter(i => focus.has(i)).length })).filter(x => x.f > 0 || x.s.max <= limit);
+  if (bank.length < 15) bank = BANK.map(s => ({ s, f: s.idxs.filter(i => focus.has(i)).length }));
+  bank.sort((a, b) => (b.f > 0) - (a.f > 0) || a.s.max - b.s.max);
+  const withFocus = bank.filter(x => x.f > 0).map(x => x.s);
+  const rest = shuffle(bank.filter(x => x.f === 0).map(x => x.s).slice(0, 60)).concat(bank.filter(x => x.f === 0).map(x => x.s).slice(60));
+  return [...gen, ...withFocus, ...rest];
+}
+function mod(name) {
+  const m = mods[name], li = focusLesson();
+  if (m.li !== li || m.ver !== deckVer) { m.deck = buildDeck(li); m.i = m.deck.length > 3 ? MOD_OFFSET[name] : 0; m.li = li; m.ver = deckVer; m.st = null; }
+  return m;
+}
+const curSentence = m => m.deck[m.i % m.deck.length];
+function nextSentence(name) { const m = mods[name]; m.i = (m.i + 1) % m.deck.length; m.st = null; refreshView(); window.scrollTo(0, 0); }
+
+function focusChips(s, li) {
+  const focus = new Set(lessonIds(li));
+  const ids = (s.idxs || []).filter(i => focus.has(i));
+  const learned = (s.idxs || []).filter(i => !focus.has(i) && wget(i) && wget(i)[0] >= 1).slice(0, 3);
+  const all = [...ids, ...learned];
+  if (!all.length) return null;
+  return h('div', { class: 'chips' }, all.map(i => h('span', { class: 'chip ' + (focus.has(i) ? 'teal' : ''), text: W[i][0] + ' — ' + W[i][1] })));
+}
+function srcChip(s) { return h('span', { class: 'chip ' + (s.src === 'claude' ? 'blue' : ''), text: s.src === 'claude' ? 'Claude tuzgan gap' : 'Tayyor gap' }); }
+
+let genBusy = false;
+function renderFocusBar(boxId, name) {
+  const box = clear($('#' + boxId));
+  const li = focusLesson();
+  const sel = h('select', { id: boxId + '-sel', 'aria-label': 'Qaysi dars soʻzlari' });
+  const maxLi = Math.max(state.cur, 1);
+  for (let k = 0; k < maxLi; k++) sel.append(h('option', { value: k, text: (k + 1) + '-dars soʻzlari' + (state.gen[k] && state.gen[k].length ? ' · ' + state.gen[k].length + ' ta Claude gapi' : '') }));
+  if (li >= maxLi) sel.append(h('option', { value: li, text: (li + 1) + '-dars soʻzlari' }));
+  sel.value = String(li);
+  sel.addEventListener('change', () => { state.settings.focus = +sel.value; touch(); refreshView(); });
+  box.append(h('label', { for: boxId + '-sel', text: 'Manba' }), sel);
+  if (sampleCap) {
+    const b = h('button', { class: 'btn sm', type: 'button', disabled: genBusy, svg: ICON.spark }, genBusy ? 'Claude gap tuzmoqda…' : 'Claude yangi gaplar tuzsin');
+    b.addEventListener('click', () => generate(li, name));
+    box.append(b);
+  }
+}
+async function generate(li, name) {
+  if (!sampleCap || genBusy) return;
+  genBusy = true; refreshView();
+  const ids = lessonIds(li);
+  const words = ids.map(i => W[i][0] + ' (' + W[i][1] + ')').join(', ');
+  const L = levelOfLesson(li);
+  const prompt = 'You write practice sentences for an Uzbek speaker learning English. ' +
+    (isBeg()
+      ? 'The learner is an ABSOLUTE BEGINNER (A0-A1). Create 8 very short English sentences (3 to 7 words). Use only present simple, am/is/are, can, have, imperatives and simple yes/no questions. Apart from the target words use only the most basic words (I, you, he, she, we, they, my, your, a, the, is, am, are, have, like, want, go, this, that, very, and, in, on, at, to). No idioms, no phrasal verbs. '
+      : 'The learner is at CEFR level ' + L.code + '. Create 8 short, natural English sentences (4 to 11 words). Apart from the target words use only common, simple English words. Mix grammar: present simple, present continuous, past simple, future, questions and negatives. ') +
+    'Each sentence must use at least one of these target words: ' + words + '. Everyday topics (family, food, study, work, Uzbekistan, travel). ' +
+    'For each sentence give an accurate, natural Uzbek translation in Latin script (use oʻ, gʻ and ʼ correctly). ' +
+    'Reply with ONLY a JSON array, no other text, like: [{"en":"I drive fast.","uz":"Men tez haydayman.","words":["fast"]}]';
+  try {
+    const res = await askClaude(prompt);
+    const arr = Array.isArray(res) ? res : (res && Array.isArray(res.sentences) ? res.sentences : []);
+    const clean = arr.map(x => ({ en: str(x && x.en, 160).trim(), uz: str(x && x.uz, 200).trim() })).filter(x => x.en && x.uz && x.en.split(/\s+/).length <= 16);
+    if (!clean.length) throw { code: 'invalid_json' };
+    const prev = state.gen[li] || [];
+    const seen = new Set(prev.map(x => x.en.toLowerCase()));
+    const added = clean.filter(x => !seen.has(x.en.toLowerCase()));
+    state.gen[li] = added.concat(prev).slice(0, 40);
+    const keys = Object.keys(state.gen);
+    if (keys.length > 12) keys.sort((a, b) => a - b).slice(0, keys.length - 12).forEach(k => { if (+k !== li) delete state.gen[k]; });
+    deckVer++;
+    touch();
+    toast(added.length + ' ta yangi gap tayyor.');
+  } catch (e) {
+    const m = sampleErr(e); if (m) toast(m);
+  } finally { genBusy = false; refreshView(); }
+}
+
+/* ================= stage 2: sentence building ================= */
+function tileWords(en) {
+  const ws = en.split(/\s+/).map(w => w.replace(/^[^A-Za-z0-9']+|[^A-Za-z0-9']+$/g, '')).filter(Boolean);
+  if (ws.length && ws[0] !== 'I' && lemma(ws[0]) >= 0) ws[0] = ws[0].toLowerCase();
+  else if (ws.length && ws[0] !== 'I' && /^(Can|Could|Do|Does|Did|Have|Has|Is|Are|Was|Were|Will|Would|What|Where|When|Why|How|Who|Which|There|This|That|These|Those|My|Your|His|Her|Our|Their|The|A|An|Let's|Don't|Please|If|Although|Because|Unless|While|By|In|On|At|It's|I'm|I'd|I've)$/.test(ws[0])) ws[0] = ws[0].toLowerCase();
+  return ws;
+}
+const sameWord = (a, b) => a.toLowerCase().replace(/[’']/g, "'") === b.toLowerCase().replace(/[’']/g, "'");
+function renderGaplar() {
+  renderFocusBar('gFocusBar', 'gaplar');
+  const body = clear($('#gBody'));
+  const m = mod('gaplar');
+  if (!m.deck.length) { body.append(h('p', { class: 'muted', text: 'Gaplar topilmadi.' })); return; }
+  const s = curSentence(m);
+  if (!m.st) {
+    const words = tileWords(s.en);
+    const pool = lessonIds(focusLesson()).map(i => W[i][0]).filter(x => !/\s/.test(x) && !words.some(w => sameWord(w, x)));
+    const extra = shuffle(pool).slice(0, words.length > 7 ? 3 : 2).map(x => x === 'I' ? x : x.toLowerCase());
+    m.st = { words, tiles: shuffle([...words, ...extra]).map((t, k) => ({ t, k, used: false })), placed: [], done: false, ok: false };
+  }
+  const st = m.st;
+  const slots = h('div', { class: 'slots' + (st.done ? (st.ok ? ' ok' : ' no') : ''), 'aria-label': 'Sizning gapingiz' });
+  if (!st.placed.length) slots.append(h('span', { class: 'ph', text: 'Pastdagi soʻzlarni tartib bilan bosing' }));
+  st.placed.forEach((k, pos) => slots.append(h('button', { class: 'tile', type: 'button', lang: 'en', disabled: st.done, text: st.tiles[k].t, onclick: () => { st.placed.splice(pos, 1); st.tiles[k].used = false; renderGaplar(); } })));
+  const tiles = h('div', { class: 'tiles' }, st.tiles.map(tl => h('button', { class: 'tile' + (tl.used ? ' used' : ''), type: 'button', lang: 'en', disabled: st.done || tl.used, text: tl.t, onclick: () => { tl.used = true; st.placed.push(tl.k); renderGaplar(); } })));
+  const result = h('div', { 'aria-live': 'polite' });
+  if (st.done) {
+    const said = st.placed.map(k => st.tiles[k].t).join(' ');
+    if (st.ok) result.append(h('p', { class: 'feedback ok', text: 'Toʻgʻri! Barakalla.' }));
+    else {
+      const al = align(toks(s.en), toks(said));
+      result.append(h('p', { class: 'feedback no', text: 'Tartibda xato bor. Toʻgʻri javob:' }), diffView(s.en, al.tm, 'miss'));
+    }
+    result.append(h('div', { class: 'row' }, h('span', { class: 'ens', lang: 'en', text: s.en }), spkBtn(s.en, 'Gapni eshitish'), spkBtn(s.en, 'Sekin eshitish', 0.75)));
+  }
+  const check = h('button', { class: 'btn primary', type: 'button', text: 'Tekshirish', disabled: !st.placed.length || st.done, onclick: () => {
+    const said = st.placed.map(k => st.tiles[k].t);
+    st.ok = said.length === st.words.length && said.every((w, i) => sameWord(w, st.words[i]));
+    st.done = true;
+    const rec = dayRec(); rec.s++;
+    touch();
+    renderGaplar();
+    speak(s.en);
+  } });
+  const card = h('div', { class: 'card' },
+    h('div', { class: 'row between' }, srcChip(s), h('span', { class: 'qcount', text: (m.i + 1) + ' / ' + m.deck.length })),
+    h('div', { class: 'prompt-lbl', text: 'Inglizcha tuzing' }),
+    h('div', { class: 'uzs', text: s.uz }),
+    focusChips(s, focusLesson()),
+    slots, st.done ? null : tiles, result,
+    h('div', { class: 'row' },
+      st.done ? h('button', { class: 'btn primary', type: 'button', text: 'Keyingi gap', onclick: () => nextSentence('gaplar') }) : check,
+      st.done && !st.ok ? h('button', { class: 'btn', type: 'button', text: 'Qayta urinish', onclick: () => { m.st = null; renderGaplar(); } }) : null,
+      !st.done ? h('button', { class: 'btn ghost', type: 'button', text: 'Tozalash', disabled: !st.placed.length, onclick: () => { st.placed = []; st.tiles.forEach(t => { t.used = false; }); renderGaplar(); } }) : null,
+      !st.done ? h('button', { class: 'btn ghost', type: 'button', text: 'Oʻtkazib yuborish', onclick: () => nextSentence('gaplar') }) : null
+    )
+  );
+  body.append(card);
+  if (!sampleCap) body.append(h('p', { class: 'note', text: 'Hozir tayyor gaplar bazasi ishlatilmoqda. Claude ochiq boʻlsa, u siz oʻrgangan soʻzlardan yangi gaplar tuzib beradi.' }));
+}
+
+/* ================= stage 3: translation ================= */
+function aiBlock(title) {
+  const box = h('div', { class: 'ai', 'aria-live': 'polite' }, h('h3', null, h('span', { class: 'icon', svg: ICON.spark }), title), h('div', { class: 'row small muted' }, h('span', { class: 'dots' }, h('i'), h('i'), h('i')), 'Claude tekshirmoqda…'));
+  return box;
+}
+function fillAi(box, title, parts) { clear(box); box.append(h('h3', null, h('span', { class: 'icon', svg: ICON.spark }), title), ...parts.filter(Boolean)); }
+function mistakeList(list) {
+  if (!list.length) return null;
+  return h('ul', null, list.map(x => h('li', null,
+    (x.wrong || x.right) ? h('div', { class: 'pair' }, x.wrong ? h('s', { text: x.wrong }) : null, x.wrong && x.right ? ' → ' : '', x.right ? h('ins', { text: x.right }) : null) : null,
+    x.why ? h('div', { text: x.why }) : null
+  )));
+}
+function renderTarjima() {
+  renderFocusBar('tFocusBar', 'tarjima');
+  const body = clear($('#tBody'));
+  const m = mod('tarjima');
+  if (!m.deck.length) return;
+  const s = curSentence(m);
+  if (!m.st) m.st = { text: '', done: false, ai: null, aiErr: '', reveal: false, hint: false };
+  const st = m.st;
+  const ta = h('textarea', { id: 'trInput', lang: 'en', spellcheck: 'false', autocapitalize: 'sentences', placeholder: 'Inglizcha tarjimani shu yerga yozing…', 'aria-label': 'Inglizcha tarjima' });
+  ta.value = st.text;
+  ta.addEventListener('input', () => { st.text = ta.value; checkBtn.disabled = !ta.value.trim(); });
+  ta.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); if (ta.value.trim() && !st.done) checkBtn.click(); } });
+  const checkBtn = h('button', { class: 'btn primary', type: 'button', text: 'Tekshirish', disabled: !st.text.trim(), onclick: () => doCheck() });
+  const res = h('div', { class: 'row', style: 'flex-direction:column;align-items:stretch;gap:14px' });
+  const hintBox = !st.done && st.hint ? h('div', null,
+    h('div', { class: 'small muted', text: 'Gapdagi soʻzlar aralash tartibda. Bosgan soʻzingiz javobga qoʻshiladi:' }),
+    h('div', { class: 'chips', style: 'margin-top:6px' }, (st.hw || (st.hw = shuffle(tileWords(s.en)))).map(w => h('button', { class: 'chip blue', type: 'button', lang: 'en', text: w, onclick: () => {
+      ta.value = (ta.value.replace(/\s+$/, '') + ' ' + w).trim(); st.text = ta.value; checkBtn.disabled = false; ta.focus();
+    } })))) : null;
+  function doCheck() {
+    st.text = ta.value.trim(); if (!st.text) return;
+    st.done = true; st.ai = null; st.aiErr = '';
+    const rec = dayRec(); rec.s++; touch();
+    renderTarjima();
+    const al = align(toks(s.en), toks(st.text));
+    if (al.score < 100 && sampleCap) runAi();
+  }
+  async function runAi() {
+    st.ai = 'loading'; renderTarjima();
+    const prompt = 'You are a friendly English teacher for an Uzbek speaker. ' + LEARNER() + ' The student translated an Uzbek sentence into English.\n' +
+      'Uzbek sentence: "' + s.uz + '"\nReference translation: "' + s.en + '"\nStudent answer: "' + st.text.slice(0, 300) + '"\n' +
+      'Decide if the student answer is a correct and natural English translation (other correct wordings are fine; ignore capital letters and final punctuation). ' +
+      'Reply with ONLY this JSON: {"correct": true or false, "score": 0-100, "corrected": "the student sentence corrected with minimal changes", "mistakes": [{"wrong": "wrong part", "right": "correct part", "why": "short explanation in Uzbek Latin script"}], "tip": "one short grammar tip in Uzbek Latin script"}. ' +
+      'Explanations must be in simple Uzbek (Latin script), at most 2 sentences each. If the answer is correct, "mistakes" must be [].';
+    try {
+      const r = await askClaude(prompt);
+      st.ai = {
+        correct: !!(r && r.correct), score: clamp(Number(r && r.score) || 0, 0, 100), corrected: str(r && r.corrected, 300),
+        mistakes: (Array.isArray(r && r.mistakes) ? r.mistakes : []).slice(0, 6).map(x => ({ wrong: str(x && x.wrong, 120), right: str(x && x.right, 120), why: str(x && x.why, 300) })),
+        tip: str(r && r.tip, 300)
+      };
+      if (st.ai.mistakes.length) { addNotes(st.ai.mistakes.slice(0, 3)); touch(); }
+    } catch (e) { st.ai = null; st.aiErr = sampleErr(e); }
+    if (mods.tarjima.st === st && view === 'tarjima') renderTarjima();
+  }
+  if (st.done) {
+    const al = align(toks(s.en), toks(st.text));
+    const ok = al.score >= 100 || (st.ai && st.ai !== 'loading' && st.ai.correct);
+    const [cls, msg] = ok ? ['good', al.score >= 100 ? 'Aʼlo! Hammasi toʻgʻri.' : 'Toʻgʻri, boshqacha variantda yozdingiz.'] : verdict(Math.min(al.score, 99));
+    res.append(h('div', { class: 'score ' + cls }, h('b', { text: (ok ? 100 : al.score) + '%' }), h('span', { text: msg })));
+    res.append(h('div', null, h('div', { class: 'prompt-lbl', text: 'Sizning javobingiz' }), diffView(st.text, al.um, 'extra')));
+    res.append(h('div', null, h('div', { class: 'prompt-lbl', text: 'Namuna tarjima' }), diffView(s.en, al.tm, 'miss')));
+    res.append(legend([['var(--good)', 'mos keldi'], ['var(--bad)', 'tushib qolgan yoki boshqacha'], ['var(--saffron)', 'ortiqcha yoki xato']]));
+    res.append(h('div', { class: 'row' }, spkBtn(s.en, 'Namunani eshitish'), spkBtn(s.en, 'Sekin eshitish', 0.75)));
+    if (st.ai === 'loading') res.append(aiBlock('Claude tahlili'));
+    else if (st.ai) {
+      const box = h('div', { class: 'ai' });
+      fillAi(box, 'Claude tahlili', [
+        st.ai.correct ? h('p', { class: 'feedback ok', text: 'Claude: javobingiz toʻgʻri.' }) : null,
+        !st.ai.correct && st.ai.corrected ? h('div', null, h('div', { class: 'small muted', text: 'Toʻgʻrilangan variant:' }), h('div', { class: 'ens', lang: 'en', text: st.ai.corrected })) : null,
+        mistakeList(st.ai.mistakes),
+        st.ai.tip ? h('p', { class: 'note', text: 'Maslahat: ' + st.ai.tip }) : null
+      ]);
+      res.append(box);
+    } else if (st.aiErr) res.append(h('p', { class: 'note warn', text: st.aiErr }));
+    else if (al.score < 100 && !sampleCap) res.append(h('p', { class: 'note', text: 'Claude tahlili mavjud boʻlganda xatolaringiz oʻzbekcha tushuntiriladi va boshqacha toʻgʻri variantlar ham qabul qilinadi.' }));
+    else if (al.score < 100 && sampleCap) res.append(h('button', { class: 'btn sm', type: 'button', svg: ICON.spark, onclick: runAi }, 'Claude bilan tekshirish'));
+  } else if (st.reveal) {
+    res.append(h('div', null, h('div', { class: 'prompt-lbl', text: 'Javob' }), h('div', { class: 'row' }, h('span', { class: 'ens', lang: 'en', text: s.en }), spkBtn(s.en))));
+  }
+  const card = h('div', { class: 'card' },
+    h('div', { class: 'row between' }, srcChip(s), h('span', { class: 'qcount', text: (m.i + 1) + ' / ' + m.deck.length })),
+    h('div', { class: 'prompt-lbl', text: 'Inglizchaga tarjima qiling' }),
+    h('div', { class: 'uzs', text: s.uz }),
+    focusChips(s, focusLesson()),
+    st.done ? null : ta,
+    hintBox,
+    res,
+    h('div', { class: 'row' },
+      st.done ? h('button', { class: 'btn primary', type: 'button', text: 'Keyingi gap', onclick: () => nextSentence('tarjima') }) : checkBtn,
+      st.done ? h('button', { class: 'btn', type: 'button', text: 'Qayta yozish', onclick: () => { st.done = false; st.ai = null; st.aiErr = ''; renderTarjima(); setTimeout(() => { const t = $('#trInput'); if (t) t.focus(); }, 0); } }) : null,
+      !st.done && !st.hint && !st.reveal ? h('button', { class: 'btn ghost', type: 'button', text: 'Yordam: soʻzlar', onclick: () => { st.text = ta.value; st.hint = true; renderTarjima(); } }) : null,
+      !st.done ? h('button', { class: 'btn ghost', type: 'button', text: st.reveal ? 'Keyingi gap' : 'Javobni koʻrsatish', onclick: () => { if (st.reveal) nextSentence('tarjima'); else { st.reveal = true; renderTarjima(); } } }) : null
+    )
+  );
+  body.append(card);
+}
+
+/* ================= stage 4: pronunciation ================= */
+const mic = { on: false, text: '', partial: '', langFallback: false, silenceT: null, rec: null };
+$$('[data-pmode]').forEach(b => b.addEventListener('click', () => { stopMic(); state.settings.pmode = b.dataset.pmode; touch(); mods.talaffuz.st = null; renderTalaffuz(); }));
+function wireDictation() {
+  dictCap.onPartial(({ text }) => { mic.partial = text || ''; updateLive(); armSilence(); });
+  dictCap.onFinal(({ text }) => { mic.text += text || ''; mic.partial = ''; updateLive(); armSilence(); });
+  dictCap.onState(({ state: s, reason }) => {
+    mic.on = s !== 'idle';
+    updateMicBtn(s);
+    if (s === 'idle') {
+      clearTimeout(mic.silenceT);
+      if (reason === 'unavailable' && !mic.langFallback) { mic.langFallback = true; toast('Ingliz tilida tinglash ochilmadi. Mikrofonni yana bir marta bosing.'); return; }
+      if (reason && !['stopped', 'viewer_stopped', 'hidden'].includes(reason)) { micError(reason); return; }
+      finishSpeech();
+    }
+  });
+}
+function armSilence() { clearTimeout(mic.silenceT); mic.silenceT = setTimeout(() => { if (mic.on && (mic.text.trim() || mic.partial.trim())) stopMic(); }, 2600); }
+function micError(code) {
+  const msg = { not_granted: 'Mikrofonga ruxsat berilmadi. Brauzer yoki artifact sozlamalaridan ruxsat bering.', 'not-allowed': 'Mikrofonga ruxsat berilmadi.', dismissed: 'Ruxsat oynasi yopildi. Mikrofonni yana bosing.', rate_limited: 'Mikrofon band. Birozdan keyin qayta urinib koʻring.', unavailable: 'Bu yerda ovozni tanish ishlamaydi. Chrome brauzerida oching yoki matn bilan yozing.', 'no-speech': 'Ovoz eshitilmadi. Yana urinib koʻring.' }[code] || 'Mikrofonda muammo chiqdi. Yana urinib koʻring.';
+  toast(msg);
+  if (code === 'not_granted' || code === 'not-allowed' || (code === 'unavailable' && mic.langFallback)) { micMode = 'none'; renderCaps(); renderTalaffuz(); }
+}
+function startMic() {
+  const st = mods.talaffuz.st; if (!st) return;
+  mic.text = ''; mic.partial = ''; st.result = null; st.ai = null; st.aiErr = '';
+  if (micMode === 'dictation' && dictCap) {
+    const p = mic.langFallback ? dictCap.start() : dictCap.start({ language: 'en' });
+    p.catch(e => {
+      const c = e && e.code;
+      if (c === 'unavailable' && !mic.langFallback) { mic.langFallback = true; toast('Mikrofonni yana bir marta bosing.'); return; }
+      if (c === 'stopped') return;
+      micError(c);
+    });
+    renderTalaffuzResult();
+    return;
+  }
+  if (micMode === 'webspeech' && SR) {
+    try {
+      const r = new SR(); mic.rec = r;
+      r.lang = 'en-US'; r.interimResults = true; r.continuous = true; r.maxAlternatives = 1;
+      r.onresult = ev => {
+        let fin = '', part = '';
+        for (let i = 0; i < ev.results.length; i++) { const t = ev.results[i][0].transcript; if (ev.results[i].isFinal) fin += t + ' '; else part += t; }
+        mic.text = fin; mic.partial = part; updateLive(); armSilence();
+      };
+      r.onerror = ev => { mic.on = false; updateMicBtn('idle'); micError(ev.error); };
+      r.onend = () => { const was = mic.on; mic.on = false; updateMicBtn('idle'); if (was || mic.text) finishSpeech(); };
+      r.start(); mic.on = true; updateMicBtn('listening'); renderTalaffuzResult();
+    } catch (e) { micError('unavailable'); }
+  }
+}
+function stopMic() {
+  clearTimeout(mic.silenceT);
+  if (micMode === 'dictation' && dictCap && mic.on) { dictCap.stop().catch(() => {}); }
+  else if (mic.rec && mic.on) { try { mic.rec.stop(); } catch (e) { /* ignore */ } }
+}
+function updateMicBtn(s) {
+  const b = $('#micBtn'); if (!b) return;
+  const on = s && s !== 'idle';
+  b.classList.toggle('on', on);
+  b.innerHTML = on ? ICON.stop : ICON.mic;
+  b.setAttribute('aria-label', on ? 'Toʻxtatish' : 'Gapirishni boshlash');
+  const l = $('#micLbl'); if (l) l.textContent = s === 'starting' ? 'Ulanmoqda…' : s === 'finishing' ? 'Yakunlanmoqda…' : on ? 'Gapiring… tugatgach toʻxtatish tugmasini bosing' : 'Mikrofonni bosib gapiring';
+}
+function updateLive() {
+  const l = $('#live'); if (!l) return;
+  clear(l);
+  if (!mic.text && !mic.partial) { l.append(h('em', { text: mic.on ? 'Tinglanmoqda…' : '' })); return; }
+  l.append(mic.text.trim(), mic.partial ? h('em', { text: ' ' + mic.partial }) : null);
+}
+function finishSpeech() {
+  const said = (mic.text + ' ' + mic.partial).trim();
+  mic.partial = '';
+  const st = mods.talaffuz.st; if (!st) return;
+  if (!said) { renderTalaffuzResult(); return; }
+  evaluateSpeech(said);
+}
+function evaluateSpeech(said) {
+  const m = mods.talaffuz, st = m.st, s = curSentence(m);
+  const T = toks(s.en), U = toks(said);
+  const al = align(T, U);
+  const pairs = subPairs(T, U, al.tm, al.um);
+  st.result = { said, al, pairs };
+  const rec = dayRec(); rec.p++;
+  for (let i = 0; i < T.length; i++) if (!al.tm[i] && T[i].length > 2 && !STOP.has(T[i])) state.pron[T[i]] = (state.pron[T[i]] || 0) + 1;
+  for (let i = 0; i < T.length; i++) if (al.tm[i] && state.pron[T[i]]) { state.pron[T[i]] = Math.max(0, state.pron[T[i]] - 1); if (!state.pron[T[i]]) delete state.pron[T[i]]; }
+  const pk = Object.keys(state.pron); if (pk.length > 60) pk.sort((a, b) => state.pron[a] - state.pron[b]).slice(0, pk.length - 60).forEach(k => delete state.pron[k]);
+  touch();
+  renderTalaffuzResult();
+  if (sampleCap) sampleGranted().then(g => { if (g && mods.talaffuz.st === st) runPronAi(); });
+}
+async function runPronAi() {
+  const m = mods.talaffuz, st = m.st, s = curSentence(m);
+  if (!st || !st.result || !sampleCap) return;
+  st.ai = 'loading'; renderTalaffuzResult();
+  const r0 = st.result;
+  const mode = state.settings.pmode;
+  const prompt = 'You are an English pronunciation coach for an Uzbek speaker. ' + LEARNER() + ' ' +
+    (mode === 'translate' ? 'The student saw the Uzbek sentence "' + s.uz + '" and had to say it in English. A good answer is: "' + s.en + '". ' : 'The student read this English sentence aloud: "' + s.en + '". ') +
+    'A speech recognizer transcribed what the student said as: "' + r0.said.slice(0, 300) + '".\n' +
+    'Word pairs that did not match (expected → heard): ' + JSON.stringify(r0.pairs.slice(0, 12)) + '.\n' +
+    'Use the mismatches as evidence of unclear sounds (for example "think" heard as "sink" means the TH sound; "very" heard as "wary" means V/W; "ship"/"sheep" means vowel length; missing final consonants). Typical Uzbek-speaker issues: TH, W vs V, short and long vowels, final consonant clusters, the English R, word stress. ' +
+    (mode === 'translate' ? 'Also check grammar and word choice: other correct translations are acceptable. ' : '') +
+    'Remember the recognizer itself can make mistakes, so be kind and only mention problems the evidence supports. ' +
+    'Reply with ONLY this JSON: {"score": 0-100, "summary": "1-2 sentences in Uzbek Latin script", "sounds": [{"word": "expected English word", "heard": "what was heard", "tip": "how to pronounce it, in Uzbek Latin script, concrete (tongue, lips, vowel length)"}], "grammar": [{"wrong": "...", "right": "...", "why": "short Uzbek explanation"}], "tip": "one practice tip in Uzbek Latin script"}';
+  try {
+    const r = await askClaude(prompt);
+    st.ai = {
+      score: clamp(Number(r && r.score) || 0, 0, 100), summary: str(r && r.summary, 400),
+      sounds: (Array.isArray(r && r.sounds) ? r.sounds : []).slice(0, 6).map(x => ({ word: str(x && x.word, 60), heard: str(x && x.heard, 60), tip: str(x && x.tip, 300) })),
+      grammar: (Array.isArray(r && r.grammar) ? r.grammar : []).slice(0, 4).map(x => ({ wrong: str(x && x.wrong, 120), right: str(x && x.right, 120), why: str(x && x.why, 300) })),
+      tip: str(r && r.tip, 300)
+    };
+    const notes = st.ai.grammar.slice(0, 2).concat(st.ai.sounds.slice(0, 2).map(x => ({ wrong: x.heard ? x.word + ' (eshitildi: ' + x.heard + ')' : x.word, right: '', why: 'Talaffuz: ' + x.tip })));
+    if (notes.length) { addNotes(notes); touch(); }
+  } catch (e) { st.ai = null; st.aiErr = sampleErr(e); }
+  if (mods.talaffuz.st === st && view === 'talaffuz') renderTalaffuzResult();
+}
+function renderTalaffuz() {
+  $$('[data-pmode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.pmode === state.settings.pmode)));
+  renderFocusBar('pFocusBar', 'talaffuz');
+  const body = clear($('#pBody'));
+  const m = mod('talaffuz');
+  if (!m.deck.length) return;
+  const s = curSentence(m);
+  if (!m.st) m.st = { result: null, ai: null, aiErr: '', typed: '', hint: false };
+  const st = m.st;
+  const readMode = state.settings.pmode === 'read';
+  const micUI = micMode !== 'none'
+    ? h('div', { class: 'micwrap' },
+        h('button', { id: 'micBtn', class: 'mic' + (mic.on ? ' on' : ''), type: 'button', 'aria-label': mic.on ? 'Toʻxtatish' : 'Gapirishni boshlash', svg: mic.on ? ICON.stop : ICON.mic, onclick: () => { if (mic.on) stopMic(); else startMic(); } }),
+        h('div', { id: 'micLbl', class: 'small muted', text: mic.on ? 'Gapiring… tugatgach toʻxtatish tugmasini bosing' : 'Mikrofonni bosib gapiring' }),
+        h('div', { id: 'live', class: 'live', lang: 'en' }))
+    : h('div', { class: 'note warn' },
+        h('div', { text: 'Bu oynada mikrofon ishlamayapti. Ovoz bilan mashq qilish uchun sahifani kompyuterda Chrome yoki Edge brauzerida oching. Hozircha aytmoqchi boʻlgan gapingizni yozib tekshirishingiz mumkin.' }),
+        typedFallback(st));
+  const card = h('div', { class: 'card' },
+    h('div', { class: 'row between' }, srcChip(s), h('span', { class: 'qcount', text: (m.i + 1) + ' / ' + m.deck.length })),
+    h('div', { class: 'prompt-lbl', text: readMode ? 'Ovoz chiqarib oʻqing' : 'Inglizcha ayting' }),
+    readMode ? h('div', { class: 'row' }, h('div', { class: 'ens', lang: 'en', text: s.en }), spkBtn(s.en, 'Namunani eshitish'), spkBtn(s.en, 'Sekin eshitish', 0.75)) : h('div', { class: 'uzs', text: s.uz }),
+    readMode ? h('div', { class: 'small muted', text: s.uz }) : focusChips(s, focusLesson()),
+    !readMode && st.hint ? h('div', null,
+      h('div', { class: 'small muted', text: 'Gapdagi soʻzlar aralash tartibda. Bosib eshiting, keyin toʻgʻri tartibda ayting:' }),
+      h('div', { class: 'chips', style: 'margin-top:6px' }, (st.hw || (st.hw = shuffle(tileWords(s.en)))).map(w => h('button', { class: 'chip blue', type: 'button', lang: 'en', text: w, onclick: () => speak(w) })))) : null,
+    micUI,
+    h('div', { id: 'pResult', style: 'display:flex;flex-direction:column;gap:14px' }),
+    h('div', { class: 'row' },
+      h('button', { class: 'btn primary', type: 'button', text: 'Keyingi gap', onclick: () => { stopMic(); nextSentence('talaffuz'); } }),
+      !readMode && !st.hint ? h('button', { class: 'btn ghost', type: 'button', text: 'Yordam: soʻzlar', onclick: () => { st.hint = true; renderTalaffuz(); } }) : null,
+      !readMode ? h('button', { class: 'btn ghost', type: 'button', text: 'Javobni eshitish', onclick: () => speak(s.en) }) : null
+    )
+  );
+  body.append(card);
+  renderTalaffuzResult();
+  updateLive();
+}
+function typedFallback(st) {
+  const ta = h('input', { id: 'pTyped', type: 'text', lang: 'en', placeholder: 'Inglizcha gapni yozing…', 'aria-label': 'Inglizcha gap', style: 'width:100%;min-height:44px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);padding:8px 12px;margin-top:10px' });
+  ta.value = st.typed || '';
+  ta.addEventListener('input', () => { st.typed = ta.value; });
+  ta.addEventListener('keydown', e => { if (e.key === 'Enter' && ta.value.trim()) evaluateSpeech(ta.value.trim()); });
+  return h('div', null, ta, h('button', { class: 'btn sm', type: 'button', style: 'margin-top:8px', text: 'Tekshirish', onclick: () => { if (ta.value.trim()) evaluateSpeech(ta.value.trim()); } }));
+}
+function renderTalaffuzResult() {
+  const box = $('#pResult'); if (!box) return;
+  clear(box);
+  const m = mods.talaffuz, st = m.st, s = curSentence(m);
+  if (!st || !st.result) return;
+  const r = st.result;
+  const [cls, msg] = verdict(r.al.score);
+  box.append(
+    h('div', { class: 'score ' + cls }, h('b', { text: r.al.score + '%' }), h('span', { text: msg })),
+    h('div', null, h('div', { class: 'prompt-lbl', text: 'Dastur eshitgan gap' }), diffView(r.said, r.al.um, 'extra')),
+    h('div', null, h('div', { class: 'prompt-lbl', text: 'Toʻgʻri gap' }), diffView(s.en, r.al.tm, 'miss')),
+    legend([['var(--good)', 'aniq eshitildi'], ['var(--bad)', 'eshitilmadi'], ['var(--saffron)', 'boshqacha eshitildi']]),
+    h('div', { class: 'row' }, h('span', { class: 'small muted', text: 'Toʻgʻri talaffuz:' }), spkBtn(s.en, 'Namunani eshitish'), spkBtn(s.en, 'Sekin eshitish', 0.75))
+  );
+  const missed = r.pairs.filter(p => p.t && !STOP.has(p.t)).slice(0, 6);
+  if (missed.length) box.append(h('div', null, h('div', { class: 'prompt-lbl', text: 'Shu soʻzlarni qayta mashq qiling' }), h('div', { class: 'chips' }, missed.map(p => h('button', { class: 'chip blue', type: 'button', title: 'Eshitish', text: p.t + (p.u ? ' (eshitildi: ' + p.u + ')' : ''), onclick: () => speak(p.t, 0.8) })))));
+  if (st.ai === 'loading') box.append(aiBlock('Claude tahlili'));
+  else if (st.ai) {
+    const ai = h('div', { class: 'ai' });
+    fillAi(ai, 'Claude tahlili', [
+      st.ai.summary ? h('p', { text: st.ai.summary }) : null,
+      st.ai.sounds.length ? h('div', null, h('div', { class: 'small muted', text: 'Tovushlar:' }), h('ul', null, st.ai.sounds.map(x => h('li', null, h('div', { class: 'pair' }, h('ins', { lang: 'en', text: x.word }), x.heard ? h('span', { class: 'muted', text: ' · eshitildi: ' + x.heard }) : null), x.tip ? h('div', { text: x.tip }) : null)))) : null,
+      st.ai.grammar.length ? h('div', null, h('div', { class: 'small muted', text: 'Grammatika:' }), mistakeList(st.ai.grammar)) : null,
+      st.ai.tip ? h('p', { class: 'note', text: 'Maslahat: ' + st.ai.tip }) : null
+    ]);
+    box.append(ai);
+  } else if (st.aiErr) box.append(h('p', { class: 'note warn', text: st.aiErr }));
+  else if (sampleCap) box.append(h('button', { class: 'btn sm', type: 'button', svg: ICON.spark, onclick: runPronAi }, 'Claude bilan tahlil qilish'));
+  else box.append(h('p', { class: 'note', text: 'Talaffuz va grammatika xatolarini batafsil tushuntirish Claude tahlili yoqilganda ishlaydi.' }));
+}
+
+/* ================= boot ================= */
+async function boot() {
+  loadLocal();
+  renderRules('gRules'); renderRules('tRules');
+  route();
+  initCaps();
+  try {
+    const [w, s] = await Promise.all([fetch('words.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }), fetch('sentences.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })]);
+    W = w; N = W.length;
+    W.forEach((x, i) => { const k = x[0].toLowerCase(); if (!IDX.has(k)) IDX.set(k, i); });
+    BANK = s.map(([en, uz], i) => ({ en, uz, src: 'bank', id: 'b' + i, n: i, ...analyze(en) }));
+    sz.lesson = state.cur;
+    refreshView();
+  } catch (e) {
+    for (const id of ['#szBody', '#gBody', '#tBody', '#pBody']) { const b = clear($(id)); b.append(h('p', { class: 'note warn', text: 'Soʻzlar bazasini yuklab boʻlmadi. Sahifani yangilang.' })); }
+  }
+}
+boot();
+})();
+</script>

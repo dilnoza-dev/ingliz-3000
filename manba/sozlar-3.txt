@@ -1,0 +1,504 @@
+accident|baxtsiz hodisa|n
+action|harakat|n
+activity|faoliyat|n
+adult|katta yoshli odam|n
+advantage|afzallik|n
+adventure|sarguzasht|n
+advertisement|reklama|n
+advice|maslahat|n
+agreement|kelishuv|n
+aim|maqsad (mo'ljal)|n
+alarm|signal; budilnik|n
+amount|miqdor|n
+anger|g'azab|n
+angle|burchak (geometriya)|n
+announcement|e'lon|n
+application|ariza; ilova|n
+appointment|belgilangan uchrashuv|n
+argument|bahs|n
+arrival|kelish|n
+article|maqola|n
+attention|e'tibor|n
+audience|tomoshabinlar|n
+author|muallif|n
+average|o'rtacha|n
+award|mukofot|n
+background|fon; kelib chiqish|n
+balance|muvozanat|n
+band|musiqiy guruh|n
+base|asos|n
+basket|savat|n
+battery|batareya|n
+battle|jang|n
+beauty|go'zallik|n
+belief|e'tiqod|n
+bell|qo'ng'iroq|n
+belt|kamar|n
+benefit|foyda|n
+bin|axlat qutisi|n
+biology|biologiya|n
+boat|qayiq|n
+boot|etik|n
+brand|brend|n
+brick|g'isht|n
+budget|byudjet|n
+button|tugma|n
+cable|kabel|n
+calendar|taqvim|n
+candle|sham|n
+candidate|nomzod|n
+cap|kepka|n
+career|martaba|n
+case|holat; g'ilof|n
+cash|naqd pul|n
+castle|qal'a|n
+celebration|bayram qilish|n
+cell|hujayra|n
+century|asr|n
+ceremony|marosim|n
+chain|zanjir|n
+challenge|sinov (qiyinchilik)|n
+champion|chempion|n
+chance|imkoniyat|n
+channel|kanal|n
+chapter|bob (kitobda)|n
+character|xarakter; qahramon|n
+charity|xayriya|n
+chart|diagramma|n
+chemistry|kimyo|n
+chest|ko'krak|n
+childhood|bolalik|n
+citizen|fuqaro|n
+climate|iqlim|n
+coin|tanga|n
+collection|to'plam|n
+competition|musobaqa|n
+complaint|shikoyat|n
+concert|konsert|n
+condition|sharoit|n
+conference|anjuman|n
+confidence|ishonch|n
+contact|aloqa|n
+conversation|suhbat|n
+copy|nusxa|n
+cotton|paxta|n
+couple|juftlik|n
+courage|jasorat|n
+court|sud|n
+crime|jinoyat|n
+crowd|olomon|n
+cupboard|shkaf|n
+currency|valyuta|n
+damage|zarar|n
+data|ma'lumotlar|n
+deal|bitim|n
+debt|qarz|n
+decision|qaror|n
+degree|daraja; gradus|n
+department|bo'lim|n
+description|tavsif|n
+detail|tafsilot|n
+diet|parhez|n
+difference|farq|n
+direction|yo'nalish|n
+dirt|kir|n
+disease|kasallik|n
+distance|masofa|n
+document|hujjat|n
+doubt|shubha|n
+drawing|chizilgan rasm|n
+drug|dori; giyohvand modda|n
+duty|burch|n
+economy|iqtisodiyot|n
+edge|chet, qirra|n
+effort|kuch-g'ayrat|n
+election|saylov|n
+electricity|elektr toki|n
+emergency|favqulodda holat|n
+emotion|his-tuyg'u|n
+employee|xodim|n
+employer|ish beruvchi|n
+engine|dvigatel|n
+entrance|kirish joyi|n
+environment|atrof-muhit|n
+equipment|jihozlar|n
+error|xatolik|n
+exhibition|ko'rgazma|n
+exit|chiqish joyi|n
+expert|mutaxassis|n
+explanation|tushuntirish|n
+fan|muxlis; ventilyator|n
+fashion|moda|n
+fault|ayb|n
+feature|xususiyat|n
+fee|to'lov haqi|n
+feeling|tuyg'u|n
+fence|to'siq devor|n
+figure|raqam; qomat|n
+file|fayl|n
+flight|parvoz|n
+focus|diqqat markazi|n
+force|kuch (zo'r)|n
+form|shakl; anketa|n
+fortune|boylik; taqdir|n
+freedom|erkinlik|n
+friendship|do'stlik|n
+fuel|yoqilg'i|n
+furniture|mebel|n
+gallery|galereya|n
+gap|oraliq|n
+generation|avlod|n
+geography|geografiya|n
+ghost|arvoh|n
+glove|qo'lqop|n
+god|xudo|n
+grade|baho; sinf|n
+grammar|grammatika|n
+growth|o'sish|n
+guard|qo'riqchi|n
+guide|gid, yo'lboshchi|n
+gym|sport zali|n
+headache|bosh og'rig'i|n
+heaven|jannat|n
+height|bo'y, balandlik|n
+hobby|sevimli mashg'ulot|n
+horror|dahshat|n
+host|mezbon|n
+humor|hazil-mutoyiba|n
+ice cream|muzqaymoq|n
+illness|xastalik|n
+image|tasvir|n
+income|daromad|n
+industry|sanoat|n
+injury|jarohat|n
+insurance|sug'urta|n
+instruction|ko'rsatma|n
+instrument|cholg'u; asbob|n
+interview|intervyu; ish suhbati|n
+invention|ixtiro|n
+invitation|taklifnoma|n
+item|buyum, element|n
+jewelry|zargarlik buyumlari|n
+journey|uzoq sayohat|n
+judge|sudya|n
+keyboard|klaviatura|n
+label|yorliq|n
+lack|yetishmovchilik|n
+ladder|narvon|n
+landscape|tabiat manzarasi|n
+laptop|noutbuk|n
+leader|rahbar|n
+lecture|ma'ruza|n
+leisure|bo'sh vaqt|n
+length|uzunlik|n
+license|guvohnoma|n
+limit|cheklov|n
+link|havola|n
+liquid|suyuqlik|n
+literature|adabiyot|n
+loan|kredit|n
+location|joylashuv|n
+loss|yo'qotish|n
+luck|omad|n
+luggage|yuk (bagaj)|n
+mail|pochta|n
+manner|odob; usul|n
+mark|belgi; baho|n
+marriage|nikoh|n
+match|o'yin (sport); gugurt|n
+material|material|n
+math|matematika|n
+meaning|ma'no|n
+media|ommaviy axborot vositalari|n
+menu|menyu|n
+metal|metall|n
+method|usul|n
+military|harbiylar|n
+model|model|n
+mood|kayfiyat|n
+movement|harakatlanish|n
+murder|qotillik|n
+muscle|mushak|n
+nation|millat|n
+neighborhood|mahalla|n
+nest|uya|n
+net|to'r|n
+network|tarmoq|n
+noon|tush payti|n
+novel|roman|n
+officer|ofitser|n
+operation|operatsiya|n
+opportunity|qulay imkoniyat|n
+option|variant|n
+organization|tashkilot|n
+owner|egasi|n
+packet|paket|n
+painting|bo'yoqli rasm|n
+palace|saroy|n
+pan|tova|n
+passenger|yo'lovchi|n
+path|so'qmoq yo'l|n
+patient|bemor|n
+pattern|naqsh|n
+payment|to'lov|n
+percent|foiz|n
+period|davr|n
+permission|ruxsat|n
+personality|shaxsiyat|n
+pet|uy hayvoni|n
+physics|fizika|n
+planet|sayyora|n
+platform|platforma|n
+pleasure|zavq|n
+poet|shoir|n
+poetry|she'riyat|n
+politics|siyosat|n
+pollution|ifloslanish|n
+population|aholi|n
+position|lavozim; holat|n
+post|pochta; lavozim|n
+pot|qozon|n
+pound|funt|n
+powder|kukun|n
+prayer|ibodat|n
+presentation|taqdimot|n
+pressure|bosim|n
+pride|g'urur|n
+prison|qamoqxona|n
+process|jarayon|n
+product|mahsulot|n
+profession|kasb|n
+professor|professor|n
+profit|daromad (foyda)|n
+progress|taraqqiyot|n
+property|mulk|n
+protest|norozilik|n
+pupil|o'quvchi|n
+quality|sifat|n
+quantity|son-miqdor|n
+quarter|chorak|n
+rate|stavka, sur'at|n
+recipe|retsept|n
+record|rekord; yozuv|n
+region|mintaqa|n
+relationship|munosabat|n
+religion|din|n
+request|so'rov|n
+research|tadqiqot|n
+resource|resurs|n
+respect|hurmat|n
+response|javob (munosabat)|n
+responsibility|mas'uliyat|n
+review|sharh|n
+reward|taqdirlash|n
+risk|tavakkal|n
+role|rol|n
+root|ildiz|n
+route|marshrut|n
+row|qator|n
+rubbish|axlat|n
+safety|xavfsizlik|n
+sale|sotuv|n
+salary|maosh|n
+sample|namuna|n
+scale|o'lchov|n
+scene|sahna ko'rinishi|n
+schedule|jadval|n
+scientist|olim|n
+score|hisob (o'yinda)|n
+seed|urug'|n
+sense|sezgi; ma'no|n
+series|serial; qator|n
+service|xizmat|n
+shade|soya joy|n
+shadow|soya|n
+shape|shakl (ko'rinish)|n
+shock|zarba, shok|n
+silence|sukunat|n
+skill|ko'nikma|n
+slice|tilim|n
+society|jamiyat|n
+software|dasturiy ta'minot|n
+soil|tuproq|n
+solution|yechim|n
+source|manba|n
+speech|nutq|n
+spirit|ruh|n
+spot|dog'; joy|n
+staff|xodimlar|n
+stage|bosqich; sahna|n
+standard|standart|n
+statue|haykal|n
+steel|po'lat|n
+stick|tayoq|n
+store|do'kon (katta)|n
+strength|kuch (jismoniy)|n
+stress|stress|n
+structure|tuzilma|n
+style|uslub|n
+sum|summa|n
+surface|sirt|n
+survey|so'rovnoma|n
+symbol|ramz|n
+talent|iste'dod|n
+target|nishon|n
+task|vazifa|n
+tax|soliq|n
+technology|texnologiya|n
+teenager|o'smir|n
+temple|ibodatxona|n
+theory|nazariya|n
+thumb|bosh barmoq|n
+title|sarlavha; unvon|n
+topic|mavzu|n
+tour|ekskursiya|n
+track|iz; yo'lak|n
+trade|savdo|n
+tradition|an'ana|n
+training|mashg'ulot|n
+treatment|davolash|n
+trend|tendensiya|n
+unit|birlik|n
+universe|olam|n
+value|qiymat|n
+vehicle|transport vositasi|n
+version|versiya|n
+video|video|n
+visitor|tashrif buyuruvchi|n
+volume|hajm; ovoz balandligi|n
+waiter|ofitsiant|n
+wave|to'lqin|n
+wealth|boylik|n
+weapon|qurol|n
+website|veb-sayt|n
+wish|istak|n
+youth|yoshlik|n
+accept|qabul qilib olmoq|v
+achieve|erishmoq|v
+act|rol o'ynamoq; harakat qilmoq|v
+admire|qoyil qolmoq|v
+admit|tan olmoq|v
+advise|maslahat bermoq|v
+afford|qurbi yetmoq|v
+apologize|kechirim so'ramoq|v
+apply|ariza bermoq|v
+argue|bahslashmoq|v
+arrest|hibsga olmoq|v
+attack|hujum qilmoq|v
+attend|qatnashmoq|v
+avoid|chetlab o'tmoq|v
+beat|urmoq; yengmoq|v
+bend|egmoq|v
+bite|tishlamoq|v
+blow|puflamoq|v
+burn|yonmoq, kuydirmoq|v
+celebrate|nishonlamoq|v
+chat|suhbatlashmoq|v
+cheat|aldamoq|v
+chew|chaynamoq|v
+communicate|muloqot qilmoq|v
+compete|musobaqalashmoq|v
+complain|shikoyat qilmoq|v
+confirm|tasdiqlamoq|v
+connect|ulamoq|v
+control|nazorat qilmoq|v
+crash|to'qnashmoq|v
+cure|davolamoq|v
+defend|mudofaa qilmoq|v
+delay|kechiktirmoq|v
+delete|o'chirmoq|v
+depend|bog'liq bo'lmoq|v
+deserve|loyiq bo'lmoq|v
+dig|qazimoq|v
+disappear|g'oyib bo'lmoq|v
+divide|bo'lmoq (qismlarga)|v
+download|yuklab olmoq|v
+earn|pul topmoq|v
+encourage|ruhlantirmoq|v
+escape|qochib ketmoq|v
+exchange|almashmoq|v
+exist|mavjud bo'lmoq|v
+explore|o'rganib chiqmoq|v
+express|ifodalamoq|v
+feed|ovqatlantirmoq|v
+float|suv betida suzmoq|v
+forgive|kechirmoq|v
+freeze|muzlamoq|v
+gain|qo'lga kiritmoq|v
+greet|salomlashmoq|v
+hang|osmoq|v
+hire|ishga olmoq|v
+hunt|ov qilmoq|v
+ignore|e'tiborsiz qoldirmoq|v
+influence|ta'sir qilmoq|v
+inform|xabardor qilmoq|v
+injure|jarohatlamoq|v
+install|o'rnatmoq|v
+introduce|tanishtirmoq|v
+invent|ixtiro qilmoq|v
+lay|yotqizib qo'ymoq|v
+lead|yetaklamoq|v
+lean|suyanmoq|v
+load|yuklamoq|v
+manage|uddalamoq; boshqarmoq|v
+mention|eslatib o'tmoq|v
+nod|bosh irg'amoq|v
+obey|bo'ysunmoq|v
+observe|kuzatmoq|v
+occur|yuz bermoq|v
+organize|tashkil qilmoq|v
+pause|to'xtab turmoq|v
+perform|ijro etmoq|v
+persuade|ko'ndirmoq|v
+pour|quymoq|v
+predict|bashorat qilmoq|v
+pretend|o'zini ...dek ko'rsatmoq|v
+prevent|oldini olmoq|v
+print|chop etmoq|v
+prove|isbotlamoq|v
+publish|nashr qilmoq|v
+punish|jazolamoq|v
+recognize|tanimoq|v
+recommend|tavsiya qilmoq|v
+recover|tuzalmoq|v
+recycle|qayta ishlamoq|v
+refuse|rad etmoq|v
+regret|afsuslanmoq|v
+remain|qolmoq|v
+remind|eslatmoq|v
+remove|olib tashlamoq|v
+repair|ta'mirlamoq|v
+replace|o'rniga qo'ymoq|v
+rescue|qutqarmoq|v
+retire|nafaqaga chiqmoq|v
+rob|talamoq|v
+roll|dumalamoq|v
+rush|shoshib bormoq|v
+scare|cho'chitmoq|v
+scream|chinqirmoq|v
+separate|ajratmoq|v
+set|o'rnatmoq; belgilamoq|v
+settle|joylashib olmoq|v
+shine|porlamoq|v
+shoot|otmoq (quroldan)|v
+sink|cho'kmoq|v
+slip|sirpanmoq|v
+spread|yoymoq|v
+stay|qolib turmoq|v
+succeed|muvaffaqiyat qozonmoq|v
+suffer|azob chekmoq|v
+surround|o'rab olmoq|v
+survive|omon qolmoq|v
+swallow|yutmoq (tomoqdan)|v
+tear|yirtmoq|v
+tie|bog'lamoq|v
+trust|ishonch bildirmoq|v
+type|klaviaturada termoq|v
+upload|internetga yuklamoq|v
+vote|ovoz bermoq|v
+warn|ogohlantirmoq|v
+waste|isrof qilmoq|v
+weigh|vaznini o'lchamoq|v
+whisper|pichirlamoq|v
+wonder|hayron bo'lmoq|v
+wrap|o'ramoq|v

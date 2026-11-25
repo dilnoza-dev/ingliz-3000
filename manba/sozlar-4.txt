@@ -1,0 +1,854 @@
+abandon|tashlab ketmoq|v
+ability|qobiliyat|n
+absence|yo'qlik|n
+absolute|mutlaq|a
+absolutely|mutlaqo|d
+academic|akademik|a
+access|kirish huquqi|n
+accommodation|turar joy|n
+accompany|hamroh bo'lmoq|v
+account|hisob raqam|n
+accurate|aniq (xatosiz)|a
+accuse|ayblamoq|v
+active|faol|a
+actor|aktyor|n
+actress|aktrisa|n
+actual|amaldagi|a
+adapt|moslashmoq|v
+addition|qo'shimcha|n
+adjust|sozlamoq|v
+admission|qabul|n
+adopt|asrab olmoq|v
+advance|oldinga siljimoq|v
+advanced|ilg'or|a
+affair|ish, voqea|n
+affect|ta'sir ko'rsatmoq|v
+afterwards|keyinchalik|d
+agent|agent|n
+aggressive|tajovuzkor|a
+agriculture|qishloq xo'jaligi|n
+aid|yordam|n
+aircraft|havo kemasi|n
+alcohol|spirtli ichimlik|n
+alternative|muqobil|n
+amazed|hayratda qolgan|a
+amazing|hayratlanarli|a
+ambition|intilish|n
+ambulance|tez yordam mashinasi|n
+analyse|tahlil qilmoq|v
+analysis|tahlil|n
+ancestor|ajdod|n
+anniversary|yubiley|n
+annoy|jig'iga tegmoq|v
+annual|yillik|a
+anxious|tashvishli|a
+apart|alohida|d
+apparent|ochiq-oydin|a
+appeal|murojaat|n
+appearance|tashqi ko'rinish|n
+appreciate|qadrlamoq|v
+approach|yondashuv|n
+appropriate|munosib|a
+approve|ma'qullamoq|v
+architect|me'mor|n
+architecture|me'morchilik|n
+arrangement|kelishuv; tartib|n
+arrow|o'q (kamon o'qi)|n
+artificial|sun'iy|a
+aspect|jihat|n
+assist|yordamlashmoq|v
+assistant|yordamchi|n
+assume|deb hisoblamoq|v
+atmosphere|muhit, atmosfera|n
+attach|biriktirmoq|v
+attempt|urinish|n
+attitude|munosabat (qarash)|n
+attract|jalb qilmoq|v
+attractive|jozibali|a
+authority|hokimiyat|n
+automatic|avtomatik|a
+aware|xabardor|a
+awful|juda yomon|a
+awkward|noqulay (xijolatli)|a
+badly|yomon tarzda|d
+ban|taqiqlamoq|v
+bar|bar; to'sin|n
+bargain|arzon xarid|n
+barrier|to'siq|n
+basic|asosiy, oddiy|a
+bath|vanna|n
+beg|yalinmoq|v
+behave|o'zini tutmoq|v
+behaviour|xulq|n
+bench|skameyka|n
+bet|garov o'ynamoq|v
+birth|tug'ilish|n
+blame|aybni to'nkamoq|v
+blank|bo'sh (yozuvsiz)|a
+block|blok|n
+blog|blog|n
+bomb|bomba|n
+bother|bezovta qilmoq|v
+bow|ta'zim qilmoq|v
+branch|shox; filial|n
+breath|nafas|n
+breathe|nafas olmoq|v
+brief|qisqa (muddatli)|a
+briefly|qisqacha|d
+brilliant|ajoyib, zo'r|a
+broad|keng (yoyiq)|a
+broadcast|efirga uzatmoq|v
+brush|cho'tka|n
+bubble|pufak|n
+bucket|chelak|n
+bullet|o'q (o'q-dori)|n
+bunch|dasta|n
+bury|ko'mmoq|v
+bush|buta|n
+calculate|hisoblamoq|v
+camp|lager|n
+cancel|bekor qilmoq|v
+cancer|saraton|n
+capable|qobiliyatli|a
+captain|kapitan|n
+capture|qo'lga olmoq|v
+care|g'amxo'rlik|n
+careless|beparvo|a
+cartoon|multfilm|n
+category|toifa|n
+cave|g'or|n
+celebrity|mashhur shaxs|n
+central|markaziy|a
+certificate|sertifikat|n
+championship|chempionat|n
+charge|to'lov; zaryad|n
+charming|maftunkor|a
+chase|quvlamoq|v
+cheek|yonoq|n
+cheerful|quvnoq|a
+chemical|kimyoviy|a
+chess|shaxmat|n
+chief|bosh (rahbar)|n
+chin|iyak|n
+cigarette|sigaret|n
+circumstance|vaziyat (holat)|n
+civil|fuqarolik|a
+claim|da'vo qilmoq|v
+clap|qarsak chalmoq|v
+classic|klassik|a
+classroom|sinfxona|n
+click|bosmoq (sichqoncha bilan)|v
+client|mijoz (doimiy)|n
+cliff|jarlik|n
+clinic|klinika|n
+clue|ishora, kalit|n
+coach|murabbiy|n
+coal|ko'mir|n
+code|kod|n
+collapse|qulamoq|v
+colleague|hamkasb|n
+column|ustun|n
+combination|birikma|n
+combine|birlashtirmoq|v
+comedy|komediya|n
+comfort|qulaylik|n
+comment|izoh|n
+commercial|tijoriy|a
+commit|sodir etmoq|v
+committee|qo'mita|n
+communication|muloqot|n
+community|jamoa (hamjamiyat)|n
+comparison|taqqoslash|n
+complex|murakkab|a
+complicated|chigal|a
+composer|bastakor|n
+concentrate|diqqatni jamlamoq|v
+concept|tushuncha|n
+concern|tashvish|n
+conclude|xulosa qilmoq|v
+conclusion|xulosa|n
+confident|o'ziga ishongan|a
+conflict|nizo|n
+confuse|chalkashtirmoq|v
+confused|sarosimaga tushgan|a
+confusing|chalkash|a
+congratulate|tabriklamoq|v
+connection|bog'lanish|n
+conscious|ongli|a
+consequence|oqibat|n
+consist|iborat bo'lmoq|v
+constant|doimiy|a
+construction|qurilish|n
+consumer|iste'molchi|n
+container|konteyner|n
+content|mazmun|n
+contest|tanlov|n
+context|kontekst|n
+continent|qit'a|n
+contract|shartnoma|n
+contrast|qarama-qarshilik|n
+contribute|hissa qo'shmoq|v
+convenient|qulay (o'ng'ay)|a
+convince|ishontirmoq|v
+cool|salqin|a
+cope|bardosh bermoq|v
+cottage|dala hovli|n
+cough|yo'tal|n
+council|kengash|n
+countryside|qishloq joy|n
+crack|yoriq|n
+craft|hunarmandchilik|n
+creative|ijodkor|a
+creature|maxluq|n
+credit|kredit (ishonch)|n
+crew|ekipaj|n
+criminal|jinoyatchi|n
+crisis|inqiroz|n
+critic|tanqidchi|n
+criticise|tanqid qilmoq|v
+crop|hosil|n
+cruel|shafqatsiz|a
+cultural|madaniy|a
+current|joriy|a
+currently|hozirda|d
+curve|egri chiziq|n
+custom|urf-odat|n
+daily|kundalik|a
+dare|jur'at qilmoq|v
+darkness|zulmat|n
+deadline|muddat|n
+dear|aziz|a
+debate|munozara|n
+decade|o'n yillik|n
+decorate|bezatmoq|v
+decrease|kamaymoq|v
+defeat|mag'lubiyat|n
+defence|mudofaa|n
+define|ta'riflamoq|v
+definite|qat'iy|a
+definitely|albatta, shubhasiz|d
+definition|ta'rif|n
+delighted|juda xursand|a
+demand|talab|n
+democracy|demokratiya|n
+demonstrate|namoyish qilmoq|v
+dentist|tish shifokori|n
+deny|inkor qilmoq|v
+departure|jo'nash|n
+depressed|tushkun|a
+depth|chuqurlik|n
+desire|xohish|n
+desperate|umidsiz|a
+despite|-ga qaramay|r
+destination|borish manzili|n
+detailed|batafsil|a
+detective|detektiv|n
+determine|aniqlamoq|v
+device|qurilma|n
+dialogue|dialog|n
+diamond|olmos|n
+diary|kundalik daftar|n
+digital|raqamli|a
+direct|to'g'ridan-to'g'ri|a
+directly|bevosita|d
+director|direktor|n
+disabled|nogiron|a
+disadvantage|kamchilik|n
+disagree|rozi bo'lmaslik|v
+disappointed|hafsalasi pir bo'lgan|a
+disaster|falokat|n
+discipline|intizom|n
+discount|chegirma|n
+discovery|kashfiyot|n
+discussion|muhokama|n
+dislike|yoqtirmaslik|v
+display|namoyish etmoq|v
+district|tuman (ma'muriy)|n
+disturb|xalaqit bermoq|v
+dive|sho'ng'imoq|v
+divorce|ajrashish|n
+domestic|ichki; uy|a
+dot|nuqta|n
+double|ikki baravar|a
+drama|drama|n
+drawer|tortma|n
+drown|cho'kib o'lmoq|v
+drum|baraban|n
+drunk|mast|a
+dull|xira; zerikarli|a
+eager|ishtiyoqmand|a
+earthquake|zilzila|n
+easily|osonlik bilan|d
+edit|tahrir qilmoq|v
+editor|muharrir|n
+effective|samarali|a
+elbow|tirsak|n
+elderly|keksa yoshli|a
+elect|saylamoq|v
+electric|elektr|a
+electronic|elektron|a
+elegant|nafis|a
+element|unsur|n
+embarrassed|xijolat bo'lgan|a
+empire|imperiya|n
+employment|bandlik|n
+ending|tugash, yakun|n
+engineering|muhandislik|n
+entertain|ko'ngil ochmoq|v
+entertainment|ko'ngilochar tadbir|n
+enthusiastic|g'ayratli|a
+entire|yaxlit|a
+entry|kirish|n
+envelope|konvert|n
+episode|qism (serial)|n
+essay|insho|n
+essential|o'ta zarur|a
+establish|tashkil etmoq|v
+estimate|baholamoq|v
+eventually|oxir-oqibat|d
+evidence|dalil|n
+evil|yovuz|a
+examine|tekshirib chiqmoq|v
+exception|istisno|n
+exhausted|holdan toygan|a
+existence|mavjudlik|n
+expand|kengaytirmoq|v
+expense|xarajat|n
+experiment|ilmiy tajriba|n
+explode|portlamoq|v
+explosion|portlash|n
+export|eksport|n
+expression|ifoda|n
+extend|uzaytirmoq|v
+extraordinary|favqulodda|a
+extreme|haddan tashqari|a
+extremely|nihoyatda|d
+fabric|mato|n
+factor|omil|n
+failure|muvaffaqiyatsizlik|n
+faith|imon|n
+faithful|sodiq|a
+fake|soxta|a
+fame|shon-shuhrat|n
+familiar|tanish|a
+fantastic|fantastik, zo'r|a
+fantasy|xayol|n
+fare|yo'l haqi|n
+favour|yaxshilik|n
+feather|pat|n
+feedback|fikr-mulohaza|n
+female|ayol jinsiga oid|a
+fiction|badiiy adabiyot|n
+finance|moliya|n
+financial|moliyaviy|a
+firm|firma|n
+flame|alanga|n
+flavour|lazzat|n
+flexible|moslashuvchan|a
+flood|toshqin|n
+flow|oqmoq|v
+flu|gripp|n
+fluent|ravon|a
+fold|buklamoq|v
+folk|xalq (folklor)|a
+forecast|prognoz|n
+forehead|peshona|n
+forever|abadiy|d
+formal|rasmiy|a
+former|sobiq|a
+fortunately|xayriyatki|d
+found|asos solmoq|v
+foundation|poydevor|n
+fountain|favvora|n
+frame|ramka|n
+frequent|tez-tez bo'ladigan|a
+frighten|qo'rqitmoq|v
+frightened|qo'rqib ketgan|a
+frozen|muzlagan|a
+fully|to'liq|d
+function|funksiya|n
+fund|fond, mablag'|n
+funeral|dafn marosimi|n
+fur|mo'yna|n
+gang|to'da|n
+gather|to'plamoq|v
+gender|jins|n
+generally|umuman olganda|d
+generous|saxiy|a
+genius|daho|n
+gesture|imo-ishora|n
+giant|gigant|n
+glance|ko'z tashlamoq|v
+global|global|a
+glue|yelim|n
+goods|tovarlar|n
+gossip|g'iybat|n
+grab|ushlab olmoq|v
+gradually|asta-sekin|d
+graduate|o'qishni bitirmoq|v
+grain|don|n
+grand|ulug'vor|a
+grandchild|nevara|n
+grateful|minnatdor|a
+grave|qabr|n
+greedy|ochko'z|a
+guarantee|kafolat|n
+guilty|aybdor|a
+hammer|bolg'a|n
+handle|tutqich|n
+happiness|baxt|n
+harbour|bandargoh|n
+harm|zarar yetkazmoq|v
+harmful|zararli|a
+harvest|o'rim-yig'im|n
+headline|gazeta sarlavhasi|n
+heal|shifo topmoq|v
+heating|isitish|n
+helmet|dubulg'a|n
+herb|dorivor o't|n
+highlight|ta'kidlamoq|v
+highly|yuqori darajada|d
+hike|piyoda sayr|n
+hint|ishora (maslahat)|n
+historic|tarixiy|a
+holy|muqaddas|a
+homeless|uysiz|a
+honour|sharaf|n
+hook|ilmoq|n
+hopefully|umid qilamanki|d
+horizon|ufq|n
+horrible|qo'rqinchli|a
+household|xonadon|n
+human|inson|n
+hunger|ochlik|n
+ideal|ideal|a
+identify|kimligini aniqlamoq|v
+illegal|noqonuniy|a
+imagination|tasavvur|n
+immigrant|muhojir|n
+impact|ta'sir (zarba)|n
+impatient|sabrsiz|a
+import|import|n
+impossible|imkonsiz|a
+impress|taassurot qoldirmoq|v
+impression|taassurot|n
+impressive|ta'sirli|a
+improvement|yaxshilanish|n
+incident|hodisa|n
+incredible|aql bovar qilmas|a
+indeed|darhaqiqat|d
+independence|mustaqillik|n
+indicate|bildirmoq|v
+individual|alohida shaxs|n
+indoor|bino ichidagi|a
+infection|infeksiya|n
+initial|dastlabki|a
+injured|yarador|a
+innocent|aybsiz|a
+insist|qat'iy turib olmoq|v
+inspire|ilhomlantirmoq|v
+instant|bir zumlik|a
+institute|institut|n
+insult|haqorat qilmoq|v
+intelligence|aql-zakovat|n
+intelligent|ziyoli, aqlli|a
+intend|niyat qilmoq|v
+intention|niyat|n
+interested|qiziqqan|a
+internal|ichki|a
+interrupt|gapni bo'lmoq|v
+introduction|kirish (muqaddima)|n
+invest|sarmoya kiritmoq|v
+investigate|tergov qilmoq|v
+investment|sarmoya|n
+involve|jalb qilmoq|v
+issue|masala|n
+jail|turma|n
+jaw|jag'|n
+jealous|rashkchi|a
+jeans|jinsi shim|n
+joint|bo'g'im|n
+journalist|jurnalist|n
+joy|quvonch|n
+junior|kichik (lavozimda)|a
+justice|adolat|n
+keen|ishtiyoqli|a
+kettle|choynak|n
+kingdom|qirollik|n
+lab|laboratoriya|n
+labour|mehnat|n
+lamb|qo'zi|n
+lane|tor ko'cha|n
+largely|ko'p jihatdan|d
+laughter|kulgi|n
+launch|ishga tushirmoq|v
+layer|qatlam|n
+leadership|rahbarlik|n
+league|liga|n
+leather|charm|n
+legal|qonuniy|a
+legend|afsona|n
+lifestyle|turmush tarzi|n
+lightning|chaqmoq|n
+likely|ehtimoliy|a
+limited|cheklangan|a
+living|tirikchilik|n
+logical|mantiqiy|a
+loyal|vafodor|a
+lyrics|qo'shiq matni|n
+magic|sehr|n
+maintain|saqlab turmoq|v
+major|katta, asosiy|a
+majority|ko'pchilik|n
+male|erkak jinsiga oid|a
+mall|savdo markazi|n
+mass|ommaviy (ko'p)|a
+massive|juda katta|a
+master|usta|n
+mature|yetuk|a
+maximum|eng yuqori|a
+mayor|shahar hokimi|n
+meanwhile|bu orada|d
+mechanic|mexanik|n
+medal|medal|n
+medical|tibbiy|a
+melt|erimoq|v
+mental|aqliy|a
+mercy|rahm-shafqat|n
+mess|tartibsizlik|n
+minimum|eng kam|a
+minister|vazir|n
+minor|ahamiyatsiz, kichik|a
+minority|ozchilik|n
+miracle|mo'jiza|n
+mission|missiya|n
+mixture|aralashma|n
+mobile|ko'chma, mobil|a
+modest|kamtar|a
+monitor|kuzatib bormoq|v
+monster|yirtqich maxluq|n
+monument|yodgorlik|n
+moral|axloqiy|a
+moreover|bundan tashqari|d
+mostly|ko'pincha|d
+motivate|rag'batlantirmoq|v
+mud|loy|n
+mysterious|sirli|a
+mystery|jumboq (sir)|n
+myth|mif|n
+nasty|yoqimsiz|a
+native|ona (tili); mahalliy|a
+navy|dengiz floti|n
+negotiate|muzokara olib bormoq|v
+nerve|asab|n
+nevertheless|shunday bo'lsa-da|d
+nightmare|dahshatli tush|n
+nonsense|bema'ni gap|n
+normally|odatiy holda|d
+nowadays|hozirgi kunda|d
+nuclear|yadroviy|a
+obligation|majburiyat|n
+obvious|ravshan|a
+obviously|tabiiyki|d
+occasion|munosabat (voqea)|n
+occasionally|vaqti-vaqti bilan|d
+odd|g'alati (toq)|a
+offend|ranjitmoq|v
+official|rasmiy (idoraviy)|a
+online|onlayn|a
+opponent|raqib|n
+oppose|qarshi chiqmoq|v
+opposite|qarama-qarshi|a
+optimistic|nikbin|a
+ordinary|oddiy (odatdagi)|a
+origin|kelib chiqish manbai|n
+original|asl|a
+otherwise|aks holda|d
+outdoor|ochiq havodagi|a
+outstanding|ajoyib, zo'r|a
+overall|umuman|d
+overcome|yengib o'tmoq|v
+owe|qarzdor bo'lmoq|v
+oxygen|kislorod|n
+package|posilka|n
+painful|og'riqli|a
+painter|rassom (bo'yoqchi)|n
+panic|vahima|n
+parking|avtoturargoh|n
+participate|ishtirok etmoq|v
+particular|muayyan|a
+partly|qisman|d
+passion|ishtiyoq|n
+password|parol|n
+patience|sabr|n
+pavement|piyodalar yo'lagi|n
+peak|cho'qqi|n
+penalty|jarima|n
+perfectly|mukammal tarzda|d
+performance|chiqish (sahnada)|n
+permanent|doimiy (o'zgarmas)|a
+personal|shaxsiy (o'ziga tegishli)|a
+personally|shaxsan|d
+philosophy|falsafa|n
+photographer|fotograf|n
+phrase|ibora|n
+physical|jismoniy|a
+pile|uyum|n
+pill|tabletka|n
+pity|achinish|n
+plain|oddiy (bezaksiz)|a
+pleased|mamnun|a
+plenty|mo'l-ko'l|n
+plot|syujet|n
+poison|zahar|n
+policy|siyosat (qoidalar)|n
+political|siyosiy|a
+port|port|n
+portrait|portret|n
+possibility|ehtimol (imkon)|n
+potential|salohiyat|n
+poverty|qashshoqlik|n
+powerful|qudratli|a
+practical|amaliy|a
+praise|maqtamoq|v
+precious|qimmatbaho|a
+pregnant|homilador|a
+preparation|tayyorgarlik|n
+presence|ishtirok|n
+preserve|asramoq|v
+press|bosmoq|v
+primary|boshlang'ich|a
+prince|shahzoda|n
+princess|malika|n
+principle|tamoyil|n
+priority|ustuvorlik|n
+prisoner|mahbus|n
+producer|prodyuser|n
+production|ishlab chiqarish|n
+professional|professional|a
+proof|isbot|n
+proper|lozim, munosib|a
+properly|lozim darajada|d
+protection|himoya|n
+psychology|psixologiya|n
+punishment|jazo|n
+purchase|xarid|n
+pure|sof|a
+puzzle|boshqotirma|n
+qualification|malaka|n
+queue|navbat (odamlar)|n
+quit|tashlamoq (odatni)|v
+quiz|viktorina|n
+quote|iqtibos|n
+rainy|yomg'irli|a
+random|tasodifiy|a
+range|qator, diapazon|n
+rapid|jadal|a
+rarely|kamdan-kam|d
+rat|kalamush|n
+rather|aksincha; ancha|d
+react|munosabat bildirmoq|v
+reaction|reaksiya|n
+reality|voqelik|n
+reasonable|oqilona|a
+receipt|chek (kvitansiya)|n
+reception|qabulxona|n
+reflect|aks ettirmoq|v
+reform|islohot|n
+refugee|qochoq|n
+register|ro'yxatdan o'tmoq|v
+regularly|muntazam ravishda|d
+relative|qarindosh|n
+release|ozod qilmoq|v
+relevant|tegishli|a
+reliable|ishonsa bo'ladigan|a
+relief|yengillik|n
+rely|tayanmoq|v
+remark|mulohaza|n
+remarkable|diqqatga sazovor|a
+remote|chekka (olis)|a
+represent|vakillik qilmoq|v
+reputation|obro'|n
+reservation|bron qilish|n
+resort|kurort|n
+reveal|oshkor qilmoq|v
+revolution|inqilob|n
+rhythm|ritm|n
+ridiculous|bema'ni|a
+robot|robot|n
+romantic|romantik|a
+routine|kundalik tartib|n
+royal|shohona|a
+ruin|vayron qilmoq (buzmoq)|v
+rumour|mish-mish|n
+rural|qishloqqa oid|a
+sacrifice|qurbon qilmoq|v
+sail|yelkanda suzmoq|v
+sailor|dengizchi|n
+satellite|sun'iy yo'ldosh|n
+satisfied|qoniqqan|a
+sauce|sous|n
+sausage|kolbasa|n
+scared|cho'chigan|a
+scary|vahimali|a
+scholarship|stipendiya|n
+scissors|qaychi|n
+secondary|ikkinchi darajali|a
+secretary|kotib|n
+section|qism (bo'lim)|n
+secure|mustahkam (xavfsiz)|a
+security|xavfsizlik xizmati|n
+select|saralamoq|v
+selfish|xudbin|a
+senior|katta (lavozimda)|a
+sensible|oqil|a
+sensitive|sezgir|a
+severe|og'ir (qattiq)|a
+sew|tikmoq|v
+shallow|sayoz|a
+shame|uyat|n
+shelter|boshpana|n
+shift|smena|n
+shocked|larzaga tushgan|a
+sight|ko'rish; manzara|n
+signal|signal|n
+signature|imzo|n
+significant|sezilarli|a
+silk|ipak|n
+similar|o'xshash|a
+sincere|samimiy|a
+site|joy (maydon)|n
+situation|vaziyat|n
+slightly|biroz|d
+slim|xipcha|a
+smart|zukko|a
+snack|yengil tamaddi|n
+solid|qattiq (jism)|a
+somehow|qandaydir yo'l bilan|d
+sort|xil|n
+soul|qalb|n
+spare|zaxira|a
+species|tur (biologik)|n
+specific|o'ziga xos|a
+spice|ziravor|n
+spoil|buzmoq|v
+stable|barqaror|a
+stadium|stadion|n
+stare|tikilib qaramoq|v
+statement|bayonot|n
+status|maqom|n
+steam|bug'|n
+steep|tik (qiya)|a
+stranger|notanish odam|n
+strategy|strategiya|n
+strawberry|qulupnay|n
+stream|soy|n
+stretch|cho'zmoq|v
+string|ip|n
+stuff|narsalar|n
+suburb|shahar chekkasi|n
+suitcase|chamadon|n
+summary|qisqacha mazmun|n
+sunshine|quyosh nuri|n
+supply|ta'minot|n
+surgery|jarrohlik|n
+surprised|hayron bo'lgan|a
+surprising|ajablanarli|a
+suspect|gumon qilmoq|v
+suspicious|shubhali|a
+sweat|ter|n
+sweater|sviter|n
+switch|almashtirmoq; yoqmoq|v
+sympathy|hamdardlik|n
+symptom|alomat|n
+tablet|planshet; tabletka|n
+tale|ertak|n
+tap|jo'mrak|n
+technical|texnik|a
+technique|texnika (usul)|n
+temporary|vaqtinchalik|a
+tend|moyil bo'lmoq|v
+tennis|tennis|n
+tension|keskinlik|n
+text|matn|n
+theme|mavzu (g'oya)|n
+thread|tikuv ipi|n
+threat|tahdid|n
+threaten|tahdid qilmoq|v
+throat|tomoq|n
+thunder|momaqaldiroq|n
+timetable|dars jadvali|n
+tip|maslahat; choychaqa|n
+toe|oyoq barmog'i|n
+tone|ohang|n
+tough|qiyin; chidamli|a
+tournament|turnir|n
+tragedy|fojia|n
+transfer|o'tkazmoq|v
+transform|tubdan o'zgartirmoq|v
+transport|transport|n
+trap|tuzoq|n
+treasure|xazina|n
+treat|muomala qilmoq; davolamoq|v
+trial|sud jarayoni|n
+triangle|uchburchak|n
+trick|hiyla|n
+trousers|shim|n
+tune|kuy|n
+tunnel|tunnel|n
+twin|egizak|n
+unable|qodir emas|a
+uncomfortable|noqulay|a
+underground|yer osti|a
+understanding|tushunish|n
+unemployed|ishsiz|a
+unemployment|ishsizlik|n
+unexpected|kutilmagan|a
+unfair|adolatsiz|a
+unfortunately|afsuski|d
+unique|noyob|a
+unknown|noma'lum|a
+unlikely|ehtimoldan yiroq|a
+unpleasant|xush yoqmaydigan|a
+upper|yuqori (ustki)|a
+urban|shaharga oid|a
+urgent|shoshilinch|a
+useless|foydasiz|a
+user|foydalanuvchi|n
+vacation|ta'til (dam olish)|n
+valuable|qimmatli|a
+van|furgon|n
+variety|xilma-xillik|n
+vast|bepoyon|a
+vegetarian|vegetarian|n
+victim|qurbon|n
+violence|zo'ravonlik|n
+violent|shafqatsiz (zo'ravon)|a
+virtual|virtual|a
+virus|virus|n
+visible|ko'rinadigan|a
+vision|ko'rish qobiliyati|n
+vital|hayotiy muhim|a
+vitamin|vitamin|n
+vocabulary|so'z boyligi|n
+volunteer|ko'ngilli|n
+waist|bel|n
+wander|kezmoq|v
+warning|ogohlantirish|n
+wealthy|badavlat|a
+weekly|haftalik|a
+weird|g'alati (antiqa)|a
+whenever|qachon bo'lsa ham|d
+wherever|qayerda bo'lsa ham|d
+whistle|hushtak|n
+width|kenglik|n
+wildlife|yovvoyi tabiat|n
+willing|rozi (tayyor)|a
+wire|sim|n
+wisdom|donolik|n
+witness|guvoh|n
+worth|arziydigan|a
+wound|yara|n
+wrist|bilak|n
+writing|yozuv|n
+zone|zona|n

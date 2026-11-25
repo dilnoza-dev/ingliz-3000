@@ -1,0 +1,367 @@
+steak|bifshteks|n
+beef|mol go'shti|n
+mutton|qo'y go'shti|n
+noodles|lag'mon (ugra)|n
+cabbage|karam|n
+pumpkin|qovoq|n
+corn|makkajo'xori|n
+wheat|bug'doy|n
+apricot|o'rik|n
+plum|olxo'ri|n
+pomegranate|anor|n
+fig|anjir|n
+almond|bodom|n
+raisin|mayiz|n
+berry|rezavor meva|n
+mushroom|qo'ziqorin|n
+olive|zaytun|n
+yogurt|qatiq|n
+dessert|shirinlik|n
+candy|konfet|n
+vinegar|sirka|n
+kebab|kabob|n
+dough|xamir|n
+jar|banka|n
+tray|patnis|n
+teapot|choynak (damlash uchun)|n
+napkin|salfetka|n
+comb|taroq|n
+toothbrush|tish cho'tkasi|n
+toothpaste|tish pastasi|n
+shampoo|shampun|n
+broom|supurgi|n
+wardrobe|kiyim javoni|n
+sheet|choyshab; varaq|n
+scarf|sharf|n
+sandal|sandal|n
+necklace|marjon|n
+earring|isirg'a|n
+bracelet|bilakuzuk|n
+glasses|ko'zoynak|n
+purse|ayollar hamyoni|n
+backpack|ryukzak|n
+pyjamas|pijama|n
+nail|tirnoq; mix|n
+lung|o'pka|n
+liver|jigar|n
+kidney|buyrak|n
+toothache|tish og'rig'i|n
+pharmacy|dorixona|n
+allergy|allergiya|n
+bandage|bint|n
+accountant|buxgalter|n
+builder|quruvchi|n
+butcher|qassob|n
+cashier|kassir|n
+cleaner|farrosh|n
+designer|dizayner|n
+electrician|elektrchi|n
+firefighter|o't o'chiruvchi|n
+hairdresser|sartarosh|n
+musician|musiqachi|n
+plumber|santexnik|n
+programmer|dasturchi|n
+shopkeeper|do'kondor|n
+surgeon|jarroh|n
+tailor|tikuvchi|n
+translator|tarjimon|n
+vet|veterinar|n
+businessman|tadbirkor|n
+volcano|vulqon|n
+waterfall|sharshara|n
+pond|hovuz (tabiiy)|n
+rose|atirgul|n
+tulip|lola|n
+sunrise|quyosh chiqishi|n
+sunset|quyosh botishi|n
+parrot|to'tiqush|n
+eagle|burgut|n
+owl|boyqush|n
+pigeon|kaptar|n
+crow|qarg'a|n
+sparrow|chumchuq|n
+rooster|xo'roz|n
+hen|makiyon tovuq|n
+ant|chumoli|n
+mosquito|chivin|n
+worm|chuvalchang|n
+lizard|kaltakesak|n
+turtle|toshbaqa|n
+shark|akula|n
+whale|kit|n
+dolphin|delfin|n
+deer|kiyik|n
+squirrel|olmaxon|n
+bat|ko'rshapalak|n
+giraffe|jirafa|n
+bull|buqa|n
+puppy|kuchukcha|n
+kitten|mushukcha|n
+cage|qafas|n
+visa|viza|n
+metro|metro|n
+crossroads|chorraha|n
+bakery|novvoyxona|n
+souvenir|esdalik sovg'asi|n
+customs|bojxona|n
+embassy|elchixona|n
+printer|printer|n
+folder|papka|n
+app|ilova (dastur)|n
+charger|zaryadlovchi|n
+profile|profil|n
+update|yangilamoq|v
+diploma|diplom|n
+notebook|daftar|n
+ruler|chizg'ich|n
+eraser|o'chirg'ich|n
+ashamed|sharmanda bo'lgan|a
+relaxed|bo'shashgan (tinch)|a
+ambitious|shuhratparast|a
+arrogant|takabbur|a
+stubborn|o'jar|a
+talkative|sergap|a
+advertise|reklama qilmoq|v
+announce|e'lon qilmoq|v
+arrange|tartibga solmoq|v
+confess|iqror bo'lmoq|v
+cooperate|hamkorlik qilmoq|v
+crawl|emaklamoq|v
+donate|xayriya qilmoq|v
+emphasize|urg'u bermoq|v
+fetch|borib olib kelmoq|v
+forbid|man qilmoq|v
+hug|quchoqlamoq|v
+kneel|tiz cho'kmoq|v
+knit|to'qimoq|v
+lick|yalamoq|v
+matter|ahamiyatga ega bo'lmoq|v
+multiply|ko'paytirmoq|v
+postpone|keyinga qoldirmoq|v
+pronounce|talaffuz qilmoq|v
+propose|taklif qilmoq (rasmiy)|v
+reject|rad qilmoq|v
+reserve|bron qilmoq|v
+respond|munosabat bildirib javob bermoq|v
+revise|qayta ko'rib chiqmoq|v
+shave|soqol olmoq|v
+sigh|xo'rsinmoq|v
+struggle|qiynalib kurashmoq|v
+swear|qasam ichmoq|v
+sweep|supurmoq|v
+wipe|artmoq|v
+yawn|esnamoq|v
+absent|qatnashmagan|a
+acceptable|maqbul|a
+amateur|havaskor|a
+blond|sariq sochli|a
+bold|dadil|a
+casual|norasmiy (oddiy)|a
+competitive|raqobatbardosh|a
+concerned|xavotirlangan|a
+cosy|shinam|a
+critical|tanqidiy|a
+crucial|hal qiluvchi|a
+curly|jingalak|a
+damp|nam|a
+delicate|nozik|a
+dependent|qaram|a
+distant|olis|a
+dusty|changli|a
+eastern|sharqiy|a
+western|g'arbiy|a
+northern|shimoliy|a
+southern|janubiy|a
+economic|iqtisodiy|a
+educational|ta'limiy|a
+efficient|unumli|a
+emotional|hissiy|a
+endless|cheksiz|a
+enjoyable|maroqli|a
+environmental|ekologik|a
+experienced|tajribali|a
+fashionable|urfdagi|a
+fixed|belgilangan|a
+foolish|nodon|a
+furious|g'azablangan|a
+genuine|chinakam|a
+golden|oltin rang|a
+harmless|zararsiz|a
+hidden|yashirin|a
+hopeless|chorasiz|a
+incorrect|xato (noto'g'ri)|a
+informal|norasmiy|a
+invisible|ko'rinmas|a
+lively|jonli|a
+lost|adashgan|a
+lovely|juda yoqimli|a
+magnificent|muhtasham|a
+medium|o'rta (o'lchamda)|a
+messy|tartibsiz|a
+mixed|aralash|a
+musical|musiqiy|a
+naughty|sho'x|a
+organic|organik|a
+overweight|ortiqcha vaznli|a
+peaceful|tinch|a
+realistic|real (hayotiy)|a
+religious|diniy|a
+scientific|ilmiy|a
+silent|sukutdagi|a
+single|yagona; bo'ydoq|a
+sleepy|uyqusiragan|a
+spiritual|ma'naviy|a
+talented|iste'dodli|a
+unhealthy|nosog'lom|a
+unnecessary|keraksiz|a
+worldwide|butun dunyo bo'ylab|a
+written|yozma|a
+accidentally|tasodifan|d
+altogether|umuman olib qaraganda|d
+anymore|endi (boshqa)|d
+apparently|aftidan|d
+approximately|taxminan|d
+basically|asosan olganda|d
+besides|bundan tashqari (yana)|d
+carefully|ehtiyotkorlik bilan|d
+clearly|aniq qilib|d
+completely|butunlay|d
+constantly|doimo|d
+deeply|chuqur|d
+deliberately|ataylab|d
+either|ham (inkorda); yoki|d
+elsewhere|boshqa joyda|d
+fairly|nisbatan|d
+firstly|birinchidan|d
+freely|erkin|d
+further|yanada|d
+gently|muloyimlik bilan|d
+happily|baxtiyor holda|d
+heavily|kuchli (qattiq)|d
+honestly|rostini aytganda|d
+lately|so'nggi paytlarda|d
+least|eng kam|d
+loudly|baland ovozda|d
+mainly|asosan|d
+naturally|tabiiy ravishda|d
+neither|hech biri ham|d
+originally|dastlab|d
+particularly|xususan|d
+practically|amalda|d
+previously|ilgari|d
+roughly|taxminan (qo'pol hisobda)|d
+safely|xavfsiz holda|d
+separately|alohida-alohida|d
+shortly|qisqa vaqtda|d
+similarly|xuddi shunday|d
+softly|ohista|d
+strongly|qattiq (kuchli ravishda)|d
+successfully|muvaffaqiyatli tarzda|d
+surely|shubhasiz|d
+surprisingly|ajablanarlisi|d
+terribly|dahshatli darajada|d
+thus|shunday qilib|d
+totally|mutlaqo (to'liq)|d
+truly|chin dildan|d
+warmly|samimiy ravishda|d
+accent|aksent|n
+achievement|yutuq|n
+affection|mehr|n
+anxiety|xavotir|n
+apology|uzr|n
+assignment|topshiriq|n
+association|uyushma|n
+athlete|sportchi|n
+attraction|diqqatga sazovor joy|n
+balloon|havo shari|n
+basement|yerto'la|n
+bedroom|yotoqxona|n
+beginning|boshlanish|n
+bride|kelin|n
+groom|kuyov|n
+circus|sirk|n
+cloth|latta (mato)|n
+command|buyruq|n
+companion|hamroh|n
+compliment|iltifot|n
+compromise|murosa|n
+confusion|chalkashlik|n
+contribution|hissa|n
+corridor|yo'lak (koridor)|n
+criticism|tanqid|n
+crown|toj|n
+cuisine|milliy taomlar|n
+curiosity|qiziquvchanlik|n
+dad|dada|n
+mum|oyi|n
+dancer|raqqos|n
+dawn|tong|n
+delivery|yetkazib berish|n
+development|rivojlanish|n
+difficulty|qiyinchilik|n
+documentary|hujjatli film|n
+elevator|lift|n
+enthusiasm|g'ayrat|n
+equality|tenglik|n
+excitement|hayajon|n
+excuse|bahona|n
+expectation|kutilma|n
+eyebrow|qosh|n
+cheque|chek (bank)|n
+grandson|nabira (o'g'il)|n
+granddaughter|nabira (qiz)|n
+nephew|jiyan (o'g'il)|n
+niece|jiyan (qiz)|n
+teenage|o'smirlik|a
+childish|bolalarcha|a
+adulthood|kattalik yoshi|n
+lifetime|umr|n
+hometown|tug'ilgan shahar|n
+landlord|uy egasi|n
+tenant|ijarachi|n
+microwave|mikroto'lqinli pech|n
+cooker|plita|n
+sink|rakovina|n
+heater|isitgich|n
+air conditioner|konditsioner|n
+remote control|pult|n
+socket|rozetka|n
+bulb|lampochka|n
+hanger|ilgich|n
+washing machine|kir yuvish mashinasi|n
+dishwasher|idish yuvish mashinasi|n
+vacuum cleaner|changyutgich|n
+doorbell|eshik qo'ng'irog'i|n
+lawn|maysazor|n
+football|futbol|n
+basketball|basketbol|n
+volleyball|voleybol|n
+boxing|boks|n
+wrestling|kurash|n
+swimming|suzish|n
+running|yugurish|n
+cycling|velosipedda uchish|n
+skiing|chang'i uchish|n
+fishing|baliq ovi|n
+hunting|ov qilish|n
+camping|lagerda dam olish|n
+shopping|xarid qilish|n
+cooking|ovqat tayyorlash|n
+reading|kitob o'qish|n
+gardening|bog'dorchilik|n
+photography|fotografiya|n
+referee|hakam|n
+goalkeeper|darvozabon|n
+trophy|kubok|n
+headphones|quloqchin|n
+microphone|mikrofon|n
+speaker|karnay; ma'ruzachi|n
+smartphone|smartfon|n
+screenshot|skrinshot|n
+selfie|selfi|n
+username|foydalanuvchi nomi|n
+inbox|kiruvchi xatlar|n
+attachment|ilova fayl|n
+browser|brauzer|n
+search engine|qidiruv tizimi|n
+wifi|vayfay|n
