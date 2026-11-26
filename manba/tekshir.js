@@ -32,7 +32,7 @@ for (const f of files) {
     const where = f + ':' + (n + 1);
     if (parts.length !== 3 || !/^\d+$/.test(parts[0]) || !parts[1] || !parts[2]) { errors.push(where + ' format: ' + line); return; }
     const li = +parts[0];
-    if (li < 1 || li > 150) { errors.push(where + ' dars raqami: ' + li); return; }
+    if (li < 1 || li > W.length / 20) { errors.push(where + ' dars raqami: ' + li); return; }
     const key = norm(parts[1]);
     if (seen.has(key)) errors.push(where + ' takror (' + seen.get(key) + '): ' + parts[1]);
     else seen.set(key, where);

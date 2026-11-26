@@ -27,9 +27,9 @@ MODEL_DIR = os.environ.get('PIPER_MODEL_DIR', os.path.join(ROOT, '.venv', 'voice
 MODEL = 'en_US-lessac-medium'
 MODEL_URL = 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/'
 RATE = 22050
-WORDS_PER_FILE = 100
+WORDS_PER_FILE = 40       # har bir soʻz fayli = 2 ta dars (kichik fayl telefonda tez ochiladi)
 SENTENCES_PER_FILE = 50
-LESSONS_PER_FILE = 5     # dars gaplari: har faylda 5 ta darsning gaplari
+LESSONS_PER_FILE = 2     # dars gaplari: har faylda 2 ta darsning gaplari
 SENTENCE_BITRATE = '24k'
 GAP = 0.25          # clips orasidagi jimlik, soniya
 PAD = 0.06          # clip boshidan/oxiridan qoldiriladigan zaxira
@@ -41,6 +41,9 @@ VOICE_OVERRIDE = {
     'separate': 'sˈɛpɚɹˌeɪt', 'estimate': 'ˈɛstɪmˌeɪt', 'increase': 'ɪŋkɹˈiːs', 'decrease': 'dɪkɹˈiːs',
     'import': 'ˈɪmpɔːɹt', 'insult': 'ɪnsˈʌlt', 'suspect': 'səspˈɛkt', 'transfer': 'tɹænsfˈɜː',
     'perfect': 'pˈɜːfɪkt', 'graduate': 'ɡɹˈædʒuːˌeɪt',
+    # B2 soʻzlari (fe'l maʼnosida)
+    'conduct': 'kəndˈʌkt', 'convert': 'kənvˈɜːt', 'console': 'kənsˈoʊl', 'extract': 'ɪkstɹˈækt',
+    'exploit': 'ɪksplˈɔɪt', 'refund': 'ɹɪfˈʌnd', 'advocate': 'ˈædvəkˌeɪt', 'coordinate': 'koʊˈɔːɹdɪnˌeɪt',
 }
 # Talaffuz yozuvi uchun CMU (ARPAbet) tanlovi.
 CMU_OVERRIDE = {
@@ -58,6 +61,10 @@ CMU_OVERRIDE = {
     'research': 'R IY1 S ER0 CH', 'graduate': 'G R AE1 JH UW0 EY2 T',
     'analyse': 'AE1 N AH0 L AY2 Z', 'criticise': 'K R IH1 T IH0 S AY2 Z', 'flavour': 'F L EY1 V ER0',
     'pyjamas': 'P AH0 JH AA1 M AH0 Z', 'toothache': 'T UW1 TH EY2 K',
+    # B2 soʻzlari
+    'conduct': 'K AH0 N D AH1 K T', 'convert': 'K AH0 N V ER1 T', 'console': 'K AH0 N S OW1 L',
+    'extract': 'IH0 K S T R AE1 K T', 'exploit': 'IH0 K S P L OY1 T', 'advocate': 'AE1 D V AH0 K EY2 T',
+    'coordinate': 'K OW0 AO1 R D AH0 N EY2 T', 'abstract': 'AE1 B S T R AE2 K T', 'offence': 'AH0 F EH1 N S',
 }
 # Grammatika qoidalari, «Tovushlar» boʻlimi va sozlamalardagi misollar (index.html bilan bir xil boʻlishi kerak).
 EXTRA = [
@@ -230,21 +237,21 @@ def main():
             index['w'].append([remap[name], e[1], e[2]])
     else:
         for n in range(0, len(words), WORDS_PER_FILE):
-            index['w'].extend(add_chunk('w%02d.mp3' % (n // WORDS_PER_FILE),
+            index['w'].extend(add_chunk('w%03d.mp3' % (n // WORDS_PER_FILE),
                                         [w[0] for w in words[n:n + WORDS_PER_FILE]], 1.1, VOICE_OVERRIDE))
-    # gaplar: umumiylari 50 tadan (s, ss), darslarniki 5 darsdan (d, ds)
+    # gaplar: umumiylari 50 tadan (s, ss), darslarniki 2 darsdan (d, ds)
     general = [i for i, r in enumerate(sentences) if len(r) < 3 or not r[2]]
-    groups = [('s', 'ss', general[n:n + SENTENCES_PER_FILE], n // SENTENCES_PER_FILE)
+    groups = [('s', 'ss', general[n:n + SENTENCES_PER_FILE], '%02d' % (n // SENTENCES_PER_FILE))
               for n in range(0, len(general), SENTENCES_PER_FILE)]
     blocks = {}
     for i, r in enumerate(sentences):
         if len(r) > 2 and r[2]:
             blocks.setdefault((r[2] - 1) // LESSONS_PER_FILE, []).append(i)
-    groups += [('d', 'ds', ids, b) for b, ids in sorted(blocks.items())]
+    groups += [('d', 'ds', ids, '%03d' % b) for b, ids in sorted(blocks.items())]
     for normal, slow, ids, k in groups:
         texts = [sentences[i][0] for i in ids]
         for key, prefix, scale in (('s', normal, 1.1), ('ss', slow, 1.45)):
-            for i, e in zip(ids, add_chunk('%s%02d.mp3' % (prefix, k), texts, scale, bitrate=SENTENCE_BITRATE)):
+            for i, e in zip(ids, add_chunk('%s%s.mp3' % (prefix, k), texts, scale, bitrate=SENTENCE_BITRATE)):
                 index[key][i] = e
     for n in range(0, len(EXTRA), 100):
         for t, e in zip(EXTRA[n:n + 100], add_chunk('x%02d.mp3' % (n // 100), EXTRA[n:n + 100], 1.1)):

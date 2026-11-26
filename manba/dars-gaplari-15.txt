@@ -171,7 +171,7 @@
 150|Don't overeat at night.|Kechasi ko'p yeb qo'ymang.
 150|Don't oversleep tomorrow.|Ertaga uxlab qolmang.
 150|Don't misunderstand me.|Meni noto'g'ri tushunmang.
-150|The advertisement was misleading.|Reklama chalg'ituvchi edi.
+150|Advertisements can mislead people.|Reklamalar odamlarni chalg'itishi mumkin.
 150|He is a dishonest person.|U nohalol odam.
 150|It is impolite to interrupt.|Gap bo'lish odobsizlik.
 150|That was an unkind thing to say.|Bunday deyish bag'ritoshlik edi.

@@ -1,0 +1,502 @@
+# B2 darajasi soʻzlari (3001–3500, 151–175-darslar). Eng koʻp ishlatiladiganidan boshlab tartiblangan, har 20 tasi bitta dars.
+# Har qator: inglizcha|oʻzbekcha|turkum
+federal|federal|a
+campaign|kampaniya|n
+administration|ma'muriyat|n
+awesome|zo'r|a
+commission|komissiya|n
+literally|tom ma'noda|d
+congress|kongress|n
+estate|mulk (yer-mulk)|n
+parliament|parlament|n
+bay|ko'rfaz|n
+core|o'zak|n
+capacity|sig'im|n
+governor|gubernator (hokim)|n
+vice|o'rinbosar; illat|n
+ensure|ta'minlamoq (kafolatlamoq)|v
+supreme|oliy|a
+era|davr|n
+grant|grant|n
+abuse|suiiste'mol qilmoq|v
+liberal|liberal|a
+corporate|korporativ|a
+distribution|taqsimot|n
+phase|bosqich|n
+revenue|daromad (tushum)|n
+coverage|yoritish (qamrov)|n
+ministry|vazirlik|n
+mode|rejim (usul)|n
+assembly|assambleya (yig'ilish)|n
+conservative|konservativ|a
+republic|respublika|n
+territory|hudud|n
+armed|qurollangan|a
+bond|rishta (bog'liqlik)|n
+resolution|qaror (rezolyutsiya)|n
+recovery|tiklanish|n
+senator|senator|n
+academy|akademiya|n
+index|indeks (ko'rsatkich)|n
+opposition|muxolifat|n
+representative|vakil (namoyanda)|n
+scheme|sxema (reja)|n
+ultimately|oxir-oqibatda|d
+combat|jang|n
+constitution|konstitutsiya|n
+counter|peshtaxta|n
+depression|depressiya (tushkunlik)|n
+exclusive|eksklyuziv|a
+grace|nafosat|n
+perspective|nuqtai nazar|n
+premier|bosh vazir|n
+carbon|uglerod|n
+deputy|o'rinbosar|n
+legislation|qonunchilik|n
+maintenance|texnik xizmat|n
+panel|panel (hay'at)|n
+resistance|qarshilik|n
+retail|chakana savdo|n
+expansion|kengayish|n
+marine|dengiz-ga oid|a
+portion|ulush (porsiya)|n
+protein|oqsil|n
+ultimate|yakuniy (eng oliy)|a
+conduct|o'tkazmoq (olib bormoq)|v
+debut|ilk chiqish|n
+principal|asosiy; direktor|a
+clinical|klinik|a
+convention|konvensiya|n
+equivalent|teng kuchli|a
+barely|arang|d
+cabinet|vazirlar mahkamasi; shkafcha|n
+contemporary|hozirgi zamon|a
+formation|shakllanish|n
+initially|dastlab|d
+jury|hakamlar hay'ati|n
+settlement|aholi punkti; kelishuv|n
+consistent|barqaror (izchil)|a
+chamber|palata (xona)|n
+circuit|elektr zanjiri|n
+format|format|n
+mount|ko'tarilmoq (o'rnatmoq)|v
+assessment|baholash|n
+founder|asoschi|n
+infrastructure|infratuzilma|n
+offensive|haqoratli|a
+superior|ustun|a
+transition|o'tish davri|n
+acid|kislota|n
+administrative|ma'muriy|a
+bonus|bonus (qo'shimcha haq)|n
+enforcement|ijro (amalga oshirish)|n
+formula|formula|n
+gross|yalpi|a
+respectively|mos ravishda|d
+assault|hujum (tajovuz)|n
+awareness|xabardorlik|n
+exposure|ta'sirga duchor bo'lish|n
+rank|unvon (daraja)|n
+replacement|almashtirish|n
+savings|jamg'arma|n
+wage|ish haqi|n
+avenue|xiyobon|n
+commitment|sadoqat (majburiyat)|n
+naked|yalang'och|a
+output|mahsulot (natija)|n
+strategic|strategik|a
+welfare|farovonlik (ijtimoiy yordam)|n
+behalf|nomidan|n
+establishment|tashkil etish (muassasa)|n
+boost|kuchaytirmoq|v
+evolution|evolyutsiya|n
+inspiration|ilhom|n
+memorial|yodgorlik|n
+promotion|lavozimga ko'tarilish|n
+saint|avliyo|n
+whereas|holbuki|c
+alliance|ittifoq|n
+bid|narx taklifi|n
+crystal|billur|n
+dean|dekan|n
+decent|munosib|a
+decline|kamaymoq; rad etmoq|v
+elite|elita|n
+obtain|olmoq (qo'lga kiritmoq)|v
+ownership|egalik|n
+cricket|chirildoq|n
+mortgage|ipoteka|n
+narrative|hikoya (bayon)|n
+subsequent|keyingi|a
+amendment|tuzatish (qonunga)|n
+defensive|mudofaaviy|a
+efficiency|samaradorlik|n
+enterprise|korxona|n
+forum|forum|n
+hence|shuning uchun|d
+pace|sur'at (qadam)|n
+possession|mulk (egalik)|n
+regulation|qoida (nizom)|n
+resident|aholi (doimiy yashovchi)|n
+valid|haqiqiy (amal qiladigan)|a
+commerce|savdo-sotiq|n
+fraud|firibgarlik|n
+legacy|meros (iz)|n
+ratio|nisbat (koeffitsiyent)|n
+reverse|teskari tomonga o'zgartirmoq|v
+survival|omon qolish|n
+ward|palata (kasalxonada)|n
+comprehensive|keng qamrovli|a
+consent|rozilik|n
+fate|qismat|n
+frequency|chastota|n
+gene|gen|n
+glory|shon-sharaf|n
+headquarters|bosh qarorgoh|n
+heritage|meros|n
+initiative|tashabbus|n
+objective|maqsad|n
+residence|qarorgoh (yashash joyi)|n
+consumption|iste'mol|n
+corruption|korrupsiya|n
+input|kiritma (hissa)|n
+luxury|hashamat|n
+outcome|natija|n
+sequence|ketma-ketlik|n
+genetic|genetik|a
+liberty|erkinlik|n
+rally|miting; jipslashmoq|n
+representation|vakillik|n
+upcoming|bo'lajak|a
+alert|hushyor|a
+arena|arena (maydon)|n
+boom|gurkirab o'sish|n
+compensation|kompensatsiya|n
+composition|tarkib; asar|n
+conservation|muhofaza|n
+density|zichlik|n
+ethnic|etnik|a
+fleet|flot|n
+foster|tarbiyalamoq (rivojlantirmoq)|v
+fundamental|asosiy (tub)|a
+guidance|yo'l-yo'riq|n
+pregnancy|homiladorlik|n
+premium|mukofot (sug'urta to'lovi)|n
+prominent|taniqli|a
+radical|tub (radikal)|a
+residential|turar-joy-ga oid|a
+substantial|salmoqli|a
+transmission|uzatish|n
+component|tarkibiy qism|n
+diversity|xilma-xillik|n
+faculty|fakultet|n
+humanity|insoniyat|n
+innovation|innovatsiya|n
+legislative|qonun chiqaruvchi|a
+ongoing|davom etayotgan|a
+versus|qarshi|p
+discrimination|kamsitish|n
+disorder|tartibsizlik (kasallik)|n
+domain|soha|n
+dynamic|dinamik|a
+engagement|unashtiruv; ishtirok|n
+footage|videolavha|n
+implementation|joriy etish|n
+literary|adabiy|a
+stability|barqarorlik|n
+terminal|terminal|n
+treaty|shartnoma (davlatlar o'rtasida)|n
+agenda|kun tartibi|n
+collective|jamoaviy|a
+cooperation|o'zaro hamkorlik|n
+hardware|apparat ta'minot|n
+intellectual|intellektual|a
+petition|petitsiya (ariza)|n
+regime|rejim|n
+seal|muhrlamoq; tyulen|v
+shield|qalqon|n
+stem|kelib chiqmoq; poya|v
+summit|cho'qqi; sammit|n
+clay|gil (loy)|n
+default|standart sozlama|n
+distinct|aniq farq qiladigan|a
+eligible|huquqi bor (mos keladigan)|a
+execution|ijro; qatl|n
+framework|asos (tizim)|n
+franchise|franshiza|n
+interaction|o'zaro aloqa|n
+loop|halqa (sikl)|n
+overseas|chet elda|d
+polish|sayqallamoq|v
+worship|sig'inmoq|v
+worthy|munosib (loyiq)|a
+collaboration|hamkorlik (birgalikdagi ish)|n
+dual|ikki tomonlama|a
+filter|filtr|n
+galaxy|galaktika|n
+intent|niyat|n
+logo|logotip|n
+odds|ehtimollik (imkoniyat)|n
+prevention|oldini olish|n
+revenge|qasos|n
+specialist|mutaxassis|n
+auction|kim oshdi savdosi|n
+chaos|xaos (to'polon)|n
+dispute|nizo|n
+earnings|daromad|n
+margin|hoshiya; farq|n
+mechanism|mexanizm|n
+moderate|mo'tadil|a
+parallel|parallel|a
+psychological|psixologik|a
+quest|izlanish (safar)|n
+radiation|radiatsiya|n
+stroke|insult; zarba|n
+utility|kommunal xizmat; foyda|n
+vessel|kema; tomir|n
+acquisition|qo'lga kiritish|n
+clip|qisqich; lavha|n
+conspiracy|fitna|n
+controversy|bahs-munozara|n
+encounter|duch kelmoq|v
+fiscal|moliyaviy (soliqqa oid)|a
+intervention|aralashuv (intervensiya)|n
+mainstream|asosiy oqim|n
+mutual|o'zaro|a
+oral|og'zaki|a
+pursue|ta'qib qilmoq; intilmoq|v
+scope|ko'lam|n
+segment|bo'lak (segment)|n
+spectrum|spektr|n
+venture|tavakkal ish|n
+considerable|sezilarli darajada katta|a
+conventional|an'anaviy (odatdagi)|a
+inquiry|surishtiruv|n
+inspector|inspektor|n
+tribute|hurmat bajo keltirish|n
+trigger|qo'zg'atmoq|v
+venue|o'tkaziladigan joy|n
+accuracy|aniqlik|n
+conversion|aylantirish|n
+copyright|mualliflik huquqi|n
+deposit|omonat (depozit)|n
+diverse|xilma-xil|a
+divine|ilohiy|a
+exclusively|faqat|d
+functional|ishlaydigan (amaliy)|a
+municipal|shahar-ga oid|a
+neutral|betaraf|a
+noble|olijanob|a
+sacred|muqaddas|a
+toxic|zaharli (toksik)|a
+upgrade|yangilamoq (yaxshilamoq)|v
+warrant|order (ruxsatnoma)|n
+asset|aktiv (qimmatli narsa)|n
+burden|og'ir yuk|n
+charter|ustav (nizom)|n
+civilian|tinch fuqaro|n
+coalition|koalitsiya|n
+controversial|bahsli|a
+dominant|hukmron|a
+graphic|grafik|a
+invasion|bosqin|n
+legendary|afsonaviy|a
+pole|qutb; ustun|n
+shed|to'kmoq; shiypon|v
+subsequently|keyinchalik|d
+syndrome|sindrom|n
+affordable|hamyonbop|a
+canal|kanal (suv yo'li)|n
+cruise|dengiz sayohati|n
+custody|vasiylik|n
+generate|ishlab chiqarmoq (hosil qilmoq)|v
+integration|integratsiya|n
+integrity|halollik (yaxlitlik)|n
+interpretation|talqin|n
+legitimate|qonuniy|a
+outfit|kiyim to'plami|n
+pension|pensiya|n
+productive|samarali|a
+socialist|sotsialist|n
+advocate|yoqlamoq (himoya qilmoq)|v
+backup|zaxira nusxa|n
+continuous|uzluksiz|a
+disability|nogironlik|n
+evaluation|baholash (tahlil)|n
+excess|ortiqcha|n
+gravity|tortishish kuchi|n
+identical|bir xil|a
+repeatedly|qayta-qayta|d
+slavery|qullik|n
+transaction|tranzaksiya (bitim)|n
+transformation|o'zgarish|n
+veteran|faxriy|n
+vulnerable|zaif (himoyasiz)|a
+bronze|bronza|n
+chronic|surunkali|a
+diagnosis|tashxis|n
+dose|doza|n
+flesh|et (tana)|n
+implement|amalga oshirmoq (joriy etmoq)|v
+occupation|kasb; ishg'ol|n
+patch|yamoq|n
+privilege|imtiyoz|n
+radar|radar|n
+resist|qarshilik ko'rsatmoq|v
+solely|faqatgina|d
+transit|tranzit|n
+blade|tig'|n
+bulk|katta qism (ulgurji)|n
+cargo|yuk (kema yoki samolyot)|n
+coastal|qirg'oqbo'yi|a
+commentary|sharh|n
+dealer|diler (sotuvchi)|n
+destiny|taqdir|n
+exploration|tadqiq qilish|n
+insight|chuqur tushuncha|n
+overnight|bir kechada|d
+qualify|huquqini olmoq (saralanmoq)|v
+raid|reyd (bostirib kirish)|n
+respective|tegishli (har birining)|a
+scenario|ssenariy|n
+sustainable|barqaror (uzoq muddatli)|a
+trace|iz|n
+widespread|keng tarqalgan|a
+accessible|foydalanish oson|a
+acknowledge|e'tirof etmoq|v
+bias|tarafkashlik|n
+chill|sovuqlik (titroq)|n
+compound|birikma|n
+identification|shaxsni tasdiqlash|n
+lap|tizza (o'tirganda)|n
+patent|patent|n
+perception|idrok|n
+proceed|davom etmoq|v
+proceedings|sud ishi (jarayon)|n
+restore|tiklamoq|v
+rifle|miltiq|n
+rival|raqib (bellashuvchi)|n
+significance|ahamiyat|n
+structural|tuzilmaviy|a
+suite|lyuks xona; to'plam|n
+anonymous|anonim|a
+attendance|davomat|n
+barrel|bochka|n
+bless|duo qilmoq|v
+colonial|mustamlakachilik|a
+compliance|rioya qilish|n
+crush|ezmoq|v
+genre|janr|n
+lens|linza|n
+loyalty|sadoqat|n
+notion|tushuncha|n
+partial|qisman|a
+propaganda|tashviqot|n
+reflection|aks; mulohaza|n
+resolve|hal qilmoq|v
+revolutionary|inqilobiy|a
+scandal|janjal (mojaro)|n
+simultaneously|bir vaqtning o'zida|d
+substitute|o'rinbosar (almashtiruvchi)|n
+surveillance|kuzatuv|n
+testimony|guvohlik|n
+underlying|asosida yotgan|a
+acceptance|qabul qilinish|n
+counsel|maslahat bermoq|v
+deadly|o'limga olib keladigan|a
+determination|qat'iyat|n
+embrace|quchoqlamoq|v
+indigenous|tub (mahalliy)|a
+installation|o'rnatish|n
+marathon|marafon|n
+parade|parad|n
+paradise|jannat|n
+preliminary|dastlabki|a
+retain|saqlab qolmoq|v
+satisfaction|qoniqish|n
+vocal|ovozli; ochiq gapiradigan|a
+warrior|jangchi|n
+yield|hosil bermoq; yon bermoq|v
+eliminate|bartaraf etmoq|v
+medication|dori-darmon|n
+portfolio|portfel (portfolio)|n
+productivity|unumdorlik|n
+stake|ulush (manfaat)|n
+strain|zo'riqish|n
+violation|buzilish (huquqbuzarlik)|n
+workshop|ustaxona; seminar|n
+abstract|mavhum|a
+beam|nur (to'sin)|n
+conviction|e'tiqod; hukm|n
+corrupt|poraxo'r|a
+duration|davomiylik|n
+harsh|qattiq (shafqatsiz)|a
+immune|immunitetli|a
+inflation|inflyatsiya|n
+inspection|tekshiruv|n
+intensity|shiddat|n
+inventory|inventar ro'yxat|n
+judicial|sud-ga oid|a
+justify|oqlamoq (asoslamoq)|v
+migration|ko'chish (migratsiya)|n
+missile|raketa|n
+patrol|patrul|n
+peer|tengdosh|n
+provision|ta'minot (qoida)|n
+statistical|statistik|a
+trauma|jarohat (ruhiy)|n
+acquire|egallamoq|v
+activist|faol (jamoat arbobi)|n
+availability|mavjudlik|n
+boundary|chegara chizig'i|n
+breach|buzilish (qoidaning)|n
+consultant|maslahatchi|n
+courtesy|xushmuomalalik|n
+engaging|jalb qiluvchi|a
+guilt|aybdorlik|n
+iconic|timsolga aylangan|a
+mandatory|majburiy (qonun bo'yicha)|a
+observation|kuzatish|n
+phenomenon|hodisa (fenomen)|n
+precise|aniq|a
+prospect|istiqbol|n
+protective|himoya qiluvchi|a
+retreat|chekinmoq|v
+separation|ajralish|n
+theft|o'g'irlik|n
+adjacent|yonma-yon|a
+athletic|sportchi qomatli|a
+colony|mustamlaka|n
+curriculum|o'quv dasturi|n
+electoral|saylov-ga oid|a
+entity|tashkilot (birlik)|n
+journalism|jurnalistika|n
+linear|chiziqli|a
+occasional|vaqti-vaqti bilan bo'ladigan|a
+pursuit|izlanish (intilish)|n
+tribe|qabila|n
+variable|o'zgaruvchi|n
+artwork|san'at asari|n
+cognitive|kognitiv (bilishga oid)|a
+convert|aylantirmoq|v
+dental|tish-ga oid|a
+diplomatic|diplomatik|a
+editorial|tahririyat maqolasi|n
+eternal|abadiy|a
+generic|umumiy|a
+grip|mahkam ushlash|n
+handful|bir hovuch|n
+humble|kamtar|a
+minimal|minimal|a
+proportion|nisbat|n
+rage|qahr|n
+restoration|qayta tiklash|n
+urge|undamoq|v
+ally|ittifoqchi|n
+array|to'plam (qator)|n
+booth|kabina|n
+breakdown|buzilib qolish|n
+brutal|vahshiyona|a
+consensus|yakdillik|n
+declaration|deklaratsiya (bayonot)|n
+distinction|farq; imtiyoz|n

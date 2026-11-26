@@ -28,14 +28,14 @@ const html = `<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="3000 ta inglizcha soʻzni oʻzbek tilida oʻrgatadigan ilova: 4 variantli test, gap tuzish, tarjima va talaffuz.">
+<meta name="description" content="4000 ta inglizcha soʻzni (A1 dan B2 gacha) oʻzbek tilida oʻrgatadigan ilova: 4 variantli test, gap tuzish, tarjima va talaffuz.">
 <meta name="theme-color" content="#17357A">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="3000 Soʻz">
+<meta name="apple-mobile-web-app-title" content="3000 B2">
 ${preamble}
 <style>
 :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); color-scheme: light; }

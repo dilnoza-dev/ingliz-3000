@@ -1,6 +1,7 @@
 // So'zlar va gaplar bazasini qayta yig'adi:
 //   node manba/build.js
-// manba/sozlar-*.txt  (inglizcha|o'zbekcha|turkum)  -> words.json  (birinchi 3000 ta noyob so'z)
+// manba/sozlar-*.txt  (inglizcha|o'zbekcha|turkum)  -> words.json  (birinchi 3000 ta noyob so'z, A1–B1)
+// manba/b2-sozlar-*.txt (xuddi shu format)            -> words.json  (keyingi 1000 ta B2 so'zi, 151–200-darslar)
 // manba/gaplar.txt    (inglizcha|o'zbekcha)          -> sentences.json (umumiy gaplar)
 // manba/dars-gaplari-*.txt (dars|inglizcha|o'zbekcha) -> sentences.json (har bir darsning gaplari)
 // Turkumlar: n ot, v fe'l, a sifat, d ravish, p olmosh, r predlog, c bog'lovchi, x boshqa.
@@ -12,26 +13,33 @@ const root = path.join(dir, '..');
 const POS = new Set(['n', 'v', 'a', 'd', 'p', 'r', 'c', 'x']);
 const uzFix = s => s.replace(/([oOgG])'/g, (m, l) => l + 'ʻ').replace(/'/g, 'ʼ');
 
-const files = fs.readdirSync(dir).filter(f => /^sozlar-\d+\.txt$/.test(f)).sort((a, b) => parseInt(a.match(/\d+/)) - parseInt(b.match(/\d+/)));
-const seen = new Set();
-const words = [];
 const problems = [];
-for (const f of files) {
-  for (const raw of fs.readFileSync(path.join(dir, f), 'utf8').split('\n')) {
-    const line = raw.trim();
-    if (!line || line.startsWith('#')) continue;
-    const parts = line.split('|').map(s => s.trim());
-    if (parts.length !== 3 || !POS.has(parts[2])) { problems.push(f + ': ' + line); continue; }
-    const [en, uz, pos] = parts;
-    const key = en === 'May' ? 'May' : en.toLowerCase();
-    if (seen.has(key)) continue;
-    seen.add(key);
-    words.push([en, uzFix(uz), pos]);
+const keyOf = en => en === 'May' ? 'May' : en.toLowerCase();
+// Berilgan fayllardagi noyob soʻzlar (seen dagilar tashlab ketiladi)
+function readWords(re, seen) {
+  const files = fs.readdirSync(dir).filter(f => re.test(f)).sort((a, b) => parseInt(a.match(/\d+/)) - parseInt(b.match(/\d+/)));
+  const out = [];
+  for (const f of files) {
+    for (const raw of fs.readFileSync(path.join(dir, f), 'utf8').split('\n')) {
+      const line = raw.trim();
+      if (!line || line.startsWith('#')) continue;
+      const parts = line.split('|').map(s => s.trim());
+      if (parts.length !== 3 || !POS.has(parts[2])) { problems.push(f + ': ' + line); continue; }
+      const [en, uz, pos] = parts;
+      if (seen.has(keyOf(en))) continue;
+      seen.add(keyOf(en));
+      out.push([en, uzFix(uz), pos]);
+    }
   }
+  return out;
 }
+const base = readWords(/^sozlar-\d+\.txt$/, new Set());
+if (base.length < 3000) console.warn('Diqqat: faqat ' + base.length + ' ta soʻz bor.');
+const main = base.slice(0, 3000);
+const b2 = readWords(/^b2-sozlar-\d+\.txt$/, new Set(main.map(w => keyOf(w[0])))).slice(0, 1000);
 if (problems.length) { console.error('Notoʻgʻri qatorlar:\n' + problems.join('\n')); process.exit(1); }
-if (words.length < 3000) console.warn('Diqqat: faqat ' + words.length + ' ta soʻz bor.');
-const list = words.slice(0, 3000);
+if (b2.length < 1000) console.warn('Diqqat: B2 darajasida faqat ' + b2.length + ' ta soʻz bor.');
+const list = main.concat(b2);
 // Talaffuz yozuvi (IPA): manba/talaffuz.txt, uni manba/ovoz.py yaratadi.
 const ipaFile = path.join(dir, 'talaffuz.txt');
 if (fs.existsSync(ipaFile)) {
@@ -62,4 +70,4 @@ for (const f of lessonFiles) {
 lessonRows.sort((a, b) => a[2] - b[2]);
 sentences.push(...lessonRows);
 fs.writeFileSync(path.join(root, 'sentences.json'), '[\n' + sentences.map(r => JSON.stringify(r)).join(',\n') + '\n]\n');
-console.log('words.json: ' + list.length + ' ta soʻz, sentences.json: ' + sentences.length + ' ta gap (' + lessonRows.length + ' tasi darslarga biriktirilgan)');
+console.log('words.json: ' + list.length + ' ta soʻz (' + b2.length + ' tasi B2), sentences.json: ' + sentences.length + ' ta gap (' + lessonRows.length + ' tasi darslarga biriktirilgan)');
