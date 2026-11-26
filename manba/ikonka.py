@@ -1,5 +1,5 @@
 """Ilova belgisini (ikonkasini) chizadi: icons/icon-192.png, icon-512.png, maskable-512.png, apple-touch-icon.png.
-Uslub: qorongʻi zamonaviy — toʻq fon, firuza→binafsha rangli progress halqasi, Unbounded shrifti.
+Uslub: qorongʻi zamonaviy — toʻq fon, firuza→binafsha rangli progress halqasi, «3000» va «B2», Unbounded shrifti.
 Ishlatish:  python3 manba/ikonka.py   (Pillow kerak; Unbounded shrifti birinchi marta Google Fonts'dan yuklanadi)"""
 import math
 import os
@@ -15,6 +15,7 @@ TRACK = (30, 38, 58)
 CYAN = (34, 211, 238)
 VIOLET = (139, 92, 246)
 WHITE = (246, 248, 255)
+LABEL = 'B2'  # «3000» ostidagi yozuv
 
 
 def font_file(weight):
@@ -78,16 +79,16 @@ def draw(size, maskable):
     while size1 > 10 and d.textlength('3000', font=ImageFont.truetype(font_file(800), size1)) > R * 1.22:
         size1 -= 2
     f1 = ImageFont.truetype(font_file(800), size1)
-    f2 = ImageFont.truetype(font_file(500), round(size1 * 0.42))
-    t1, t2 = '3000', 'SOʻZ'
+    f2 = ImageFont.truetype(font_file(800 if len(LABEL) <= 2 else 500), round(size1 * (0.58 if len(LABEL) <= 2 else 0.42)))
+    t1, t2 = '3000', LABEL
     b1 = d.textbbox((0, 0), t1, font=f1)
     h1 = b1[3] - b1[1]
-    spacing = size1 * 0.13
+    spacing = size1 * (0.06 if len(LABEL) <= 2 else 0.13)
     widths = [d.textlength(ch, font=f2) for ch in t2]
     w2 = sum(widths) + spacing * (len(t2) - 1)
     b2 = d.textbbox((0, 0), t2, font=f2)
     h2 = b2[3] - b2[1]
-    gap = size1 * 0.3
+    gap = size1 * (0.26 if len(LABEL) <= 2 else 0.3)
     top = cy - (h1 + gap + h2) / 2
     d.text((cx - (b1[2] - b1[0]) / 2 - b1[0], top - b1[1]), t1, font=f1, fill=WHITE)
     x = cx - w2 / 2
