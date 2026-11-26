@@ -1,4 +1,4 @@
-# 3000 B2 — ingliz tilini oʻrganish uchun
+# 4000 B2 — ingliz tilini oʻrganish uchun
 
 Oʻzbek tilida soʻzlashuvchilar uchun ingliz tili dasturi. Unda 4000 ta inglizcha soʻz 200 ta darsga boʻlingan, har darsda 20 tadan soʻz bor. Darajalar: A1, A2, B1 (1–150-darslar, eng kerakli 3000 soʻz) va B2 (151–200-darslar, yana 1000 ta soʻz).
 
