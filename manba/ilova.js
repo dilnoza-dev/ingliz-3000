@@ -19,7 +19,8 @@ const preamble = page.slice(0, cut)
   .join('\n');
 const body = page.slice(cut);
 
-const version = sha(page + sha(read('words.json')) + sha(read('sentences.json')) + sha(read('audio/index.json'))).slice(0, 10);
+const icons = ['icon-192.png', 'icon-512.png', 'maskable-512.png', 'apple-touch-icon.png'].map(f => sha(read('icons/' + f))).join('');
+const version = sha(page + sha(read('words.json')) + sha(read('sentences.json')) + sha(read('audio/index.json')) + icons).slice(0, 10);
 const audioVersion = sha(read('audio/index.json')).slice(0, 10);
 
 const html = `<!doctype html>

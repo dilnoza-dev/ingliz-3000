@@ -1,5 +1,5 @@
 // Avtomatik yaratilgan: node manba/ilova.js. Qoʻlda tahrir qilmang.
-const CORE = 'ingliz3000-core-0ef9a40362';
+const CORE = 'ingliz3000-core-29688c6f61';
 const AUDIO = 'ingliz3000-audio-168026bd65';
 const CORE_FILES = ['./', 'index.html', 'words.json', 'sentences.json', 'audio/index.json', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-512.png', 'icons/apple-touch-icon.png'];
