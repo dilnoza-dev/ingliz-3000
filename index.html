@@ -4,7 +4,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;600;700;800&family=Charis+SIL&display=swap">
 <style>
 /* Layout: one-column workbook (max 760px) under a sticky lapis "tile band" carrying the brand, progress and five stage tabs. */
 :root {
@@ -266,6 +266,10 @@ textarea:focus { border-color: var(--accent); outline: none; }
 .rules .ex { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .rules .ex .en { font-weight: 800; color: var(--accent); }
 .rules .ex .uz { color: var(--muted); font-size: .9rem; }
+.ipa { font-family: 'Charis SIL', 'Noto Sans', 'Segoe UI', 'DejaVu Sans', sans-serif; color: var(--muted); font-size: .95rem; font-weight: 400; margin-left: 8px; }
+.ipa.lg { display: block; font-size: 1.2rem; margin: 4px 0 0; }
+.chip .ipa { margin-left: 2px; font-size: .85rem; }
+.rules .ipa-s { font-family: 'Charis SIL', 'Noto Sans', 'Segoe UI', sans-serif; font-size: 1.35rem; color: var(--accent); font-weight: 700; min-width: 2.2em; }
 .rules .spk { width: 32px; height: 32px; }
 .rules .spk svg { width: 16px; height: 16px; }
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(18px + env(safe-area-inset-bottom, 0px)); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 10px; font-weight: 700; font-size: .9rem; z-index: 20; max-width: calc(100% - 32px); }
@@ -324,7 +328,8 @@ textarea:focus { border-color: var(--accent); outline: none; }
 
   <h2>Sozlamalar</h2>
   <div class="settings">
-    <div class="row"><span class="small muted" style="min-width:120px">Ovoz</span>
+    <p class="small muted">3000 ta soʻz va tayyor gaplar oldindan yozib olingan ovoz bilan aytiladi, bu telefonda ham ishlaydi. Claude tuzgan yangi gaplar esa quyida tanlangan ovoz bilan aytiladi.</p>
+    <div class="row"><span class="small muted" style="min-width:120px">Yangi gaplar ovozi</span>
       <div class="seg" role="group" aria-label="Ovoz manbai"><button type="button" data-voice="auto" aria-pressed="true">Claude ovozi</button><button type="button" data-voice="browser" aria-pressed="false">Brauzer ovozi</button></div>
     </div>
     <div class="row"><span class="small muted" style="min-width:120px">Darajam</span>
@@ -364,6 +369,7 @@ textarea:focus { border-color: var(--accent); outline: none; }
   <div class="row">
     <div class="seg" role="group" aria-label="Mashq turi"><button type="button" data-pmode="translate" aria-pressed="true">Tarjima qilib ayting</button><button type="button" data-pmode="read" aria-pressed="false">Oʻqib bering</button></div>
   </div>
+  <details class="rules" id="pSounds"></details>
   <div class="focusbar" id="pFocusBar"></div>
   <div id="pBody"><div class="loading">Yuklanmoqda…</div></div>
 </section>
@@ -431,6 +437,32 @@ const RULES = [
   { t: 'in / on / at / to', d: 'Oʻzbekchada -da, -ga soʻz oxiriga qoʻshiladi. Inglizchada ular alohida soʻz boʻlib, otdan oldin keladi.', ex: [['I go to school every day.', 'Men har kuni maktabga boraman.'], ['The book is on the table.', 'Kitob stol ustida.']] },
   { t: 'Oʻtgan zamon: -ed', d: 'Koʻp feʼllarga -ed qoʻshiladi: work → worked. Ayrim feʼllar boshqacha oʻzgaradi, ularni yodlash kerak: go → went, see → saw.', ex: [['I went to the market yesterday.', 'Men kecha bozorga bordim.']] }
 ];
+const SOUNDS = [
+  { s: 'θ', ex: ['think', 'three', 'thank'], d: 'Tilning uchini tishlar orasiga qoʻyib, ovozsiz puflang. «s» demang: think soʻzi «sink» boʻlib eshitilmasin.' },
+  { s: 'ð', ex: ['this', 'they', 'mother'], d: 'Til yana tishlar orasida, lekin ovoz bilan aytiladi. «z» ham, «d» ham emas.' },
+  { s: 'w', ex: ['we', 'water', 'west'], d: 'Lablarni yumaloqlab oldinga choʻzing va «u» dan boshlab tez oching. Tishlar labga tegmaydi.' },
+  { s: 'v', ex: ['very', 'vest', 'voice'], d: 'Yuqori tishlar pastki labga tegadi. west va vest soʻzlarini farqlab ayting.' },
+  { s: 'æ', ex: ['cat', 'apple', 'bag'], d: 'Ogʻizni keng ochib, «a» bilan «e» orasidagi tovushni ayting.' },
+  { s: 'ʌ', ex: ['cup', 'but', 'sun'], d: 'Qisqa va keskin «a».' },
+  { s: 'ə', ex: ['about', 'the', 'banana'], d: 'Juda qisqa va kuchsiz tovush. Urgʻu tushmaydigan boʻgʻinlarda keladi.' },
+  { s: 'ɪ · iː', ex: ['ship', 'sheep', 'sit', 'seat'], d: 'ɪ qisqa «i», iː choʻziq «ii». ship (kema) va sheep (qoʻy) soʻzlarining maʼnosi boshqa.' },
+  { s: 'ŋ', ex: ['sing', 'morning', 'long'], d: 'Oʻzbekcha «tong» soʻzidagi «ng» kabi. Oxirida «g» alohida aytilmaydi.' },
+  { s: 'r', ex: ['red', 'car', 'girl'], d: 'Til tanglayga tegmaydi va titramaydi. Amerikacha talaffuzda soʻz oxiridagi r ham aytiladi.' }
+];
+function renderSounds() {
+  const d = $('#pSounds'); if (!d) return;
+  clear(d);
+  const ipaOf = w => { const i = IDX.get(w.toLowerCase()); return i != null && W[i] && W[i][0].toLowerCase() === w.toLowerCase() ? (W[i][3] || '') : ''; };
+  d.append(h('summary', null, h('span', null, 'Tovushlar', h('span', { class: 'small muted', text: ' · oʻzbek tilida yoʻq tovushlar va transkripsiya belgilari' }))));
+  d.append(h('ol', null,
+    SOUNDS.map(x => h('li', null,
+      h('div', { class: 'ex' }, h('span', { class: 'ipa-s', text: x.s }), h('span', { class: 'small', style: 'flex:1;min-width:0', text: x.d })),
+      h('div', { class: 'chips' }, x.ex.map(w => h('button', { class: 'chip blue', type: 'button', lang: 'en', title: 'Eshitish', onclick: () => speak(w) }, w, ipaOf(w) ? h('span', { class: 'ipa', text: ipaOf(w) }) : null)))
+    )),
+    h('li', null, h('b', { text: 'Belgilar' }), h('span', { class: 'small', text: 'ˈ — urgʻu: undan keyingi boʻgʻin kuchliroq aytiladi, masalan water /ˈwɔːtɚ/. ː — unli choʻzib aytiladi. ʃ = sh, tʃ = ch, dʒ = j (jon), ʒ = j (jurnal), j = y.' }))
+  ));
+}
+function renderGuides() { renderRules('gRules'); renderRules('tRules'); renderSounds(); }
 function renderRules(id) {
   const d = $('#' + id); if (!d) return;
   clear(d);
@@ -648,9 +680,86 @@ function browserSpeak(text, rate) {
     speechSynthesis.speak(u);
   } catch (e) { toast('Ovozni chiqarib boʻlmadi.'); }
 }
-const canSpeak = () => !!ttsCap || ('speechSynthesis' in window);
+/* ---------- recorded audio: works in every viewer, the Claude mobile app included ---------- */
+const REC = { idx: null, map: new Map(), slow: new Map(), ctx: null, bufs: new Map(), cur: null, tok: 0 };
+function audioCtx() {
+  if (!REC.ctx) {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return null;
+    try { REC.ctx = new AC(); } catch (e) { return null; }
+  }
+  return REC.ctx;
+}
+function unlockAudio() {
+  if (!REC.idx) return;
+  const c = audioCtx(); if (!c) return;
+  if (c.state === 'suspended') c.resume().catch(() => {});
+  try { const s = c.createBufferSource(); s.buffer = c.createBuffer(1, 1, 22050); s.connect(c.destination); s.start(0); } catch (e) { /* ignore */ }
+}
+['pointerdown', 'touchend', 'keydown'].forEach(ev => document.addEventListener(ev, unlockAudio, { capture: true, passive: true }));
+function loadBuf(fi) {
+  if (REC.bufs.has(fi)) return REC.bufs.get(fi);
+  const c = audioCtx();
+  if (!c) return Promise.reject(new Error('no audio'));
+  const p = fetch('audio/' + REC.idx.files[fi])
+    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.arrayBuffer(); })
+    .then(ab => new Promise((res, rej) => { const q = c.decodeAudioData(ab, res, rej); if (q && q.then) q.then(res, rej); }));
+  p.catch(() => { if (REC.bufs.get(fi) === p) REC.bufs.delete(fi); });
+  REC.bufs.set(fi, p);
+  if (REC.bufs.size > 6) REC.bufs.delete(REC.bufs.keys().next().value);
+  return p;
+}
+function clipFor(text, slow) {
+  if (!REC.idx || !text) return null;
+  const k = String(text).trim();
+  return (slow && REC.slow.get(k)) || REC.map.get(k) || null;
+}
+function stopClip() { if (REC.cur) { try { REC.cur.stop(); } catch (e) { /* ignore */ } REC.cur = null; } }
+async function playClip(e, rate) {
+  const c = audioCtx(); if (!c) return false;
+  const tok = ++REC.tok;
+  try {
+    if (c.state === 'suspended') await c.resume();
+    const buf = await loadBuf(e[0]);
+    if (tok !== REC.tok) return true;
+    stopClip();
+    const s = c.createBufferSource();
+    s.buffer = buf; s.playbackRate.value = rate || 1;
+    s.connect(c.destination);
+    s.start(0, e[1], Math.max(0.05, Math.min(e[2], buf.duration - e[1])));
+    REC.cur = s;
+    return true;
+  } catch (err) { return false; }
+}
+function prefetchWords(ids) { if (!REC.idx || !audioCtx()) return; new Set(ids.map(i => REC.idx.w[i] && REC.idx.w[i][0]).filter(x => x != null)).forEach(fi => loadBuf(fi).catch(() => {})); }
+function prefetchText(text) { const e = clipFor(text); if (e && audioCtx()) loadBuf(e[0]).catch(() => {}); }
+function loadAudioIndex() {
+  return fetch('audio/index.json').then(r => r.ok ? r.json() : null).then(ix => {
+    if (!ix || !Array.isArray(ix.files) || !audioCtx()) return;
+    REC.idx = ix;
+    W.forEach((w, i) => { if (ix.w && ix.w[i]) REC.map.set(w[0], ix.w[i]); });
+    BANK.forEach((s, i) => { if (ix.s && ix.s[i]) REC.map.set(s.en, ix.s[i]); if (ix.ss && ix.ss[i]) REC.slow.set(s.en, ix.ss[i]); });
+    for (const [t, e] of Object.entries(ix.x || {})) if (!REC.map.has(t)) REC.map.set(t, e);
+    renderGuides(); renderCaps(); refreshView();
+  }).catch(() => {});
+}
+
+const canSpeak = () => !!REC.idx || !!ttsCap || ('speechSynthesis' in window);
+const hasVoice = text => !!clipFor(text) || !!ttsCap || ('speechSynthesis' in window);
 function speak(text, rate) {
   if (!text) return;
+  const slow = !!(rate && rate < 1);
+  const e = clipFor(text, slow);
+  if (e) {
+    const r = slow && !REC.slow.has(String(text).trim()) ? 0.85 : 1;
+    if ('speechSynthesis' in window) { try { speechSynthesis.cancel(); } catch (x) { /* ignore */ } }
+    playClip(e, r).then(ok => { if (!ok) speakSynth(text, rate); });
+    return;
+  }
+  speakSynth(text, rate);
+}
+function speakSynth(text, rate) {
+  if (!ttsCap && !('speechSynthesis' in window)) { toast('Bu gap uchun ovoz yozilmagan, bu qurilmada avtomatik ovoz ham yoʻq.'); return; }
   rate = Math.max(0.7, (rate || 1) * (isBeg() ? 0.88 : 1));
   if (ttsCap && state.settings.voice !== 'browser') {
     ttsCap.speak(text, { language: 'en', rate }).catch(e => {
@@ -662,6 +771,7 @@ function speak(text, rate) {
   } else browserSpeak(text, rate);
 }
 function spkBtn(text, label, rate) {
+  if (!hasVoice(text)) return null;
   return h('button', { class: 'spk', type: 'button', 'aria-label': label || 'Eshitish', title: label || 'Eshitish', svg: rate && rate < 1 ? ICON.slow : ICON.speak, onclick: e => { e.stopPropagation(); speak(text, rate); } });
 }
 
@@ -703,7 +813,7 @@ function renderCaps() {
   box.append(
     item(!!sampleCap, 'Claude tahlili: yoqilgan', 'Claude tahlili: mavjud emas'),
     item(micMode !== 'none', 'Mikrofon: bor', 'Mikrofon: mavjud emas'),
-    item(canSpeak(), ttsCap ? 'Ovoz: Claude' : 'Ovoz: brauzer', 'Ovoz: yoʻq')
+    item(canSpeak(), REC.idx ? 'Ovoz: yozib olingan' : ttsCap ? 'Ovoz: Claude' : 'Ovoz: brauzer', 'Ovoz: yoʻq')
   );
   $$('[data-voice]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.voice === state.settings.voice)));
   $$('[data-lvl]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lvl === (isBeg() ? 'beginner' : 'intermediate'))));
@@ -805,6 +915,7 @@ function startLesson(li) {
 }
 function startReview() {
   const due = dueList().slice(0, 25);
+  prefetchWords(due);
   if (!due.length) { toast('Takrorlanadigan soʻz yoʻq.'); return; }
   sz.quiz = { kind: 'review', queue: shuffle(due).map(w => makeQ(w, Math.random() < 0.5 ? 'uz2en' : 'en2uz')), pos: 0, miss: new Set(), first: new Set(), right: 0, asked: 0, answered: false };
   sz.mode = 'quiz';
@@ -848,14 +959,16 @@ function renderSozlar() {
 
 function renderIntro(body, li) {
   const ids = lessonIds(li);
+  prefetchWords(ids);
   const card = h('div', { class: 'card' },
     h('div', { class: 'row between' }, h('div', null, h('div', { class: 'prompt-lbl', text: 'Avval tanishib chiqing' }), h('p', { class: 'small muted', text: 'Har bir soʻzni eshiting va tarjimasini oʻqing. Keyin test boshlanadi.' })),
       canSpeak() ? h('button', { class: 'btn sm', type: 'button', text: 'Hammasini eshitish', onclick: () => playList(ids.map(i => W[i][0])) }) : null),
     h('ol', { class: 'wlist' }, ids.map(i => h('li', null,
       h('span', { class: 'no', text: '#' + (i + 1) }),
-      h('div', { style: 'min-width:0' }, h('div', null, h('span', { class: 'en', text: W[i][0] }), h('span', { class: 'pos', text: POS[W[i][2]] || '' })), h('div', { class: 'uz', text: W[i][1] })),
-      canSpeak() ? spkBtn(W[i][0], W[i][0] + ' soʻzini eshitish') : h('span')
+      h('div', { style: 'min-width:0' }, h('div', null, h('span', { class: 'en', lang: 'en', text: W[i][0] }), W[i][3] ? h('span', { class: 'ipa', text: W[i][3] }) : null, h('span', { class: 'pos', text: POS[W[i][2]] || '' })), h('div', { class: 'uz', text: W[i][1] })),
+      spkBtn(W[i][0], W[i][0] + ' soʻzini eshitish') || h('span')
     ))),
+    h('p', { class: 'small muted' }, 'Qiyshiq chiziqlar orasidagi yozuv soʻz qanday oʻqilishini koʻrsatadi. Belgilarning maʼnosi ', h('a', { href: '#talaffuz', text: 'Talaffuz → Tovushlar' }), ' qoʻllanmasida.'),
     h('div', { class: 'row' },
       h('button', { class: 'btn primary lg', type: 'button', text: 'Testni boshlash', onclick: () => { startLesson(li); renderSozlar(); window.scrollTo(0, 0); } }),
       dueList().length ? h('button', { class: 'btn lg', type: 'button', text: 'Takrorlash (' + dueList().length + ')', onclick: () => { startReview(); renderSozlar(); } }) : null
@@ -886,7 +999,7 @@ function renderQuiz(body) {
     promptEl = h('div', { class: 'qword' }, h('span', { class: 'w uz', text: w[1] }), h('span', { class: 'posl', text: POS[w[2]] || '' }));
   } else if (it.type === 'en2uz') {
     label = 'Tarjimasini toping';
-    promptEl = h('div', { class: 'qword' }, h('span', { class: 'w', lang: 'en', text: w[0] }), canSpeak() ? spkBtn(w[0]) : null);
+    promptEl = h('div', { class: 'qword' }, h('div', null, h('span', { class: 'w', lang: 'en', text: w[0] }), w[3] ? h('div', { class: 'ipa lg', text: w[3] }) : null), spkBtn(w[0], w[0] + ' soʻzini eshitish'));
   } else {
     label = 'Eshiting va tarjimasini toping';
     promptEl = h('div', { class: 'qword' }, h('button', { class: 'listen-big', type: 'button', 'aria-label': 'Soʻzni eshitish', svg: ICON.speak, onclick: () => speak(w[0]) }), h('span', { class: 'small muted', text: 'Tugmani bosib soʻzni eshiting' }));
@@ -917,14 +1030,14 @@ function renderQuiz(body) {
     }
     if (ok) {
       q.right++;
-      fb.className = 'feedback ok'; fb.textContent = 'Toʻgʻri! ' + w[0] + ' — ' + w[1];
+      fb.className = 'feedback ok'; fb.textContent = 'Toʻgʻri! ' + w[0] + (w[3] ? ' ' + w[3] : '') + ' — ' + w[1];
       if (it.type !== 'en2uz' && canSpeak()) speak(w[0]);
       clearTimeout(advanceT);
       advanceT = setTimeout(advance, it.type === 'uz2en' ? 1100 : 800);
     } else {
       q.miss.add(it.w);
       q.queue.splice(Math.min(q.queue.length, q.pos + 4), 0, makeQ(it.w, it.type === 'listen' ? 'en2uz' : it.type));
-      fb.className = 'feedback no'; fb.textContent = 'Toʻgʻri javob: ' + w[0] + ' — ' + w[1];
+      fb.className = 'feedback no'; fb.textContent = 'Toʻgʻri javob: ' + w[0] + (w[3] ? ' ' + w[3] : '') + ' — ' + w[1];
       if (canSpeak()) speak(w[0]);
       next.hidden = false; next.focus();
     }
@@ -1097,6 +1210,7 @@ function renderGaplar() {
   const m = mod('gaplar');
   if (!m.deck.length) { body.append(h('p', { class: 'muted', text: 'Gaplar topilmadi.' })); return; }
   const s = curSentence(m);
+  prefetchText(s.en);
   if (!m.st) {
     const words = tileWords(s.en);
     const pool = lessonIds(focusLesson()).map(i => W[i][0]).filter(x => !/\s/.test(x) && !words.some(w => sameWord(w, x)));
@@ -1163,6 +1277,7 @@ function renderTarjima() {
   const m = mod('tarjima');
   if (!m.deck.length) return;
   const s = curSentence(m);
+  prefetchText(s.en);
   if (!m.st) m.st = { text: '', done: false, ai: null, aiErr: '', reveal: false, hint: false };
   const st = m.st;
   const ta = h('textarea', { id: 'trInput', lang: 'en', spellcheck: 'false', autocapitalize: 'sentences', placeholder: 'Inglizcha tarjimani shu yerga yozing…', 'aria-label': 'Inglizcha tarjima' });
@@ -1371,6 +1486,7 @@ function renderTalaffuz() {
   const m = mod('talaffuz');
   if (!m.deck.length) return;
   const s = curSentence(m);
+  prefetchText(s.en);
   if (!m.st) m.st = { result: null, ai: null, aiErr: '', typed: '', hint: false };
   const st = m.st;
   const readMode = state.settings.pmode === 'read';
@@ -1443,7 +1559,7 @@ function renderTalaffuzResult() {
 /* ================= boot ================= */
 async function boot() {
   loadLocal();
-  renderRules('gRules'); renderRules('tRules');
+  renderGuides();
   route();
   initCaps();
   try {
@@ -1452,7 +1568,9 @@ async function boot() {
     W.forEach((x, i) => { const k = x[0].toLowerCase(); if (!IDX.has(k)) IDX.set(k, i); });
     BANK = s.map(([en, uz], i) => ({ en, uz, src: 'bank', id: 'b' + i, n: i, ...analyze(en) }));
     sz.lesson = state.cur;
+    renderGuides();
     refreshView();
+    loadAudioIndex();
   } catch (e) {
     for (const id of ['#szBody', '#gBody', '#tBody', '#pBody']) { const b = clear($(id)); b.append(h('p', { class: 'note warn', text: 'Soʻzlar bazasini yuklab boʻlmadi. Sahifani yangilang.' })); }
   }

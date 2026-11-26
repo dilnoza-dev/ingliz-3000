@@ -31,6 +31,14 @@ for (const f of files) {
 if (problems.length) { console.error('Notoʻgʻri qatorlar:\n' + problems.join('\n')); process.exit(1); }
 if (words.length < 3000) console.warn('Diqqat: faqat ' + words.length + ' ta soʻz bor.');
 const list = words.slice(0, 3000);
+// Talaffuz yozuvi (IPA): manba/talaffuz.txt, uni manba/ovoz.py yaratadi.
+const ipaFile = path.join(dir, 'talaffuz.txt');
+if (fs.existsSync(ipaFile)) {
+  const ipa = new Map(fs.readFileSync(ipaFile, 'utf8').split('\n').filter(Boolean).map(l => l.split('|')));
+  let missing = 0;
+  for (const w of list) { if (ipa.has(w[0])) w.push(ipa.get(w[0])); else missing++; }
+  if (missing) console.warn('Diqqat: ' + missing + ' ta soʻzning talaffuz yozuvi yoʻq. manba/ovoz.py ni qayta ishga tushiring.');
+}
 fs.writeFileSync(path.join(root, 'words.json'), '[\n' + list.map(w => JSON.stringify(w)).join(',\n') + '\n]\n');
 
 const sentences = fs.readFileSync(path.join(dir, 'gaplar.txt'), 'utf8').split('\n').map(l => l.trim()).filter(Boolean).map(l => {

@@ -29,17 +29,27 @@ Veb-sayt sifatida ochish uchun: repozitoriyning **Settings → Pages** boʻlimid
 ## Fayllar
 
 - `index.html` — dasturning oʻzi (bitta sahifa, qoʻshimcha kutubxonalar kerak emas).
-- `words.json` — 3000 ta soʻz: `["inglizcha", "oʻzbekcha", "turkum"]`.
+- `words.json` — 3000 ta soʻz: `["inglizcha", "oʻzbekcha", "turkum", "/talaffuz/"]`.
 - `sentences.json` — 241 ta tayyor gap, osondan qiyinga qarab tartiblangan.
-- `manba/` — yuqoridagi ikki faylning manbasi:
+- `audio/` — barcha soʻzlar va tayyor gaplarning oldindan yozib olingan ovozi (oddiy va sekin). Ular telefondagi Claude ilovasida ham ishlaydi. `index.json` har bir soʻzning qaysi faylda va qaysi soniyada turganini koʻrsatadi.
+- `manba/` — yuqoridagi fayllarning manbasi:
   - `sozlar-1.txt` … `sozlar-6.txt` — har qatorda `inglizcha|oʻzbekcha|turkum`;
   - `gaplar.txt` — har qatorda `inglizcha|oʻzbekcha`;
-  - `build.js` — JSON fayllarni qayta yigʻadi.
+  - `talaffuz.txt` — har soʻzning talaffuz yozuvi (IPA, AQSh talaffuzi);
+  - `build.js` — JSON fayllarni qayta yigʻadi;
+  - `ovoz.py` — ovoz fayllarini va talaffuz yozuvini yaratadi (Piper TTS, `en_US-lessac-medium` ochiq ovoz modeli; talaffuz CMU Pronouncing Dictionary asosida).
 
 ## Soʻz yoki tarjimani tuzatish
 
 1. `manba/sozlar-*.txt` yoki `manba/gaplar.txt` faylida kerakli qatorni oʻzgartiring. Oʻzbekcha harflarni oddiy apostrof bilan yozsa boʻladi (`o'`, `g'`), skript ularni `oʻ`, `gʻ` ga oʻzi aylantiradi.
 2. `node manba/build.js` buyrugʻini ishga tushiring.
-3. Yangilangan `words.json` va `sentences.json` fayllarini commit qiling.
+3. Inglizcha soʻz yoki gap oʻzgargan boʻlsa, ovozni ham qayta yarating:
+   ```
+   python3 -m venv .venv && .venv/bin/pip install piper-tts cmudict
+   .venv/bin/python manba/ovoz.py
+   node manba/build.js
+   ```
+   (`ffmpeg` oʻrnatilgan boʻlishi kerak; ovoz modeli birinchi marta oʻzi yuklab olinadi.)
+4. Yangilangan `words.json`, `sentences.json` va `audio/` fayllarini commit qiling.
 
 Turkum belgilari: `n` ot, `v` feʼl, `a` sifat, `d` ravish, `p` olmosh, `r` predlog, `c` bogʻlovchi, `x` boshqa.
