@@ -2,7 +2,8 @@
 
 Oʻzbek tilida soʻzlashuvchilar uchun ingliz tili dasturi. Unda 3000 ta eng kerakli inglizcha soʻz 150 ta darsga boʻlingan, har darsda 20 tadan soʻz bor. Darajalar: A1, A2 va B1.
 
-**Dasturni ochish:** https://claude.ai/artifact/W8NYMAPiM7G5fAvxxMTJ34
+**Ilova (telefon va kompyuter uchun):** https://dilnoza-dev.github.io/ingliz-3000/  
+**Claude ichida:** https://claude.ai/artifact/W8NYMAPiM7G5fAvxxMTJ34
 
 ## Toʻrt bosqich
 
@@ -24,15 +25,28 @@ Dastur avtomatik ravishda **boshlangʻich rejimda** ishlaydi: gaplar oddiy boʻl
 | Mikrofon (talaffuz) | ✓ kompyuterda Chrome yoki Edge'da | ✓ faqat Chrome'da |
 | Natijalarni hisobda saqlash (boshqa qurilmada davom ettirish) | ✓ | — natija faqat shu brauzerda saqlanadi |
 
-Veb-sayt sifatida ochish uchun: repozitoriyning **Settings → Pages** boʻlimida `main` branch va `/ (root)` papkasini tanlang.
+## Ilovani oʻrnatish
+
+Ilova PWA (veb-ilova) koʻrinishida: telefonning bosh ekraniga oʻz belgisi bilan oʻrnatiladi, toʻliq ekranda ochiladi va internetsiz ham ishlaydi. Ovozlar birinchi marta eshitilganda telefonga saqlanadi.
+
+1. **Bir marta yoqish (GitHub'da):** repozitoriyning **Settings → Pages** boʻlimida *Source* = **Deploy from a branch**, *Branch* = **main** va **/ (root)** ni tanlab, **Save** ni bosing. 1–2 daqiqadan keyin ilova https://dilnoza-dev.github.io/ingliz-3000/ manzilida ochiladi.
+2. **Android (Chrome):** manzilni oching, pastdagi **«⬇ Ilovani oʻrnatish»** tugmasini bosing. Tugma chiqmasa: menyu **⋮ → «Ilovani oʻrnatish»** yoki **«Bosh ekranga qoʻshish»**.
+3. **iPhone (Safari):** manzilni oching, **Ulashish ⬆ → «Bosh ekranga qoʻshish»**.
+4. **Kompyuter (Chrome yoki Edge):** manzil qatorining oʻng tomonidagi **oʻrnatish** belgisini bosing.
+
+Oʻrnatilgan ilovada mikrofon Android'dagi Chrome orqali ishlaydi. Claude tahlili esa faqat claude.ai havolasida ishlaydi.
 
 ## Fayllar
 
-- `index.html` — dasturning oʻzi (bitta sahifa, qoʻshimcha kutubxonalar kerak emas).
+- `index.html` — oʻrnatiladigan ilova sahifasi. Uni `node manba/ilova.js` yaratadi, qoʻlda tahrir qilmang.
+- `manifest.webmanifest`, `sw.js`, `icons/` — ilovaning nomi va belgisi hamda internetsiz ishlash uchun kesh (`sw.js` ni ham `manba/ilova.js` yaratadi).
 - `words.json` — 3000 ta soʻz: `["inglizcha", "oʻzbekcha", "turkum", "/talaffuz/"]`.
 - `sentences.json` — 2616 ta gap: `["inglizcha", "oʻzbekcha", dars]`. 241 tasi umumiy (`dars` = 0, osondan qiyinga qarab), 2375 tasi 150 ta darsga biriktirilgan (har darsda 11–20 ta).
 - `audio/` — barcha soʻzlar va tayyor gaplarning oldindan yozib olingan ovozi (oddiy va sekin). Ular telefondagi Claude ilovasida ham ishlaydi. `index.json` har bir soʻzning qaysi faylda va qaysi soniyada turganini koʻrsatadi.
 - `manba/` — yuqoridagi fayllarning manbasi:
+  - `sahifa.html` — dasturning asosiy fayli. Claude'dagi artifact shu fayldan, ilova (`index.html`) esa `ilova.js` orqali yigʻiladi;
+  - `ilova.js` — `index.html` va `sw.js` ni yaratadi;
+  - `ikonka.py` — ilova belgisini chizadi;
   - `sozlar-1.txt` … `sozlar-6.txt` — har qatorda `inglizcha|oʻzbekcha|turkum`;
   - `gaplar.txt` — umumiy gaplar, har qatorda `inglizcha|oʻzbekcha`;
   - `dars-gaplari-01.txt` … `dars-gaplari-15.txt` — darslar gaplari, har qatorda `dars|inglizcha|oʻzbekcha`;
@@ -53,6 +67,7 @@ Veb-sayt sifatida ochish uchun: repozitoriyning **Settings → Pages** boʻlimid
    node manba/build.js
    ```
    (`ffmpeg` oʻrnatilgan boʻlishi kerak; ovoz modeli birinchi marta oʻzi yuklab olinadi.)
-4. Yangilangan `words.json`, `sentences.json` va `audio/` fayllarini commit qiling.
+4. `node manba/ilova.js` ni ishga tushirib, ilovani yangilang.
+5. Yangilangan fayllarni commit qiling.
 
 Turkum belgilari: `n` ot, `v` feʼl, `a` sifat, `d` ravish, `p` olmosh, `r` predlog, `c` bogʻlovchi, `x` boshqa.

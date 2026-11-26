@@ -11,7 +11,7 @@ const W = JSON.parse(fs.readFileSync(path.join(root, 'words.json'), 'utf8'));
 const IDX = new Map();
 W.forEach((x, i) => { const k = x[0].toLowerCase(); if (!IDX.has(k)) IDX.set(k, i); });
 // index.html dagi lemma() va analyze() funksiyalari aynan shu yerda ishlatiladi
-const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const html = fs.readFileSync(path.join(dir, 'sahifa.html'), 'utf8');
 const src = html.slice(html.indexOf('const IRR'), html.indexOf('/* ---------- text comparison'));
 const { lemma, analyze } = new Function('IDX', src + '; return { lemma, analyze };')(IDX);
 
