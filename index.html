@@ -172,6 +172,11 @@ button.chip { cursor: pointer; }
 .qbar i { display: block; height: 100%; background: var(--accent); width: 0; transition: width .3s; }
 .qcount { font-size: .85rem; color: var(--muted); font-weight: 700; font-variant-numeric: tabular-nums; }
 .decknav { display: flex; align-items: center; gap: 6px; }
+.steps { margin: 0; padding: 10px 12px; list-style: none; display: flex; flex-direction: column; gap: 6px; background: var(--surface-2); border-radius: 10px; counter-reset: st; font-size: .88rem; color: var(--muted); }
+.steps li { counter-increment: st; display: flex; gap: 8px; align-items: flex-start; }
+.steps li::before { content: counter(st); flex: none; width: 20px; height: 20px; margin-top: 1px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 800; font-size: .72rem; display: grid; place-items: center; }
+.tiles.pulse .tile:not(.used) { animation: tilepulse .9s ease 2; }
+@keyframes tilepulse { 50% { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); } }
 .navbtn { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 1.35rem; font-weight: 800; line-height: 1; padding: 0 0 3px; }
 .navbtn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
 .navbtn:disabled { opacity: .35; cursor: default; }
@@ -1173,6 +1178,7 @@ function deckNav(name, m) {
     h('span', { class: 'qcount', text: deckCounter(m) }),
     h('button', { class: 'navbtn', type: 'button', 'aria-label': 'Keyingi gap', title: 'Keyingi gap', text: '›', onclick: go(nextSentence) }));
 }
+const howTo = items => h('ol', { class: 'steps', 'aria-label': 'Qanday ishlaydi' }, items.map(t => h('li', null, h('span', { text: t }))));
 const backBtn = (name, m) => m.i > 0 ? h('button', { class: 'btn ghost', type: 'button', text: '‹ Oldingi gap', onclick: () => { if (name === 'talaffuz') stopMic(); prevSentence(name); } }) : null;
 
 function focusChips(s, li) {
@@ -1258,24 +1264,35 @@ function renderGaplar() {
     const words = tileWords(s.en);
     const pool = lessonIds(focusLesson()).map(i => W[i][0]).filter(x => !/\s/.test(x) && !words.some(w => sameWord(w, x)));
     const extra = shuffle(pool).slice(0, words.length > 7 ? 3 : 2).map(x => x === 'I' ? x : x.toLowerCase());
-    m.st = { words, tiles: shuffle([...words, ...extra]).map((t, k) => ({ t, k, used: false })), placed: [], done: false, ok: false };
+    m.st = { words, tiles: shuffle([...words, ...extra]).map((t, k) => ({ t, k, used: false })), placed: [], done: false, ok: false, revealed: false, msg: '', pulse: false };
   }
   const st = m.st;
   const slots = h('div', { class: 'slots' + (st.done ? (st.ok ? ' ok' : ' no') : ''), 'aria-label': 'Sizning gapingiz' });
   if (!st.placed.length) slots.append(h('span', { class: 'ph', text: 'Pastdagi soʻzlarni tartib bilan bosing' }));
-  st.placed.forEach((k, pos) => slots.append(h('button', { class: 'tile', type: 'button', lang: 'en', disabled: st.done, text: st.tiles[k].t, onclick: () => { st.placed.splice(pos, 1); st.tiles[k].used = false; renderGaplar(); } })));
-  const tiles = h('div', { class: 'tiles' }, st.tiles.map(tl => h('button', { class: 'tile' + (tl.used ? ' used' : ''), type: 'button', lang: 'en', disabled: st.done || tl.used, text: tl.t, onclick: () => { tl.used = true; st.placed.push(tl.k); renderGaplar(); } })));
+  st.placed.forEach((k, pos) => slots.append(h('button', { class: 'tile', type: 'button', lang: 'en', disabled: st.done, text: st.tiles[k].t, onclick: () => { st.placed.splice(pos, 1); st.tiles[k].used = false; st.msg = ''; renderGaplar(); } })));
+  const tiles = h('div', { class: 'tiles' + (st.pulse ? ' pulse' : '') }, st.tiles.map(tl => h('button', { class: 'tile' + (tl.used ? ' used' : ''), type: 'button', lang: 'en', disabled: st.done || tl.used, text: tl.t, onclick: () => { tl.used = true; st.placed.push(tl.k); st.msg = ''; st.pulse = false; renderGaplar(); } })));
+  st.pulse = false;
   const result = h('div', { 'aria-live': 'polite' });
   if (st.done) {
     const said = st.placed.map(k => st.tiles[k].t).join(' ');
     if (st.ok) result.append(h('p', { class: 'feedback ok', text: 'Toʻgʻri! Barakalla.' }));
+    else if (st.revealed) result.append(h('p', { class: 'note', text: 'Toʻgʻri javob shu. Uni eshiting, keyin «Qayta urinish» ni bosib, oʻzingiz tuzib koʻring.' }));
     else {
       const al = align(toks(s.en), toks(said));
       result.append(h('p', { class: 'feedback no', text: 'Tartibda xato bor. Toʻgʻri javob:' }), diffView(s.en, al.tm, 'miss'));
     }
     result.append(h('div', { class: 'row' }, h('span', { class: 'ens', lang: 'en', text: s.en }), spkBtn(s.en, 'Gapni eshitish'), spkBtn(s.en, 'Sekin eshitish', 0.75)));
   }
-  const check = h('button', { class: 'btn primary', type: 'button', text: 'Tekshirish', disabled: !st.placed.length || st.done, onclick: () => {
+  if (!st.done && st.msg) result.append(h('p', { class: 'note warn', text: st.msg }));
+  const check = h('button', { class: 'btn primary', type: 'button', text: 'Tekshirish', onclick: () => {
+    if (!st.placed.length) {
+      st.msg = 'Hali birorta soʻz tanlamadingiz. Pastdagi soʻzlarni gapdagi tartibda bitta-bitta bosing: ular yuqoridagi qutiga tushadi. Keyin «Tekshirish» ni bosing.';
+      st.pulse = true; renderGaplar(); return;
+    }
+    if (st.placed.length < st.words.length) {
+      st.msg = 'Gap hali toʻliq emas: unda ' + st.words.length + ' ta soʻz bor, siz ' + st.placed.length + ' tasini qoʻydingiz. Yana soʻz qoʻshing yoki «Javobni koʻrsatish» ni bosing.';
+      st.pulse = true; renderGaplar(); return;
+    }
     const said = st.placed.map(k => st.tiles[k].t);
     st.ok = said.length === st.words.length && said.every((w, i) => sameWord(w, st.words[i]));
     st.done = true;
@@ -1284,16 +1301,25 @@ function renderGaplar() {
     renderGaplar();
     speak(s.en);
   } });
+  const reveal = () => {
+    st.tiles.forEach(t => { t.used = false; });
+    st.placed = [];
+    for (const w of st.words) { const t = st.tiles.find(x => !x.used && x.t === w); if (t) { t.used = true; st.placed.push(t.k); } }
+    st.done = true; st.ok = false; st.revealed = true; st.msg = '';
+    renderGaplar(); speak(s.en);
+  };
   const card = h('div', { class: 'card' },
     h('div', { class: 'row between' }, srcChip(s), deckNav('gaplar', m)),
     h('div', { class: 'prompt-lbl', text: 'Inglizcha tuzing' }),
     h('div', { class: 'uzs', text: s.uz }),
     focusChips(s, focusLesson()),
+    st.done ? null : howTo(['Yuqoridagi oʻzbekcha gapni oʻqing.', 'Pastdagi inglizcha soʻzlarni toʻgʻri tartibda bitta-bitta bosing: ular qutiga tushadi. Adashsangiz, qutidagi soʻzni bosib qaytaring.', '«Tekshirish» ni bosing.']),
     slots, st.done ? null : tiles, result,
     h('div', { class: 'row' },
       st.done ? h('button', { class: 'btn primary', type: 'button', text: 'Keyingi gap', onclick: () => nextSentence('gaplar') }) : check,
       st.done && !st.ok ? h('button', { class: 'btn', type: 'button', text: 'Qayta urinish', onclick: () => { m.st = null; renderGaplar(); } }) : null,
       !st.done ? h('button', { class: 'btn ghost', type: 'button', text: 'Tozalash', disabled: !st.placed.length, onclick: () => { st.placed = []; st.tiles.forEach(t => { t.used = false; }); renderGaplar(); } }) : null,
+      !st.done ? h('button', { class: 'btn ghost', type: 'button', text: 'Javobni koʻrsatish', onclick: reveal }) : null,
       !st.done ? h('button', { class: 'btn ghost', type: 'button', text: 'Oʻtkazib yuborish', onclick: () => nextSentence('gaplar') }) : null,
       backBtn('gaplar', m)
     )
@@ -1333,21 +1359,25 @@ function renderTarjima() {
   const toUz = tdir() === 'en2uz';
   const ref = toUz ? s.uz : s.en;
   const tk = toUz ? toksUz : toks;
-  if (!m.st || m.st.dir !== tdir()) m.st = { dir: tdir(), text: '', done: false, ai: null, aiErr: '', reveal: false, hint: false, self: null };
+  if (!m.st || m.st.dir !== tdir()) m.st = { dir: tdir(), text: '', done: false, ai: null, aiErr: '', reveal: false, hint: false, self: null, msg: '' };
   const st = m.st;
   const ta = h('textarea', { id: 'trInput', lang: toUz ? 'uz' : 'en', spellcheck: 'false', autocapitalize: 'sentences', placeholder: toUz ? 'Oʻzbekcha tarjimani shu yerga yozing…' : 'Inglizcha tarjimani shu yerga yozing…', 'aria-label': toUz ? 'Oʻzbekcha tarjima' : 'Inglizcha tarjima' });
   ta.value = st.text;
-  ta.addEventListener('input', () => { st.text = ta.value; checkBtn.disabled = !ta.value.trim(); });
+  ta.addEventListener('input', () => { st.text = ta.value; if (st.msg) { st.msg = ''; const w = $('#trMsg'); if (w) w.remove(); } });
   ta.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); if (ta.value.trim() && !st.done) checkBtn.click(); } });
-  const checkBtn = h('button', { class: 'btn primary', type: 'button', text: 'Tekshirish', disabled: !st.text.trim(), onclick: () => doCheck() });
+  const checkBtn = h('button', { class: 'btn primary', type: 'button', text: 'Tekshirish', onclick: () => doCheck() });
   const res = h('div', { class: 'row', style: 'flex-direction:column;align-items:stretch;gap:14px' });
   const hintBox = !st.done && st.hint ? h('div', null,
     h('div', { class: 'small muted', text: 'Gapdagi soʻzlar aralash tartibda. Bosgan soʻzingiz javobga qoʻshiladi:' }),
     h('div', { class: 'chips', style: 'margin-top:6px' }, (st.hw || (st.hw = shuffle(toUz ? uzWords(s.uz) : tileWords(s.en)))).map(w => h('button', { class: 'chip blue', type: 'button', lang: toUz ? 'uz' : 'en', text: w, onclick: () => {
-      ta.value = (ta.value.replace(/\s+$/, '') + ' ' + w).trim(); st.text = ta.value; checkBtn.disabled = false; ta.focus();
+      ta.value = (ta.value.replace(/\s+$/, '') + ' ' + w).trim(); st.text = ta.value; st.msg = ''; const mw = $('#trMsg'); if (mw) mw.remove(); ta.focus();
     } })))) : null;
   function doCheck() {
-    st.text = ta.value.trim(); if (!st.text) return;
+    st.text = ta.value.trim();
+    if (!st.text) {
+      st.msg = 'Avval ' + (toUz ? 'oʻzbekcha' : 'inglizcha') + ' tarjimani pastdagi maydonga yozing, keyin «Tekshirish» ni bosing. Qiynalsangiz «Yordam: soʻzlar» ni bosing.';
+      renderTarjima(); setTimeout(() => { const t = $('#trInput'); if (t) t.focus(); }, 0); return;
+    }
     st.done = true; st.ai = null; st.aiErr = ''; st.self = null;
     const rec = dayRec(); rec.s++; touch();
     renderTarjima();
@@ -1421,7 +1451,9 @@ function renderTarjima() {
       ? h('div', { class: 'row' }, h('div', { class: 'ens', lang: 'en', style: 'min-width:0;flex:1', text: s.en }), spkBtn(s.en, 'Gapni eshitish'), spkBtn(s.en, 'Sekin eshitish', 0.75))
       : h('div', { class: 'uzs', text: s.uz }),
     focusChips(s, focusLesson()),
+    st.done ? null : howTo([toUz ? 'Inglizcha gapni oʻqing yoki eshiting.' : 'Oʻzbekcha gapni oʻqing.', (toUz ? 'Oʻzbekcha' : 'Inglizcha') + ' tarjimasini pastdagi maydonga yozing.', '«Tekshirish» ni bosing. Qiynalsangiz «Yordam: soʻzlar» yoki «Javobni koʻrsatish» ni bosing.']),
     st.done ? null : ta,
+    !st.done && st.msg ? h('p', { id: 'trMsg', class: 'note warn', text: st.msg }) : null,
     hintBox,
     res,
     h('div', { class: 'row' },
@@ -1599,7 +1631,7 @@ function typedFallback(st) {
   ta.value = st.typed || '';
   ta.addEventListener('input', () => { st.typed = ta.value; });
   ta.addEventListener('keydown', e => { if (e.key === 'Enter' && ta.value.trim()) evaluateSpeech(ta.value.trim()); });
-  return h('div', null, ta, h('button', { class: 'btn sm', type: 'button', style: 'margin-top:8px', text: 'Tekshirish', onclick: () => { if (ta.value.trim()) evaluateSpeech(ta.value.trim()); } }));
+  return h('div', null, ta, h('button', { class: 'btn sm', type: 'button', style: 'margin-top:8px', text: 'Tekshirish', onclick: () => { if (ta.value.trim()) evaluateSpeech(ta.value.trim()); else { toast('Avval inglizcha gapni maydonga yozing.'); ta.focus(); } } }));
 }
 function renderTalaffuzResult() {
   const box = $('#pResult'); if (!box) return;
