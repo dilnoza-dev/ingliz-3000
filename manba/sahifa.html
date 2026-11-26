@@ -724,7 +724,7 @@ function loadBuf(fi) {
     .then(ab => new Promise((res, rej) => { const q = c.decodeAudioData(ab, res, rej); if (q && q.then) q.then(res, rej); }));
   p.catch(() => { if (REC.bufs.get(fi) === p) REC.bufs.delete(fi); });
   REC.bufs.set(fi, p);
-  if (REC.bufs.size > 6) REC.bufs.delete(REC.bufs.keys().next().value);
+  if (REC.bufs.size > 4) REC.bufs.delete(REC.bufs.keys().next().value);
   return p;
 }
 function clipFor(text, slow) {

@@ -27,7 +27,7 @@ Dastur avtomatik ravishda **boshlangʻich rejimda** ishlaydi: gaplar oddiy boʻl
 
 ## Ilovani oʻrnatish
 
-Ilova PWA (veb-ilova) koʻrinishida: telefonning bosh ekraniga oʻz belgisi bilan oʻrnatiladi, toʻliq ekranda ochiladi va internetsiz ham ishlaydi. Ovozlar birinchi marta eshitilganda telefonga saqlanadi.
+Ilova PWA (veb-ilova) koʻrinishida: telefonning bosh ekraniga oʻz belgisi bilan oʻrnatiladi, toʻliq ekranda ochiladi va internetsiz ham ishlaydi. Telefon xotirasini band qilmasligi uchun faqat oxirgi eshitilgan 16 ta ovoz fayli (bir necha MB) saqlanadi; qolgan ovozlar kerak boʻlganda internetdan yuklanadi.
 
 1. **Bir marta yoqish (GitHub'da):** repozitoriyning **Settings → Pages** boʻlimida *Source* = **Deploy from a branch**, *Branch* = **main** va **/ (root)** ni tanlab, **Save** ni bosing. 1–2 daqiqadan keyin ilova https://dilnoza-dev.github.io/ingliz-3000/ manzilida ochiladi.
 2. **Android (Chrome):** manzilni oching, pastdagi **«⬇ Ilovani oʻrnatish»** tugmasini bosing. Tugma chiqmasa: menyu **⋮ → «Ilovani oʻrnatish»** yoki **«Bosh ekranga qoʻshish»**.

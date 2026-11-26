@@ -1,7 +1,7 @@
 {
-  "name": "3000 Soʻz — ingliz tili",
-  "short_name": "3000 Soʻz",
-  "description": "3000 ta inglizcha soʻzni oʻzbek tilida oʻrgatadigan ilova: 4 variantli test, gap tuzish, tarjima va talaffuz.",
+  "name": "3000 B2 — ingliz tili",
+  "short_name": "3000 B2",
+  "description": "4000 ta inglizcha soʻzni (A1 dan B2 gacha) oʻzbek tilida oʻrgatadigan ilova: 4 variantli test, gap tuzish, tarjima va talaffuz.",
   "lang": "uz",
   "dir": "ltr",
   "start_url": "./",
