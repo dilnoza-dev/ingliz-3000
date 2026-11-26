@@ -171,6 +171,10 @@ button.chip { cursor: pointer; }
 .qbar { height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; flex: 1; }
 .qbar i { display: block; height: 100%; background: var(--accent); width: 0; transition: width .3s; }
 .qcount { font-size: .85rem; color: var(--muted); font-weight: 700; font-variant-numeric: tabular-nums; }
+.decknav { display: flex; align-items: center; gap: 6px; }
+.navbtn { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 1.35rem; font-weight: 800; line-height: 1; padding: 0 0 3px; }
+.navbtn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.navbtn:disabled { opacity: .35; cursor: default; }
 .prompt-lbl { font-size: .8rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .qword { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; min-height: 72px; }
 .qword .w { font-family: var(--f-display); font-weight: 600; font-size: clamp(1.9rem, 7.5vw, 3rem); line-height: 1.1; letter-spacing: -.015em; overflow-wrap: anywhere; }
@@ -1116,7 +1120,7 @@ function renderResult(body) {
 /* ================= sentence decks ================= */
 const mods = { gaplar: { li: -1, ver: -1, deck: [], i: 0 }, tarjima: { li: -1, ver: -1, deck: [], i: 0 }, talaffuz: { li: -1, ver: -1, deck: [], i: 0 } };
 let deckVer = 0;
-const MOD_OFFSET = { gaplar: 0, tarjima: 1, talaffuz: 2 };
+const MOD_OFFSET = { gaplar: 0, tarjima: 0, talaffuz: 0 };
 function focusLesson() {
   const f = state.settings.focus;
   if (typeof f === 'number' && f >= 0 && f < Math.ceil(N / LESSON)) return f;
@@ -1160,6 +1164,16 @@ function deckCounter(m) {
 }
 const curSentence = m => m.deck[m.i % m.deck.length];
 function nextSentence(name) { const m = mods[name]; m.i = (m.i + 1) % m.deck.length; m.st = null; refreshView(); window.scrollTo(0, 0); }
+function prevSentence(name) { const m = mods[name]; if (m.i <= 0) return; m.i -= 1; m.st = null; refreshView(); window.scrollTo(0, 0); }
+// ‹ 2 / 12 › — step back and forth through the sentences
+function deckNav(name, m) {
+  const go = fn => () => { if (name === 'talaffuz') stopMic(); fn(name); };
+  return h('div', { class: 'decknav' },
+    h('button', { class: 'navbtn', type: 'button', 'aria-label': 'Oldingi gap', title: 'Oldingi gap', disabled: m.i === 0, text: '‹', onclick: go(prevSentence) }),
+    h('span', { class: 'qcount', text: deckCounter(m) }),
+    h('button', { class: 'navbtn', type: 'button', 'aria-label': 'Keyingi gap', title: 'Keyingi gap', text: '›', onclick: go(nextSentence) }));
+}
+const backBtn = (name, m) => m.i > 0 ? h('button', { class: 'btn ghost', type: 'button', text: '‹ Oldingi gap', onclick: () => { if (name === 'talaffuz') stopMic(); prevSentence(name); } }) : null;
 
 function focusChips(s, li) {
   const focus = new Set(lessonIds(li));
@@ -1271,7 +1285,7 @@ function renderGaplar() {
     speak(s.en);
   } });
   const card = h('div', { class: 'card' },
-    h('div', { class: 'row between' }, srcChip(s), h('span', { class: 'qcount', text: deckCounter(m) })),
+    h('div', { class: 'row between' }, srcChip(s), deckNav('gaplar', m)),
     h('div', { class: 'prompt-lbl', text: 'Inglizcha tuzing' }),
     h('div', { class: 'uzs', text: s.uz }),
     focusChips(s, focusLesson()),
@@ -1280,7 +1294,8 @@ function renderGaplar() {
       st.done ? h('button', { class: 'btn primary', type: 'button', text: 'Keyingi gap', onclick: () => nextSentence('gaplar') }) : check,
       st.done && !st.ok ? h('button', { class: 'btn', type: 'button', text: 'Qayta urinish', onclick: () => { m.st = null; renderGaplar(); } }) : null,
       !st.done ? h('button', { class: 'btn ghost', type: 'button', text: 'Tozalash', disabled: !st.placed.length, onclick: () => { st.placed = []; st.tiles.forEach(t => { t.used = false; }); renderGaplar(); } }) : null,
-      !st.done ? h('button', { class: 'btn ghost', type: 'button', text: 'Oʻtkazib yuborish', onclick: () => nextSentence('gaplar') }) : null
+      !st.done ? h('button', { class: 'btn ghost', type: 'button', text: 'Oʻtkazib yuborish', onclick: () => nextSentence('gaplar') }) : null,
+      backBtn('gaplar', m)
     )
   );
   body.append(card);
@@ -1400,7 +1415,7 @@ function renderTarjima() {
       : h('div', { class: 'row' }, h('span', { class: 'ens', lang: 'en', text: s.en }), spkBtn(s.en))));
   }
   const card = h('div', { class: 'card' },
-    h('div', { class: 'row between' }, srcChip(s), h('span', { class: 'qcount', text: deckCounter(m) })),
+    h('div', { class: 'row between' }, srcChip(s), deckNav('tarjima', m)),
     h('div', { class: 'prompt-lbl', text: toUz ? 'Oʻzbekchaga tarjima qiling' : 'Inglizchaga tarjima qiling' }),
     toUz
       ? h('div', { class: 'row' }, h('div', { class: 'ens', lang: 'en', style: 'min-width:0;flex:1', text: s.en }), spkBtn(s.en, 'Gapni eshitish'), spkBtn(s.en, 'Sekin eshitish', 0.75))
@@ -1413,7 +1428,8 @@ function renderTarjima() {
       st.done ? h('button', { class: 'btn primary', type: 'button', text: 'Keyingi gap', onclick: () => nextSentence('tarjima') }) : checkBtn,
       st.done ? h('button', { class: 'btn', type: 'button', text: 'Qayta yozish', onclick: () => { st.done = false; st.ai = null; st.aiErr = ''; st.self = null; renderTarjima(); setTimeout(() => { const t = $('#trInput'); if (t) t.focus(); }, 0); } }) : null,
       !st.done && !st.hint && !st.reveal ? h('button', { class: 'btn ghost', type: 'button', text: 'Yordam: soʻzlar', onclick: () => { st.text = ta.value; st.hint = true; renderTarjima(); } }) : null,
-      !st.done ? h('button', { class: 'btn ghost', type: 'button', text: st.reveal ? 'Keyingi gap' : 'Javobni koʻrsatish', onclick: () => { if (st.reveal) nextSentence('tarjima'); else { st.reveal = true; renderTarjima(); } } }) : null
+      !st.done ? h('button', { class: 'btn ghost', type: 'button', text: st.reveal ? 'Keyingi gap' : 'Javobni koʻrsatish', onclick: () => { if (st.reveal) nextSentence('tarjima'); else { st.reveal = true; renderTarjima(); } } }) : null,
+      backBtn('tarjima', m)
     )
   );
   body.append(card);
@@ -1558,7 +1574,7 @@ function renderTalaffuz() {
         h('div', { text: 'Bu oynada mikrofon ishlamayapti. Ovoz bilan mashq qilish uchun sahifani kompyuterda Chrome yoki Edge brauzerida oching. Hozircha aytmoqchi boʻlgan gapingizni yozib tekshirishingiz mumkin.' }),
         typedFallback(st));
   const card = h('div', { class: 'card' },
-    h('div', { class: 'row between' }, srcChip(s), h('span', { class: 'qcount', text: deckCounter(m) })),
+    h('div', { class: 'row between' }, srcChip(s), deckNav('talaffuz', m)),
     h('div', { class: 'prompt-lbl', text: readMode ? 'Ovoz chiqarib oʻqing' : 'Inglizcha ayting' }),
     readMode ? h('div', { class: 'row' }, h('div', { class: 'ens', lang: 'en', text: s.en }), spkBtn(s.en, 'Namunani eshitish'), spkBtn(s.en, 'Sekin eshitish', 0.75)) : h('div', { class: 'uzs', text: s.uz }),
     readMode ? h('div', { class: 'small muted', text: s.uz }) : focusChips(s, focusLesson()),
@@ -1570,7 +1586,8 @@ function renderTalaffuz() {
     h('div', { class: 'row' },
       h('button', { class: 'btn primary', type: 'button', text: 'Keyingi gap', onclick: () => { stopMic(); nextSentence('talaffuz'); } }),
       !readMode && !st.hint ? h('button', { class: 'btn ghost', type: 'button', text: 'Yordam: soʻzlar', onclick: () => { st.hint = true; renderTalaffuz(); } }) : null,
-      !readMode ? h('button', { class: 'btn ghost', type: 'button', text: 'Javobni eshitish', onclick: () => speak(s.en) }) : null
+      !readMode ? h('button', { class: 'btn ghost', type: 'button', text: 'Javobni eshitish', onclick: () => speak(s.en) }) : null,
+      backBtn('talaffuz', m)
     )
   );
   body.append(card);
