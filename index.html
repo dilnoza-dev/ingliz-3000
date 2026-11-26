@@ -315,12 +315,13 @@ textarea:focus { border-color: var(--accent); outline: none; }
     <div class="stat"><b id="sStrong">0</b><span>Mustahkam soʻzlar</span></div>
   </div>
 
-  <h2>Toʻrt bosqich</h2>
+  <h2>Besh bosqich</h2>
   <div class="stages">
     <a class="stage" href="#sozlar"><span class="k">1</span><span><b>Soʻzlar</b><small>Soʻz va pastda 4 ta variant. Har darsda 20 ta soʻz, jami 150 dars.</small></span><span class="go">›</span></a>
     <a class="stage" href="#gaplar"><span class="k">2</span><span><b>Gaplar</b><small>Har bir darsning oʻz gaplari bor: soʻzlarni toʻgʻri tartibga qoʻyib gap tuzasiz. Shu yerda 10 ta asosiy grammatika qoidasi ham bor.</small></span><span class="go">›</span></a>
-    <a class="stage" href="#tarjima"><span class="k">3</span><span><b>Tarjima</b><small>Oʻzbekcha gapni inglizchaga, inglizcha gapni oʻzbekchaga tarjima qilasiz. Har darsda 11–20 ta gap, jami 2616 ta. Xatolar oʻzbekcha tushuntiriladi.</small></span><span class="go">›</span></a>
-    <a class="stage" href="#talaffuz"><span class="k">4</span><span><b>Talaffuz</b><small>Oʻzbekcha gapni inglizcha ovoz chiqarib aytasiz. Ovozingiz tahlil qilinadi.</small></span><span class="go">›</span></a>
+    <a class="stage" href="#tarjima-en"><span class="k">3</span><span><b>Oʻzbekchadan inglizchaga</b><small>Oʻzbekcha gap beriladi, siz uni inglizcha yozasiz. Har darsda 11–20 ta gap, jami 2616 ta. Xatolar oʻzbekcha tushuntiriladi.</small></span><span class="go">›</span></a>
+    <a class="stage" href="#tarjima-uz"><span class="k">4</span><span><b>Inglizchadan oʻzbekchaga</b><small>Inglizcha gap ovozi bilan beriladi, siz uni oʻzbekcha yozasiz. Shu darsning gaplari, xatolar tushuntiriladi.</small></span><span class="go">›</span></a>
+    <a class="stage" href="#talaffuz"><span class="k">5</span><span><b>Talaffuz</b><small>Oʻzbekcha gapni inglizcha ovoz chiqarib aytasiz. Ovozingiz tahlil qilinadi.</small></span><span class="go">›</span></a>
   </div>
 
   <h2>Kamchiliklarim</h2>
@@ -358,7 +359,7 @@ textarea:focus { border-color: var(--accent); outline: none; }
 </section>
 
 <section id="v-tarjima" class="view" hidden>
-  <div><div class="eyebrow">3-bosqich</div><h1>Tarjima</h1><p class="muted small">Har bir darsning oʻz gaplari bor. Gapni oʻzbekchadan inglizchaga yoki inglizchadan oʻzbekchaga tarjima qiling. Bir nechta toʻgʻri variant boʻlishi mumkin, Claude ularni ham qabul qiladi.</p></div>
+  <div><div class="eyebrow" id="tEyebrow">3-bosqich</div><h1 id="tTitle">Oʻzbekchadan inglizchaga</h1><p class="muted small">Har bir darsning oʻz gaplari bor. Gapni oʻzbekchadan inglizchaga yoki inglizchadan oʻzbekchaga tarjima qiling. Bir nechta toʻgʻri variant boʻlishi mumkin, Claude ularni ham qabul qiladi.</p></div>
   <div class="row">
     <div class="seg" role="group" aria-label="Tarjima yoʻnalishi"><button type="button" data-tdir="uz2en" aria-pressed="true">Oʻzbekcha → Inglizcha</button><button type="button" data-tdir="en2uz" aria-pressed="false">Inglizcha → Oʻzbekcha</button></div>
   </div>
@@ -368,7 +369,7 @@ textarea:focus { border-color: var(--accent); outline: none; }
 </section>
 
 <section id="v-talaffuz" class="view" hidden>
-  <div><div class="eyebrow">4-bosqich</div><h1>Talaffuz</h1><p class="muted small">Mikrofonni bosing va gapni inglizcha ayting. Dastur nima eshitganini koʻrsatadi va kamchiliklaringizni aytadi.</p></div>
+  <div><div class="eyebrow">5-bosqich</div><h1>Talaffuz</h1><p class="muted small">Mikrofonni bosing va gapni inglizcha ayting. Dastur nima eshitganini koʻrsatadi va kamchiliklaringizni aytadi.</p></div>
   <div class="row">
     <div class="seg" role="group" aria-label="Mashq turi"><button type="button" data-pmode="translate" aria-pressed="true">Tarjima qilib ayting</button><button type="button" data-pmode="read" aria-pressed="false">Oʻqib bering</button></div>
   </div>
@@ -782,7 +783,13 @@ function spkBtn(text, label, rate) {
 const VIEWS = ['bosh', 'sozlar', 'gaplar', 'tarjima', 'talaffuz'];
 let view = 'bosh';
 function route() {
-  const v = (location.hash || '').replace('#', '');
+  let v = (location.hash || '').replace('#', '');
+  // #tarjima-uz and #tarjima-en open the translation stage in a given direction
+  if (v === 'tarjima-uz' || v === 'tarjima-en') {
+    const d = v === 'tarjima-uz' ? 'en2uz' : 'uz2en';
+    if (state.settings.tdir !== d) { state.settings.tdir = d; mods.tarjima.st = null; touch(); }
+    v = 'tarjima';
+  }
   view = VIEWS.includes(v) ? v : 'bosh';
   for (const id of VIEWS) $('#v-' + id).hidden = id !== view;
   $$('.tabs a').forEach(a => a.setAttribute('aria-current', a.dataset.v === view ? 'page' : 'false'));
@@ -1299,6 +1306,8 @@ const toksUz = s => String(s).toLowerCase().replace(/[ʻʼ‘’`´']/g, '').rep
 const uzWords = uz => String(uz).split(/\s+/).map(w => w.replace(/^[.,!?;:«»"—–-]+|[.,!?;:«»"—–-]+$/g, '')).filter(Boolean);
 $$('[data-tdir]').forEach(b => b.addEventListener('click', () => { state.settings.tdir = b.dataset.tdir; touch(); mods.tarjima.st = null; renderTarjima(); }));
 function renderTarjima() {
+  $('#tEyebrow').textContent = tdir() === 'en2uz' ? '4-bosqich' : '3-bosqich';
+  $('#tTitle').textContent = tdir() === 'en2uz' ? 'Inglizchadan oʻzbekchaga' : 'Oʻzbekchadan inglizchaga';
   $$('[data-tdir]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.tdir === tdir())));
   renderFocusBar('tFocusBar', 'tarjima');
   const body = clear($('#tBody'));
