@@ -1,0 +1,163 @@
+# Har qator: dars raqami|inglizcha|oʻzbekcha
+101|I dislike cold weather.|Men sovuq havoni yoqtirmayman.
+101|The new phones are on display.|Yangi telefonlar vitrinada turibdi.
+101|We live in a quiet district.|Biz tinch tumanda yashaymiz.
+101|Please don't disturb me.|Iltimos, meni bezovta qilmang.
+101|He dived into the lake.|U ko'lga sho'ng'idi.
+101|They got a divorce last year.|Ular o'tgan yili ajrashishdi.
+101|Domestic flights are cheaper.|Ichki reyslar arzonroq.
+101|I'd like a double room.|Ikki kishilik xona olmoqchiman.
+101|We watched a Turkish drama.|Biz turk dramasini ko'rdik.
+101|The keys are in the top drawer.|Kalitlar yuqori tortmada.
+101|He plays the drum.|U baraban chaladi.
+101|The colors are too dull.|Ranglar juda xira.
+101|She is eager to learn.|U o'rganishga ishtiyoqmand.
+101|There was a big earthquake in Tashkent in 1966.|1966-yilda Toshkentda kuchli zilzila bo'lgan.
+101|You can easily find the hotel.|Mehmonxonani osongina topasiz.
+101|Please edit my essay.|Iltimos, inshoimni tahrir qiling.
+101|He works as an editor.|U muharrir bo'lib ishlaydi.
+101|Never drive drunk.|Hech qachon mast holda mashina haydamang.
+102|This medicine is very effective.|Bu dori juda samarali.
+102|I hurt my elbow.|Tirsagimni lat yedirdim.
+102|Help elderly people.|Keksa odamlarga yordam bering.
+102|We will elect a new president.|Biz yangi prezident saylaymiz.
+102|I want to buy an electric car.|Elektromobil sotib olmoqchiman.
+102|She looks elegant.|U nafis ko'rinadi.
+102|I felt embarrassed.|Xijolat bo'ldim.
+102|The film has a happy ending.|Film baxtli yakun bilan tugaydi.
+102|He studies engineering.|U muhandislikni o'rganadi.
+102|The clown entertained the children.|Masxaraboz bolalarning ko'nglini ochdi.
+102|The students were enthusiastic.|Talabalar g'ayratli edi.
+102|I spent the entire day at home.|Butun kunni uyda o'tkazdim.
+102|No entry!|Kirish taqiqlanadi!
+102|Put the letter in an envelope.|Xatni konvertga soling.
+102|I watched the last episode.|Oxirgi qismni ko'rdim.
+102|The Timurid Empire was very big.|Temuriylar imperiyasi juda katta edi.
+103|Write an essay about your family.|Oilangiz haqida insho yozing.
+103|Water is essential for life.|Suv hayot uchun zarur.
+103|The university was established in 1920.|Universitet 1920-yilda tashkil etilgan.
+103|Can you estimate the cost?|Narxini taxminan baholay olasizmi?
+103|Eventually, we found the hotel.|Oxir-oqibat mehmonxonani topdik.
+103|There is no evidence.|Hech qanday dalil yo'q.
+103|The doctor examined the patient.|Shifokor bemorni ko'rikdan o'tkazdi.
+103|Everyone came, with one exception.|Bir kishidan boshqa hamma keldi.
+103|I am exhausted after work.|Ishdan keyin holdan toyganman.
+103|The company wants to expand.|Kompaniya kengaymoqchi.
+103|Travel expenses are high.|Yo'l xarajatlari baland.
+103|We did an experiment in class.|Darsda tajriba o'tkazdik.
+103|Uzbekistan exports cotton and fruit.|O'zbekiston paxta va meva eksport qiladi.
+103|Can we extend our stay?|Turish muddatimizni uzaytira olamizmi?
+103|It was an extraordinary day.|Bu favqulodda kun edi.
+104|It is extremely hot today.|Bugun juda qattiq issiq.
+104|Extreme sports are dangerous.|Ekstremal sport turlari xavfli.
+104|This fabric is soft.|Bu mato yumshoq.
+104|Failure is part of success.|Muvaffaqiyatsizlik muvaffaqiyatning bir qismi.
+104|Dogs are faithful animals.|Itlar sodiq hayvonlar.
+104|This bag is fake.|Bu sumka soxta.
+104|Your face looks familiar.|Yuzingiz tanish ko'rinyapti.
+104|The food was fantastic!|Ovqat zo'r bo'ldi!
+104|How much is the bus fare?|Avtobus yo'l haqi qancha?
+104|Can you do me a favour?|Menga bir yaxshilik qila olasizmi?
+104|Thank you for your feedback.|Fikr-mulohazangiz uchun rahmat.
+104|I like science fiction.|Men ilmiy fantastikani yoqtiraman.
+104|She works in finance.|U moliya sohasida ishlaydi.
+104|They have financial problems.|Ularning moliyaviy muammolari bor.
+104|Have faith in yourself.|O'z kuchingizga ishoning.
+104|Fame is not important to me.|Shon-shuhrat men uchun muhim emas.
+105|My brother works for a law firm.|Akam yuridik firmada ishlaydi.
+105|What flavour of ice cream do you want?|Qanday ta'mli muzqaymoq xohlaysiz?
+105|My working hours are flexible.|Ish vaqtim moslashuvchan.
+105|I have the flu.|Menda gripp.
+105|She speaks fluent English.|U ingliz tilida ravon gapiradi.
+105|Fold your clothes.|Kiyimlaringizni taxlang.
+105|I love Uzbek folk music.|Men o'zbek xalq musiqasini yaxshi ko'raman.
+105|What is the weather forecast for tomorrow?|Ertangi ob-havo ma'lumoti qanday?
+105|The dress code is formal.|Kiyinish qoidasi rasmiy.
+105|He is a former teacher.|U sobiq o'qituvchi.
+105|Fortunately, the rain stopped.|Xayriyatki, yomg'ir to'xtadi.
+105|Our friendship will last forever.|Do'stligimiz abadiy davom etadi.
+105|Let's meet near the fountain.|Favvora yonida uchrashaylik.
+105|I need a frame for this photo.|Bu surat uchun ramka kerak.
+105|The river flows into the lake.|Daryo ko'lga quyiladi.
+105|The house has a strong foundation.|Uyning poydevori mustahkam.
+106|He is a frequent visitor here.|U bu yerga tez-tez keladi.
+106|Don't frighten the baby.|Chaqaloqni qo'rqitmang.
+106|The child was frightened.|Bola qo'rqib ketdi.
+106|Buy some frozen vegetables.|Muzlatilgan sabzavot sotib oling.
+106|The hotel is fully booked.|Mehmonxonada bo'sh joy yo'q.
+106|We gathered around the table.|Biz dasturxon atrofiga yig'ildik.
+106|Generally, I wake up early.|Odatda men erta uyg'onaman.
+106|Uzbek people are generous.|O'zbek xalqi saxiy.
+106|He is a genius!|U daho!
+106|It was a kind gesture.|Bu juda chiroyli harakat bo'ldi.
+106|Global warming is a serious problem.|Global isish jiddiy muammo.
+106|Fix it with glue.|Uni yelim bilan yopishtiring.
+106|I glanced at my watch.|Soatimga ko'z tashladim.
+106|We are raising funds for the school.|Maktab uchun mablag' yig'yapmiz.
+106|They went to the funeral.|Ular dafn marosimiga borishdi.
+106|There is a giant tree in the park.|Parkda ulkan daraxt bor.
+107|The shop sells local goods.|Do'kon mahalliy mahsulotlarni sotadi.
+107|Don't believe gossip.|G'iybatlarga ishonmang.
+107|Grab your coat, we are leaving.|Paltongizni oling, ketyapmiz.
+107|The weather is gradually getting warmer.|Havo asta-sekin isiyapti.
+107|She graduated from university last year.|U o'tgan yili universitetni tamomladi.
+107|My first grandchild was born today.|Bugun birinchi nevaram tug'ildi.
+107|I am grateful for your help.|Yordamingiz uchun minnatdorman.
+107|Don't be greedy.|Ochko'z bo'lmang.
+107|The phone has a one-year guarantee.|Telefonning bir yillik kafolati bor.
+107|He felt guilty.|U o'zini aybdor his qildi.
+107|Bring me the hammer.|Menga bolg'ani olib keling.
+107|Turn the handle.|Tutqichni buring.
+107|Money doesn't bring happiness.|Pul baxt keltirmaydi.
+107|Smoking is harmful to your health.|Chekish sog'liq uchun zararli.
+107|The harvest is in autumn.|Hosil kuzda yig'iladi.
+107|A little rain won't do any harm.|Ozgina yomg'irdan hech zarar yo'q.
+108|Did you read the headlines?|Sarlavhalarni o'qidingizmi?
+108|Time heals everything.|Vaqt hamma narsani davolaydi.
+108|The heating isn't working.|Isitish tizimi ishlamayapti.
+108|Always wear a helmet on a bike.|Velosipedda doim dubulg'a kiying.
+108|My grandmother uses herbs as medicine.|Buvim dorivor o'tlarni davo sifatida ishlatadi.
+108|He is a highly qualified doctor.|U yuqori malakali shifokor.
+108|Let's go for a hike in the mountains.|Keling, tog'da piyoda sayr qilaylik.
+108|Give me a hint.|Menga bir ishora bering.
+108|Bukhara is a historic city.|Buxoro tarixiy shahar.
+108|Ramadan is a holy month.|Ramazon muqaddas oy.
+108|We helped the homeless.|Biz uysizlarga yordam berdik.
+108|Hopefully, it won't rain.|Umid qilamanki, yomg'ir yog'maydi.
+108|The sun is going down below the horizon.|Quyosh ufq ortiga botyapti.
+108|What a horrible noise!|Qanday dahshatli shovqin!
+108|Humans need water to live.|Insonlar yashash uchun suvga muhtoj.
+108|Hang your coat on the hook.|Paltongizni ilmoqqa iling.
+108|It is an honour to meet you.|Siz bilan tanishish men uchun sharaf.
+109|This is an ideal place for a holiday.|Bu dam olish uchun ideal joy.
+109|Can you identify this man?|Bu odamni taniy olasizmi?
+109|It is illegal to drive without a license.|Guvohnomasiz mashina haydash qonunga zid.
+109|Children have a great imagination.|Bolalarning tasavvuri boy.
+109|Social media has a big impact on young people.|Ijtimoiy tarmoqlar yoshlarga katta ta'sir ko'rsatadi.
+109|Don't be impatient.|Sabrsiz bo'lmang.
+109|Nothing is impossible.|Imkonsiz narsa yo'q.
+109|He wanted to impress her.|U unda yaxshi taassurot qoldirmoqchi edi.
+109|First impressions are important.|Birinchi taassurot muhim.
+109|Your English shows great improvement.|Ingliz tilingiz ancha yaxshilangan.
+109|The view is incredible!|Manzara aql bovar qilmas darajada go'zal!
+109|Independence Day in Uzbekistan is on the first of September.|O'zbekistonda Mustaqillik kuni 1-sentyabrda nishonlanadi.
+109|Every individual is important.|Har bir inson muhim.
+109|We play indoor games in winter.|Qishda bino ichida o'ynaladigan o'yinlarni o'ynaymiz.
+109|This is an impressive building.|Bu hayratlanarli bino.
+109|A friend in need is a friend indeed.|Do'st boshga kun tushganda bilinadi.
+110|Wash the wound to prevent infection.|Infeksiyaning oldini olish uchun yarani yuving.
+110|My initial plan was different.|Dastlabki rejam boshqacha edi.
+110|Two people were injured.|Ikki kishi jarohat oldi.
+110|He is innocent.|U aybsiz.
+110|She insisted on paying.|U o'zi to'lashni talab qildi.
+110|My teacher inspires me.|O'qituvchim meni ilhomlantiradi.
+110|I drink instant coffee.|Men eriydigan qahva ichaman.
+110|He studies at the Institute of Medicine.|U tibbiyot institutida o'qiydi.
+110|Don't insult people.|Odamlarni haqorat qilmang.
+110|Dolphins are intelligent animals.|Delfinlar aqlli hayvonlar.
+110|I intend to study abroad.|Chet elda o'qishni niyat qilganman.
+110|I'm not interested.|Menga qiziq emas.
+110|Sorry to interrupt.|Gapingizni bo'lganim uchun uzr.
+110|Read the introduction first.|Avval kirish qismini o'qing.
+110|He invested his money in a business.|U pulini biznesga tikdi.
+110|The police are investigating the case.|Politsiya ishni tergov qilmoqda.

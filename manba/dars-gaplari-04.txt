@@ -1,0 +1,151 @@
+# Har qator: dars raqami|inglizcha|oʻzbekcha
+31|Do you need anything?|Sizga biror narsa kerakmi?
+31|Nobody was at home.|Uyda hech kim yo'q edi.
+31|I made this cake myself.|Bu tortni o'zim pishirdim.
+31|Help yourself!|Marhamat, o'zingiz oling!
+31|I want my own room.|Men o'zimning alohida xonamni xohlayman.
+31|Can I have another cup of tea?|Yana bir piyola choy olsam bo'ladimi?
+31|Both of my brothers are doctors.|Ikkala akam ham shifokor.
+31|Each student has a book.|Har bir o'quvchining kitobi bor.
+31|Only a few people came.|Faqat bir nechta odam keldi.
+31|Are you sure?|Ishonchingiz komilmi?
+31|Health is more important than money.|Sog'liq puldan muhimroq.
+31|I feel sick today.|Bugun tobim yo'q.
+31|Take this medicine three times a day.|Bu dorini kuniga uch mahal iching.
+31|The child has a high fever.|Bolaning isitmasi baland.
+31|I have a pain in my back.|Orqam og'riyapti.
+32|He broke a bone in his arm.|U qo'lidagi suyakni sindirib oldi.
+32|The sun is bad for your skin.|Quyosh teringiz uchun zararli.
+32|I cut my finger.|Barmog'imni kesib oldim.
+32|My neck hurts.|Bo'ynim og'riyapti.
+32|My stomach hurts after eating.|Ovqatdan keyin qornim og'riydi.
+32|He hurt his knee playing football.|U futbol o'ynab tizzasini lat yedirdi.
+32|Put your hand on my shoulder.|Qo'lingizni yelkamga qo'ying.
+32|My grandfather has a long white beard.|Bobomning uzun oq soqoli bor.
+32|I go to work on foot.|Ishga piyoda boraman.
+32|She has a beautiful voice.|Uning ovozi chiroyli.
+32|I had a strange dream.|G'alati tush ko'rdim.
+32|We had a lot of fun.|Biz juda maza qildik.
+32|Tell us a joke.|Bizga bitta latifa aytib bering.
+32|The food smells delicious.|Taomning hidi juda yoqimli.
+32|I can't sleep because of the noise.|Shovqin sababli uxlay olmayapman.
+32|What is that sound?|Bu qanday tovush?
+33|Turn on the light.|Chiroqni yoqing.
+33|It gets dark early in winter.|Qishda erta qorong'i tushadi.
+33|Please be quiet.|Iltimos, jim bo'ling.
+33|The music is too loud.|Musiqa juda baland.
+33|This box is very heavy.|Bu quti juda og'ir.
+33|The bed is soft.|Karavot yumshoq.
+33|My grandfather is still strong.|Bobom hali ham baquvvat.
+33|I feel weak after the illness.|Kasallikdan keyin o'zimni holsiz his qilyapman.
+33|The street is very narrow.|Ko'cha juda tor.
+33|The river is wide and deep.|Daryo keng va chuqur.
+33|The earth is round.|Yer yumaloq.
+33|I like sweet tea.|Men shirin choyni yoqtiraman.
+33|This lemon is very sour.|Bu limon juda nordon.
+33|The medicine tastes bitter.|Dorining ta'mi achchiq.
+33|He is thin, but his brother is fat.|U ozg'in, ukasi esa semiz.
+34|I buy fresh bread every morning.|Men har kuni ertalab yangi non olaman.
+34|The plov was delicious.|Palov juda mazali bo'ldi.
+34|Have a nice weekend!|Dam olish kunlaringiz yaxshi o'tsin!
+34|The people here are very friendly.|Bu yerdagi odamlar juda samimiy.
+34|That was a funny film.|Bu kulgili film edi.
+34|This book is very interesting.|Bu kitob juda qiziqarli.
+34|The lesson was boring.|Dars zerikarli bo'ldi.
+34|Samarkand is a famous city.|Samarqand mashhur shahar.
+34|Why are you angry?|Nega jahlingiz chiqdi?
+34|I am afraid of the dark.|Men qorong'idan qo'rqaman.
+34|I live alone.|Men yolg'iz yashayman.
+34|My sister is married.|Opam turmushga chiqqan.
+34|The streets are safe at night.|Kechasi ko'chalar xavfsiz.
+34|Is it possible to pay by card?|Karta bilan to'lash mumkinmi?
+34|Is this story true?|Bu hikoya rostmi?
+35|This park is open to the public.|Bu park hamma uchun ochiq.
+35|This is a private road.|Bu shaxsiy yo'l.
+35|What is the main idea of the text?|Matnning asosiy fikri nima?
+35|I worked the whole day.|Men kun bo'yi ishladim.
+35|I am thirsty.|Chanqadim.
+35|When I was young, I lived in a village.|Yoshligimda qishloqda yashardim.
+35|This exam is very hard.|Bu imtihon juda qiyin.
+35|Add some sugar.|Biroz shakar qo'shing.
+35|Smoking is not allowed here.|Bu yerda chekish mumkin emas.
+35|The train arrives at ten.|Poyezd soat o'nda yetib keladi.
+35|Can I borrow your car?|Mashinangizni olib tursam bo'ladimi?
+35|Check your answers.|Javoblaringizni tekshiring.
+35|Let's continue tomorrow.|Ertaga davom ettiramiz.
+35|He collects old coins.|U eski tangalarni yig'adi.
+36|How much does a taxi to the airport cost?|Aeroportgacha taksi qancha turadi?
+36|Cover the pot.|Qozonning qopqog'ini yoping.
+36|Cross the street carefully.|Ko'chani ehtiyotkorlik bilan kesib o'ting.
+36|They deliver food to your home.|Ular ovqatni uyingizgacha yetkazib berishadi.
+36|Describe your house.|Uyingizni tasvirlab bering.
+36|We discussed the plan.|Biz rejani muhokama qildik.
+36|I dropped my phone.|Telefonimni tushirib yubordim.
+36|Enjoy your meal!|Yoqimli ishtaha!
+36|Please enter the room.|Iltimos, xonaga kiring.
+36|Explain it in simple words, please.|Iltimos, buni oddiy so'zlar bilan tushuntiring.
+36|He failed the test.|U testdan o'ta olmadi.
+36|Fill the bottle with water.|Shishani suvga to'ldiring.
+36|Can you fix my bike?|Velosipedimni tuzatib bera olasizmi?
+36|Follow me.|Menga ergashing.
+36|Scientists discovered a new star.|Olimlar yangi yulduz kashf qilishdi.
+37|Guess what!|Toping-chi, nima bo'ldi!
+37|I hate waiting.|Men kutishni yomon ko'raman.
+37|Hurry up, we are late!|Shoshiling, kechikyapmiz!
+37|Does it hurt?|Og'riyaptimi?
+37|Imagine you are rich.|Tasavvur qiling, siz boysiz.
+37|I want to improve my English.|Men ingliz tilimni yaxshilamoqchiman.
+37|Is water included in the price?|Suv narxga kiradimi?
+37|We invited our friends to dinner.|Biz do'stlarimizni kechki ovqatga taklif qildik.
+37|Can I join you?|Sizga qo'shilsam bo'ladimi?
+37|Someone is knocking at the door.|Kimdir eshikni taqillatyapti.
+37|Don't lie to me.|Menga yolg'on gapirmang.
+37|I miss my family.|Oilamni sog'indim.
+37|They want to marry in the summer.|Ular yozda turmush qurmoqchi.
+37|He offered me a job.|U menga ish taklif qildi.
+37|The boy jumped into the water.|Bola suvga sakradi.
+38|I would like to order a pizza.|Pitsa buyurtma qilmoqchiman.
+38|Pack your bag.|Sumkangizni yig'ing.
+38|Can you pass the salt, please?|Iltimos, tuzni uzatib yuboring.
+38|What are your plans for the weekend?|Dam olish kunlariga qanday rejalaringiz bor?
+38|We planted apple trees.|Biz olma daraxtlari ekdik.
+38|Practice every day.|Har kuni mashq qiling.
+38|I prefer tea to coffee.|Men qahvadan ko'ra choyni afzal ko'raman.
+38|Mother is preparing dinner.|Onam kechki ovqat tayyorlayapti.
+38|I promise to come.|Kelishga va'da beraman.
+38|Push the door, don't pull it.|Eshikni itaring, tortmang.
+38|Did you receive my email?|Xatimni oldingizmi?
+38|Sit down and relax.|O'tiring, dam oling.
+38|We rent a small apartment.|Biz kichik kvartirani ijaraga olganmiz.
+38|I will return the book tomorrow.|Kitobni ertaga qaytaraman.
+39|Can you ride a horse?|Ot minishni bilasizmi?
+39|The phone is ringing.|Telefon jiringlayapti.
+39|The sun rises in the east.|Quyosh sharqdan chiqadi.
+39|I am saving money for a car.|Mashina uchun pul yig'yapman.
+39|I am searching for my keys.|Kalitlarimni qidiryapman.
+39|Let's share the cake.|Keling, tortni bo'lishamiz.
+39|Don't shout at me.|Menga baqirmang.
+39|Sign here, please.|Iltimos, shu yerga imzo qo'ying.
+39|Please don't smoke in the car.|Iltimos, mashinada chekmang.
+39|Can you solve this problem?|Bu muammoni hal qila olasizmi?
+39|How much money do you spend on food?|Ovqatga qancha pul sarflaysiz?
+39|Don't steal other people's ideas.|Boshqalarning g'oyalarini o'g'irlamang.
+39|My family supports me.|Oilam meni qo'llab-quvvatlaydi.
+39|Don't touch the hot pan.|Issiq tovaga tegmang.
+39|Can you translate this letter?|Bu xatni tarjima qilib bera olasizmi?
+39|Wake me up at six.|Meni soat oltida uyg'oting.
+40|What should I wear?|Nima kiysam ekan?
+40|Don't worry, everything will be fine.|Xavotir olmang, hammasi yaxshi bo'ladi.
+40|Fry the onions in oil.|Piyozni yog'da qovuring.
+40|Boil the water first.|Avval suvni qaynating.
+40|My mother bakes bread at home.|Onam uyda non yopadi.
+40|Shake hands with your friend.|Do'stingiz bilan qo'l berib ko'rishing.
+40|Lock the door when you leave.|Ketayotganda eshikni qulflang.
+40|Mix the eggs and the flour.|Tuxum va unni aralashtiring.
+40|This bag belongs to me.|Bu sumka meniki.
+40|Please reply to my message.|Iltimos, xabarimga javob bering.
+40|What happened?|Nima bo'ldi?
+40|You seem tired.|Charchaganga o'xshaysiz.
+40|This factory produces cars.|Bu zavod mashina ishlab chiqaradi.
+40|The hotel provides free breakfast.|Mehmonxona bepul nonushta beradi.
+40|This job requires experience.|Bu ish tajriba talab qiladi.

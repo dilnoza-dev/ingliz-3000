@@ -1,0 +1,158 @@
+# Har qator: dars raqami|inglizcha|oʻzbekcha
+91|This was my first attempt.|Bu mening birinchi urinishim edi.
+91|She has a positive attitude.|Uning hayotga qarashi ijobiy.
+91|The festival attracts many tourists.|Festival ko'p sayyohlarni jalb qiladi.
+91|The city is very attractive in spring.|Bahorda shahar juda jozibali.
+91|The door is automatic.|Eshik avtomatik.
+91|Are you aware of the problem?|Muammodan xabardormisiz?
+91|The food was awful.|Ovqat juda yomon edi.
+91|There was an awkward silence.|Noqulay sukunat cho'kdi.
+91|He sings badly.|U yomon qo'shiq aytadi.
+91|Smoking is banned in public places.|Jamoat joylarida chekish taqiqlangan.
+91|This bag was a real bargain.|Bu sumka juda arzonga tushdi.
+91|Learn the basic words first.|Avval asosiy so'zlarni o'rganing.
+91|I take a bath every evening.|Men har kuni kechqurun vannada cho'milaman.
+91|Behave yourself!|O'zingizni yaxshi tuting!
+91|His behaviour was terrible.|Uning xulqi juda yomon edi.
+91|Let's sit on that bench.|Ana u skameykaga o'tiraylik.
+92|I bet you can't do it.|Garov o'ynaymiz, buni qila olmaysiz.
+92|What is your date of birth?|Tug'ilgan sanangiz qachon?
+92|Don't blame me.|Meni ayblamang.
+92|Leave this line blank.|Bu qatorni bo'sh qoldiring.
+92|My house is two blocks from here.|Uyim bu yerdan ikki ko'cha narida.
+92|She writes a travel blog.|U sayohat haqida blog yuritadi.
+92|Sorry to bother you.|Bezovta qilganim uchun uzr.
+92|The bank has a branch near my house.|Bankning uyim yaqinida filiali bor.
+92|Take a deep breath.|Chuqur nafas oling.
+92|Breathe slowly.|Sekin nafas oling.
+92|I will be brief.|Qisqa gapiraman.
+92|She is a brilliant student.|U a'lochi talaba.
+92|The match will be broadcast live.|O'yin jonli efirda ko'rsatiladi.
+92|Brush your hair.|Sochingizni tarang.
+92|Fill the bucket with water.|Chelakni suvga to'ldiring.
+92|Children love soap bubbles.|Bolalar sovun pufaklarini yaxshi ko'radi.
+93|He gave her a bunch of flowers.|U unga bir dasta gul sovg'a qildi.
+93|Calculate the total cost.|Umumiy xarajatni hisoblang.
+93|We camped near the lake.|Biz ko'l yonida chodir tikib dam oldik.
+93|The meeting was cancelled.|Yig'ilish bekor qilindi.
+93|Smoking can cause cancer.|Chekish saratonga sabab bo'lishi mumkin.
+93|She is capable of doing this job.|U bu ishni uddalay oladi.
+93|The captain spoke to the passengers.|Kapitan yo'lovchilarga murojaat qildi.
+93|Take care of yourself.|O'zingizni ehtiyot qiling.
+93|He is careless with money.|U pulga beparvo.
+93|My son watches cartoons every morning.|O'g'lim har kuni ertalab multfilm ko'radi.
+93|There is a cave in the mountain.|Tog'da g'or bor.
+93|Many celebrities came to the concert.|Konsertga ko'plab mashhur insonlar keldi.
+93|The hotel is in a central location.|Mehmonxona markaziy joyda joylashgan.
+93|I got my certificate.|Sertifikatimni oldim.
+93|They won the championship.|Ular chempionatda g'olib chiqishdi.
+93|Choose a category.|Toifani tanlang.
+94|Is there a charge for parking?|Avtoturargoh pullikmi?
+94|What a charming little town!|Qanday maftunkor shaharcha!
+94|The dog chased the cat.|It mushukni quvladi.
+94|She kissed her mother on the cheek.|U onasining yuzidan o'pdi.
+94|He is always cheerful.|U doim quvnoq.
+94|Do you play chess?|Shaxmat o'ynaysizmi?
+94|He is the chief doctor.|U bosh shifokor.
+94|Throw away that cigarette.|Ana u sigaretni tashlab yuboring.
+94|Everyone clapped.|Hamma qarsak chaldi.
+94|I love classic films.|Men klassik filmlarni yaxshi ko'raman.
+94|Our classroom is on the second floor.|Sinfxonamiz ikkinchi qavatda.
+94|Click on the link.|Havolani bosing.
+94|We have a new client.|Bizda yangi mijoz bor.
+94|Don't go near the cliff.|Jarlikka yaqin bormang.
+94|The clinic opens at eight.|Klinika soat sakkizda ochiladi.
+95|I have no clue.|Hech qanday tasavvurim yo'q.
+95|The coach trains the team every day.|Murabbiy jamoani har kuni mashq qildiradi.
+95|Enter the code.|Kodni kiriting.
+95|The old bridge collapsed.|Eski ko'prik qulab tushdi.
+95|My colleagues are very kind.|Hamkasblarim juda mehribon.
+95|Write your answers in this column.|Javoblaringizni shu ustunga yozing.
+95|Combine the flour and the sugar.|Un va shakarni qo'shing.
+95|I like comedies.|Men komediyalarni yoqtiraman.
+95|Leave a comment below.|Pastda izoh qoldiring.
+95|Good communication is important in a team.|Jamoada yaxshi muloqot muhim.
+95|Our community is very friendly.|Mahallamiz juda ahil.
+95|The problem is complicated.|Muammo chigal.
+95|This is a complex question.|Bu murakkab savol.
+95|He committed a crime.|U jinoyat sodir etdi.
+95|The hotel offers comfort and good service.|Mehmonxona qulaylik va yaxshi xizmat taklif qiladi.
+96|Mozart was a great composer.|Motsart buyuk bastakor edi.
+96|I can't concentrate.|Diqqatimni jamlay olmayapman.
+96|This is a new concept.|Bu yangi tushuncha.
+96|Thank you for your concern.|G'amxo'rligingiz uchun rahmat.
+96|What is your conclusion?|Xulosangiz qanday?
+96|Be confident!|O'zingizga ishoning!
+96|I am confused.|Boshim qotib qoldi.
+96|The rules are confusing.|Qoidalar chalkash.
+96|I congratulate you on your success.|Sizni muvaffaqiyatingiz bilan tabriklayman.
+96|The internet connection is slow.|Internet aloqasi sekin.
+96|Every action has consequences.|Har bir harakatning oqibati bor.
+96|The team consists of five players.|Jamoa besh o'yinchidan iborat.
+96|There is constant noise from the street.|Ko'chadan doimiy shovqin keladi.
+96|The building is under construction.|Bino qurilmoqda.
+96|Keep the food in a container.|Ovqatni idishda saqlang.
+96|Don't confuse these two words.|Bu ikki so'zni adashtirmang.
+97|The content of the book is interesting.|Kitobning mazmuni qiziqarli.
+97|She won a singing contest.|U qo'shiq tanlovida g'olib bo'ldi.
+97|Guess the meaning from the context.|Ma'nosini kontekstdan topishga harakat qiling.
+97|Asia is the biggest continent.|Osiyo eng katta qit'a.
+97|Read the contract before you sign.|Imzolashdan oldin shartnomani o'qing.
+97|Everyone can contribute.|Hamma o'z hissasini qo'sha oladi.
+97|Is this time convenient for you?|Bu vaqt sizga qulaymi?
+97|You convinced me.|Siz meni ishontirdingiz.
+97|It's cool in the evening.|Kechqurun salqin bo'ladi.
+97|How do you cope with stress?|Stressni qanday yengasiz?
+97|We have a small cottage in the mountains.|Tog'da kichik dala hovlimiz bor.
+97|I have a bad cough.|Qattiq yo'talyapman.
+97|I prefer the countryside to the city.|Men shahardan ko'ra qishloq joyni afzal ko'raman.
+97|There is a crack in the wall.|Devorda yoriq bor.
+97|She is a very creative person.|U juda ijodkor inson.
+97|I paid by credit card.|Kredit karta bilan to'ladim.
+98|The crew is ready.|Ekipaj tayyor.
+98|The criminal was caught.|Jinoyatchi qo'lga olindi.
+98|The country is in an economic crisis.|Mamlakat iqtisodiy inqirozda.
+98|Don't criticise others.|Boshqalarni tanqid qilmang.
+98|This year the crop was good.|Bu yil hosil yaxshi bo'ldi.
+98|Don't be cruel to animals.|Hayvonlarga shafqatsiz bo'lmang.
+98|Tashkent is a cultural center.|Toshkent madaniy markaz.
+98|I am currently working from home.|Hozirda uydan ishlayapman.
+98|It's a local custom.|Bu mahalliy urf-odat.
+98|Read the news daily.|Yangiliklarni har kuni o'qing.
+98|How dare you!|Qanday jur'at etdingiz!
+98|The deadline is Friday.|Muddat — juma.
+98|Dear friends, welcome!|Aziz do'stlar, xush kelibsiz!
+98|We decorated the room for the party.|Ziyofat uchun xonani bezatdik.
+98|I have lived here for a decade.|Men bu yerda o'n yildan beri yashayman.
+98|What is the current situation?|Hozirgi vaziyat qanday?
+99|The number of smokers is decreasing.|Chekuvchilar soni kamayyapti.
+99|They accepted the defeat.|Ular mag'lubiyatni tan olishdi.
+99|Define this word.|Bu so'zga ta'rif bering.
+99|I will definitely come.|Albatta kelaman.
+99|Look up the definition in the dictionary.|Ta'rifini lug'atdan qarang.
+99|I am delighted to see you.|Sizni ko'rganimdan juda xursandman.
+99|There is a high demand for doctors.|Shifokorlarga talab katta.
+99|Let me demonstrate how it works.|Qanday ishlashini ko'rsatib beray.
+99|I go to the dentist twice a year.|Men yiliga ikki marta tish shifokoriga boraman.
+99|He denied everything.|U hamma narsani inkor qildi.
+99|What is the departure time?|Jo'nash vaqti qachon?
+99|Despite the rain, we had fun.|Yomg'irga qaramay, maza qildik.
+99|We reached our destination.|Manzilimizga yetib keldik.
+99|He felt depressed after losing his job.|Ishdan ayrilgach, u tushkunlikka tushdi.
+99|They were desperate for help.|Ular yordamga juda muhtoj edi.
+100|Give me a detailed answer.|Menga batafsil javob bering.
+100|I love detective stories.|Detektiv hikoyalarni yaxshi ko'raman.
+100|This device is very useful.|Bu qurilma juda foydali.
+100|Read the dialogue in pairs.|Dialogni juft bo'lib o'qing.
+100|She wears a diamond ring.|U olmos uzuk taqadi.
+100|I write in my diary every night.|Har kecha kundaligimga yozaman.
+100|We live in a digital world.|Biz raqamli dunyoda yashaymiz.
+100|Is there a direct flight to London?|Londonga to'g'ridan-to'g'ri reys bormi?
+100|The director of the school is very kind.|Maktab direktori juda mehribon.
+100|I disagree with you.|Men siz bilan rozi emasman.
+100|I am disappointed.|Hafsalam pir bo'ldi.
+100|The flood was a disaster.|Toshqin haqiqiy falokat bo'ldi.
+100|Discipline is the key to success.|Intizom — muvaffaqiyat kaliti.
+100|Can I get a discount?|Chegirma qilib bera olasizmi?
+100|It was an important discovery.|Bu muhim kashfiyot edi.
+100|We had a long discussion.|Biz uzoq muhokama qildik.

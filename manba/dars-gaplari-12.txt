@@ -1,0 +1,184 @@
+# Har qator: dars raqami|inglizcha|oʻzbekcha
+111|The job involves a lot of travel.|Bu ish ko'p safarlarni o'z ichiga oladi.
+111|This is a serious issue.|Bu jiddiy masala.
+111|He spent two years in jail.|U ikki yil qamoqda o'tirdi.
+111|My jaw hurts.|Jag'im og'riyapti.
+111|Don't be jealous.|Rashk qilmang.
+111|I usually wear jeans.|Men odatda jinsi shim kiyaman.
+111|My knee joint hurts.|Tizza bo'g'imim og'riyapti.
+111|She is a journalist.|U jurnalist.
+111|Her eyes were full of joy.|Uning ko'zlari quvonchga to'la edi.
+111|He is a junior manager.|U kichik menejer.
+111|Everyone wants justice.|Hamma adolat istaydi.
+111|I am keen on sport.|Men sportga ishtiyoqmandman.
+111|Put the kettle on.|Choynakni qo'ying.
+111|The United Kingdom is in Europe.|Buyuk Britaniya Yevropada joylashgan.
+111|She works in a lab.|U laboratoriyada ishlaydi.
+111|We had lamb for dinner.|Kechki ovqatga qo'zi go'shti yedik.
+111|The room was full of laughter.|Xona kulgiga to'la edi.
+112|The company launched a new product.|Kompaniya yangi mahsulotni chiqardi.
+112|Wear layers in winter.|Qishda bir necha qavat kiyim kiying.
+112|He showed great leadership.|U ajoyib rahbarlik qobiliyatini ko'rsatdi.
+112|Which team won the league?|Ligada qaysi jamoa g'olib chiqdi?
+112|This bag is made of leather.|Bu sumka charmdan tikilgan.
+112|Is it legal?|Bu qonuniymi?
+112|There is an old legend about this city.|Bu shahar haqida qadimiy afsona bor.
+112|A healthy lifestyle is important.|Sog'lom turmush tarzi muhim.
+112|It's likely to rain.|Yomg'ir yog'ishi ehtimoli bor.
+112|We have limited time.|Vaqtimiz cheklangan.
+112|What do you do for a living?|Nima ish bilan tirikchilik qilasiz?
+112|That's logical.|Bu mantiqiy.
+112|He is a loyal friend.|U vafodor do'st.
+112|I don't understand the lyrics.|Qo'shiq matnini tushunmayapman.
+112|Do you believe in magic?|Sehrga ishonasizmi?
+112|The majority of people agree.|Ko'pchilik rozi.
+112|This is a major problem.|Bu katta muammo.
+112|Maintain a healthy weight.|Sog'lom vaznni saqlang.
+112|Lightning hit the tree.|Chaqmoq daraxtga tushdi.
+113|Let's go shopping at the mall.|Keling, savdo markaziga xarid qilgani boraylik.
+113|The new stadium is massive.|Yangi stadion juda katta.
+113|He is a master of his craft.|U o'z kasbining ustasi.
+113|She is very mature for her age.|U yoshiga nisbatan juda yetuk.
+113|The maximum speed is ninety.|Eng yuqori tezlik to'qson.
+113|The mayor opened the new park.|Shahar hokimi yangi parkni ochdi.
+113|Meanwhile, I'll make tea.|Bu orada men choy damlayman.
+113|The mechanic fixed my car.|Mexanik mashinamni tuzatdi.
+113|She won a gold medal.|U oltin medal yutdi.
+113|I need medical help.|Menga tibbiy yordam kerak.
+113|The ice is melting.|Muz eriyapti.
+113|Mental health is important.|Ruhiy sog'liq muhim.
+113|Your room is a mess!|Xonangiz ostin-ustun!
+113|The minimum age is eighteen.|Eng kam yosh — o'n sakkiz.
+113|He is the Minister of Education.|U ta'lim vaziri.
+113|It's a minor problem.|Bu kichik muammo.
+113|It's a miracle!|Bu mo'jiza!
+114|Our mission is to help people.|Bizning vazifamiz odamlarga yordam berish.
+114|Pour the mixture into the pan.|Aralashmani tovaga quying.
+114|What is your mobile number?|Mobil raqamingiz qanday?
+114|She is very modest.|U juda kamtar.
+114|The doctor monitors the patient.|Shifokor bemorni kuzatib boradi.
+114|Children are afraid of monsters.|Bolalar maxluqlardan qo'rqadi.
+114|There is a monument in the park.|Parkda yodgorlik bor.
+114|The story has a moral.|Hikoyaning ibratli xulosasi bor.
+114|The hotel is cheap; moreover, it is near the sea.|Mehmonxona arzon, bundan tashqari dengizga yaqin.
+114|The audience was mostly young.|Tomoshabinlar asosan yoshlar edi.
+114|Good teachers motivate students.|Yaxshi o'qituvchilar o'quvchilarni rag'batlantiradi.
+114|My shoes are covered in mud.|Poyabzalim loyga belanib ketdi.
+114|It's a mystery.|Bu jumboq.
+114|That's just a myth.|Bu shunchaki afsona.
+114|What is your native language?|Ona tilingiz qaysi?
+114|He has strong nerves.|Uning asablari mustahkam.
+114|We negotiated a good price.|Biz yaxshi narx kelishib oldik.
+115|It was hard; nevertheless, we finished.|Qiyin edi, shunday bo'lsa-da, tugatdik.
+115|I had a nightmare.|Dahshatli tush ko'rdim.
+115|That's nonsense!|Bu bema'ni gap!
+115|Normally, the shop opens at nine.|Odatda do'kon soat to'qqizda ochiladi.
+115|Nowadays everyone has a phone.|Hozirgi kunda hammada telefon bor.
+115|It's obvious.|Bu ravshan.
+115|Obviously, he was tired.|Tabiiyki, u charchagan edi.
+115|We use this room only on special occasions.|Bu xonadan faqat alohida munosabatlarda foydalanamiz.
+115|I occasionally eat fast food.|Vaqti-vaqti bilan fast-fud yeyman.
+115|That's odd.|Bu g'alati.
+115|I didn't want to offend you.|Sizni ranjitmoqchi emasdim.
+115|English is an official language in many countries.|Ingliz tili ko'p mamlakatlarda rasmiy til.
+115|I buy clothes online.|Kiyimni internet orqali sotib olaman.
+115|Our opponent was strong.|Raqibimiz kuchli edi.
+115|Many people oppose the new law.|Ko'p odamlar yangi qonunga qarshi.
+115|The bank is opposite the hotel.|Bank mehmonxonaning qarshisida.
+115|I am optimistic about the future.|Kelajakka nikbinlik bilan qarayman.
+115|It was an ordinary day.|Oddiy kun edi.
+116|What is the origin of this word?|Bu so'zning kelib chiqishi qanday?
+116|Is this the original?|Bu asl nusxami?
+116|Hurry, otherwise we'll be late.|Shoshiling, aks holda kechikamiz.
+116|I like outdoor activities.|Men ochiq havodagi mashg'ulotlarni yoqtiraman.
+116|Her work is outstanding.|Uning ishi ajoyib.
+116|Overall, it was a good trip.|Umuman olganda, safar yaxshi o'tdi.
+116|You can overcome any problem.|Har qanday muammoni yengib o'tishingiz mumkin.
+116|How much do I owe you?|Sizdan qancha qarzman?
+116|Plants produce oxygen.|O'simliklar kislorod ishlab chiqaradi.
+116|A package arrived for you.|Sizga posilka keldi.
+116|The injection was painful.|Ukol og'riqli bo'ldi.
+116|Don't panic!|Vahimaga tushmang!
+116|Is there parking here?|Bu yerda avtoturargoh bormi?
+116|Everyone can participate.|Hamma ishtirok etishi mumkin.
+116|Do you want a particular color?|Biror aniq rang xohlaysizmi?
+116|Music is my passion.|Musiqa — mening ishtiyoqim.
+116|I forgot my password.|Parolimni unutib qo'ydim.
+116|Learning a language needs patience.|Til o'rganish sabr talab qiladi.
+116|The painter is painting the house.|Bo'yoqchi uyni bo'yayapti.
+116|It was partly my fault.|Bunda qisman mening aybim ham bor.
+117|Walk on the pavement.|Piyodalar yo'lagidan yuring.
+117|We reached the peak of the mountain.|Biz tog' cho'qqisiga chiqdik.
+117|He scored from a penalty.|U penaltidan gol urdi.
+117|It works perfectly.|U a'lo darajada ishlaydi.
+117|Her performance was excellent.|Uning chiqishi a'lo bo'ldi.
+117|Is this job permanent?|Bu doimiy ishmi?
+117|Can I ask a personal question?|Shaxsiy savol bersam bo'ladimi?
+117|Personally, I prefer tea.|Shaxsan men choyni afzal ko'raman.
+117|He studies philosophy.|U falsafa o'rganadi.
+117|We hired a photographer for the wedding.|To'yga fotograf yolladik.
+117|Learn useful phrases.|Foydali iboralarni o'rganing.
+117|Physical activity is good for you.|Jismoniy faollik foydali.
+117|There is a pile of books on the desk.|Stolda bir uyum kitob bor.
+117|Take one pill after meals.|Ovqatdan keyin bitta tabletka iching.
+117|What a pity!|Qanday achinarli!
+117|I like plain yogurt.|Men oddiy qatiqni yoqtiraman.
+117|I am pleased to meet you.|Tanishganimizdan xursandman.
+117|There is plenty of food.|Ovqat mo'l-ko'l.
+117|The plot of the film is simple.|Filmning syujeti oddiy.
+117|This mushroom is poison.|Bu qo'ziqorin zaharli.
+118|What is the company's policy?|Kompaniyaning siyosati qanday?
+118|I am not interested in political news.|Siyosiy yangiliklarga qiziqmayman.
+118|She painted my portrait.|U mening portretimni chizdi.
+118|There is a possibility of rain.|Yomg'ir yog'ish ehtimoli bor.
+118|He has great potential.|Uning salohiyati katta.
+118|Poverty is a big problem.|Qashshoqlik katta muammo.
+118|The engine is very powerful.|Dvigatel juda kuchli.
+118|This is a practical solution.|Bu amaliy yechim.
+118|The teacher praised me.|O'qituvchi meni maqtadi.
+118|Time is precious.|Vaqt qimmatli.
+118|My sister is pregnant.|Opam homilador.
+118|The preparation for the wedding took a month.|To'yga tayyorgarlik bir oy davom etdi.
+118|We must preserve nature.|Biz tabiatni asrashimiz kerak.
+118|Press and hold the button.|Tugmani bosib turing.
+118|My son goes to primary school.|O'g'lim boshlang'ich maktabga boradi.
+118|The prince married a princess.|Shahzoda malikaga uylandi.
+118|It's a matter of principle.|Bu tamoyil masalasi.
+118|Thank you for your presence.|Ishtirokingiz uchun rahmat.
+119|Family is my priority.|Men uchun oila birinchi o'rinda.
+119|The prisoner escaped.|Mahbus qochib ketdi.
+119|Uzbekistan is a big cotton producer.|O'zbekiston yirik paxta yetishtiruvchi davlat.
+119|Production has increased.|Ishlab chiqarish oshdi.
+119|He is a professional photographer.|U professional fotograf.
+119|Do you have proof?|Dalilingiz bormi?
+119|Eat proper food.|To'g'ri ovqatlaning.
+119|Close the door properly.|Eshikni yaxshilab yoping.
+119|Use sun protection.|Quyoshdan himoya vositasini ishlating.
+119|She studies psychology.|U psixologiya o'rganadi.
+119|Is this the right punishment?|Bu to'g'ri jazomi?
+119|Thank you for your purchase.|Xaridingiz uchun rahmat.
+119|This is pure honey.|Bu sof asal.
+119|I like doing puzzles.|Men boshqotirma yechishni yoqtiraman.
+119|What qualifications do you have?|Qanday malakangiz bor?
+119|Please wait in the queue.|Iltimos, navbatda turing.
+119|He quit his job.|U ishdan bo'shadi.
+119|We had a quiz in class.|Darsda viktorina o'tkazdik.
+119|It is rainy today.|Bugun havo yomg'irli.
+120|Choose a random number.|Tasodifiy son tanlang.
+120|We have a wide range of products.|Bizda mahsulotlarning keng turi bor.
+120|The city is growing at a rapid pace.|Shahar jadal sur'atda o'sib bormoqda.
+120|I rarely watch TV.|Men kamdan-kam televizor ko'raman.
+120|I would rather stay home.|Uyda qolganim ma'qulroq.
+120|How did he react?|U qanday munosabat bildirdi?
+120|Her reaction surprised me.|Uning munosabati meni hayron qoldirdi.
+120|Face reality.|Haqiqatga tik qarang.
+120|The price is reasonable.|Narx maqbul.
+120|Can I have a receipt?|Chek bera olasizmi?
+120|Ask at the reception.|Qabulxonadan so'rang.
+120|The lake reflects the mountains.|Ko'lda tog'lar aks etadi.
+120|Register on the website.|Saytda ro'yxatdan o'ting.
+120|Exercise regularly.|Muntazam ravishda shug'ullaning.
+120|We are visiting relatives this weekend.|Shu dam olish kunlari qarindoshlarnikiga boramiz.
+120|His new song was released today.|Uning yangi qo'shig'i bugun chiqdi.
+120|This information is not relevant.|Bu ma'lumot tegishli emas.
+120|I saw a rat in the basement.|Yerto'lada kalamush ko'rdim.

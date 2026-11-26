@@ -318,8 +318,8 @@ textarea:focus { border-color: var(--accent); outline: none; }
   <h2>Toʻrt bosqich</h2>
   <div class="stages">
     <a class="stage" href="#sozlar"><span class="k">1</span><span><b>Soʻzlar</b><small>Soʻz va pastda 4 ta variant. Har darsda 20 ta soʻz, jami 150 dars.</small></span><span class="go">›</span></a>
-    <a class="stage" href="#gaplar"><span class="k">2</span><span><b>Gaplar</b><small>Oʻrgangan soʻzlaringiz bilan gap tuzish: soʻzlarni toʻgʻri tartibga qoʻyasiz. Shu yerda 10 ta asosiy grammatika qoidasi ham bor.</small></span><span class="go">›</span></a>
-    <a class="stage" href="#tarjima"><span class="k">3</span><span><b>Tarjima</b><small>Oʻzbekcha gap beriladi, siz uni inglizcha yozasiz. Xatolar oʻzbekcha tushuntiriladi.</small></span><span class="go">›</span></a>
+    <a class="stage" href="#gaplar"><span class="k">2</span><span><b>Gaplar</b><small>Har bir darsning oʻz gaplari bor: soʻzlarni toʻgʻri tartibga qoʻyib gap tuzasiz. Shu yerda 10 ta asosiy grammatika qoidasi ham bor.</small></span><span class="go">›</span></a>
+    <a class="stage" href="#tarjima"><span class="k">3</span><span><b>Tarjima</b><small>Oʻzbekcha gapni inglizchaga, inglizcha gapni oʻzbekchaga tarjima qilasiz. Har darsda 11–20 ta gap, jami 2616 ta. Xatolar oʻzbekcha tushuntiriladi.</small></span><span class="go">›</span></a>
     <a class="stage" href="#talaffuz"><span class="k">4</span><span><b>Talaffuz</b><small>Oʻzbekcha gapni inglizcha ovoz chiqarib aytasiz. Ovozingiz tahlil qilinadi.</small></span><span class="go">›</span></a>
   </div>
 
@@ -358,7 +358,10 @@ textarea:focus { border-color: var(--accent); outline: none; }
 </section>
 
 <section id="v-tarjima" class="view" hidden>
-  <div><div class="eyebrow">3-bosqich</div><h1>Tarjima</h1><p class="muted small">Gapni inglizcha yozing. Bir nechta toʻgʻri variant boʻlishi mumkin, Claude ularni ham qabul qiladi.</p></div>
+  <div><div class="eyebrow">3-bosqich</div><h1>Tarjima</h1><p class="muted small">Har bir darsning oʻz gaplari bor. Gapni oʻzbekchadan inglizchaga yoki inglizchadan oʻzbekchaga tarjima qiling. Bir nechta toʻgʻri variant boʻlishi mumkin, Claude ularni ham qabul qiladi.</p></div>
+  <div class="row">
+    <div class="seg" role="group" aria-label="Tarjima yoʻnalishi"><button type="button" data-tdir="uz2en" aria-pressed="true">Oʻzbekcha → Inglizcha</button><button type="button" data-tdir="en2uz" aria-pressed="false">Inglizcha → Oʻzbekcha</button></div>
+  </div>
   <details class="rules" id="tRules"></details>
   <div class="focusbar" id="tFocusBar"></div>
   <div id="tBody"><div class="loading">Yuklanmoqda…</div></div>
@@ -476,7 +479,7 @@ function renderRules(id) {
 
 /* ================= state ================= */
 const LSKEY = 'ingliz3000:v1';
-const DEF = () => ({ v: 1, updated: 0, cur: 0, words: {}, lessons: {}, days: {}, pron: {}, notes: [], gen: {}, settings: { voice: 'auto', pmode: 'translate', focus: -1, lvl: 'beginner' } });
+const DEF = () => ({ v: 1, updated: 0, cur: 0, words: {}, lessons: {}, days: {}, pron: {}, notes: [], gen: {}, settings: { voice: 'auto', pmode: 'translate', tdir: 'uz2en', focus: -1, lvl: 'beginner' } });
 let state = DEF();
 function normalizeState(s) {
   const d = DEF();
@@ -520,9 +523,9 @@ function streak() {
 }
 
 /* ================= data ================= */
-let W = [], N = 0, BANK = [];
+let W = [], N = 0, BANK = [], GENERAL = [];
 const IDX = new Map();
-const IRR = { am: 'be', is: 'be', are: 'be', was: 'be', were: 'be', been: 'be', being: 'be', has: 'have', had: 'have', does: 'do', did: 'do', done: 'do', went: 'go', gone: 'go', came: 'come', saw: 'see', seen: 'see', bought: 'buy', made: 'make', said: 'say', found: 'find', lost: 'lose', forgot: 'forget', forgotten: 'forget', knew: 'know', known: 'know', built: 'build', sent: 'send', spoke: 'speak', spoken: 'speak', began: 'begin', begun: 'begin', took: 'take', taken: 'take', gave: 'give', given: 'give', got: 'get', told: 'tell', thought: 'think', felt: 'feel', left: 'leave', met: 'meet', ran: 'run', sat: 'sit', stood: 'stand', wrote: 'write', written: 'write', ate: 'eat', eaten: 'eat', drank: 'drink', slept: 'sleep', won: 'win', children: 'child', men: 'man', women: 'woman', teeth: 'tooth', feet: 'foot', better: 'good', best: 'good', kept: 'keep', held: 'hold', brought: 'bring', caught: 'catch', taught: 'teach', fell: 'fall', grew: 'grow', broke: 'break', paid: 'pay', heard: 'hear', understood: 'understand', spent: 'spend', woke: 'wake', wore: 'wear', mice: 'mouse', lives: 'life', wives: 'wife', bigger: 'big', taller: 'tall', faster: 'fast', coldest: 'cold' };
+const IRR = { am: 'be', is: 'be', are: 'be', was: 'be', were: 'be', been: 'be', being: 'be', has: 'have', had: 'have', does: 'do', did: 'do', done: 'do', went: 'go', gone: 'go', came: 'come', saw: 'see', seen: 'see', bought: 'buy', made: 'make', said: 'say', found: 'find', lost: 'lose', forgot: 'forget', forgotten: 'forget', knew: 'know', known: 'know', built: 'build', sent: 'send', spoke: 'speak', spoken: 'speak', began: 'begin', begun: 'begin', took: 'take', taken: 'take', gave: 'give', given: 'give', got: 'get', told: 'tell', thought: 'think', felt: 'feel', left: 'leave', met: 'meet', ran: 'run', sat: 'sit', stood: 'stand', wrote: 'write', written: 'write', ate: 'eat', eaten: 'eat', drank: 'drink', slept: 'sleep', won: 'win', children: 'child', men: 'man', women: 'woman', teeth: 'tooth', feet: 'foot', better: 'good', best: 'good', kept: 'keep', held: 'hold', brought: 'bring', caught: 'catch', taught: 'teach', fell: 'fall', grew: 'grow', broke: 'break', paid: 'pay', heard: 'hear', understood: 'understand', spent: 'spend', woke: 'wake', wore: 'wear', mice: 'mouse', lives: 'life', wives: 'wife', stole: 'steal', rode: 'ride', rang: 'ring', shook: 'shake', hid: 'hide', chose: 'choose', drove: 'drive', flew: 'fly', sang: 'sing', swam: 'swim', drew: 'draw', threw: 'throw', became: 'become', sold: 'sell', wore: 'wear', fought: 'fight', led: 'lead', lent: 'lend', meant: 'mean', froze: 'freeze', hung: 'hang', dug: 'dig', fed: 'feed', forgave: 'forgive', swore: 'swear', swept: 'sweep', tore: 'tear', sank: 'sink', shot: 'shoot', laid: 'lay', bigger: 'big', taller: 'tall', faster: 'fast', coldest: 'cold' };
 function lemma(t) {
   t = String(t).toLowerCase().replace(/[^a-z'-]/g, '').replace(/^'+|'+$/g, '');
   if (!t) return -1;
@@ -591,11 +594,11 @@ function subPairs(T, U, tm, um) {
   return res;
 }
 // Render a sentence word-by-word, colouring each word by whether its tokens were matched.
-function diffView(text, matchedFlags, cls) {
+function diffView(text, matchedFlags, cls, tk = toks) {
   const wrap = h('div', { class: 'diff' });
   let p = 0;
   for (const word of String(text).split(/\s+/).filter(Boolean)) {
-    const n = toks(word).length;
+    const n = tk(word).length;
     const flags = matchedFlags.slice(p, p + n); p += n;
     const ok = n === 0 || flags.every(Boolean);
     wrap.append(h('span', { class: ok ? 'ok' : cls, text: word }));
@@ -1095,7 +1098,7 @@ function renderResult(body) {
     h('div', { class: 'score ' + (q.score >= 80 ? 'good' : q.score >= 50 ? 'mid' : 'low') }, h('b', { text: q.score + '%' }), h('span', { class: 'muted', text: 'soʻz birinchi urinishda toʻgʻri topildi' })),
     missed.length ? h('div', null, h('p', { class: 'small muted', text: 'Xato qilingan soʻzlar (ular tezroq takrorlanadi):' }), h('div', { class: 'chips' }, missed.map(i => h('button', { class: 'chip saffron', type: 'button', text: W[i][0] + ' — ' + W[i][1], onclick: () => speak(W[i][0]) })))) : h('p', { class: 'feedback ok', text: 'Birorta ham xato yoʻq. Zoʻr!' }),
     h('div', { class: 'row' },
-      q.kind === 'lesson' ? h('button', { class: 'btn primary', type: 'button', text: 'Shu soʻzlar bilan gap tuzish', onclick: () => { state.settings.focus = q.lesson; touch(); mods.gaplar.li = -2; go('gaplar'); if (sampleCap && !(state.gen[q.lesson] || []).length) generate(q.lesson, 'gaplar'); } }) : null,
+      q.kind === 'lesson' ? h('button', { class: 'btn primary', type: 'button', text: 'Shu soʻzlar bilan gap tuzish', onclick: () => { state.settings.focus = q.lesson; touch(); mods.gaplar.li = -2; go('gaplar'); } }) : null,
       q.kind === 'lesson' ? h('button', { class: 'btn', type: 'button', text: (state.cur + 1) + '-darsga oʻtish', onclick: () => { sz.lesson = state.cur; sz.mode = 'intro'; sz.quiz = null; renderSozlar(); window.scrollTo(0, 0); } }) : null,
       h('button', { class: 'btn', type: 'button', text: 'Qayta ishlash', onclick: () => { if (q.kind === 'lesson') startLesson(q.lesson); else startReview(); renderSozlar(); } })
     )
@@ -1112,27 +1115,41 @@ function focusLesson() {
   if (typeof f === 'number' && f >= 0 && f < Math.ceil(N / LESSON)) return f;
   return Math.max(0, state.cur - 1);
 }
+const lessonCount = li => BANK.reduce((n, s) => n + (s.lesson === li + 1 ? 1 : 0), 0);
+// Deck order: this lesson's own sentences, Claude's sentences for it, general sentences, then earlier lessons' sentences for review.
 function buildDeck(li) {
   const focus = new Set(lessonIds(li));
-  const gen = (state.gen[li] || []).map((s, k) => ({ en: s.en, uz: s.uz, src: 'claude', id: 'g' + li + '_' + k, ...analyze(s.en) }));
+  const own = BANK.filter(s => s.lesson === li + 1);
+  const gen = (state.gen[li] || []).map((s, k) => ({ en: s.en, uz: s.uz, src: 'claude', lesson: 0, id: 'g' + li + '_' + k, ...analyze(s.en) }));
+  const review = shuffle(BANK.filter(s => s.lesson > 0 && s.lesson <= li));
+  let general;
   if (isBeg()) {
-    // The bank is ordered from easiest to hardest; beginners only see the easy end, which grows with each lesson.
-    const cap = clamp(45 + state.cur * 5, 25, BANK.length);
-    const pool = BANK.filter(s => s.n < cap).map(s => ({ s, f: s.idxs.filter(i => focus.has(i)).length }));
-    return [...gen, ...pool.filter(x => x.f > 0).map(x => x.s), ...pool.filter(x => x.f === 0).map(x => x.s)];
+    // General sentences are ordered from easiest to hardest; beginners only see the easy end, which grows with each lesson.
+    const cap = clamp(45 + state.cur * 5, 25, GENERAL.length);
+    const pool = GENERAL.filter(s => s.n < cap).map(s => ({ s, f: s.idxs.filter(i => focus.has(i)).length }));
+    general = [...pool.filter(x => x.f > 0).map(x => x.s), ...pool.filter(x => x.f === 0).map(x => x.s)];
+  } else {
+    const limit = Math.max(state.cur * LESSON + 250, 400);
+    let bank = GENERAL.map(s => ({ s, f: s.idxs.filter(i => focus.has(i)).length })).filter(x => x.f > 0 || x.s.max <= limit);
+    if (bank.length < 15) bank = GENERAL.map(s => ({ s, f: s.idxs.filter(i => focus.has(i)).length }));
+    bank.sort((a, b) => (b.f > 0) - (a.f > 0) || a.s.max - b.s.max);
+    const rest = bank.filter(x => x.f === 0).map(x => x.s);
+    general = [...bank.filter(x => x.f > 0).map(x => x.s), ...shuffle(rest.slice(0, 60)), ...rest.slice(60)];
   }
-  const limit = Math.max(state.cur * LESSON + 250, 400);
-  let bank =BANK.map(s => ({ s, f: s.idxs.filter(i => focus.has(i)).length })).filter(x => x.f > 0 || x.s.max <= limit);
-  if (bank.length < 15) bank = BANK.map(s => ({ s, f: s.idxs.filter(i => focus.has(i)).length }));
-  bank.sort((a, b) => (b.f > 0) - (a.f > 0) || a.s.max - b.s.max);
-  const withFocus = bank.filter(x => x.f > 0).map(x => x.s);
-  const rest = shuffle(bank.filter(x => x.f === 0).map(x => x.s).slice(0, 60)).concat(bank.filter(x => x.f === 0).map(x => x.s).slice(60));
-  return [...gen, ...withFocus, ...rest];
+  return { deck: [...own, ...gen, ...general, ...review], own: own.length + gen.length };
 }
 function mod(name) {
   const m = mods[name], li = focusLesson();
-  if (m.li !== li || m.ver !== deckVer) { m.deck = buildDeck(li); m.i = m.deck.length > 3 ? MOD_OFFSET[name] : 0; m.li = li; m.ver = deckVer; m.st = null; }
+  if (m.li !== li || m.ver !== deckVer) {
+    const d = buildDeck(li);
+    m.deck = d.deck; m.own = d.own;
+    m.i = m.own > 3 ? MOD_OFFSET[name] : 0; m.li = li; m.ver = deckVer; m.st = null;
+  }
   return m;
+}
+function deckCounter(m) {
+  if (m.i < m.own) return (m.i + 1) + ' / ' + m.own;
+  return 'Qoʻshimcha: ' + (m.i - m.own + 1) + ' / ' + (m.deck.length - m.own);
 }
 const curSentence = m => m.deck[m.i % m.deck.length];
 function nextSentence(name) { const m = mods[name]; m.i = (m.i + 1) % m.deck.length; m.st = null; refreshView(); window.scrollTo(0, 0); }
@@ -1145,16 +1162,21 @@ function focusChips(s, li) {
   if (!all.length) return null;
   return h('div', { class: 'chips' }, all.map(i => h('span', { class: 'chip ' + (focus.has(i) ? 'teal' : ''), text: W[i][0] + ' — ' + W[i][1] })));
 }
-function srcChip(s) { return h('span', { class: 'chip ' + (s.src === 'claude' ? 'blue' : ''), text: s.src === 'claude' ? 'Claude tuzgan gap' : 'Tayyor gap' }); }
+function srcChip(s) {
+  if (s.src === 'claude') return h('span', { class: 'chip blue', text: 'Claude tuzgan gap' });
+  if (s.lesson) return h('span', { class: 'chip teal', text: s.lesson + '-dars gapi' });
+  return h('span', { class: 'chip', text: 'Umumiy gap' });
+}
 
 let genBusy = false;
 function renderFocusBar(boxId, name) {
   const box = clear($('#' + boxId));
   const li = focusLesson();
   const sel = h('select', { id: boxId + '-sel', 'aria-label': 'Qaysi dars soʻzlari' });
-  const maxLi = Math.max(state.cur, 1);
-  for (let k = 0; k < maxLi; k++) sel.append(h('option', { value: k, text: (k + 1) + '-dars soʻzlari' + (state.gen[k] && state.gen[k].length ? ' · ' + state.gen[k].length + ' ta Claude gapi' : '') }));
-  if (li >= maxLi) sel.append(h('option', { value: li, text: (li + 1) + '-dars soʻzlari' }));
+  const maxLi = Math.min(Math.ceil(N / LESSON), state.cur + 1);
+  const label = k => (k + 1) + '-dars · ' + lessonCount(k) + ' ta gap' + (state.gen[k] && state.gen[k].length ? ' + ' + state.gen[k].length + ' Claude' : '');
+  for (let k = 0; k < maxLi; k++) sel.append(h('option', { value: k, text: label(k) }));
+  if (li >= maxLi) sel.append(h('option', { value: li, text: label(li) }));
   sel.value = String(li);
   sel.addEventListener('change', () => { state.settings.focus = +sel.value; touch(); refreshView(); });
   box.append(h('label', { for: boxId + '-sel', text: 'Manba' }), sel);
@@ -1242,7 +1264,7 @@ function renderGaplar() {
     speak(s.en);
   } });
   const card = h('div', { class: 'card' },
-    h('div', { class: 'row between' }, srcChip(s), h('span', { class: 'qcount', text: (m.i + 1) + ' / ' + m.deck.length })),
+    h('div', { class: 'row between' }, srcChip(s), h('span', { class: 'qcount', text: deckCounter(m) })),
     h('div', { class: 'prompt-lbl', text: 'Inglizcha tuzing' }),
     h('div', { class: 'uzs', text: s.uz }),
     focusChips(s, focusLesson()),
@@ -1271,16 +1293,25 @@ function mistakeList(list) {
     x.why ? h('div', { text: x.why }) : null
   )));
 }
+const tdir = () => state.settings.tdir === 'en2uz' ? 'en2uz' : 'uz2en';
+// Uzbek answers are compared without apostrophes, so oʻ, o' and o all match.
+const toksUz = s => String(s).toLowerCase().replace(/[ʻʼ‘’`´']/g, '').replace(/[^a-z0-9\s-]/g, ' ').replace(/-/g, ' ').split(/\s+/).filter(Boolean);
+const uzWords = uz => String(uz).split(/\s+/).map(w => w.replace(/^[.,!?;:«»"—–-]+|[.,!?;:«»"—–-]+$/g, '')).filter(Boolean);
+$$('[data-tdir]').forEach(b => b.addEventListener('click', () => { state.settings.tdir = b.dataset.tdir; touch(); mods.tarjima.st = null; renderTarjima(); }));
 function renderTarjima() {
+  $$('[data-tdir]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.tdir === tdir())));
   renderFocusBar('tFocusBar', 'tarjima');
   const body = clear($('#tBody'));
   const m = mod('tarjima');
   if (!m.deck.length) return;
   const s = curSentence(m);
   prefetchText(s.en);
-  if (!m.st) m.st = { text: '', done: false, ai: null, aiErr: '', reveal: false, hint: false };
+  const toUz = tdir() === 'en2uz';
+  const ref = toUz ? s.uz : s.en;
+  const tk = toUz ? toksUz : toks;
+  if (!m.st || m.st.dir !== tdir()) m.st = { dir: tdir(), text: '', done: false, ai: null, aiErr: '', reveal: false, hint: false, self: null };
   const st = m.st;
-  const ta = h('textarea', { id: 'trInput', lang: 'en', spellcheck: 'false', autocapitalize: 'sentences', placeholder: 'Inglizcha tarjimani shu yerga yozing…', 'aria-label': 'Inglizcha tarjima' });
+  const ta = h('textarea', { id: 'trInput', lang: toUz ? 'uz' : 'en', spellcheck: 'false', autocapitalize: 'sentences', placeholder: toUz ? 'Oʻzbekcha tarjimani shu yerga yozing…' : 'Inglizcha tarjimani shu yerga yozing…', 'aria-label': toUz ? 'Oʻzbekcha tarjima' : 'Inglizcha tarjima' });
   ta.value = st.text;
   ta.addEventListener('input', () => { st.text = ta.value; checkBtn.disabled = !ta.value.trim(); });
   ta.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); if (ta.value.trim() && !st.done) checkBtn.click(); } });
@@ -1288,24 +1319,30 @@ function renderTarjima() {
   const res = h('div', { class: 'row', style: 'flex-direction:column;align-items:stretch;gap:14px' });
   const hintBox = !st.done && st.hint ? h('div', null,
     h('div', { class: 'small muted', text: 'Gapdagi soʻzlar aralash tartibda. Bosgan soʻzingiz javobga qoʻshiladi:' }),
-    h('div', { class: 'chips', style: 'margin-top:6px' }, (st.hw || (st.hw = shuffle(tileWords(s.en)))).map(w => h('button', { class: 'chip blue', type: 'button', lang: 'en', text: w, onclick: () => {
+    h('div', { class: 'chips', style: 'margin-top:6px' }, (st.hw || (st.hw = shuffle(toUz ? uzWords(s.uz) : tileWords(s.en)))).map(w => h('button', { class: 'chip blue', type: 'button', lang: toUz ? 'uz' : 'en', text: w, onclick: () => {
       ta.value = (ta.value.replace(/\s+$/, '') + ' ' + w).trim(); st.text = ta.value; checkBtn.disabled = false; ta.focus();
     } })))) : null;
   function doCheck() {
     st.text = ta.value.trim(); if (!st.text) return;
-    st.done = true; st.ai = null; st.aiErr = '';
+    st.done = true; st.ai = null; st.aiErr = ''; st.self = null;
     const rec = dayRec(); rec.s++; touch();
     renderTarjima();
-    const al = align(toks(s.en), toks(st.text));
+    const al = align(tk(ref), tk(st.text));
     if (al.score < 100 && sampleCap) runAi();
   }
   async function runAi() {
     st.ai = 'loading'; renderTarjima();
-    const prompt = 'You are a friendly English teacher for an Uzbek speaker. ' + LEARNER() + ' The student translated an Uzbek sentence into English.\n' +
-      'Uzbek sentence: "' + s.uz + '"\nReference translation: "' + s.en + '"\nStudent answer: "' + st.text.slice(0, 300) + '"\n' +
-      'Decide if the student answer is a correct and natural English translation (other correct wordings are fine; ignore capital letters and final punctuation). ' +
-      'Reply with ONLY this JSON: {"correct": true or false, "score": 0-100, "corrected": "the student sentence corrected with minimal changes", "mistakes": [{"wrong": "wrong part", "right": "correct part", "why": "short explanation in Uzbek Latin script"}], "tip": "one short grammar tip in Uzbek Latin script"}. ' +
-      'Explanations must be in simple Uzbek (Latin script), at most 2 sentences each. If the answer is correct, "mistakes" must be [].';
+    const prompt = toUz
+      ? 'You are a friendly English teacher for an Uzbek speaker. ' + LEARNER() + ' The student translated an English sentence into Uzbek.\n' +
+        'English sentence: "' + s.en + '"\nReference Uzbek translation: "' + s.uz + '"\nStudent answer (Uzbek): "' + st.text.slice(0, 300) + '"\n' +
+        'Decide if the student answer has the same meaning in correct, natural Uzbek (Latin script). Ignore capital letters, punctuation and the apostrophe style (oʻ or o\', gʻ or g\'); other correct wordings and word orders are fine. If it is wrong, explain which English words or grammar the student misunderstood. ' +
+        'Reply with ONLY this JSON: {"correct": true or false, "score": 0-100, "corrected": "a correct Uzbek translation close to the student answer", "mistakes": [{"wrong": "wrong part", "right": "correct part", "why": "short explanation in Uzbek Latin script"}], "tip": "one short tip in Uzbek Latin script"}. ' +
+        'Explanations must be in simple Uzbek (Latin script), at most 2 sentences each. If the answer is correct, "mistakes" must be [].'
+      : 'You are a friendly English teacher for an Uzbek speaker. ' + LEARNER() + ' The student translated an Uzbek sentence into English.\n' +
+        'Uzbek sentence: "' + s.uz + '"\nReference translation: "' + s.en + '"\nStudent answer: "' + st.text.slice(0, 300) + '"\n' +
+        'Decide if the student answer is a correct and natural English translation (other correct wordings are fine; ignore capital letters and final punctuation). ' +
+        'Reply with ONLY this JSON: {"correct": true or false, "score": 0-100, "corrected": "the student sentence corrected with minimal changes", "mistakes": [{"wrong": "wrong part", "right": "correct part", "why": "short explanation in Uzbek Latin script"}], "tip": "one short grammar tip in Uzbek Latin script"}. ' +
+        'Explanations must be in simple Uzbek (Latin script), at most 2 sentences each. If the answer is correct, "mistakes" must be [].';
     try {
       const r = await askClaude(prompt);
       st.ai = {
@@ -1318,41 +1355,54 @@ function renderTarjima() {
     if (mods.tarjima.st === st && view === 'tarjima') renderTarjima();
   }
   if (st.done) {
-    const al = align(toks(s.en), toks(st.text));
-    const ok = al.score >= 100 || (st.ai && st.ai !== 'loading' && st.ai.correct);
-    const [cls, msg] = ok ? ['good', al.score >= 100 ? 'Aʼlo! Hammasi toʻgʻri.' : 'Toʻgʻri, boshqacha variantda yozdingiz.'] : verdict(Math.min(al.score, 99));
-    res.append(h('div', { class: 'score ' + cls }, h('b', { text: (ok ? 100 : al.score) + '%' }), h('span', { text: msg })));
-    res.append(h('div', null, h('div', { class: 'prompt-lbl', text: 'Sizning javobingiz' }), diffView(st.text, al.um, 'extra')));
-    res.append(h('div', null, h('div', { class: 'prompt-lbl', text: 'Namuna tarjima' }), diffView(s.en, al.tm, 'miss')));
+    const al = align(tk(ref), tk(st.text));
+    const aiDone = st.ai && st.ai !== 'loading';
+    const ok = al.score >= 100 || (aiDone && st.ai.correct) || st.self === true;
+    const selfCheck = toUz && al.score < 100 && !sampleCap;
+    let cls, msg;
+    if (ok) [cls, msg] = ['good', al.score >= 100 ? 'Aʼlo! Hammasi toʻgʻri.' : st.self === true ? 'Belgilandi: toʻgʻri.' : 'Toʻgʻri, boshqacha variantda yozdingiz.'];
+    else if (selfCheck && st.self === null) [cls, msg] = ['mid', 'Namuna bilan solishtiring: maʼnosi bir xilmi?'];
+    else [cls, msg] = verdict(Math.min(al.score, 99));
+    res.append(h('div', { class: 'score ' + cls }, h('b', { text: ok ? '100%' : (selfCheck && st.self === null) ? '?' : al.score + '%' }), h('span', { text: msg })));
+    res.append(h('div', null, h('div', { class: 'prompt-lbl', text: 'Sizning javobingiz' }), diffView(st.text, al.um, 'extra', tk)));
+    res.append(h('div', null, h('div', { class: 'prompt-lbl', text: 'Namuna tarjima' }), diffView(ref, al.tm, 'miss', tk)));
     res.append(legend([['var(--good)', 'mos keldi'], ['var(--bad)', 'tushib qolgan yoki boshqacha'], ['var(--saffron)', 'ortiqcha yoki xato']]));
-    res.append(h('div', { class: 'row' }, spkBtn(s.en, 'Namunani eshitish'), spkBtn(s.en, 'Sekin eshitish', 0.75)));
+    const sp = spkBtn(s.en, 'Eshitish');
+    if (sp) res.append(h('div', { class: 'row' }, h('span', { class: 'small muted', text: 'Inglizcha gap:' }), sp, spkBtn(s.en, 'Sekin eshitish', 0.75)));
     if (st.ai === 'loading') res.append(aiBlock('Claude tahlili'));
     else if (st.ai) {
       const box = h('div', { class: 'ai' });
       fillAi(box, 'Claude tahlili', [
         st.ai.correct ? h('p', { class: 'feedback ok', text: 'Claude: javobingiz toʻgʻri.' }) : null,
-        !st.ai.correct && st.ai.corrected ? h('div', null, h('div', { class: 'small muted', text: 'Toʻgʻrilangan variant:' }), h('div', { class: 'ens', lang: 'en', text: st.ai.corrected })) : null,
+        !st.ai.correct && st.ai.corrected ? h('div', null, h('div', { class: 'small muted', text: 'Toʻgʻrilangan variant:' }), h('div', { class: toUz ? 'uzs' : 'ens', lang: toUz ? 'uz' : 'en', text: st.ai.corrected })) : null,
         mistakeList(st.ai.mistakes),
         st.ai.tip ? h('p', { class: 'note', text: 'Maslahat: ' + st.ai.tip }) : null
       ]);
       res.append(box);
     } else if (st.aiErr) res.append(h('p', { class: 'note warn', text: st.aiErr }));
-    else if (al.score < 100 && !sampleCap) res.append(h('p', { class: 'note', text: 'Claude tahlili mavjud boʻlganda xatolaringiz oʻzbekcha tushuntiriladi va boshqacha toʻgʻri variantlar ham qabul qilinadi.' }));
+    else if (selfCheck && st.self === null) res.append(h('div', { class: 'row' },
+      h('button', { class: 'btn', type: 'button', text: 'Toʻgʻri yozdim', onclick: () => { st.self = true; dayRec().c++; touch(); renderTarjima(); } }),
+      h('button', { class: 'btn', type: 'button', text: 'Xato qildim', onclick: () => { st.self = false; renderTarjima(); } })));
+    else if (al.score < 100 && !sampleCap && !toUz) res.append(h('p', { class: 'note', text: 'Claude tahlili mavjud boʻlganda xatolaringiz oʻzbekcha tushuntiriladi va boshqacha toʻgʻri variantlar ham qabul qilinadi.' }));
     else if (al.score < 100 && sampleCap) res.append(h('button', { class: 'btn sm', type: 'button', svg: ICON.spark, onclick: runAi }, 'Claude bilan tekshirish'));
   } else if (st.reveal) {
-    res.append(h('div', null, h('div', { class: 'prompt-lbl', text: 'Javob' }), h('div', { class: 'row' }, h('span', { class: 'ens', lang: 'en', text: s.en }), spkBtn(s.en))));
+    res.append(h('div', null, h('div', { class: 'prompt-lbl', text: 'Javob' }), toUz
+      ? h('div', { class: 'uzs', text: s.uz })
+      : h('div', { class: 'row' }, h('span', { class: 'ens', lang: 'en', text: s.en }), spkBtn(s.en))));
   }
   const card = h('div', { class: 'card' },
-    h('div', { class: 'row between' }, srcChip(s), h('span', { class: 'qcount', text: (m.i + 1) + ' / ' + m.deck.length })),
-    h('div', { class: 'prompt-lbl', text: 'Inglizchaga tarjima qiling' }),
-    h('div', { class: 'uzs', text: s.uz }),
+    h('div', { class: 'row between' }, srcChip(s), h('span', { class: 'qcount', text: deckCounter(m) })),
+    h('div', { class: 'prompt-lbl', text: toUz ? 'Oʻzbekchaga tarjima qiling' : 'Inglizchaga tarjima qiling' }),
+    toUz
+      ? h('div', { class: 'row' }, h('div', { class: 'ens', lang: 'en', style: 'min-width:0;flex:1', text: s.en }), spkBtn(s.en, 'Gapni eshitish'), spkBtn(s.en, 'Sekin eshitish', 0.75))
+      : h('div', { class: 'uzs', text: s.uz }),
     focusChips(s, focusLesson()),
     st.done ? null : ta,
     hintBox,
     res,
     h('div', { class: 'row' },
       st.done ? h('button', { class: 'btn primary', type: 'button', text: 'Keyingi gap', onclick: () => nextSentence('tarjima') }) : checkBtn,
-      st.done ? h('button', { class: 'btn', type: 'button', text: 'Qayta yozish', onclick: () => { st.done = false; st.ai = null; st.aiErr = ''; renderTarjima(); setTimeout(() => { const t = $('#trInput'); if (t) t.focus(); }, 0); } }) : null,
+      st.done ? h('button', { class: 'btn', type: 'button', text: 'Qayta yozish', onclick: () => { st.done = false; st.ai = null; st.aiErr = ''; st.self = null; renderTarjima(); setTimeout(() => { const t = $('#trInput'); if (t) t.focus(); }, 0); } }) : null,
       !st.done && !st.hint && !st.reveal ? h('button', { class: 'btn ghost', type: 'button', text: 'Yordam: soʻzlar', onclick: () => { st.text = ta.value; st.hint = true; renderTarjima(); } }) : null,
       !st.done ? h('button', { class: 'btn ghost', type: 'button', text: st.reveal ? 'Keyingi gap' : 'Javobni koʻrsatish', onclick: () => { if (st.reveal) nextSentence('tarjima'); else { st.reveal = true; renderTarjima(); } } }) : null
     )
@@ -1499,7 +1549,7 @@ function renderTalaffuz() {
         h('div', { text: 'Bu oynada mikrofon ishlamayapti. Ovoz bilan mashq qilish uchun sahifani kompyuterda Chrome yoki Edge brauzerida oching. Hozircha aytmoqchi boʻlgan gapingizni yozib tekshirishingiz mumkin.' }),
         typedFallback(st));
   const card = h('div', { class: 'card' },
-    h('div', { class: 'row between' }, srcChip(s), h('span', { class: 'qcount', text: (m.i + 1) + ' / ' + m.deck.length })),
+    h('div', { class: 'row between' }, srcChip(s), h('span', { class: 'qcount', text: deckCounter(m) })),
     h('div', { class: 'prompt-lbl', text: readMode ? 'Ovoz chiqarib oʻqing' : 'Inglizcha ayting' }),
     readMode ? h('div', { class: 'row' }, h('div', { class: 'ens', lang: 'en', text: s.en }), spkBtn(s.en, 'Namunani eshitish'), spkBtn(s.en, 'Sekin eshitish', 0.75)) : h('div', { class: 'uzs', text: s.uz }),
     readMode ? h('div', { class: 'small muted', text: s.uz }) : focusChips(s, focusLesson()),
@@ -1566,7 +1616,10 @@ async function boot() {
     const [w, s] = await Promise.all([fetch('words.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }), fetch('sentences.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })]);
     W = w; N = W.length;
     W.forEach((x, i) => { const k = x[0].toLowerCase(); if (!IDX.has(k)) IDX.set(k, i); });
-    BANK = s.map(([en, uz], i) => ({ en, uz, src: 'bank', id: 'b' + i, n: i, ...analyze(en) }));
+    BANK = s.map(([en, uz, lesson], i) => ({ en, uz, lesson: +lesson || 0, src: 'bank', id: 'b' + i, ...analyze(en) }));
+    let g = 0;
+    for (const b of BANK) b.n = b.lesson ? -1 : g++;
+    GENERAL = BANK.filter(b => !b.lesson);
     sz.lesson = state.cur;
     renderGuides();
     refreshView();

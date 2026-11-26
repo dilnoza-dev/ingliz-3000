@@ -1,0 +1,150 @@
+# Har qator: dars raqami|inglizcha|oʻzbekcha
+61|I like the city; however, it is too noisy.|Shahar menga yoqadi, biroq u juda shovqinli.
+61|Although it was raining, we went to the park.|Yomg'ir yog'ayotgan bo'lsa ham, biz parkka bordik.
+61|You won't pass unless you study.|O'qimasangiz, imtihondan o'tolmaysiz.
+61|I don't know whether he will come.|U kelish-kelmasligini bilmayman.
+61|Many people are against this idea.|Ko'p odamlar bu fikrga qarshi.
+61|We walked along the river.|Biz daryo bo'ylab sayr qildik.
+61|The temperature is below zero.|Harorat noldan past.
+61|There is a clock above the door.|Eshik ustida soat bor.
+61|Sit beside me.|Yonimga o'tiring.
+61|The shop is open every day except Sunday.|Do'kon yakshanbadan tashqari har kuni ochiq.
+61|The cat jumped onto the table.|Mushuk stol ustiga sakradi.
+61|Everybody was happy.|Hamma xursand edi.
+61|None of my friends smoke.|Do'stlarimdan hech biri chekmaydi.
+61|The price is ten dollars per person.|Narx har bir kishi uchun o'n dollar.
+61|He ran toward the door.|U eshik tomon yugurdi.
+62|Do whatever you want.|Nima xohlasangiz, shuni qiling.
+62|Whoever comes first gets the prize.|Kim birinchi kelsa, sovrinni oladi.
+62|He cooked dinner himself.|U kechki ovqatni o'zi tayyorladi.
+62|She looked at herself in the mirror.|U ko'zguda o'ziga qaradi.
+62|We built this house ourselves.|Bu uyni o'zimiz qurdik.
+62|Is anybody home?|Uyda hech kim bormi?
+62|You can sit anywhere.|Istalgan joyga o'tirishingiz mumkin.
+62|Welcome to Uzbekistan!|O'zbekistonga xush kelibsiz!
+62|I bought a dozen eggs.|O'n ikkita tuxum sotib oldim.
+62|There was an accident on the road.|Yo'lda avariya bo'ldi.
+62|We need action, not words.|Bizga so'z emas, harakat kerak.
+62|Swimming is my favorite activity.|Suzish mening sevimli mashg'ulotim.
+62|Tickets for adults cost more.|Kattalar uchun chiptalar qimmatroq.
+62|Living in the city has many advantages.|Shaharda yashashning ko'p afzalliklari bor.
+62|I love adventure films.|Men sarguzasht filmlarini yaxshi ko'raman.
+63|Can you give me some advice?|Menga maslahat bera olasizmi?
+63|We signed an agreement.|Biz kelishuvni imzoladik.
+63|My aim is to learn three thousand words.|Maqsadim uch ming so'z o'rganish.
+63|I set my alarm for six.|Budilnikni soat oltiga qo'ydim.
+63|Drink a large amount of water.|Ko'p miqdorda suv iching.
+63|I have a doctor's appointment at four.|Soat to'rtda shifokor qabuliga yozilganman.
+63|They had an argument.|Ular bahslashib qolishdi.
+63|I read an interesting article.|Men qiziqarli maqola o'qidim.
+63|Pay attention, please.|Iltimos, diqqat qiling.
+63|The audience loved the concert.|Tomoshabinlarga konsert juda yoqdi.
+63|Who is the author of this book?|Bu kitobning muallifi kim?
+63|The average salary is low here.|Bu yerda o'rtacha maosh past.
+63|She won an award.|U mukofot oldi.
+63|Work and life need balance.|Ish va hayot o'rtasida muvozanat kerak.
+63|I sent my application yesterday.|Arizamni kecha yubordim.
+64|My favorite band is playing tonight.|Sevimli guruhim bugun kechqurun chiqish qiladi.
+64|Put the apples in the basket.|Olmalarni savatga soling.
+64|My phone battery is low.|Telefonimning batareyasi kam qoldi.
+64|I love the beauty of nature.|Men tabiat go'zalligini yaxshi ko'raman.
+64|The bell rang.|Qo'ng'iroq chalindi.
+64|This belt is too long.|Bu kamar juda uzun.
+64|Exercise has many benefits.|Mashqning foydasi ko'p.
+64|Throw it in the bin.|Uni axlat qutisiga tashlang.
+64|My sister studies biology.|Opam biologiya o'qiydi.
+64|We went on a boat trip.|Biz qayiqda sayr qildik.
+64|Wear boots in winter.|Qishda etik kiying.
+64|What brand is your phone?|Telefoningiz qaysi brend?
+64|The house is made of brick.|Uy g'ishtdan qurilgan.
+64|We have a small budget.|Byudjetimiz kichik.
+64|Press the green button.|Yashil tugmani bosing.
+64|Write the date in your calendar.|Sanani taqvimingizga yozib qo'ying.
+65|Light a candle.|Sham yoqing.
+65|He is the best candidate for the job.|U bu ish uchun eng munosib nomzod.
+65|She wants a career in medicine.|U tibbiyotda martaba qilmoqchi.
+65|In that case, I will stay.|Unday bo'lsa, men qolaman.
+65|Do you have cash?|Naqd pulingiz bormi?
+65|We visited an old castle.|Biz eski qal'aga bordik.
+65|This mosque is five centuries old.|Bu masjid besh asrlik.
+65|The wedding ceremony was beautiful.|To'y marosimi chiroyli o'tdi.
+65|Learning a language is a challenge.|Til o'rganish — katta sinov.
+65|He is a world champion.|U jahon chempioni.
+65|Give me one more chance.|Menga yana bitta imkoniyat bering.
+65|Change the channel.|Kanalni almashtiring.
+65|Read the first chapter.|Birinchi bobni o'qing.
+65|She gives money to charity.|U xayriyaga pul beradi.
+66|Chemistry is a difficult subject.|Kimyo qiyin fan.
+66|I have a pain in my chest.|Ko'kragim og'riyapti.
+66|I had a happy childhood.|Bolaligim baxtli o'tdi.
+66|I am a citizen of Uzbekistan.|Men O'zbekiston fuqarosiman.
+66|The climate here is dry.|Bu yerning iqlimi quruq.
+66|He has a big stamp collection.|Uning katta marka to'plami bor.
+66|She won the competition.|U musobaqada g'olib chiqdi.
+66|The car is in good condition.|Mashina yaxshi holatda.
+66|He speaks with confidence.|U ishonch bilan gapiradi.
+66|Let's keep in contact.|Aloqada bo'laylik.
+66|We had a long conversation.|Biz uzoq suhbatlashdik.
+66|Make a copy of this document.|Bu hujjatdan nusxa ko'chiring.
+66|Uzbekistan grows a lot of cotton.|O'zbekistonda ko'p paxta yetishtiriladi.
+66|A young couple lives next door.|Qo'shni uyda yosh juftlik yashaydi.
+66|It takes courage to say no.|"Yo'q" deyish uchun jasorat kerak.
+67|Crime is low in this area.|Bu hududda jinoyat kam.
+67|There was a big crowd at the stadium.|Stadionda odam ko'p edi.
+67|The cups are in the cupboard.|Piyolalar shkafda.
+67|What is the currency of Uzbekistan?|O'zbekistonning valyutasi nima?
+67|The storm caused a lot of damage.|Bo'ron katta zarar keltirdi.
+67|It's a deal!|Kelishdik!
+67|I have no debts.|Mening qarzim yo'q.
+67|It was a difficult decision.|Bu qiyin qaror edi.
+67|She has a degree in economics.|Uning iqtisodiyot bo'yicha diplomi bor.
+67|He works in the sales department.|U savdo bo'limida ishlaydi.
+67|I am on a diet.|Men parhez qilyapman.
+67|What is the difference between these two?|Bu ikkisining farqi nima?
+67|Which direction is the station?|Bekat qaysi tomonda?
+67|Wash the dirt off your hands.|Qo'lingizdagi kirni yuvib tashlang.
+67|What is the distance from Tashkent to Samarkand?|Toshkentdan Samarqandgacha masofa qancha?
+68|I have no doubt.|Menda hech qanday shubha yo'q.
+68|My son likes drawing.|O'g'lim rasm chizishni yaxshi ko'radi.
+68|It is our duty to help.|Yordam berish bizning burchimiz.
+68|The economy is growing.|Iqtisodiyot o'sib bormoqda.
+68|Don't stand near the edge.|Chetiga yaqin turmang.
+68|Thank you for your effort.|Harakatingiz uchun rahmat.
+68|Who won the election?|Saylovda kim g'olib chiqdi?
+68|There is no electricity in the village today.|Bugun qishloqda elektr yo'q.
+68|Call 103 in an emergency.|Favqulodda holatda 103 ga qo'ng'iroq qiling.
+68|The company has two hundred employees.|Kompaniyada ikki yuz nafar xodim bor.
+68|The engine is not working.|Dvigatel ishlamayapti.
+68|Where is the entrance?|Kirish qayerda?
+68|We must protect the environment.|Biz atrof-muhitni asrashimiz kerak.
+68|There is an error in the program.|Dasturda xatolik bor.
+68|Where is the exit?|Chiqish qayerda?
+69|Ask an expert.|Mutaxassisdan so'rang.
+69|Thank you for the explanation.|Tushuntirganingiz uchun rahmat.
+69|I am a big fan of this team.|Men bu jamoaning ashaddiy muxlisiman.
+69|She works in fashion.|U moda sohasida ishlaydi.
+69|It's not my fault.|Bu mening aybim emas.
+69|What is the entrance fee?|Kirish to'lovi qancha?
+69|I have a bad feeling about this.|Bu ishdan ko'nglim g'ash.
+69|Our flight is at six in the morning.|Reysimiz ertalab soat oltida.
+69|Fill in this form.|Bu anketani to'ldiring.
+69|I can't focus on my work.|Ishimga diqqatimni jamlay olmayapman.
+69|Freedom is precious.|Erkinlik bebaho.
+69|Our friendship is very important to me.|Do'stligimiz men uchun juda muhim.
+69|We need new furniture.|Bizga yangi mebel kerak.
+69|Save the file.|Faylni saqlang.
+70|We visited an art gallery.|Biz san'at galereyasiga bordik.
+70|Mind the gap between the train and the platform.|Poyezd bilan platforma orasidagi bo'shliqqa ehtiyot bo'ling.
+70|The young generation loves technology.|Yosh avlod texnologiyani yaxshi ko'radi.
+70|I am good at geography.|Men geografiyadan yaxshiman.
+70|Do you believe in ghosts?|Arvohlarga ishonasizmi?
+70|Wear gloves, it is cold.|Qo'lqop kiying, sovuq.
+70|Thank God!|Xudoga shukur!
+70|What grade did you get?|Qanday baho oldingiz?
+70|English grammar is not difficult.|Ingliz tili grammatikasi qiyin emas.
+70|The guide showed us the old city.|Gid bizga eski shaharni ko'rsatdi.
+70|I go to the gym after work.|Men ishdan keyin sport zaliga boraman.
+70|What is your hobby?|Sevimli mashg'ulotingiz nima?
+70|I don't watch horror films.|Men qo'rqinchli filmlarni ko'rmayman.
+70|He has a good sense of humor.|Uning hazil tuyg'usi yaxshi.
+70|What is your height?|Bo'yingiz necha?

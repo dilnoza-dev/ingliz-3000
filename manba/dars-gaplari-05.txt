@@ -1,0 +1,138 @@
+# Har qator: dars raqami|inglizcha|oʻzbekcha
+41|I didn't expect to see you here.|Sizni bu yerda ko'raman deb kutmagandim.
+41|I will consider your offer.|Taklifingizni ko'rib chiqaman.
+41|I suppose you are right.|Menimcha, siz haqsiz.
+41|I didn't realize it was so late.|Shunchalik kech bo'lganini sezmabman.
+41|We need to reduce costs.|Xarajatlarni kamaytirishimiz kerak.
+41|Prices increase every year.|Narxlar har yili oshadi.
+41|Raise your hand if you know the answer.|Javobni bilsangiz, qo'lingizni ko'taring.
+41|How do you spell your name?|Ismingiz qanday yoziladi?
+41|At what age did you start school?|Necha yoshda maktabga borgansiz?
+41|Can we have the bill, please?|Iltimos, hisobni olib keling.
+41|I am a bit tired.|Men biroz charchadim.
+41|He started his own business.|U o'z biznesini boshladi.
+41|Breakfast is served from seven to ten.|Nonushta soat yettidan o'ngacha beriladi.
+42|Would you like a piece of cake?|Bir bo'lak tort yeysizmi?
+42|I sent her a birthday card.|Men unga tug'ilgan kun otkritkasini yubordim.
+42|We have a red carpet in the living room.|Mehmonxonamizda qizil gilam bor.
+42|I like bread with cheese.|Men pishloqli nonni yoqtiraman.
+42|We had chicken soup for lunch.|Tushlikka tovuq sho'rva ichdik.
+42|Children love chocolate.|Bolalar shokoladni yaxshi ko'radi.
+42|You have no choice.|Sizda boshqa tanlov yo'q.
+42|Draw a circle.|Doira chizing.
+42|There are dark clouds in the sky.|Osmonda qora bulutlar bor.
+42|He works for a big company.|U katta kompaniyada ishlaydi.
+42|The shop is on the corner.|Do'kon burchakda.
+42|I am taking an English course.|Men ingliz tili kursida o'qiyapman.
+42|I am interested in Japanese culture.|Men Yaponiya madaniyatiga qiziqaman.
+42|What is the date today?|Bugun sana nechanchi?
+42|Plov is our national dish.|Palov bizning milliy taomimiz.
+43|One dollar is about twelve thousand soums.|Bir dollar taxminan o'n ikki ming so'm.
+43|There is dust on the shelf.|Javonda chang bor.
+43|Education is very important.|Ta'lim juda muhim.
+43|Sport gives me energy.|Sport menga quvvat beradi.
+43|I do exercises every morning.|Men har kuni ertalab badantarbiya qilaman.
+43|Do you have work experience?|Ish tajribangiz bormi?
+43|My father works in a factory.|Otam zavodda ishlaydi.
+43|The music festival is in May.|Musiqa festivali may oyida.
+43|Our flag is blue, white and green.|Bizning bayrog'imiz ko'k, oq va yashil.
+43|What are your plans for the future?|Kelajakka qanday rejalaringiz bor?
+43|Open the gate, please.|Iltimos, darvozani oching.
+43|My goal is to speak English well.|Mening maqsadim ingliz tilida yaxshi gapirish.
+43|She wears a gold ring.|U oltin uzuk taqadi.
+44|He plays the guitar very well.|U gitarani juda yaxshi chaladi.
+44|Reading is a good habit.|Kitob o'qish yaxshi odat.
+44|I love history.|Men tarixni yaxshi ko'raman.
+44|There is a hole in my sock.|Paypog'imda teshik bor.
+44|The ice is very thin.|Muz juda yupqa.
+44|I need more information.|Menga ko'proq ma'lumot kerak.
+44|Insects are everywhere in summer.|Yozda hamma joyda hasharotlar bo'ladi.
+44|I have no interest in politics.|Siyosatga qiziqishim yo'q.
+44|Can I use your iron?|Dazmolingizdan foydalansam bo'ladimi?
+44|Put on your jacket.|Kurtkangizni kiying.
+44|I drink orange juice every morning.|Men har kuni ertalab apelsin sharbati ichaman.
+44|Knowledge is power.|Bilim — kuch.
+44|A yellow leaf fell from the tree.|Daraxtdan sariq barg tushdi.
+44|Everyone must follow the law.|Hamma qonunga amal qilishi kerak.
+45|What is your English level?|Ingliz tili darajangiz qanday?
+45|There is a long line at the bank.|Bankda uzun navbat bor.
+45|Make a shopping list.|Xaridlar ro'yxatini tuzing.
+45|This machine makes coffee.|Bu mashina qahva tayyorlaydi.
+45|We have a meeting at three.|Soat uchda yig'ilishimiz bor.
+45|He is a member of our team.|U jamoamiz a'zosi.
+45|I have a good memory.|Xotiram yaxshi.
+45|Look in the mirror.|Ko'zguga qarang.
+45|Wait a moment, please.|Iltimos, bir lahza kuting.
+45|Let's watch a movie tonight.|Bugun kechqurun kino ko'raylik.
+45|I love nature.|Men tabiatni yaxshi ko'raman.
+45|I wrote a note to my mother.|Onamga eslatma yozib qoldirdim.
+45|Have you ever seen the ocean?|Okeanni hech ko'rganmisiz?
+45|I changed my mind.|Fikrimni o'zgartirdim.
+46|In my opinion, this is a good plan.|Menimcha, bu yaxshi reja.
+46|I need a new pair of shoes.|Menga yangi juft poyabzal kerak.
+46|Don't forget your passport.|Pasportingizni unutmang.
+46|Forget the past.|O'tmishni unuting.
+46|We want peace.|Biz tinchlik istaymiz.
+46|Can I have a piece of bread?|Bir bo'lak non olsam bo'ladimi?
+46|Plastic is bad for nature.|Plastik tabiat uchun zararli.
+46|My phone is in my pocket.|Telefonim cho'ntagimda.
+46|She wrote a poem.|U she'r yozdi.
+46|The hotel has a swimming pool.|Mehmonxonada basseyn bor.
+46|I like potatoes with meat.|Men go'shtli kartoshkani yoqtiraman.
+46|He won first prize.|U birinchi sovrinni yutdi.
+46|This TV program is very popular.|Bu teledastur juda mashhur.
+46|We are working on a new project.|Biz yangi loyiha ustida ishlayapmiz.
+47|What is the purpose of your visit?|Tashrifingizdan maqsad nima?
+47|I came here for a reason.|Bu yerga bir sabab bilan keldim.
+47|You need some rest.|Sizga biroz dam olish kerak.
+47|The exam results are ready.|Imtihon natijalari tayyor.
+47|The roof is old.|Tom eski.
+47|Follow the rules.|Qoidalarga rioya qiling.
+47|I made a salad and some sandwiches.|Men salat va bir nechta sendvich tayyorladim.
+47|The children are playing in the sand.|Bolalar qumda o'ynashyapti.
+47|I am interested in science.|Men ilm-fanga qiziqaman.
+47|Can I take this seat?|Bu joyga o'tirsam bo'ladimi?
+47|Can you keep a secret?|Sir saqlay olasizmi?
+47|The ship is in the port.|Kema portda.
+47|I take a shower every morning.|Men har kuni ertalab dush qabul qilaman.
+47|Don't look at the screen for too long.|Ekranga uzoq qaramang.
+48|What size are these shoes?|Bu poyabzallar necha o'lchamda?
+48|I bought a silver ring.|Kumush uzuk sotib oldim.
+48|I am afraid of snakes.|Men ilondan qo'rqaman.
+48|I had soup for lunch.|Tushlikka sho'rva ichdim.
+48|Please slow down, your speed is too high.|Iltimos, sekinlating, tezligingiz juda baland.
+48|There is a fountain in the square.|Maydonda favvora bor.
+48|Go up the stairs.|Zinadan yuqoriga chiqing.
+48|Take one step forward.|Bir qadam oldinga yuring.
+48|There was a storm last night.|Kecha kechasi bo'ron bo'ldi.
+48|Math is my favorite subject.|Matematika mening sevimli fanim.
+48|I wish you success.|Sizga muvaffaqiyat tilayman.
+48|He wears a black suit to work.|U ishga qora kostyum kiyadi.
+48|I buy food at the supermarket.|Men oziq-ovqatni supermarketdan olaman.
+49|Let's take a taxi.|Keling, taksiga o'tiramiz.
+49|Which team do you support?|Qaysi jamoaga muxlislik qilasiz?
+49|The temperature is thirty degrees today.|Bugun harorat o'ttiz daraja.
+49|We slept in a tent.|Biz chodirda uxladik.
+49|The police caught the thief.|Politsiya o'g'rini qo'lga oldi.
+49|Where is the toilet?|Hojatxona qayerda?
+49|Tomatoes are cheap in summer.|Yozda pomidor arzon.
+49|Many tourists visit Bukhara.|Ko'plab sayyohlar Buxoroga tashrif buyuradi.
+49|I live in a small town.|Men kichik shaharchada yashayman.
+49|The traffic is very bad today.|Bugun yo'lda tirbandlik kuchli.
+49|We had a great trip.|Safarimiz ajoyib o'tdi.
+49|Are you in trouble?|Muammoga duch keldingizmi?
+49|Tell me the truth.|Menga haqiqatni ayting.
+49|I left my umbrella on the bus.|Soyabonimni avtobusda qoldirib ketdim.
+50|Students wear a uniform at school.|O'quvchilar maktabda forma kiyishadi.
+50|The Fergana Valley is very beautiful.|Farg'ona vodiysi juda go'zal.
+50|The view from the window is wonderful.|Derazadan ko'rinish ajoyib.
+50|War is terrible.|Urush dahshatli.
+50|I found a wallet on the street.|Ko'chada hamyon topib oldim.
+50|We are going to a wedding on Saturday.|Shanba kuni to'yga boramiz.
+50|Birds have wings.|Qushlarning qanoti bor.
+50|This table is made of wood.|Bu stol yog'ochdan yasalgan.
+50|Let's go to the zoo.|Keling, hayvonot bog'iga boraylik.
+50|Cut the cucumbers and tomatoes for the salad.|Salat uchun bodring va pomidorni to'g'rang.
+50|Uzbek melons are very sweet.|O'zbek qovunlari juda shirin.
+50|We eat watermelon in summer.|Yozda tarvuz yeymiz.
+50|Grapes grow well in Samarkand.|Samarqandda uzum yaxshi o'sadi.

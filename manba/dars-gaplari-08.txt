@@ -1,0 +1,156 @@
+# Har qator: dars raqami|inglizcha|oʻzbekcha
+71|He recovered from a long illness.|U uzoq davom etgan kasallikdan tuzaldi.
+71|This image is not clear.|Bu tasvir aniq emas.
+71|What is your monthly income?|Oylik daromadingiz qancha?
+71|Tourism is an important industry.|Turizm muhim soha.
+71|The injury is not serious.|Jarohat jiddiy emas.
+71|Do you have health insurance?|Tibbiy sug'urtangiz bormi?
+71|Read the instructions carefully.|Ko'rsatmalarni diqqat bilan o'qing.
+71|Do you play any instrument?|Biror cholg'u asbobini chalasizmi?
+71|I have a job interview tomorrow.|Ertaga ish bo'yicha suhbatim bor.
+71|The phone is a great invention.|Telefon ajoyib ixtiro.
+71|Thank you for the invitation.|Taklifingiz uchun rahmat.
+71|She sells handmade jewelry.|U qo'lda yasalgan zargarlik buyumlarini sotadi.
+71|Have a good journey!|Yo'lingiz bexatar bo'lsin!
+71|The keyboard is not working.|Klaviatura ishlamayapti.
+71|Read the label before you buy.|Sotib olishdan oldin yorliqni o'qing.
+71|Climb the ladder carefully.|Narvonga ehtiyot bo'lib chiqing.
+72|The landscape here is beautiful.|Bu yerning manzarasi go'zal.
+72|I work on my laptop.|Men noutbukimda ishlayman.
+72|He is a good leader.|U yaxshi rahbar.
+72|The lecture starts at nine.|Ma'ruza soat to'qqizda boshlanadi.
+72|What is the length of this river?|Bu daryoning uzunligi qancha?
+72|Do you have a driving license?|Haydovchilik guvohnomangiz bormi?
+72|The speed limit here is sixty.|Bu yerda tezlik chegarasi oltmish.
+72|Send me the link.|Menga havolani yuboring.
+72|You can't take liquids on the plane.|Samolyotga suyuqlik olib chiqib bo'lmaydi.
+72|I love Uzbek literature.|Men o'zbek adabiyotini yaxshi ko'raman.
+72|We took a loan from the bank.|Biz bankdan kredit oldik.
+72|Good luck!|Omad tilayman!
+72|Where can I get my luggage?|Yukimni qayerdan olsam bo'ladi?
+72|Did you check the mail?|Pochtani tekshirdingizmi?
+72|They have a happy marriage.|Ularning oilaviy hayoti baxtli.
+72|Put a mark next to the correct answer.|To'g'ri javob yoniga belgi qo'ying.
+73|Did you watch the match last night?|Kechagi o'yinni ko'rdingizmi?
+73|What material is this dress made of?|Bu ko'ylak qanday matodan tikilgan?
+73|What is the meaning of this word?|Bu so'zning ma'nosi nima?
+73|The menu is in English and Uzbek.|Menyu ingliz va o'zbek tillarida.
+73|This box is made of metal.|Bu quti metalldan yasalgan.
+73|This is a good method for learning words.|Bu so'z o'rganishning yaxshi usuli.
+73|What model is your car?|Mashinangiz qaysi model?
+73|I am in a good mood today.|Bugun kayfiyatim yaxshi.
+73|Exercise makes your muscles strong.|Mashq mushaklaringizni kuchli qiladi.
+73|We live in a quiet neighborhood.|Biz tinch mahallada yashaymiz.
+73|There is a bird's nest in the tree.|Daraxtda qush uyasi bor.
+73|The mobile network is weak here.|Bu yerda mobil tarmoq kuchsiz.
+73|Let's meet at noon.|Tushda uchrashaylik.
+73|Do you like math?|Matematikani yoqtirasizmi?
+73|The media talked about the event.|Ommaviy axborot vositalari bu voqea haqida gapirdi.
+74|I am reading a novel.|Men roman o'qiyapman.
+74|The police officer helped us.|Politsiya xodimi bizga yordam berdi.
+74|The operation was successful.|Operatsiya muvaffaqiyatli o'tdi.
+74|This is a great opportunity.|Bu ajoyib imkoniyat.
+74|We have two options.|Bizda ikkita variant bor.
+74|She works for a charity organization.|U xayriya tashkilotida ishlaydi.
+74|Who is the owner of this car?|Bu mashinaning egasi kim?
+74|This painting is very old.|Bu rasm juda eski.
+74|We visited the palace in Bukhara.|Biz Buxorodagi saroyga bordik.
+74|The doctor is with a patient.|Shifokor bemor bilan band.
+74|Follow the path to the lake.|Ko'lga olib boradigan so'qmoqdan yuring.
+74|Prices went up by ten percent.|Narxlar o'n foizga oshdi.
+74|Can I have your permission?|Ruxsat berasizmi?
+74|She has a strong personality.|Uning shaxsiyati kuchli.
+74|All passengers must show their tickets.|Barcha yo'lovchilar chiptalarini ko'rsatishi shart.
+75|Do you have a pet?|Uy hayvoningiz bormi?
+75|Physics explains how the world works.|Fizika dunyo qanday ishlashini tushuntiradi.
+75|We live on planet Earth.|Biz Yer sayyorasida yashaymiz.
+75|The train leaves from platform two.|Poyezd ikkinchi platformadan jo'naydi.
+75|It's a pleasure to meet you.|Siz bilan tanishganimdan mamnunman.
+75|Alisher Navoi is a great poet.|Alisher Navoiy buyuk shoir.
+75|I don't like politics.|Men siyosatni yoqtirmayman.
+75|Air pollution is a big problem in cities.|Shaharlarda havo ifloslanishi katta muammo.
+75|The population of Uzbekistan is growing.|O'zbekiston aholisi o'sib bormoqda.
+75|Put the pot on the fire.|Qozonni olovga qo'ying.
+75|I sent the letter by post.|Xatni pochta orqali yubordim.
+75|She gave a great presentation.|U ajoyib taqdimot qildi.
+75|My blood pressure is high.|Qon bosimim baland.
+75|The thief went to prison.|O'g'ri qamoqqa tushdi.
+75|I write poetry in my free time.|Bo'sh vaqtimda she'r yozaman.
+76|Learning is a slow process.|O'rganish sekin jarayon.
+76|This product is made in Uzbekistan.|Bu mahsulot O'zbekistonda ishlab chiqarilgan.
+76|What is your profession?|Kasbingiz nima?
+76|My uncle is a professor.|Amakim professor.
+76|The company made a big profit.|Kompaniya katta foyda ko'rdi.
+76|You are making good progress.|Siz yaxshi rivojlanyapsiz.
+76|The quality of this phone is excellent.|Bu telefonning sifati a'lo.
+76|It's a quarter past three.|Soat uchdan o'n besh daqiqa o'tdi.
+76|Can you share the recipe?|Retseptini aytib bera olasizmi?
+76|He broke the world record.|U jahon rekordini yangiladi.
+76|Fergana is a beautiful region.|Farg'ona go'zal viloyat.
+76|They have a good relationship.|Ularning munosabatlari yaxshi.
+76|I have a small request.|Bir kichik iltimosim bor.
+76|Scientists are doing research.|Olimlar tadqiqot olib borishyapti.
+76|Every pupil has a uniform.|Har bir o'quvchining formasi bor.
+77|Water is a precious resource.|Suv qimmatli resurs.
+77|Respect your elders.|Kattalarni hurmat qiling.
+77|I am still waiting for a response.|Hali ham javob kutyapman.
+77|It is my responsibility.|Bu mening mas'uliyatim.
+77|I read the reviews before buying.|Sotib olishdan oldin sharhlarni o'qiyman.
+77|Don't take risks on the road.|Yo'lda tavakkal qilmang.
+77|What is your role in the team?|Jamoadagi vazifangiz nima?
+77|Which route is faster?|Qaysi yo'l tezroq?
+77|We sat in the first row.|Biz birinchi qatorda o'tirdik.
+77|Take out the rubbish.|Axlatni olib chiqing.
+77|Safety comes first.|Xavfsizlik birinchi o'rinda.
+77|These shoes are on sale.|Bu poyabzallar chegirmada.
+77|He gets his salary on Friday.|U maoshini juma kuni oladi.
+77|What is your schedule for tomorrow?|Ertangi rejangiz qanday?
+77|My dream is to become a scientist.|Mening orzuyim olim bo'lish.
+78|What's the score?|Hisob qanday?
+78|Plant the seeds in spring.|Urug'larni bahorda eking.
+78|It doesn't make sense.|Bu mantiqqa to'g'ri kelmaydi.
+78|I am watching a new series.|Men yangi serial ko'ryapman.
+78|The service in this restaurant is good.|Bu restoranda xizmat yaxshi.
+78|Let's sit in the shade.|Keling, soyada o'tiramiz.
+78|What shape is it?|U qanday shaklda?
+78|The news was a shock to us.|Bu yangilik biz uchun zarba bo'ldi.
+78|Silence, please!|Iltimos, jimlik saqlang!
+78|Communication is an important skill.|Muloqot muhim ko'nikma.
+78|Can I have a slice of bread?|Bir tilim non olsam bo'ladimi?
+78|Install the new software.|Yangi dasturni o'rnating.
+78|The soil here is good for cotton.|Bu yerdagi tuproq paxta uchun yaxshi.
+78|We found a solution.|Biz yechim topdik.
+78|The president gave a speech.|Prezident nutq so'zladi.
+78|This is a nice spot for a picnic.|Bu piknik uchun yaxshi joy.
+79|The hotel staff were very friendly.|Mehmonxona xodimlari juda samimiy edi.
+79|The singer came on stage.|Qo'shiqchi sahnaga chiqdi.
+79|There is a statue of Amir Temur in Tashkent.|Toshkentda Amir Temur haykali bor.
+79|This knife is made of steel.|Bu pichoq po'latdan yasalgan.
+79|The old man walks with a stick.|Keksa odam hassa bilan yuradi.
+79|I bought it at the store.|Buni do'kondan sotib oldim.
+79|Exercise reduces stress.|Mashq stressni kamaytiradi.
+79|I like your style.|Uslubingiz menga yoqadi.
+79|Pay the full sum now.|Butun summani hozir to'lang.
+79|The heart is a symbol of love.|Yurak sevgi ramzi.
+79|She has a talent for music.|Uning musiqaga iste'dodi bor.
+79|Our target is to finish by Friday.|Maqsadimiz jumagacha tugatish.
+79|I have an important task for you.|Sizga muhim vazifam bor.
+79|Everyone must pay taxes.|Hamma soliq to'lashi kerak.
+79|Technology makes life easier.|Texnologiya hayotni osonlashtiradi.
+80|My son is a teenager now.|O'g'lim endi o'smir.
+80|We visited an ancient temple.|Biz qadimiy ibodatxonani ziyorat qildik.
+80|In theory, it is easy.|Nazariyada bu oson.
+80|I hurt my thumb.|Bosh barmog'imni lat yedirdim.
+80|What is the title of the book?|Kitobning nomi nima?
+80|Let's change the topic.|Keling, mavzuni o'zgartiramiz.
+80|We took a tour of the city.|Biz shahar bo'ylab ekskursiyaga chiqdik.
+80|Hospitality is an Uzbek tradition.|Mehmondo'stlik — o'zbek an'anasi.
+80|The training starts on Monday.|Mashg'ulot dushanba kuni boshlanadi.
+80|The treatment takes two weeks.|Davolash ikki hafta davom etadi.
+80|This is a new fashion trend.|Bu yangi moda tendensiyasi.
+80|The universe is very big.|Olam juda katta.
+80|Family has great value in Uzbekistan.|O'zbekistonda oila katta qadrga ega.
+80|No vehicles are allowed here.|Bu yerga transport vositalari kirishi mumkin emas.
+80|Watch this video.|Bu videoni ko'ring.
+80|We had many visitors today.|Bugun bizga ko'p tashrif buyuruvchilar keldi.
+80|Download the latest version.|Eng so'nggi versiyani yuklab oling.

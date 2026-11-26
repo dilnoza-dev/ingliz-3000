@@ -1,0 +1,143 @@
+# Har qator: dars raqami|inglizcha|oʻzbekcha
+11|The train leaves at seven.|Poyezd soat yettida jo'naydi.
+11|I go to work by bike.|Men ishga velosipedda boraman.
+11|Our plane is late.|Samolyotimiz kechikyapti.
+11|How much is a ticket to Samarkand?|Samarqandga chipta qancha turadi?
+11|I don't eat meat.|Men go'sht yemayman.
+11|We had fish for dinner.|Kechki ovqatga baliq yedik.
+11|I eat two eggs for breakfast.|Nonushtaga ikkita tuxum yeyman.
+11|Do you take sugar in your coffee?|Qahvangizga shakar solasizmi?
+11|Add a little salt to the rice.|Guruchga ozgina tuz qo'shing.
+11|Fruit and vegetables are good for you.|Meva va sabzavotlar sog'liq uchun foydali.
+11|Do you have time for lunch?|Tushlikka vaqtingiz bormi?
+11|I work at night and sleep in the day.|Men kechasi ishlayman, kunduzi uxlayman.
+12|We meet every Saturday evening.|Biz har shanba kechqurun uchrashamiz.
+12|I visit my parents once a week.|Men ota-onamnikiga haftada bir marta boraman.
+12|My birthday is next month.|Tug'ilgan kunim keyingi oyda.
+12|I started learning English this year.|Men bu yil ingliz tilini o'rgana boshladim.
+12|The lesson takes one hour.|Dars bir soat davom etadi.
+12|I don't have much money.|Mening pulim ko'p emas.
+12|The price is too high.|Narx juda baland.
+12|She has a good job.|Uning yaxshi ishi bor.
+12|Can I borrow your pen and some paper?|Ruchkangiz va bir oz qog'oz olib tursam bo'ladimi?
+12|I write each new word ten times.|Men har bir yangi so'zni o'n marta yozaman.
+12|Read this sentence again.|Bu gapni yana bir bor o'qing.
+12|My phone is next to the computer.|Telefonim kompyuterning yonida.
+12|I have a question about the lesson.|Darsga oid bitta savolim bor.
+13|This picture is very beautiful.|Bu rasm juda chiroyli.
+13|I listen to music in the car.|Men mashinada musiqa tinglayman.
+13|Sing a song for us.|Bizga bitta qo'shiq aytib bering.
+13|The film starts at eight.|Film soat sakkizda boshlanadi.
+13|Let's play a game.|Keling, o'yin o'ynaylik.
+13|Football is my favorite sport.|Futbol mening sevimli sport turim.
+13|Throw me the ball.|To'pni menga otib yuboring.
+13|My head hurts.|Boshim og'riyapti.
+13|She has blue eyes and long hair.|Uning ko'zlari ko'k, sochi uzun.
+13|Wash your face and brush your teeth.|Yuzingizni yuving va tishlaringizni tozalang.
+13|He broke his leg.|U oyog'ini sindirib oldi.
+13|The sun is very hot today.|Bugun quyosh juda qizdiryapti.
+13|Sport is good for the body and the heart.|Sport tana va yurak uchun foydali.
+14|The moon is very bright tonight.|Bugun kechasi oy juda yorug'.
+14|I can see many stars in the sky.|Osmonda ko'p yulduzlarni ko'ryapman.
+14|What is the weather like today?|Bugun ob-havo qanday?
+14|It rained all day.|Kun bo'yi yomg'ir yog'di.
+14|The children are playing in the snow.|Bolalar qorda o'ynashyapti.
+14|The wind is very strong.|Shamol juda kuchli.
+14|There is a big tree in our garden.|Bog'imizda katta daraxt bor.
+14|I bought flowers for my mother.|Onamga gul sotib oldim.
+14|My dog likes to run.|Itim yugurishni yaxshi ko'radi.
+14|The horse is a beautiful animal.|Ot chiroyli hayvon.
+14|We swam in the sea.|Biz dengizda suzdik.
+14|The river is near the mountains.|Daryo tog'lar yaqinida.
+14|I want to travel around the world.|Men butun dunyo bo'ylab sayohat qilmoqchiman.
+14|What is your favorite color?|Sevimli rangingiz qaysi?
+15|I have a red car.|Mening qizil mashinam bor.
+15|The sky is blue today.|Bugun osmon ko'k.
+15|Green tea is very healthy.|Ko'k choy sog'liq uchun juda foydali.
+15|She is wearing a yellow dress.|U sariq ko'ylak kiygan.
+15|He likes black coffee.|U qora qahvani yoqtiradi.
+15|The walls in my room are white.|Xonamning devorlari oq.
+15|It was a long and difficult day.|Bu uzoq va og'ir kun bo'ldi.
+15|My brother is tall, and I am short.|Akam baland bo'yli, men esa past bo'yliman.
+15|The mountains here are very high.|Bu yerdagi tog'lar juda baland.
+15|Wear a warm coat.|Issiq palto kiying.
+15|He drives too fast.|U mashinani juda tez haydaydi.
+15|This test is easy.|Bu test oson.
+15|I am happy to see you.|Sizni ko'rganimdan xursandman.
+15|She was sad and tired after work.|U ishdan keyin xafa va charchagan edi.
+16|Are you hungry?|Qorningiz ochmi?
+16|He is rich, but he is not happy.|U boy, lekin baxtli emas.
+16|We must help poor people.|Biz kambag'al odamlarga yordam berishimiz kerak.
+16|Turn right at the bank.|Bankdan o'ngga buriling.
+16|Sorry, I have the wrong number.|Kechirasiz, raqamni adashtiribman.
+16|The bottle is empty.|Shisha bo'sh.
+16|I am full, thank you.|Rahmat, qornim to'q.
+16|This phone is cheap, but that one is expensive.|Bu telefon arzon, ana u esa qimmat.
+16|Your shoes are dirty.|Poyabzalingiz iflos.
+16|Are you free tomorrow?|Ertaga bo'shmisiz?
+16|I am busy right now.|Hozir bandman.
+16|Dinner is ready.|Kechki ovqat tayyor.
+16|Family is very important to me.|Oila men uchun juda muhim.
+16|We go to the same school.|Biz bitta maktabda o'qiymiz.
+16|This is my first visit to Tashkent.|Toshkentga birinchi marta kelishim.
+17|I saw him last week.|Men uni o'tgan hafta ko'rdim.
+17|See you next year!|Keyingi yil ko'rishguncha!
+17|How many brothers do you have?|Nechta akangiz bor?
+17|How much is this?|Bu qancha turadi?
+17|Please speak a little more slowly.|Iltimos, biroz sekinroq gapiring.
+17|All my friends are here.|Barcha do'stlarim shu yerda.
+17|Would you like some tea?|Choy ichasizmi?
+17|Do you have any questions?|Savollaringiz bormi?
+17|There is nothing in the fridge.|Muzlatkichda hech narsa yo'q.
+17|I want to tell you something.|Sizga bir narsa aytmoqchiman.
+17|Everyone knows him.|Uni hamma taniydi.
+17|This is a quiet place.|Bu tinch joy.
+17|What is the best way to learn English?|Ingliz tilini o'rganishning eng yaxshi yo'li qaysi?
+17|No problem!|Muammo yo'q!
+18|That is a good idea.|Bu yaxshi fikr.
+18|Tell me a story.|Menga bir hikoya aytib bering.
+18|What is your phone number?|Telefon raqamingiz qanday?
+18|You must stop at the red light.|Qizil chiroqda to'xtashingiz shart.
+18|You should sleep more.|Ko'proq uxlashingiz kerak.
+18|I will call you later.|Keyinroq sizga qo'ng'iroq qilaman.
+18|My father cooks plov on Sundays.|Otam yakshanba kunlari palov pishiradi.
+18|Let's clean the house together.|Keling, uyni birga tozalaymiz.
+18|Can you drive?|Mashina haydashni bilasizmi?
+18|Birds fly south in autumn.|Kuzda qushlar janubga uchib ketadi.
+18|I like to travel by train.|Men poyezdda sayohat qilishni yoqtiraman.
+18|We visit our grandparents every month.|Biz har oy bobo-buvimizni ziyorat qilamiz.
+18|She can sing and dance.|U qo'shiq aytishni ham, raqs tushishni ham biladi.
+18|The baby is crying.|Chaqaloq yig'layapti.
+18|We laughed a lot.|Biz ko'p kuldik.
+19|She always smiles.|U doim jilmayib turadi.
+19|Our team won the game.|Jamoamiz o'yinda g'alaba qozondi.
+19|Don't lose your ticket.|Chiptangizni yo'qotib qo'ymang.
+19|The bus leaves in ten minutes.|Avtobus o'n daqiqadan keyin jo'naydi.
+19|I finished my work.|Men ishimni tugatdim.
+19|The concert begins at seven.|Konsert soat yettida boshlanadi.
+19|I want to become a pilot.|Men uchuvchi bo'lishni xohlayman.
+19|We moved to a new apartment.|Biz yangi kvartiraga ko'chdik.
+19|Turn off the light, please.|Iltimos, chiroqni o'chiring.
+19|Keep the change.|Qaytimi o'zingizga.
+19|Hold my hand.|Qo'limni ushlang.
+19|Do you remember me?|Meni eslaysizmi?
+19|I believe you.|Men sizga ishonaman.
+19|Let me help you.|Keling, sizga yordam beray.
+19|Please answer my question.|Iltimos, savolimga javob bering.
+19|Repeat after me.|Mendan keyin takrorlang.
+20|Count from one to ten.|Birdan o'ngacha sanang.
+20|Choose a book you like.|O'zingizga yoqqan kitobni tanlang.
+20|We decided to stay home.|Biz uyda qolishga qaror qildik.
+20|I hope you are well.|Umid qilamanki, yaxshisiz.
+20|I don't agree with him.|Men u bilan rozi emasman.
+20|Tomatoes grow well here.|Bu yerda pomidor yaxshi o'sadi.
+20|They want to build a new school here.|Ular bu yerda yangi maktab qurmoqchi.
+20|Be careful, don't break the glass.|Ehtiyot bo'ling, stakanni sindirib qo'ymang.
+20|Cut the bread, please.|Iltimos, nonni kesing.
+20|Can you carry this bag?|Bu sumkani ko'tara olasizmi?
+20|The leaves fall in autumn.|Kuzda barglar to'kiladi.
+20|Catch the ball!|To'pni ushla!
+20|Don't throw rubbish on the street.|Ko'chaga axlat tashlamang.
+20|Stand up and sit down.|O'rningizdan turing va o'tiring.
+20|The shop is between the bank and the cafe.|Do'kon bank bilan kafe orasida.
+20|We live near the river.|Biz daryo yaqinida yashaymiz.

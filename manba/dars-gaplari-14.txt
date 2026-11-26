@@ -1,0 +1,191 @@
+# Har qator: dars raqami|inglizcha|oʻzbekcha
+131|Plums are sweet and juicy.|Olxo'ri shirin va sersuv.
+131|Pomegranate juice is good for the blood.|Anor sharbati qon uchun foydali.
+131|Figs grow in the south.|Anjir janubda o'sadi.
+131|Add almonds and raisins to the plov.|Palovga bodom va mayiz qo'shing.
+131|We picked berries in the forest.|Biz o'rmonda rezavor meva terdik.
+131|I like mushroom soup.|Men qo'ziqorin sho'rvasini yoqtiraman.
+131|Olive oil is healthy.|Zaytun yog'i foydali.
+131|What would you like for dessert?|Shirinlikka nima olasiz?
+131|Too much candy is bad for your teeth.|Ko'p konfet tishlarga zarar.
+131|Put some vinegar on the salad.|Salatga biroz sirka soling.
+131|Let's have kebab tonight.|Bugun kechqurun kabob yeylik.
+131|The dough is ready.|Xamir tayyor.
+131|Open this jar, please.|Iltimos, bu bankani oching.
+131|Bring the tray to the table.|Patnisni stolga olib keling.
+131|Pour the tea from the teapot.|Choyni choynakdan quying.
+131|Here is a napkin.|Mana, salfetka.
+131|Don't forget your toothbrush.|Tish cho'tkangizni unutmang.
+131|I drink yogurt every day.|Men har kuni qatiq ichaman.
+132|We need toothpaste and shampoo.|Bizga tish pastasi va shampun kerak.
+132|Sweep the floor with the broom.|Polni supurgi bilan supuring.
+132|Hang your clothes in the wardrobe.|Kiyimlaringizni javonga iling.
+132|Change the bed sheets.|Choyshablarni almashtiring.
+132|Wear a scarf, it's cold.|Sharf taqing, havo sovuq.
+132|I wear sandals in summer.|Yozda sandal kiyaman.
+132|She bought a gold necklace.|U oltin marjon sotib oldi.
+132|I lost one earring.|Bitta isirg'amni yo'qotib qo'ydim.
+132|This bracelet is a gift from my mother.|Bu bilakuzuk onamning sovg'asi.
+132|I can't see without my glasses.|Ko'zoynaksiz ko'ra olmayman.
+132|She keeps her money in a purse.|U pulini hamyonda saqlaydi.
+132|Put your books in your backpack.|Kitoblaringizni ryukzakka soling.
+132|The children are in their pyjamas.|Bolalar pijamada.
+132|Don't bite your nails.|Tirnog'ingizni tishlamang.
+132|Smoking damages your lungs.|Chekish o'pkangizga zarar yetkazadi.
+132|I have a toothache.|Tishim og'riyapti.
+132|Is there a pharmacy near here?|Bu yaqin atrofda dorixona bormi?
+132|The liver is a very important organ.|Jigar juda muhim a'zo.
+133|I have an allergy to cats.|Mushukka allergiyam bor.
+133|Put a bandage on the cut.|Kesilgan joyga bint o'rang.
+133|My mother is an accountant.|Onam buxgalter.
+133|The builders are working on the roof.|Quruvchilar tomda ishlashyapti.
+133|Buy meat from the butcher.|Go'shtni qassobdan oling.
+133|Pay the cashier, please.|Iltimos, kassirga to'lang.
+133|She wants to be a fashion designer.|U moda dizayneri bo'lmoqchi.
+133|Call an electrician.|Elektrchi chaqiring.
+133|Firefighters are brave people.|O't o'chiruvchilar jasur odamlar.
+133|I go to the hairdresser once a month.|Oyida bir marta sartaroshga boraman.
+133|My brother is a musician.|Akam musiqachi.
+133|We need a plumber.|Bizga santexnik kerak.
+133|My son wants to become a programmer.|O'g'lim dasturchi bo'lmoqchi.
+133|The shopkeeper gave me a discount.|Do'kondor menga chegirma qildi.
+133|The surgeon is very experienced.|Jarroh juda tajribali.
+133|The tailor made me a suit.|Tikuvchi menga kostyum tikdi.
+133|I work as a translator.|Men tarjimon bo'lib ishlayman.
+133|Take your cat to the vet.|Mushukingizni veterinarga olib boring.
+133|He is a successful businessman.|U muvaffaqiyatli tadbirkor.
+134|The volcano is active.|Vulqon faol.
+134|We swam under the waterfall.|Biz sharshara ostida cho'mildik.
+134|There are fish in the pond.|Hovuzda baliqlar bor.
+134|He gave her a red rose.|U unga qizil atirgul berdi.
+134|Tulips bloom in spring.|Lolalar bahorda ochiladi.
+134|We watched the sunrise.|Biz quyosh chiqishini tomosha qildik.
+134|The sunset was beautiful.|Quyosh botishi go'zal edi.
+134|Our parrot can talk.|To'tiqushimiz gapira oladi.
+134|The eagle is flying high.|Burgut baland uchyapti.
+134|Owls sleep during the day.|Boyqushlar kunduzi uxlaydi.
+134|Pigeons live in the square.|Maydonda kaptarlar yashaydi.
+134|The rooster wakes us up every morning.|Xo'roz bizni har tong uyg'otadi.
+134|The hens are in the yard.|Tovuqlar hovlida.
+134|Ants are very hard-working.|Chumolilar juda mehnatkash.
+134|Mosquitoes bite at night.|Chivinlar kechasi chaqadi.
+134|Turtles live for a long time.|Toshbaqalar uzoq yashaydi.
+134|A lizard ran across the wall.|Devordan kaltakesak yugurib o'tdi.
+134|Birds eat worms.|Qushlar chuvalchang yeydi.
+135|Sharks live in the ocean.|Akulalar okeanda yashaydi.
+135|The whale is the biggest animal.|Kit eng katta hayvon.
+135|Dolphins are very friendly.|Delfinlar juda do'stona.
+135|A deer ran into the forest.|Kiyik o'rmonga yugurib kirdi.
+135|Squirrels eat nuts.|Olmaxonlar yong'oq yeydi.
+135|Bats fly at night.|Ko'rshapalaklar kechasi uchadi.
+135|Giraffes have long necks.|Jirafalarning bo'yni uzun.
+135|We got a new puppy.|Biz yangi kuchukcha oldik.
+135|The kitten is playing with a ball.|Mushukcha to'p bilan o'ynayapti.
+135|Do I need a visa?|Menga viza kerakmi?
+135|Take the metro, it's faster.|Metroga o'tiring, bu tezroq.
+135|Turn left at the crossroads.|Chorrahadan chapga buriling.
+135|The bakery opens at six.|Novvoyxona soat oltida ochiladi.
+135|I bought souvenirs for my friends.|Do'stlarimga esdalik sovg'alari sotib oldim.
+135|We went through customs.|Biz bojxonadan o'tdik.
+135|Where is the embassy?|Elchixona qayerda?
+135|The printer is out of paper.|Printerda qog'oz tugadi.
+135|Save the file in this folder.|Faylni shu papkaga saqlang.
+136|This app helps me learn English.|Bu ilova menga ingliz tilini o'rganishga yordam beradi.
+136|Can I borrow your charger?|Zaryadlovchingizni olib tursam bo'ladimi?
+136|Change your profile photo.|Profil suratingizni almashtiring.
+136|Update the app.|Ilovani yangilang.
+136|I got my diploma.|Diplomimni oldim.
+136|Write it in your notebook.|Buni daftaringizga yozing.
+136|I need a ruler and an eraser.|Menga chizg'ich va o'chirg'ich kerak.
+136|I am ashamed of my mistake.|Xatoyimdan uyalaman.
+136|I feel relaxed on holiday.|Ta'tilda o'zimni xotirjam his qilaman.
+136|She is very ambitious.|U juda intiluvchan.
+136|Don't be arrogant.|Takabbur bo'lmang.
+136|My son is stubborn.|O'g'lim o'jar.
+136|My aunt is very talkative.|Xolam juda sergap.
+136|They advertise on TV.|Ular televizorda reklama qilishadi.
+136|They announced the winners.|G'oliblarni e'lon qilishdi.
+136|Can you arrange a meeting?|Uchrashuv tashkil qila olasizmi?
+136|He confessed everything.|U hamma narsaga iqror bo'ldi.
+136|Let's cooperate.|Keling, hamkorlik qilaylik.
+136|The baby is starting to crawl.|Chaqaloq emaklay boshladi.
+137|I donate blood every year.|Men har yili qon topshiraman.
+137|The teacher emphasized this rule.|O'qituvchi bu qoidaga urg'u berdi.
+137|Fetch some water from the well.|Quduqdan suv olib keling.
+137|My parents forbid me to smoke.|Ota-onam chekishni man qiladi.
+137|Give me a hug.|Meni quchoqlang.
+137|My grandmother knits socks.|Buvim paypoq to'qiydi.
+137|The dog licked my hand.|It qo'limni yaladi.
+137|It doesn't matter.|Bu muhim emas.
+137|Multiply five by three.|Beshni uchga ko'paytiring.
+137|The meeting was postponed.|Yig'ilish keyinga qoldirildi.
+137|How do you pronounce this word?|Bu so'z qanday talaffuz qilinadi?
+137|He proposed to her.|U unga turmush qurishni taklif qildi.
+137|They rejected my idea.|Ular fikrimni rad etishdi.
+137|I reserved a table for four.|To'rt kishilik stol band qildim.
+137|She didn't respond to my message.|U xabarimga javob bermadi.
+137|Revise your lessons before the exam.|Imtihondan oldin darslaringizni takrorlang.
+137|My father shaves every morning.|Otam har kuni ertalab soqol oladi.
+137|She sighed.|U xo'rsindi.
+137|Many families struggle with money.|Ko'p oilalar moddiy qiyinchilik bilan kurashadi.
+137|Kneel down.|Tiz cho'king.
+138|I swear I didn't do it.|Qasam ichaman, men buni qilmadim.
+138|Wipe the table.|Stolni arting.
+138|Stop yawning!|Esnashni bas qiling!
+138|Who is absent today?|Bugun kim yo'q?
+138|This is not acceptable.|Bu maqbul emas.
+138|He is an amateur photographer.|U havaskor fotograf.
+138|She has blond hair.|Uning sochi sariq.
+138|That's a bold decision.|Bu dadil qaror.
+138|Wear casual clothes.|Oddiy kiyim kiying.
+138|The job market is very competitive.|Mehnat bozorida raqobat kuchli.
+138|I am concerned about my health.|Sog'lig'imdan xavotirdaman.
+138|The cafe is small and cosy.|Kafe kichkina va shinam.
+138|Don't be so critical.|Bunchalik tanqidchi bo'lmang.
+138|Sleep is crucial for your health.|Uyqu sog'lig'ingiz uchun hal qiluvchi ahamiyatga ega.
+138|Her hair is curly.|Uning sochi jingalak.
+138|The basement is damp.|Yerto'la nam.
+138|This is a delicate matter.|Bu nozik masala.
+138|Children are dependent on their parents.|Bolalar ota-onasiga qaram.
+138|I can hear distant music.|Olisdan musiqa eshitilyapti.
+138|Sweep the yard.|Hovlini supuring.
+139|The roads are dusty in summer.|Yozda yo'llar changli bo'ladi.
+139|Bukhara is in the western part of the country.|Buxoro mamlakatning g'arbiy qismida joylashgan.
+139|Termez is a southern city.|Termiz janubiy shahar.
+139|Northern countries are cold.|Shimoliy mamlakatlar sovuq.
+139|Eastern food is spicy.|Sharq taomlari achchiq.
+139|This is an educational program.|Bu ta'limiy dastur.
+139|This machine is very efficient.|Bu mashina juda unumli.
+139|She is very emotional.|U juda hissiyotli.
+139|The desert seemed endless.|Cho'l cheksizdek tuyuldi.
+139|We had an enjoyable evening.|Maroqli oqshom o'tkazdik.
+139|Environmental problems are serious.|Ekologik muammolar jiddiy.
+139|We need an experienced driver.|Bizga tajribali haydovchi kerak.
+139|These shoes are very fashionable.|Bu poyabzal juda urfda.
+139|The prices are fixed.|Narxlar belgilangan.
+139|Don't be foolish.|Ahmoqona ish qilmang.
+139|He was furious.|U g'azablangan edi.
+139|This is genuine leather.|Bu haqiqiy charm.
+139|She has golden hair.|Uning sochi oltinrang.
+139|This snake is harmless.|Bu ilon zararsiz.
+139|Economic growth is important.|Iqtisodiy o'sish muhim.
+140|There is a hidden door.|Yashirin eshik bor.
+140|The situation is not hopeless.|Vaziyat chorasiz emas.
+140|Your answer is incorrect.|Javobingiz noto'g'ri.
+140|It's an informal meeting.|Bu norasmiy uchrashuv.
+140|Air is invisible.|Havo ko'rinmas.
+140|The market is very lively.|Bozor juda gavjum va jonli.
+140|Organic food is more expensive.|Organik oziq-ovqat qimmatroq.
+140|What a lovely day!|Qanday ajoyib kun!
+140|The palace is magnificent.|Saroy muhtasham.
+140|I'd like a medium pizza.|O'rtacha o'lchamdagi pitsa olmoqchiman.
+140|My desk is messy.|Stolim tartibsiz.
+140|I have mixed feelings.|Hislarim aralash.
+140|He comes from a musical family.|U musiqachilar oilasidan.
+140|The children are very naughty.|Bolalar juda sho'x.
+140|I buy organic vegetables.|Men organik sabzavotlar sotib olaman.
+140|The doctor said I am overweight.|Shifokor menda ortiqcha vazn borligini aytdi.
+140|It is peaceful here.|Bu yer tinch.
+140|Be realistic.|Real fikrlang.
+140|My grandparents are religious.|Bobom va buvim dindor.
+140|This is a scientific fact.|Bu ilmiy dalil.

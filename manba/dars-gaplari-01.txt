@@ -1,0 +1,119 @@
+# Har qator: dars raqami|inglizcha|oʻzbekcha
+1|Hello, I am Aziz.|Salom, men Azizman.
+1|Who is she?|U kim?
+1|What is this?|Bu nima?
+1|Yes, this is my phone.|Ha, bu mening telefonim.
+1|We are students, and they are teachers.|Biz talabamiz, ular esa o'qituvchilar.
+1|Sorry, I am late.|Kechirasiz, men kechikdim.
+1|Thanks, you are very kind.|Rahmat, siz juda mehribonsiz.
+1|No, that is not my bag.|Yo'q, u mening sumkam emas.
+1|Goodbye, my friend!|Xayr, do'stim!
+1|Please help me.|Iltimos, menga yordam bering.
+1|Who are they?|Ular kim?
+1|It is cold, but I am happy.|Havo sovuq, lekin men xursandman.
+2|My family is big.|Mening oilam katta.
+2|That man is my father.|Ana u kishi mening otam.
+2|The woman in the red dress is my mother.|Qizil ko'ylakdagi ayol mening onam.
+2|The boy and the girl are friends.|O'g'il bola bilan qiz bola do'st.
+2|What is your brother's name?|Akangizning ismi nima?
+2|Our house has five rooms.|Uyimizda beshta xona bor.
+2|Please close the door and open the window.|Iltimos, eshikni yoping va derazani oching.
+2|The child is sitting on a chair.|Bola stulda o'tiribdi.
+2|There is water on the table.|Stol ustida suv bor.
+2|My sister likes Uzbek food.|Singlim o'zbek taomlarini yoqtiradi.
+2|He is my best friend.|U mening eng yaqin do'stim.
+3|I eat bread with tea.|Men nonni choy bilan yeyman.
+3|Do you want milk or tea?|Sut ichasizmi yoki choy?
+3|This apple is very big.|Bu olma juda katta.
+3|I love my mother.|Men onamni yaxshi ko'raman.
+3|Come here, please.|Iltimos, bu yerga keling.
+3|We go to the park every Sunday.|Biz har yakshanba parkka boramiz.
+3|I know a good restaurant.|Men bitta yaxshi restoranni bilaman.
+3|What do you do?|Siz nima ish qilasiz?
+3|The weather is bad today.|Bugun ob-havo yomon.
+3|I can see a small house.|Men kichkina uyni ko'ryapman.
+3|They have two children.|Ularning ikkita farzandi bor.
+4|I have a new phone.|Mening yangi telefonim bor.
+4|My grandfather is old but strong.|Bobom keksa, lekin baquvvat.
+4|The soup is hot.|Sho'rva issiq.
+4|It is cold outside.|Tashqarida sovuq.
+4|I have three sisters and one brother.|Mening uchta opam va bitta akam bor.
+4|Give me five minutes, please.|Iltimos, menga besh daqiqa bering.
+4|I see him every day.|Men uni har kuni ko'raman.
+4|Call her tonight.|Bugun kechqurun unga qo'ng'iroq qiling.
+4|Our teacher helps us.|O'qituvchimiz bizga yordam beradi.
+4|I don't know them.|Men ularni tanimayman.
+4|The lesson starts at nine.|Dars soat to'qqizda boshlanadi.
+4|There are seven days in a week.|Bir haftada yetti kun bor.
+5|Where is your car?|Mashinangiz qayerda?
+5|These books are mine.|Bu kitoblar meniki.
+5|Those houses are very old.|Ana u uylar juda eski.
+5|When do you go to work?|Ishga qachon borasiz?
+5|Why are you here?|Nega shu yerdasiz?
+5|How do you go to school?|Maktabga qanday borasiz?
+5|Which color do you like?|Qaysi rangni yoqtirasiz?
+5|I am at home because I am sick.|Kasal bo'lganim uchun uydaman.
+5|If you are tired, sit down.|Agar charchagan bo'lsangiz, o'tiring.
+5|Their children are in the garden.|Ularning bolalari bog'da.
+5|It is late, so let's go home.|Kech bo'ldi, uyga ketaylik.
+5|His phone is on the table.|Uning telefoni stol ustida.
+6|I am from Uzbekistan.|Men O'zbekistondanman.
+6|She lives with her parents.|U ota-onasi bilan yashaydi.
+6|This gift is for you.|Bu sovg'a siz uchun.
+6|Tell me about your family.|Menga oilangiz haqida gapirib bering.
+6|The cat is sleeping under the table.|Mushuk stol tagida uxlayapti.
+6|We drink tea after dinner.|Biz kechki ovqatdan keyin choy ichamiz.
+6|Wash your hands before lunch.|Tushlikdan oldin qo'lingizni yuving.
+6|Can you come again tomorrow?|Ertaga yana kela olasizmi?
+6|I only drink water.|Men faqat suv ichaman.
+6|He is never late.|U hech qachon kechikmaydi.
+6|We often walk in the park.|Biz tez-tez parkda sayr qilamiz.
+6|It was very hot yesterday.|Kecha juda issiq edi.
+7|Sometimes I cook dinner for my family.|Ba'zan oilam uchun kechki ovqat tayyorlayman.
+7|What did he say?|U nima dedi?
+7|I get up at six.|Men soat oltida turaman.
+7|Let's make a cake.|Keling, tort tayyorlaylik.
+7|I think it will rain.|Menimcha, yomg'ir yog'adi.
+7|Look at this picture.|Bu rasmga qarang.
+7|Take an umbrella with you.|O'zingiz bilan soyabon oling.
+7|Can I use your pen?|Ruchkangizdan foydalansam bo'ladimi?
+7|I can't find my glasses.|Ko'zoynagimni topa olmayapman.
+7|Ask the teacher.|O'qituvchidan so'rang.
+7|I feel good today.|Bugun o'zimni yaxshi his qilyapman.
+7|We need more time.|Bizga ko'proq vaqt kerak.
+8|My father reads the newspaper every morning.|Otam har kuni ertalab gazeta o'qiydi.
+8|Write your name here.|Ismingizni shu yerga yozing.
+8|Do you speak Russian?|Siz ruscha gapirasizmi?
+8|Listen to the music.|Musiqani tinglang.
+8|I can't hear you.|Sizni eshitmayapman.
+8|My brother teaches math at school.|Akam maktabda matematikadan dars beradi.
+8|Do you understand me?|Meni tushunyapsizmi?
+8|The shop closes at ten.|Do'kon soat o'nda yopiladi.
+8|Stop the car, please.|Iltimos, mashinani to'xtating.
+8|Wait for me here.|Meni shu yerda kuting.
+8|I can pay by card.|Men karta bilan to'lay olaman.
+8|They sell fresh fruit at the market.|Bozorda yangi meva sotishadi.
+9|The children play football after school.|Bolalar maktabdan keyin futbol o'ynashadi.
+9|Put the milk in the fridge.|Sutni muzlatkichga qo'ying.
+9|Bring me a glass of water.|Menga bir stakan suv olib keling.
+9|I will send you a message.|Sizga xabar yuboraman.
+9|Let's meet at the station.|Bekatda uchrashaylik.
+9|Show me your new house.|Yangi uyingizni menga ko'rsating.
+9|Many people live in this city.|Bu shaharda ko'p odam yashaydi.
+9|The baby is sleeping.|Chaqaloq uxlayapti.
+9|Their son is a doctor.|Ularning o'g'li shifokor.
+9|My grandmother tells good stories.|Buvim yaxshi ertaklar aytib beradi.
+9|Her husband is a teacher.|Uning eri o'qituvchi.
+9|We watch films on Friday evening.|Biz juma kuni kechqurun film ko'ramiz.
+10|I go to bed at eleven.|Men soat o'n birda yotaman.
+10|My mother is in the kitchen.|Onam oshxonada.
+10|The bathroom is on the second floor.|Hammom ikkinchi qavatda.
+10|There is a picture on the wall.|Devorda rasm bor.
+10|I live in a big city.|Men katta shaharda yashayman.
+10|My grandparents live in a village.|Bobom bilan buvim qishloqda yashashadi.
+10|Uzbekistan is a beautiful country.|O'zbekiston go'zal mamlakat.
+10|Our school is on this street.|Maktabimiz shu ko'chada.
+10|The bank is next to the market.|Bank bozorning yonida.
+10|He goes to the office by bus.|U ofisga avtobusda boradi.
+10|The road to the hospital is long.|Kasalxonaga boradigan yo'l uzun.
+10|I want to buy a car.|Men mashina sotib olmoqchiman.

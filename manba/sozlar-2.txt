@@ -542,4 +542,4 @@ anywhere|har qayerda|d
 welcome|xush kelibsiz|x
 zero|nol|x
 billion|milliard|x
-dozen|o'nta (dyujina)|n
+dozen|o'n ikkita (dyujina)|n

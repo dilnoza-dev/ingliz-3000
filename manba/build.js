@@ -1,7 +1,8 @@
 // So'zlar va gaplar bazasini qayta yig'adi:
 //   node manba/build.js
 // manba/sozlar-*.txt  (inglizcha|o'zbekcha|turkum)  -> words.json  (birinchi 3000 ta noyob so'z)
-// manba/gaplar.txt    (inglizcha|o'zbekcha)          -> sentences.json
+// manba/gaplar.txt    (inglizcha|o'zbekcha)          -> sentences.json (umumiy gaplar)
+// manba/dars-gaplari-*.txt (dars|inglizcha|o'zbekcha) -> sentences.json (har bir darsning gaplari)
 // Turkumlar: n ot, v fe'l, a sifat, d ravish, p olmosh, r predlog, c bog'lovchi, x boshqa.
 // O'zbekcha matnda oddiy apostrof yoziladi: o' va g' -> oʻ, gʻ; qolganlari -> ʼ (tutuq belgisi).
 const fs = require('fs');
@@ -41,10 +42,24 @@ if (fs.existsSync(ipaFile)) {
 }
 fs.writeFileSync(path.join(root, 'words.json'), '[\n' + list.map(w => JSON.stringify(w)).join(',\n') + '\n]\n');
 
+// Umumiy gaplar (dars raqami 0) va har bir darsning gaplari: [inglizcha, oʻzbekcha, dars]
 const sentences = fs.readFileSync(path.join(dir, 'gaplar.txt'), 'utf8').split('\n').map(l => l.trim()).filter(Boolean).map(l => {
   const [en, uz] = l.split('|').map(s => s && s.trim());
   if (!en || !uz) { console.error('Notoʻgʻri gap: ' + l); process.exit(1); }
-  return [en, uzFix(uz)];
+  return [en, uzFix(uz), 0];
 });
+const lessonFiles = fs.readdirSync(dir).filter(f => /^dars-gaplari-\d+\.txt$/.test(f)).sort();
+const lessonRows = [];
+for (const f of lessonFiles) {
+  for (const raw of fs.readFileSync(path.join(dir, f), 'utf8').split('\n')) {
+    const line = raw.trim();
+    if (!line || line.startsWith('#')) continue;
+    const [li, en, uz] = line.split('|').map(s => s && s.trim());
+    if (!/^\d+$/.test(li || '') || !en || !uz) { console.error('Notoʻgʻri dars gapi (' + f + '): ' + line); process.exit(1); }
+    lessonRows.push([en, uzFix(uz), +li]);
+  }
+}
+lessonRows.sort((a, b) => a[2] - b[2]);
+sentences.push(...lessonRows);
 fs.writeFileSync(path.join(root, 'sentences.json'), '[\n' + sentences.map(r => JSON.stringify(r)).join(',\n') + '\n]\n');
-console.log('words.json: ' + list.length + ' ta soʻz, sentences.json: ' + sentences.length + ' ta gap');
+console.log('words.json: ' + list.length + ' ta soʻz, sentences.json: ' + sentences.length + ' ta gap (' + lessonRows.length + ' tasi darslarga biriktirilgan)');

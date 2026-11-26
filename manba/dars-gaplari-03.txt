@@ -1,0 +1,136 @@
+# Har qator: dars raqami|inglizcha|oʻzbekcha
+21|The car is behind the house.|Mashina uyning orqasida.
+21|I can't live without music.|Men musiqasiz yashay olmayman.
+21|This coffee is too hot.|Bu qahva juda issiq.
+21|I have already eaten.|Men allaqachon ovqatlandim.
+21|Are you still at work?|Hali ham ishdamisiz?
+21|The film will start soon.|Film tez orada boshlanadi.
+21|I get up early every day.|Men har kuni erta turaman.
+21|This bag costs two hundred thousand soums.|Bu sumka ikki yuz ming so'm turadi.
+21|Could you open the window?|Derazani ochib bera olasizmi?
+21|It might rain tomorrow.|Ertaga yomg'ir yog'ishi mumkin.
+21|I need new shoes and a white shirt.|Menga yangi poyabzal va oq ko'ylak kerak.
+21|Take off your hat inside.|Bino ichida shlyapangizni yeching.
+21|I just bought new clothes.|Men hozirgina yangi kiyim sotib oldim.
+22|Put on your coat, it is cold.|Paltongizni kiying, havo sovuq.
+22|My bag is very heavy.|Sumkam juda og'ir.
+22|What is in this box?|Bu qutida nima bor?
+22|I lost my keys again.|Kalitlarimni yana yo'qotib qo'ydim.
+22|Can I have a cup of coffee?|Bir chashka qahva olsam bo'ladimi?
+22|She drinks a glass of milk every night.|U har kecha bir stakan sut ichadi.
+22|Put the plates on the table.|Tarelkalarni stolga qo'ying.
+22|Eat with a fork and a knife.|Vilka va pichoq bilan yeng.
+22|Give me a spoon, please.|Iltimos, menga qoshiq bering.
+22|Don't forget soap and a towel.|Sovun va sochiqni unutmang.
+22|We grow vegetables in our garden.|Biz bog'imizda sabzavot yetishtiramiz.
+22|My uncle has a big farm.|Amakimning katta fermasi bor.
+22|The children are playing on the grass.|Bolalar maysada o'ynashyapti.
+22|There is a lake in the forest.|O'rmonda ko'l bor.
+23|Don't throw stones.|Tosh otmang.
+23|Sit near the fire.|Olov yoniga o'tiring.
+23|The air in the mountains is fresh.|Tog'da havo toza.
+23|We climbed the hill.|Biz tepalikka chiqdik.
+23|Let's go to the beach this weekend.|Shu dam olish kunlari plyajga boraylik.
+23|Where are you going on holiday?|Ta'tilga qayerga borasiz?
+23|Happy birthday!|Tug'ilgan kuningiz bilan!
+23|We are having a party on Saturday.|Shanba kuni ziyofat qilyapmiz.
+23|Thank you for the gift.|Sovg'angiz uchun rahmat.
+23|Did you hear the news?|Yangilikni eshitdingizmi?
+23|My grandfather watches television in the evening.|Bobom kechqurun televizor ko'radi.
+23|I listen to the radio in the car.|Men mashinada radio tinglayman.
+23|Send me an email.|Menga elektron xat yuboring.
+23|Can you take a photo of us?|Bizni suratga olib bera olasizmi?
+23|The internet is very slow today.|Bugun internet juda sekin.
+24|I forgot my camera at home.|Kameramni uyda unutib qoldirdim.
+24|Can you show me on the map?|Xaritada ko'rsatib bera olasizmi?
+24|Our hotel is near the sea.|Mehmonxonamiz dengiz yaqinida.
+24|Let's have lunch at the cafe.|Kafeda tushlik qilaylik.
+24|We arrived at the airport early.|Aeroportga erta yetib keldik.
+24|There is an old bridge over the river.|Daryo ustida eski ko'prik bor.
+24|My office is in that tall building.|Ofisim ana u baland binoda.
+24|We go to the mosque on Friday.|Biz juma kuni masjidga boramiz.
+24|I borrow books from the library.|Men kutubxonadan kitob olaman.
+24|Let's go to the museum tomorrow.|Ertaga muzeyga boraylik.
+24|My sister studies at university.|Singlim universitetda o'qiydi.
+24|Did you do your homework?|Uy vazifangizni qildingizmi?
+24|I passed the exam!|Men imtihondan o'tdim!
+24|Everyone makes mistakes.|Hamma xato qiladi.
+25|Can you give me an example?|Menga misol keltira olasizmi?
+25|Open your books to page ten.|Kitoblaringizning o'ninchi sahifasini oching.
+25|Look up the word in the dictionary.|So'zni lug'atdan qarang.
+25|Write with a pencil.|Qalam bilan yozing.
+25|The teacher wrote the date on the board.|O'qituvchi doskaga sanani yozdi.
+25|My uncle lives in Bukhara.|Amakim Buxoroda yashaydi.
+25|My aunt makes delicious samsa.|Xolam mazali somsa pishiradi.
+25|Our neighbors are very friendly.|Qo'shnilarimiz juda samimiy.
+25|We have guests tonight.|Bugun kechqurun bizga mehmon keladi.
+25|My boss is a kind man.|Boshlig'im mehribon odam.
+25|The driver stopped the bus.|Haydovchi avtobusni to'xtatdi.
+25|Call the police!|Politsiyani chaqiring!
+25|My cousin is a nurse.|Amakivachcham hamshira.
+26|My brother is an engineer.|Akam muhandis.
+26|The chef cooks very well.|Oshpaz juda yaxshi ovqat pishiradi.
+26|She is a famous singer.|U mashhur qo'shiqchi.
+26|I want to be a writer.|Men yozuvchi bo'lmoqchiman.
+26|This artist paints flowers.|Bu rassom gullarni chizadi.
+26|He is the best player on the team.|U jamoadagi eng yaxshi o'yinchi.
+26|The pilot is talking to the passengers.|Uchuvchi yo'lovchilarga gapiryapti.
+26|We need a good lawyer.|Bizga yaxshi advokat kerak.
+26|I want to speak to the manager.|Men menejer bilan gaplashmoqchiman.
+26|The customer is always right.|Mijoz doim haq.
+26|I am twenty years old.|Men yigirma yoshdaman.
+26|My son is eleven, and my daughter is fifteen.|O'g'lim o'n bir yoshda, qizim esa o'n besh yoshda.
+26|The class starts at twelve.|Dars soat o'n ikkida boshlanadi.
+27|My father is fifty years old.|Otam ellik yoshda.
+27|There are thirty students in our class.|Sinfimizda o'ttiz nafar o'quvchi bor.
+27|Tashkent has about three million people.|Toshkentda taxminan uch million odam yashaydi.
+27|I live on the third floor.|Men uchinchi qavatda yashayman.
+27|I have English on Monday and Wednesday.|Dushanba va chorshanba kunlari ingliz tili darsim bor.
+27|The shop is closed on Sunday.|Do'kon yakshanba kuni yopiq.
+27|Let's meet on Thursday.|Payshanba kuni uchrashaylik.
+27|I start my new job in January.|Yangi ishimni yanvarda boshlayman.
+27|Navruz is in March.|Navro'z mart oyida.
+27|It is often cold in February.|Fevralda ko'pincha sovuq bo'ladi.
+27|We plant trees in April.|Biz aprelda daraxt ekamiz.
+27|Friday is my favorite day.|Juma mening sevimli kunim.
+28|It is very hot in July.|Iyulda juda issiq bo'ladi.
+28|School starts in September.|Maktab sentyabrda boshlanadi.
+28|We have a holiday in August.|Avgustda ta'tilimiz bor.
+28|It often snows in December.|Dekabrda tez-tez qor yog'adi.
+28|Which season do you like best?|Qaysi faslni ko'proq yoqtirasiz?
+28|We go to the mountains in summer.|Yozda tog'larga boramiz.
+28|Winter in Uzbekistan is short.|O'zbekistonda qish qisqa.
+28|Fergana is in the east of Uzbekistan.|Farg'ona O'zbekistonning sharqida.
+28|Our house is in the city center.|Uyimiz shahar markazida.
+28|Write your name at the top of the page.|Ismingizni sahifaning tepasiga yozing.
+28|The keys are at the bottom of my bag.|Kalitlar sumkamning tubida.
+28|We were born in June.|Biz iyunda tug'ilganmiz.
+28|The wind is coming from the north.|Shamol shimoldan esyapti.
+29|Let's sit at the front.|Keling, oldinda o'tiramiz.
+29|I will be back in an hour.|Bir soatdan keyin qaytaman.
+29|The bank is on the other side of the street.|Bank ko'chaning narigi tomonida.
+29|At the end of the day, I am tired.|Kun oxirida charchab qolaman.
+29|We work in a small group.|Biz kichik guruhda ishlaymiz.
+29|What kind of music do you like?|Qanday musiqani yoqtirasiz?
+29|Cut the apple in half.|Olmani teng ikkiga bo'ling.
+29|It is warm inside.|Ichkarida issiq.
+29|The children are playing outside.|Bolalar tashqarida o'ynashyapti.
+29|We walked across the bridge.|Biz ko'prikdan o'tdik.
+29|My work is far from my house.|Ishxonam uyimdan uzoqda.
+29|Let's do it together.|Keling, buni birga qilaylik.
+29|Maybe I will come tomorrow.|Balki ertaga kelarman.
+29|I really like this song.|Bu qo'shiq menga juda yoqadi.
+30|Come quickly!|Tez keling!
+30|Drive slowly, the road is wet.|Sekin haydang, yo'l ho'l.
+30|We usually have dinner at seven.|Biz odatda soat yettida kechki ovqat qilamiz.
+30|I am almost ready.|Men deyarli tayyorman.
+30|We have enough time.|Vaqtimiz yetarli.
+30|The film was quite good.|Film ancha yaxshi edi.
+30|Have you ever been to Khiva?|Siz hech Xivada bo'lganmisiz?
+30|He hasn't called yet.|U hali qo'ng'iroq qilmadi.
+30|I go to the gym twice a week.|Men haftada ikki marta sport zaliga boraman.
+30|First wash the rice, then cook it.|Avval guruchni yuving, keyin pishiring.
+30|Don't use your phone during the lesson.|Dars paytida telefoningizdan foydalanmang.
+30|Wait until I come.|Men kelgunimcha kuting.
+30|She is taller than her mother.|U onasidan balandroq.
+30|Whose bag is this?|Bu kimning sumkasi?

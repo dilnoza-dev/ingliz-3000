@@ -1,0 +1,154 @@
+# Har qator: dars raqami|inglizcha|oʻzbekcha
+51|I eat a banana every day.|Men har kuni banan yeyman.
+51|Put some lemon in your tea.|Choyingizga biroz limon soling.
+51|Cherries are ripe in June.|Gilos iyunda pishadi.
+51|Peaches from Fergana are delicious.|Farg'ona shaftolilari juda mazali.
+51|I am allergic to nuts.|Menda yong'oqqa allergiya bor.
+51|Bread with butter and honey is my favorite breakfast.|Sariyog' va asal surtilgan non mening sevimli nonushtam.
+51|We need flour to make bread.|Non yopish uchun bizga un kerak.
+51|My grandmother makes cherry jam.|Buvim gilos murabbosi qiladi.
+51|Have some apple pie.|Olma pirogidan oling.
+51|Add garlic to the soup.|Sho'rvaga sarimsoq qo'shing.
+51|Put the cake in the oven.|Tortni pechga qo'ying.
+51|The cat is sleeping on the sofa.|Mushuk divanda uxlayapti.
+51|Turn on the lamp, it is dark.|Chiroqni yoqing, qorong'i.
+51|I need a soft pillow.|Menga yumshoq yostiq kerak.
+52|Close the curtains, please.|Iltimos, pardalarni yoping.
+52|Put the books on the shelf.|Kitoblarni javonga qo'ying.
+52|The ceiling in this room is high.|Bu xonaning shifti baland.
+52|The car is in the garage.|Mashina garajda.
+52|We drink tea on the balcony.|Biz balkonda choy ichamiz.
+52|What is your address?|Manzilingiz qanday?
+52|Tashkent is the capital of Uzbekistan.|Toshkent O'zbekistonning poytaxti.
+52|We crossed the border at night.|Biz chegarani kechasi kesib o'tdik.
+52|Camels live in the desert.|Tuyalar cho'lda yashaydi.
+52|Look, there is a rainbow!|Qarang, kamalak chiqibdi!
+52|Drive carefully in the fog.|Tumanda ehtiyot bo'lib haydang.
+52|I can't stand this heat.|Bu issiqqa chiday olmayman.
+52|A bee is flying around the flowers.|Gullar atrofida ari uchib yuribdi.
+52|The fox is a clever animal.|Tulki aqlli hayvon.
+53|The elephant is the biggest land animal.|Fil quruqlikdagi eng katta hayvon.
+53|Will you be able to come tomorrow?|Ertaga kela olasizmi?
+53|Is this room available?|Bu xona bo'shmi?
+53|I am bored.|Zerikdim.
+53|He is a brave soldier.|U jasur askar.
+53|My phone is broken.|Telefonim buzilgan.
+53|Be careful on the road.|Yo'lda ehtiyot bo'ling.
+53|I am not certain about that.|Bunga unchalik amin emasman.
+53|Your son is very clever.|O'g'lingiz juda aqlli.
+53|It is cloudy today.|Bugun havo bulutli.
+53|This chair is very comfortable.|Bu stul juda qulay.
+53|Your answer is correct.|Javobingiz to'g'ri.
+53|What a cute baby!|Qanday yoqimtoy chaqaloq!
+53|My clothes are wet.|Kiyimlarim ho'l.
+53|Hang the towel to dry.|Sochiqni quritish uchun osib qo'ying.
+54|Your work is excellent.|Ishingiz a'lo darajada.
+54|The children are excited about the trip.|Bolalar sayohatdan hayajonda.
+54|That was an exciting game.|Bu hayajonli o'yin bo'ldi.
+54|It's not fair!|Bu adolatdan emas!
+54|I'm fine, thank you.|Rahmat, men yaxshiman.
+54|Do you speak any foreign languages?|Biror chet tilini bilasizmi?
+54|I am glad to hear that.|Buni eshitganimdan xursandman.
+54|That's a great idea!|Bu ajoyib fikr!
+54|Eat healthy food.|Sog'lom ovqat yeng.
+54|Thank you, you were very helpful.|Rahmat, juda katta yordam berdingiz.
+54|He is an honest man.|U halol odam.
+54|They live in a huge house.|Ular ulkan uyda yashashadi.
+54|I want to work for an international company.|Men xalqaro kompaniyada ishlamoqchiman.
+54|Don't be lazy.|Dangasa bo'lmang.
+54|We buy vegetables from local farmers.|Biz sabzavotni mahalliy dehqonlardan olamiz.
+54|You are lucky.|Sizning omadingiz bor.
+54|Tashkent is a modern city.|Toshkent zamonaviy shahar.
+55|It is natural to make mistakes.|Xato qilish tabiiy hol.
+55|I feel nervous before exams.|Imtihonlardan oldin hayajonlanaman.
+55|It is normal to feel tired.|Charchash normal holat.
+55|Be polite to older people.|Keksalar bilan xushmuomala bo'ling.
+55|This song is very popular.|Bu qo'shiq juda mashhur.
+55|What a pretty dress!|Qanday chiroyli ko'ylak!
+55|I am proud of you.|Siz bilan faxrlanaman.
+55|Can I ask you a quick question?|Sizga tezgina bitta savol bersam bo'ladimi?
+55|Don't be rude.|Qo'pollik qilmang.
+55|Are you serious?|Jiddiy gapiryapsizmi?
+55|Be careful, the knife is sharp.|Ehtiyot bo'ling, pichoq o'tkir.
+55|She is shy.|U uyatchan.
+55|The rules are very simple.|Qoidalar juda oddiy.
+55|Today is a special day.|Bugun alohida kun.
+55|That's strange.|G'alati.
+55|It will be sunny tomorrow.|Ertaga havo quyoshli bo'ladi.
+55|The weather was terrible.|Havo dahshatli edi.
+56|Navruz is a traditional holiday.|Navro'z an'anaviy bayram.
+56|This book is very useful.|Bu kitob juda foydali.
+56|It is windy today.|Bugun havo shamolli.
+56|My grandfather is a wise man.|Bobom dono inson.
+56|We had a wonderful time.|Vaqtimiz ajoyib o'tdi.
+56|I am worried about my exam.|Imtihonim haqida xavotirdaman.
+56|This is the worst day of my life.|Bu hayotimdagi eng yomon kun.
+56|The weather is getting worse.|Havo yomonlashyapti.
+56|I have visited several countries.|Men bir nechta mamlakatda bo'lganman.
+56|Samarkand is an ancient city.|Samarqand qadimiy shahar.
+56|The baby is asleep.|Chaqaloq uxlab yotibdi.
+56|Are you awake?|Uyg'oqmisiz?
+56|Stay calm.|Xotirjam bo'ling.
+56|Is everything clear?|Hammasi tushunarlimi?
+56|He was unhappy at his old job.|U eski ishida baxtsiz edi.
+57|The bus is very crowded.|Avtobus juda gavjum.
+57|Children are curious.|Bolalar qiziquvchan bo'ladi.
+57|All people are equal.|Barcha odamlar teng.
+57|What is the exact time?|Aniq vaqt qancha?
+57|Can I have an extra pillow?|Qo'shimcha yostiq olsam bo'ladimi?
+57|This is my final answer.|Bu mening yakuniy javobim.
+57|I go to the gym to keep fit.|Sog'lom bo'lish uchun sport zaliga boraman.
+57|She has brown eyes.|Uning ko'zlari jigarrang.
+57|The sky is grey today.|Bugun osmon kulrang.
+57|My daughter loves pink.|Qizim pushti rangni yaxshi ko'radi.
+57|Uzbekistan became independent in 1991.|O'zbekiston 1991-yilda mustaqil bo'ldi.
+57|These jeans are too tight.|Bu jinsi shim juda tor.
+57|Is it necessary to book a table?|Stol band qilish shartmi?
+57|Our neighbors are very noisy.|Qo'shnilarimiz juda shovqinli.
+57|Have you heard the latest news?|So'nggi yangiliklarni eshitdingizmi?
+58|You look pale. Are you ill?|Rangingiz oqarib ketibdi. Kasalmisiz?
+58|Your English is perfect.|Ingliz tilingiz mukammal.
+58|It was a pleasant evening.|Yoqimli oqshom bo'ldi.
+58|Try to think positive.|Ijobiy fikrlashga harakat qiling.
+58|The test result was negative.|Test natijasi salbiy chiqdi.
+58|This is a rare bird.|Bu kamyob qush.
+58|Don't eat raw meat.|Xom go'sht yemang.
+58|I am a regular customer here.|Men bu yerning doimiy mijoziman.
+58|Parents are responsible for their children.|Ota-onalar farzandlari uchun javobgar.
+58|Do you like spicy food?|Achchiq taomni yoqtirasizmi?
+58|Our teacher is very strict.|O'qituvchimiz juda talabchan.
+58|She is a successful businesswoman.|U muvaffaqiyatli ishbilarmon ayol.
+58|This film is not suitable for children.|Bu film bolalar uchun mos emas.
+58|The soup is very tasty.|Sho'rva juda mazali.
+58|Social media takes a lot of time.|Ijtimoiy tarmoqlar ko'p vaqtni oladi.
+59|Keep your room tidy.|Xonangizni ozoda saqlang.
+59|They live in a tiny apartment.|Ular juda kichkina kvartirada yashashadi.
+59|The total is fifty thousand soums.|Jami ellik ming so'm.
+59|This is a typical Uzbek house.|Bu odatiy o'zbek uyi.
+59|That's unusual.|Bu g'ayrioddiy.
+59|She is upset about the test.|U test tufayli xafa.
+59|Let's meet at the usual place.|Odatdagi joyda uchrashamiz.
+59|Wild animals live in the forest.|O'rmonda yovvoyi hayvonlar yashaydi.
+59|Actually, I don't like coffee.|Aslida, men qahvani yoqtirmayman.
+59|I love fruit, especially peaches.|Men mevani, ayniqsa shaftolini yaxshi ko'raman.
+59|That's exactly what I wanted.|Aynan shuni xohlagandim.
+59|Finally, the weekend is here!|Nihoyat, dam olish kunlari keldi!
+59|I can hardly hear you.|Sizni zo'rg'a eshityapman.
+59|Call me immediately.|Darhol menga qo'ng'iroq qiling.
+59|Luckily, nobody was hurt.|Baxtimizga, hech kim jarohat olmadi.
+59|It's nearly midnight.|Yarim tun bo'lishiga oz qoldi.
+60|Perhaps he is busy.|Ehtimol, u band.
+60|It will probably rain tonight.|Bugun kechasi yomg'ir yog'sa kerak.
+60|Please speak quietly.|Iltimos, past ovozda gapiring.
+60|I recently moved to Tashkent.|Yaqinda Toshkentga ko'chib keldim.
+60|I looked everywhere for my keys.|Kalitlarimni hamma joydan qidirdim.
+60|I left my glasses somewhere.|Ko'zoynagimni qayerdadir qoldirdim.
+60|My brother works abroad.|Akam chet elda ishlaydi.
+60|Go straight ahead.|To'g'ri oldinga yuring.
+60|My room is upstairs.|Xonam yuqori qavatda.
+60|I am looking forward to seeing you.|Sizni ko'rishni intiqlik bilan kutyapman.
+60|I met him two years ago.|Men u bilan ikki yil oldin tanishganman.
+60|Do you need anything else?|Yana biror narsa kerakmi?
+60|Let's walk instead of taking a taxi.|Taksiga o'tirish o'rniga piyoda yuraylik.
+60|Suddenly the lights went out.|To'satdan chiroqlar o'chib qoldi.
+60|I simply forgot.|Shunchaki unutibman.

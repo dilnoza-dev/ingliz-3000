@@ -1,0 +1,167 @@
+# Har qator: dars raqami|inglizcha|oʻzbekcha
+81|Turn down the volume.|Ovozni pasaytiring.
+81|The waiter brought our food.|Ofitsiant ovqatimizni olib keldi.
+81|The waves are high today.|Bugun to'lqinlar baland.
+81|Health is better than wealth.|Sog'liq boylikdan afzal.
+81|Visit our website.|Veb-saytimizga kiring.
+81|Make a wish!|Niyat qiling!
+81|We accept cards.|Biz karta qabul qilamiz.
+81|You can achieve anything.|Siz har qanday narsaga erisha olasiz.
+81|I admire my father.|Men otamga qoyil qolaman.
+81|I admit I was wrong.|Noto'g'ri bo'lganimni tan olaman.
+81|I advise you to rest.|Dam olishingizni maslahat beraman.
+81|We can't afford a new car.|Yangi mashina olishga qurbimiz yetmaydi.
+81|I apologize for the mistake.|Xato uchun uzr so'rayman.
+81|She applied for a new job.|U yangi ishga ariza topshirdi.
+81|Don't argue with your parents.|Ota-onangiz bilan bahslashmang.
+81|The police arrested the thief.|Politsiya o'g'rini hibsga oldi.
+81|In my youth, I played football.|Yoshligimda futbol o'ynardim.
+82|I attend English classes twice a week.|Haftada ikki marta ingliz tili darslariga qatnashaman.
+82|Avoid fast food.|Fast-fuddan saqlaning.
+82|Our team beat them three to one.|Jamoamiz ularni uch-bir hisobida yutdi.
+82|Bend your knees.|Tizzalaringizni buking.
+82|Does your dog bite?|Itingiz tishlaydimi?
+82|Blow out the candles!|Shamlarni puflab o'chiring!
+82|Be careful, you will burn your hand.|Ehtiyot bo'ling, qo'lingizni kuydirasiz.
+82|How do you celebrate your birthday?|Tug'ilgan kuningizni qanday nishonlaysiz?
+82|Let's chat later.|Keyinroq gaplashamiz.
+82|Don't cheat on the exam.|Imtihonda ko'chirmang.
+82|Chew your food well.|Ovqatni yaxshilab chaynang.
+82|We communicate in English.|Biz ingliz tilida muloqot qilamiz.
+82|Ten teams will compete in the tournament.|Turnirda o'nta jamoa bellashadi.
+82|Stop complaining!|Shikoyat qilishni bas qiling!
+82|Please confirm your booking.|Iltimos, bronni tasdiqlang.
+82|I can't connect to the internet.|Internetga ulana olmayapman.
+82|Control your anger.|G'azabingizni jilovlang.
+82|The car crashed into a tree.|Mashina daraxtga urilib ketdi.
+83|The flight was delayed.|Reys kechiktirildi.
+83|Delete this photo.|Bu suratni o'chiring.
+83|You can depend on me.|Menga tayanishingiz mumkin.
+83|You deserve it.|Siz bunga loyiqsiz.
+83|The dog is digging in the garden.|It bog'da yer kovlayapti.
+83|My keys disappeared.|Kalitlarim g'oyib bo'ldi.
+83|Divide the cake into eight pieces.|Tortni sakkiz bo'lakka bo'ling.
+83|You can download the app for free.|Ilovani bepul yuklab olishingiz mumkin.
+83|How much do you earn?|Qancha pul topasiz?
+83|My parents encourage me.|Ota-onam meni ruhlantirib turishadi.
+83|The bird escaped from the cage.|Qush qafasdan qochib ketdi.
+83|Where can I exchange money?|Pulni qayerda almashtirsam bo'ladi?
+83|Let's explore the old city.|Keling, eski shaharni aylanib chiqamiz.
+83|It's hard to express my feelings.|Hislarimni ifodalash qiyin.
+83|Don't forget to feed the cat.|Mushukni ovqatlantirishni unutmang.
+83|Please forgive me.|Iltimos, meni kechiring.
+83|The lake freezes in winter.|Qishda ko'l muzlaydi.
+84|Uzbeks greet guests warmly.|O'zbeklar mehmonlarni iliq kutib olishadi.
+84|Hang your coat here.|Paltongizni shu yerga iling.
+84|The company wants to hire new workers.|Kompaniya yangi ishchilarni ishga olmoqchi.
+84|Don't ignore my messages.|Xabarlarimga e'tiborsiz qaramang.
+84|Friends can influence you.|Do'stlar sizga ta'sir qilishi mumkin.
+84|Please inform us about any changes.|Iltimos, har qanday o'zgarish haqida bizga xabar bering.
+84|Let me introduce my friend.|Do'stimni tanishtiray.
+84|Who invented the telephone?|Telefonni kim ixtiro qilgan?
+84|He leads the team.|U jamoani boshqaradi.
+84|Don't lean on the door.|Eshikka suyanmang.
+84|Help me load the car.|Mashinaga yuk ortishga yordam bering.
+84|I managed to finish on time.|Ishni o'z vaqtida tugatishga ulgurdim.
+84|He didn't mention it.|U bu haqda gapirmadi.
+84|She nodded and smiled.|U bosh irg'ab jilmaydi.
+84|Children must obey their parents.|Bolalar ota-onasining gapiga kirishi kerak.
+84|Install the app on your phone.|Ilovani telefoningizga o'rnating.
+85|When did the accident occur?|Baxtsiz hodisa qachon yuz berdi?
+85|We organized a party for her.|Biz unga ziyofat uyushtirdik.
+85|Pause the video, please.|Iltimos, videoni to'xtatib turing.
+85|The students will perform a song.|O'quvchilar qo'shiq ijro etadi.
+85|I persuaded him to stay.|Uni qolishga ko'ndirdim.
+85|Pour me some tea.|Menga choy quyib bering.
+85|Nobody can predict the future.|Kelajakni hech kim bashorat qila olmaydi.
+85|He pretended to be asleep.|U o'zini uxlaganga soldi.
+85|Washing your hands prevents illness.|Qo'l yuvish kasallikning oldini oladi.
+85|Print this page, please.|Iltimos, bu sahifani chop eting.
+85|Can you prove it?|Buni isbotlay olasizmi?
+85|I didn't recognize you!|Sizni tanimabman!
+85|Can you recommend a good book?|Yaxshi kitob tavsiya qila olasizmi?
+85|She is recovering from the flu.|U grippdan tuzalyapti.
+85|We recycle paper and plastic.|Biz qog'oz va plastikni qayta ishlaymiz.
+85|He refused to help.|U yordam berishdan bosh tortdi.
+85|I don't regret anything.|Hech narsadan afsuslanmayman.
+86|Remind me to call my mother.|Onamga qo'ng'iroq qilishni eslatib qo'ying.
+86|Remove your shoes, please.|Iltimos, poyabzalingizni yeching.
+86|They are repairing the road.|Ular yo'lni ta'mirlashyapti.
+86|I need to replace my phone.|Telefonimni almashtirishim kerak.
+86|The firefighters rescued the family.|O't o'chiruvchilar oilani qutqarishdi.
+86|My father retired last year.|Otam o'tgan yil nafaqaga chiqdi.
+86|Someone robbed the bank.|Kimdir bankni talab ketdi.
+86|Don't rush, we have time.|Shoshilmang, vaqtimiz bor.
+86|Don't scare the children.|Bolalarni qo'rqitmang.
+86|Separate the plastic from the paper.|Plastikni qog'ozdan ajrating.
+86|Set the table, please.|Iltimos, dasturxon tuzang.
+86|The sun is shining.|Quyosh charaqlab turibdi.
+86|The boat started to sink.|Qayiq cho'ka boshladi.
+86|Be careful, don't slip on the ice.|Ehtiyot bo'ling, muzda sirpanib ketmang.
+86|News spreads fast.|Yangiliklar tez tarqaladi.
+86|Stay with me.|Men bilan qoling.
+87|If you work hard, you will succeed.|Qattiq mehnat qilsangiz, muvaffaqiyatga erishasiz.
+87|Many people suffer from allergies.|Ko'p odamlar allergiyadan aziyat chekadi.
+87|Mountains surround the city.|Shaharni tog'lar o'rab turibdi.
+87|Plants can't survive without water.|O'simliklar suvsiz yashay olmaydi.
+87|Swallow the pill with water.|Tabletkani suv bilan yuting.
+87|Don't tear the paper.|Qog'ozni yirtmang.
+87|Tie your shoes.|Poyabzalingiz bog'ichini bog'lang.
+87|I trust you.|Men sizga ishonaman.
+87|How fast can you type?|Klaviaturada qanchalik tez yozasiz?
+87|Upload the photos to the website.|Suratlarni saytga yuklang.
+87|Did you vote?|Ovoz berdingizmi?
+87|I warned you!|Men sizni ogohlantirgandim!
+87|Don't waste water.|Suvni isrof qilmang.
+87|How much do you weigh?|Vazningiz qancha?
+87|She whispered something to me.|U menga nimadir deb pichirladi.
+87|I wonder where he is.|U qayerda ekan, deb o'ylayapman.
+87|Wrap the gift in paper.|Sovg'ani qog'ozga o'rang.
+87|She has the ability to learn fast.|Uning tez o'rganish qobiliyati bor.
+88|You are absolutely right.|Siz mutlaqo haqsiz.
+88|I don't have access to the internet here.|Bu yerda internetga kirish imkonim yo'q.
+88|We need accommodation for three nights.|Bizga uch kechaga turar joy kerak.
+88|I opened a bank account.|Men bank hisob raqamini ochdim.
+88|This information is accurate.|Bu ma'lumot aniq.
+88|Don't accuse me without proof.|Dalilsiz meni ayblamang.
+88|My grandmother is still very active.|Buvim hali ham juda faol.
+88|He is a famous actor.|U mashhur aktyor.
+88|It takes time to adapt to a new city.|Yangi shaharga moslashish uchun vaqt kerak.
+88|In addition, we offer free delivery.|Bundan tashqari, bepul yetkazib berishni taklif qilamiz.
+88|Adjust your seat.|O'rindig'ingizni sozlang.
+88|They adopted a little girl.|Ular kichkina qizni asrab olishdi.
+88|This is an advanced course.|Bu yuqori darajadagi kurs.
+88|Pay in advance, please.|Iltimos, oldindan to'lang.
+88|My sister is an actress.|Opam aktrisa.
+88|Admission is free.|Kirish bepul.
+89|Stress affects your health.|Stress sog'lig'ingizga ta'sir qiladi.
+89|We had dinner and afterwards went for a walk.|Kechki ovqatdan keyin sayrga chiqdik.
+89|Talk to a travel agent.|Sayohat agenti bilan gaplashing.
+89|Agriculture is important for Uzbekistan.|Qishloq xo'jaligi O'zbekiston uchun muhim.
+89|Learn first aid.|Birinchi tibbiy yordamni o'rganing.
+89|I don't drink alcohol.|Men spirtli ichimlik ichmayman.
+89|Is there an alternative?|Boshqa muqobil yo'l bormi?
+89|I was amazed by the view.|Manzaradan hayratda qoldim.
+89|The concert was amazing!|Konsert ajoyib bo'ldi!
+89|His ambition is to become a doctor.|Uning orzusi shifokor bo'lish.
+89|Call an ambulance!|Tez yordam chaqiring!
+89|Today is our wedding anniversary.|Bugun to'yimizning yilligi.
+89|The noise annoys me.|Shovqin asabimga tegyapti.
+89|The annual festival is in September.|Yillik festival sentyabrda bo'ladi.
+89|Let's analyse the results.|Natijalarni tahlil qilaylik.
+90|I feel anxious before flights.|Parvoz oldidan xavotirlanaman.
+90|We live far apart.|Biz bir-birimizdan uzoqda yashaymiz.
+90|I really appreciate your help.|Yordamingizni juda qadrlayman.
+90|Don't judge people by their appearance.|Odamlarga tashqi ko'rinishiga qarab baho bermang.
+90|Winter is approaching.|Qish yaqinlashyapti.
+90|This dress is not appropriate for work.|Bu ko'ylak ishga mos emas.
+90|My parents approved my plan.|Ota-onam rejamni ma'qullashdi.
+90|She is an architect.|U me'mor.
+90|I love the architecture of Samarkand.|Samarqand me'morchiligini yaxshi ko'raman.
+90|Follow the arrows.|Strelkalar bo'yicha yuring.
+90|These are artificial flowers.|Bu sun'iy gullar.
+90|How can I assist you?|Sizga qanday yordam bera olaman?
+90|My assistant will call you.|Yordamchim sizga qo'ng'iroq qiladi.
+90|The atmosphere was friendly.|Muhit samimiy edi.
+90|Attach the file to the email.|Faylni xatga biriktiring.
+90|I assume you are hungry.|Qorningiz ochdir deb o'ylayman.

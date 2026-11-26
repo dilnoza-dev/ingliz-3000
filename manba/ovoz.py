@@ -29,6 +29,8 @@ MODEL_URL = 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/l
 RATE = 22050
 WORDS_PER_FILE = 100
 SENTENCES_PER_FILE = 50
+LESSONS_PER_FILE = 5     # dars gaplari: har faylda 5 ta darsning gaplari
+SENTENCE_BITRATE = '24k'
 GAP = 0.25          # clips orasidagi jimlik, soniya
 PAD = 0.06          # clip boshidan/oxiridan qoldiriladigan zaxira
 
@@ -169,7 +171,7 @@ def synth(voice, text, length_scale, override=None):
     return a[max(0, first - keep):min(len(a), last + keep)]
 
 
-def write_chunk(name, clips):
+def write_chunk(name, clips, bitrate='32k'):
     """clips: list of array('h'); returns [(start, dur), ...] and writes audio/<name>.mp3"""
     import array
     pcm = array.array('h', [0] * int(0.3 * RATE))
@@ -183,7 +185,7 @@ def write_chunk(name, clips):
     pcm.extend(array.array('h', [0] * int(0.3 * RATE)))
     out = os.path.join(ROOT, 'audio', name)
     subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 's16le', '-ar', str(RATE), '-ac', '1', '-i', '-',
-                    '-codec:a', 'libmp3lame', '-b:a', '32k', out], input=pcm.tobytes(), check=True)
+                    '-codec:a', 'libmp3lame', '-b:a', bitrate, out], input=pcm.tobytes(), check=True)
     return spans
 
 
@@ -202,28 +204,51 @@ def main():
         return
 
     files = []
-    index = {'v': 1, 'files': files, 'w': [], 's': [], 'ss': [], 'x': {}}
+    index = {'v': 2, 'files': files, 'w': [], 's': [None] * len(sentences), 'ss': [None] * len(sentences), 'x': {}}
+    old = None
+    if '--sozlarni-qoldir' in sys.argv:
+        # soʻzlar oʻzgarmagan boʻlsa, ularning ovozini qayta yozmaymiz
+        old = json.load(open(os.path.join(ROOT, 'audio', 'index.json'), encoding='utf8'))
+        assert len(old['w']) == len(words)
 
-    def add_group(prefix, texts, size, scale, key, overrides=None):
-        for n in range(0, len(texts), size):
-            part = texts[n:n + size]
-            clips = [synth(voice, t, scale, (overrides or {}).get(t)) for t in part]
-            name = '%s%02d.mp3' % (prefix, n // size)
-            spans = write_chunk(name, clips)
-            fi = len(files)
-            files.append(name)
-            for t, (st, du) in zip(part, spans):
-                entry = [fi, st, du]
-                if key == 'x':
-                    index['x'][t] = entry
-                else:
-                    index[key].append(entry)
-            print(' ', name, len(part))
+    def add_chunk(name, texts, scale, overrides=None, bitrate='32k'):
+        clips = [synth(voice, t, scale, (overrides or {}).get(t)) for t in texts]
+        spans = write_chunk(name, clips, bitrate)
+        fi = len(files)
+        files.append(name)
+        print(' ', name, len(texts), flush=True)
+        return [[fi, st, du] for st, du in spans]
 
-    add_group('w', [w[0] for w in words], WORDS_PER_FILE, 1.1, 'w', VOICE_OVERRIDE)
-    add_group('s', [s[0] for s in sentences], SENTENCES_PER_FILE, 1.1, 's')
-    add_group('ss', [s[0] for s in sentences], SENTENCES_PER_FILE, 1.5, 'ss')
-    add_group('x', EXTRA, 100, 1.1, 'x')
+    # soʻzlar
+    if old:
+        remap = {}
+        for e in old['w']:
+            name = old['files'][e[0]]
+            if name not in remap:
+                remap[name] = len(files)
+                files.append(name)
+            index['w'].append([remap[name], e[1], e[2]])
+    else:
+        for n in range(0, len(words), WORDS_PER_FILE):
+            index['w'].extend(add_chunk('w%02d.mp3' % (n // WORDS_PER_FILE),
+                                        [w[0] for w in words[n:n + WORDS_PER_FILE]], 1.1, VOICE_OVERRIDE))
+    # gaplar: umumiylari 50 tadan (s, ss), darslarniki 5 darsdan (d, ds)
+    general = [i for i, r in enumerate(sentences) if len(r) < 3 or not r[2]]
+    groups = [('s', 'ss', general[n:n + SENTENCES_PER_FILE], n // SENTENCES_PER_FILE)
+              for n in range(0, len(general), SENTENCES_PER_FILE)]
+    blocks = {}
+    for i, r in enumerate(sentences):
+        if len(r) > 2 and r[2]:
+            blocks.setdefault((r[2] - 1) // LESSONS_PER_FILE, []).append(i)
+    groups += [('d', 'ds', ids, b) for b, ids in sorted(blocks.items())]
+    for normal, slow, ids, k in groups:
+        texts = [sentences[i][0] for i in ids]
+        for key, prefix, scale in (('s', normal, 1.1), ('ss', slow, 1.45)):
+            for i, e in zip(ids, add_chunk('%s%02d.mp3' % (prefix, k), texts, scale, bitrate=SENTENCE_BITRATE)):
+                index[key][i] = e
+    for n in range(0, len(EXTRA), 100):
+        for t, e in zip(EXTRA[n:n + 100], add_chunk('x%02d.mp3' % (n // 100), EXTRA[n:n + 100], 1.1)):
+            index['x'][t] = e
     with open(os.path.join(ROOT, 'audio', 'index.json'), 'w', encoding='utf8') as f:
         json.dump(index, f, ensure_ascii=False, separators=(',', ':'))
     total = sum(os.path.getsize(os.path.join(ROOT, 'audio', n)) for n in files)
