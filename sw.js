@@ -1,9 +1,9 @@
 // Avtomatik yaratilgan: node manba/ilova.js. Qoʻlda tahrir qilmang.
-const CORE = 'ingliz3000-core-38ce9c0344';
-const AUDIO = 'ingliz3000-audio-434cb8545e';
+const CORE = 'ingliz3000-core-8850beaf2f';
+const AUDIO = 'ingliz3000-audio-0864f236ee';
 // Telefon xotirasini band qilmaslik uchun faqat oxirgi eshitilgan shuncha ovoz fayli saqlanadi (bir necha MB).
 const AUDIO_KEEP = 16;
-const CORE_FILES = ['./', 'index.html', 'words.json', 'sentences.json', 'audio/index.json', 'manifest.webmanifest',
+const CORE_FILES = ['./', 'index.html', 'words.json', 'sentences.json', 'grammatika.json', 'audio/index.json', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-512.png', 'icons/apple-touch-icon.png'];
 
 self.addEventListener('install', e => {

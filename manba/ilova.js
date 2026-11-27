@@ -20,7 +20,7 @@ const preamble = page.slice(0, cut)
 const body = page.slice(cut);
 
 const icons = ['icon-192.png', 'icon-512.png', 'maskable-512.png', 'apple-touch-icon.png'].map(f => sha(read('icons/' + f))).join('');
-const version = sha(page + sha(read('words.json')) + sha(read('sentences.json')) + sha(read('audio/index.json')) + icons).slice(0, 10);
+const version = sha(page + sha(read('words.json')) + sha(read('sentences.json')) + sha(read('grammatika.json')) + sha(read('audio/index.json')) + icons).slice(0, 10);
 const audioVersion = sha(read('audio/index.json')).slice(0, 10);
 
 const html = `<!doctype html>
@@ -78,7 +78,7 @@ const CORE = 'ingliz3000-core-${version}';
 const AUDIO = 'ingliz3000-audio-${audioVersion}';
 // Telefon xotirasini band qilmaslik uchun faqat oxirgi eshitilgan shuncha ovoz fayli saqlanadi (bir necha MB).
 const AUDIO_KEEP = 16;
-const CORE_FILES = ['./', 'index.html', 'words.json', 'sentences.json', 'audio/index.json', 'manifest.webmanifest',
+const CORE_FILES = ['./', 'index.html', 'words.json', 'sentences.json', 'grammatika.json', 'audio/index.json', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-512.png', 'icons/apple-touch-icon.png'];
 
 self.addEventListener('install', e => {

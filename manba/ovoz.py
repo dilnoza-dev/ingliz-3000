@@ -2,7 +2,9 @@
 
 Ishlatish (repozitoriy ildizidan):
     python3 -m venv .venv && .venv/bin/pip install piper-tts cmudict
-    .venv/bin/python manba/ovoz.py
+    .venv/bin/python manba/ovoz.py                      # hammasi
+    .venv/bin/python manba/ovoz.py --sozlarni-qoldir    # soʻzlardan tashqari hammasi
+    .venv/bin/python manba/ovoz.py --faqat-qoshimcha    # faqat qoʻshimcha matnlar (x*.mp3: qoidalar va grammatika)
     node manba/build.js
 
 Natija:
@@ -14,6 +16,7 @@ Talaffuz yozuvi: CMU Pronouncing Dictionary (AQSh talaffuzi).
 """
 import json
 import os
+import re
 import subprocess
 import sys
 import urllib.request
@@ -73,6 +76,31 @@ EXTRA = [
     'cat', 'apple', 'bag', 'cup', 'but', 'sun', 'about', 'the', 'banana', 'ship', 'sheep', 'sit', 'seat',
     'sing', 'morning', 'long', 'red', 'car', 'girl', 'sink', 'wine', 'west', 'vest',
 ]
+
+
+
+def gram_spoken(q):
+    """Grammatika savolining toʻgʻri javob qoʻyilgan, ovoz chiqarib aytiladigan shakli (sahifadagi gSpoken bilan bir xil)."""
+    filled = q[0].replace('___', q[1][q[2]], 1)
+    return re.sub(r'\s*\([^)]*\)', '', filled.split('→')[-1]).strip()
+
+
+def extra_texts(sentences):
+    """EXTRA + grammatika.json dagi misollar va savollar (gaplar bazasida borlari tashlab ketiladi)."""
+    have = {r[0] for r in sentences}
+    out, seen = [], set()
+    texts = list(EXTRA)
+    gp = os.path.join(ROOT, 'grammatika.json')
+    if os.path.exists(gp):
+        for g in json.load(open(gp, encoding='utf8')):
+            texts += [e[0] for e in g['ex']] + [gram_spoken(q) for q in g['q']]
+    for t in texts:
+        if t in seen or (t in have and t not in EXTRA):
+            continue
+        seen.add(t)
+        out.append(t)
+    return out
+
 
 IPA_V = {'AA': 'ɑː', 'AE': 'æ', 'AO': 'ɔː', 'AW': 'aʊ', 'AY': 'aɪ', 'EH': 'e', 'EY': 'eɪ', 'IH': 'ɪ',
          'OW': 'oʊ', 'OY': 'ɔɪ', 'UH': 'ʊ'}
@@ -213,7 +241,26 @@ def main():
     files = []
     index = {'v': 2, 'files': files, 'w': [], 's': [None] * len(sentences), 'ss': [None] * len(sentences), 'x': {}}
     old = None
-    if '--sozlarni-qoldir' in sys.argv:
+    only_extra = '--faqat-qoshimcha' in sys.argv
+    if only_extra:
+        # soʻz va gaplar oʻzgarmagan: ularning ovozini qayta yozmaymiz, faqat x*.mp3
+        old = json.load(open(os.path.join(ROOT, 'audio', 'index.json'), encoding='utf8'))
+        assert len(old['w']) == len(words) and len(old['s']) == len(sentences)
+        remap = {}
+
+        def keep(e):
+            if e is None:
+                return None
+            name = old['files'][e[0]]
+            if name not in remap:
+                remap[name] = len(files)
+                files.append(name)
+            return [remap[name], e[1], e[2]]
+        index['w'] = [keep(e) for e in old['w']]
+        index['s'] = [keep(e) for e in old['s']]
+        index['ss'] = [keep(e) for e in old['ss']]
+        old = None
+    elif '--sozlarni-qoldir' in sys.argv:
         # soʻzlar oʻzgarmagan boʻlsa, ularning ovozini qayta yozmaymiz
         old = json.load(open(os.path.join(ROOT, 'audio', 'index.json'), encoding='utf8'))
         assert len(old['w']) == len(words)
@@ -235,7 +282,7 @@ def main():
                 remap[name] = len(files)
                 files.append(name)
             index['w'].append([remap[name], e[1], e[2]])
-    else:
+    elif not only_extra:
         for n in range(0, len(words), WORDS_PER_FILE):
             index['w'].extend(add_chunk('w%03d.mp3' % (n // WORDS_PER_FILE),
                                         [w[0] for w in words[n:n + WORDS_PER_FILE]], 1.1, VOICE_OVERRIDE))
@@ -248,13 +295,16 @@ def main():
         if len(r) > 2 and r[2]:
             blocks.setdefault((r[2] - 1) // LESSONS_PER_FILE, []).append(i)
     groups += [('d', 'ds', ids, '%03d' % b) for b, ids in sorted(blocks.items())]
+    if only_extra:
+        groups = []
     for normal, slow, ids, k in groups:
         texts = [sentences[i][0] for i in ids]
         for key, prefix, scale in (('s', normal, 1.1), ('ss', slow, 1.45)):
             for i, e in zip(ids, add_chunk('%s%s.mp3' % (prefix, k), texts, scale, bitrate=SENTENCE_BITRATE)):
                 index[key][i] = e
-    for n in range(0, len(EXTRA), 100):
-        for t, e in zip(EXTRA[n:n + 100], add_chunk('x%02d.mp3' % (n // 100), EXTRA[n:n + 100], 1.1)):
+    extra = extra_texts(sentences)
+    for n in range(0, len(extra), 100):
+        for t, e in zip(extra[n:n + 100], add_chunk('x%02d.mp3' % (n // 100), extra[n:n + 100], 1.1)):
             index['x'][t] = e
     with open(os.path.join(ROOT, 'audio', 'index.json'), 'w', encoding='utf8') as f:
         json.dump(index, f, ensure_ascii=False, separators=(',', ':'))

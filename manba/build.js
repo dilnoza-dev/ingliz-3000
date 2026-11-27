@@ -71,3 +71,22 @@ lessonRows.sort((a, b) => a[2] - b[2]);
 sentences.push(...lessonRows);
 fs.writeFileSync(path.join(root, 'sentences.json'), '[\n' + sentences.map(r => JSON.stringify(r)).join(',\n') + '\n]\n');
 console.log('words.json: ' + list.length + ' ta soʻz (' + b2.length + ' tasi B2), sentences.json: ' + sentences.length + ' ta gap (' + lessonRows.length + ' tasi darslarga biriktirilgan)');
+
+// Grammatika dasturi (har 5 ta darsga bitta mavzu): manba/grammatika.json -> grammatika.json
+// Har mavzu: t sarlavha, d tushuntirish, f qoida, ex [[inglizcha, oʻzbekcha] ×3], q [[«___» li gap, [3 variant], toʻgʻri raqami, izoh] ×4]
+const gram = JSON.parse(fs.readFileSync(path.join(dir, 'grammatika.json'), 'utf8'));
+const gErr = [];
+gram.forEach((g, k) => {
+  const at = (k + 1) + '-mavzu';
+  if (!g.t || !g.d || !g.f) gErr.push(at + ': t, d yoki f yoʻq');
+  if (!Array.isArray(g.ex) || g.ex.length !== 3 || g.ex.some(e => !e[0] || !e[1])) gErr.push(at + ': 3 ta misol kerak');
+  if (!Array.isArray(g.q) || g.q.length !== 4) gErr.push(at + ': 4 ta savol kerak');
+  for (const q of g.q || []) {
+    if (q[0].split('___').length !== 2) gErr.push(at + ': savolda bitta «___» boʻlishi kerak: ' + q[0]);
+    if (!Array.isArray(q[1]) || q[1].length !== 3 || !(q[2] >= 0 && q[2] < 3) || !q[3]) gErr.push(at + ': savol notoʻgʻri: ' + q[0]);
+  }
+});
+if (gErr.length) { console.error('Grammatika xatolari:\n' + gErr.join('\n')); process.exit(1); }
+const gramOut = gram.map(g => ({ t: uzFix(g.t), d: uzFix(g.d), f: uzFix(g.f), ex: g.ex.map(([en, uz]) => [en, uzFix(uz)]), q: g.q.map(([s, o, c, why]) => [s, o, c, uzFix(why)]) }));
+fs.writeFileSync(path.join(root, 'grammatika.json'), '[\n' + gramOut.map(g => JSON.stringify(g)).join(',\n') + '\n]\n');
+console.log('grammatika.json: ' + gramOut.length + ' ta mavzu (har biri ' + Math.ceil(list.length / 20 / gramOut.length) + ' ta darsga)');

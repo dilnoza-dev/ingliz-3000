@@ -309,6 +309,28 @@ textarea:focus { border-color: var(--accent); outline: none; }
 .rules .spk svg { width: 16px; height: 16px; }
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(18px + env(safe-area-inset-bottom, 0px)); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 10px; font-weight: 700; font-size: .9rem; z-index: 20; max-width: calc(100% - 32px); }
 .loading { padding: 40px 0; text-align: center; color: var(--muted); }
+/* ---------- Ustoz bilan dars ---------- */
+.ustoz { display: flex; gap: 10px; align-items: flex-start; }
+.ustoz .av { flex: none; width: 42px; height: 42px; border-radius: 50%; background: var(--band); color: #F1B654; display: grid; place-items: center; }
+.ustoz .av svg { width: 24px; height: 24px; }
+.ustoz .bub { background: var(--accent-soft); color: var(--ink); border-radius: 4px 14px 14px 14px; padding: 10px 14px; font-size: .95rem; line-height: 1.45; min-width: 0; }
+.ustoz .bub p { margin: 0; }
+.ustoz .bub .why { margin-top: 6px; font-size: .8rem; color: var(--muted); }
+.tprog { display: flex; flex-direction: column; gap: 6px; }
+.tprog .lbl { display: flex; justify-content: space-between; gap: 10px; font-size: .8rem; font-weight: 800; color: var(--muted); }
+.hl { color: var(--teal); background: var(--teal-soft); border-radius: 5px; padding: 0 3px; font-weight: inherit; }
+.formula { font-family: var(--f-display); font-weight: 600; font-size: .95rem; line-height: 1.45; background: var(--surface-2); border-left: 4px solid var(--saffron); border-radius: 8px; padding: 10px 12px; overflow-wrap: anywhere; }
+.blank { display: inline-block; min-width: 4.5em; min-height: 1.2em; border-bottom: 3px solid var(--accent); margin: 0 4px; text-align: center; color: var(--good); vertical-align: baseline; }
+.tipbox { display: flex; flex-direction: column; gap: 6px; background: var(--surface-2); border-radius: 10px; padding: 10px 12px; }
+.tips { margin: 0; padding-left: 18px; font-size: .9rem; display: flex; flex-direction: column; gap: 4px; }
+.tally { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 12px; font-size: .92rem; }
+.tally b { font-variant-numeric: tabular-nums; }
+.gtext { margin: 0; font-size: .98rem; line-height: 1.55; }
+.gex { display: flex; flex-direction: column; gap: 10px; }
+.gex .ex, .tipbox .ex { display: flex; align-items: center; gap: 10px; }
+.gex .en, .tipbox .ex .en { font-weight: 800; color: var(--accent); }
+#uBody .card > .btn, #uBody .tipbox > .btn { align-self: flex-start; }
+@media (max-width: 420px) { .tabs a { padding-inline: 6px; font-size: .82rem; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
 </style>
 
@@ -319,6 +341,7 @@ textarea:focus { border-color: var(--accent); outline: none; }
   </div></div>
   <nav class="gut" aria-label="Boʻlimlar"><div class="wrap tabs">
     <a href="#bosh" data-v="bosh">Bosh</a>
+    <a href="#ustoz" data-v="ustoz">Ustoz</a>
     <a href="#sozlar" data-v="sozlar">Soʻzlar</a>
     <a href="#gaplar" data-v="gaplar">Gaplar</a>
     <a href="#tarjima" data-v="tarjima">Tarjima</a>
@@ -340,7 +363,8 @@ textarea:focus { border-color: var(--accent); outline: none; }
     </div>
   </div>
   <div class="actions">
-    <button class="btn primary lg" id="hLesson" type="button">1-darsni boshlash<small>20 ta yangi soʻz · 4 variantli test</small></button>
+    <button class="btn primary lg" id="hTeach" type="button">1-dars: ustoz bilan<small>Soʻzlar, grammatika, gaplar va talaffuz · 15–20 daqiqa</small></button>
+    <button class="btn lg" id="hLesson" type="button">Faqat soʻz testi<small>20 ta yangi soʻz · 4 variantli test</small></button>
     <button class="btn lg" id="hReview" type="button">Takrorlash<small>Bugun takrorlanadigan soʻz yoʻq</small></button>
   </div>
   <div class="plan" id="hPlan" aria-label="Bugungi reja"></div>
@@ -351,8 +375,9 @@ textarea:focus { border-color: var(--accent); outline: none; }
     <div class="stat"><b id="sStrong">0</b><span>Mustahkam soʻzlar</span></div>
   </div>
 
-  <h2>Besh bosqich</h2>
+  <h2>Bosqichlar</h2>
   <div class="stages">
+    <a class="stage" href="#ustoz"><span class="k">★</span><span><b>Ustoz bilan dars <span class="chip teal">tavsiya</span></b><small>Ustoz darsni bosqichma-bosqich olib boradi: yangi soʻzlar, grammatika, tinglash, gap tuzish, tarjima va gapirish. Har bir dars 15–20 daqiqa.</small></span><span class="go">›</span></a>
     <a class="stage" href="#sozlar"><span class="k">1</span><span><b>Soʻzlar</b><small>Soʻz va pastda 4 ta variant. Har darsda 20 ta soʻz, jami <span data-n="lessons">200</span> dars: A1 dan B2 gacha.</small></span><span class="go">›</span></a>
     <a class="stage" href="#gaplar"><span class="k">2</span><span><b>Gaplar</b><small>Har bir darsning oʻz gaplari bor: soʻzlarni toʻgʻri tartibga qoʻyib gap tuzasiz. Shu yerda 10 ta asosiy grammatika qoidasi ham bor.</small></span><span class="go">›</span></a>
     <a class="stage" href="#tarjima-en"><span class="k">3</span><span><b>Oʻzbekchadan inglizchaga</b><small>Oʻzbekcha gap beriladi, siz uni inglizcha yozasiz. Har darsda 11–20 ta gap, jami <span data-n="sents">3388</span> ta. Xatolar oʻzbekcha tushuntiriladi.</small></span><span class="go">›</span></a>
@@ -414,6 +439,11 @@ textarea:focus { border-color: var(--accent); outline: none; }
   <div id="pBody"><div class="loading">Yuklanmoqda…</div></div>
 </section>
 
+<section id="v-ustoz" class="view" hidden>
+  <div><div class="eyebrow" id="uEyebrow">Ustoz bilan dars</div><h1 id="uTitle">Ustoz bilan dars</h1></div>
+  <div id="uBody"><div class="loading">Yuklanmoqda…</div></div>
+</section>
+
 </div></main>
 <div class="toast" id="toast" hidden></div>
 
@@ -450,7 +480,8 @@ const ICON = {
   slow: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.2v5.6h3.6L12.5 19V5L7.6 9.2H4z" fill="currentColor"/><path d="M16 10.5a2.2 2.2 0 0 1 0 3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>',
   mic: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3" fill="currentColor"/><path d="M5.5 11.2a6.5 6.5 0 0 0 13 0M12 17.7V21" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>',
   stop: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="6.5" width="11" height="11" rx="2.5" fill="currentColor"/></svg>',
-  spark: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" fill="currentColor"/></svg>'
+  spark: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" fill="currentColor"/></svg>',
+  cap: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 1.5 9 12 14l8.5-4.05V16H22V9L12 4z" fill="currentColor"/><path d="M5.5 12.3v3.5c0 1.7 2.9 3.2 6.5 3.2s6.5-1.5 6.5-3.2v-3.5L12 15.4l-6.5-3.1z" fill="currentColor"/></svg>'
 };
 
 /* ================= constants ================= */
@@ -517,7 +548,7 @@ function renderRules(id) {
 
 /* ================= state ================= */
 const LSKEY = 'ingliz3000:v1';
-const DEF = () => ({ v: 1, updated: 0, cur: 0, words: {}, lessons: {}, days: {}, pron: {}, notes: [], gen: {}, settings: { voice: 'auto', pmode: 'translate', tdir: 'uz2en', focus: -1, lvl: 'beginner' } });
+const DEF = () => ({ v: 1, updated: 0, cur: 0, words: {}, lessons: {}, days: {}, pron: {}, notes: [], gen: {}, teach: {}, settings: { voice: 'auto', pmode: 'translate', tdir: 'uz2en', focus: -1, lvl: 'beginner' } });
 let state = DEF();
 function normalizeState(s) {
   const d = DEF();
@@ -818,7 +849,7 @@ function spkBtn(text, label, rate) {
 }
 
 /* ================= router ================= */
-const VIEWS = ['bosh', 'sozlar', 'gaplar', 'tarjima', 'talaffuz'];
+const VIEWS = ['bosh', 'ustoz', 'sozlar', 'gaplar', 'tarjima', 'talaffuz'];
 let view = 'bosh';
 function route() {
   let v = (location.hash || '').replace('#', '');
@@ -831,7 +862,7 @@ function route() {
   view = VIEWS.includes(v) ? v : 'bosh';
   for (const id of VIEWS) $('#v-' + id).hidden = id !== view;
   $$('.tabs a').forEach(a => a.setAttribute('aria-current', a.dataset.v === view ? 'page' : 'false'));
-  if (view !== 'talaffuz') stopMic();
+  stopMic();
   refreshView();
   window.scrollTo(0, 0);
 }
@@ -845,6 +876,7 @@ function refreshView() {
   else if (view === 'gaplar') renderGaplar();
   else if (view === 'tarjima') renderTarjima();
   else if (view === 'talaffuz') renderTalaffuz();
+  else if (view === 'ustoz') renderUstoz();
 }
 function renderAll() { refreshView(); }
 
@@ -897,7 +929,9 @@ function renderHome() {
   });
   const li = state.cur;
   const b = $('#hLesson'); clear(b);
-  b.append((li + 1) + '-darsni boshlash', h('small', { text: 'Soʻzlar #' + (li * LESSON + 1) + '–#' + Math.min(N, li * LESSON + LESSON) + ' · 4 variantli test' }));
+  b.append('Faqat soʻz testi', h('small', { text: (li + 1) + '-dars · soʻzlar #' + (li * LESSON + 1) + '–#' + Math.min(N, li * LESSON + LESSON) + ' · 4 variantli test' }));
+  const tb = $('#hTeach'); clear(tb);
+  tb.append((li + 1) + '-dars: ustoz bilan', h('small', { text: 'Soʻzlar, grammatika, gaplar va talaffuz · 15–20 daqiqa' }));
   const due = dueList().length;
   const r = $('#hReview'); clear(r);
   r.append('Takrorlash', h('small', { text: due ? due + ' ta soʻz takrorlashni kutyapti' : 'Bugun takrorlanadigan soʻz yoʻq' }));
@@ -912,6 +946,7 @@ function renderHome() {
   renderCaps();
 }
 $('#hLesson').addEventListener('click', () => { sz.lesson = state.cur; sz.mode = 'intro'; go('sozlar'); });
+$('#hTeach').addEventListener('click', () => { if (tch.li !== state.cur || tch.done) { buildTeach(state.cur); tch.pinned = false; } go('ustoz'); });
 $('#hReview').addEventListener('click', () => { startReview(); go('sozlar'); });
 
 function renderWeak() {
@@ -1502,7 +1537,7 @@ function renderTarjima() {
 }
 
 /* ================= stage 4: pronunciation ================= */
-const mic = { on: false, text: '', partial: '', langFallback: false, silenceT: null, rec: null };
+const mic = { on: false, text: '', partial: '', langFallback: false, silenceT: null, rec: null, onDone: null };
 $$('[data-pmode]').forEach(b => b.addEventListener('click', () => { stopMic(); state.settings.pmode = b.dataset.pmode; touch(); mods.talaffuz.st = null; renderTalaffuz(); }));
 function wireDictation() {
   dictCap.onPartial(({ text }) => { mic.partial = text || ''; updateLive(); armSilence(); });
@@ -1522,11 +1557,14 @@ function armSilence() { clearTimeout(mic.silenceT); mic.silenceT = setTimeout(()
 function micError(code) {
   const msg = { not_granted: 'Mikrofonga ruxsat berilmadi. Brauzer yoki artifact sozlamalaridan ruxsat bering.', 'not-allowed': 'Mikrofonga ruxsat berilmadi.', dismissed: 'Ruxsat oynasi yopildi. Mikrofonni yana bosing.', rate_limited: 'Mikrofon band. Birozdan keyin qayta urinib koʻring.', unavailable: 'Bu yerda ovozni tanish ishlamaydi. Chrome brauzerida oching yoki matn bilan yozing.', 'no-speech': 'Ovoz eshitilmadi. Yana urinib koʻring.' }[code] || 'Mikrofonda muammo chiqdi. Yana urinib koʻring.';
   toast(msg);
-  if (code === 'not_granted' || code === 'not-allowed' || (code === 'unavailable' && mic.langFallback)) { micMode = 'none'; renderCaps(); renderTalaffuz(); }
+  if (code === 'not_granted' || code === 'not-allowed' || (code === 'unavailable' && mic.langFallback)) { micMode = 'none'; renderCaps(); if (view === 'ustoz') renderUstoz(); else renderTalaffuz(); }
 }
-function startMic() {
-  const st = mods.talaffuz.st; if (!st) return;
-  mic.text = ''; mic.partial = ''; st.result = null; st.ai = null; st.aiErr = '';
+// onDone berilsa (Ustoz bilan dars), natija unga qaytadi; berilmasa — «Talaffuz» boʻlimi
+function startMic(onDone) {
+  mic.onDone = typeof onDone === 'function' ? onDone : null;
+  const st = mods.talaffuz.st; if (!mic.onDone && !st) return;
+  mic.text = ''; mic.partial = '';
+  if (!mic.onDone) { st.result = null; st.ai = null; st.aiErr = ''; }
   if (micMode === 'dictation' && dictCap) {
     const p = mic.langFallback ? dictCap.start() : dictCap.start({ language: 'en' });
     p.catch(e => {
@@ -1535,7 +1573,7 @@ function startMic() {
       if (c === 'stopped') return;
       micError(c);
     });
-    renderTalaffuzResult();
+    if (mic.onDone) updateMicBtn('starting'); else renderTalaffuzResult();
     return;
   }
   if (micMode === 'webspeech' && SR) {
@@ -1549,7 +1587,7 @@ function startMic() {
       };
       r.onerror = ev => { mic.on = false; updateMicBtn('idle'); micError(ev.error); };
       r.onend = () => { const was = mic.on; mic.on = false; updateMicBtn('idle'); if (was || mic.text) finishSpeech(); };
-      r.start(); mic.on = true; updateMicBtn('listening'); renderTalaffuzResult();
+      r.start(); mic.on = true; updateMicBtn('listening'); if (!mic.onDone) renderTalaffuzResult();
     } catch (e) { micError('unavailable'); }
   }
 }
@@ -1558,16 +1596,17 @@ function stopMic() {
   if (micMode === 'dictation' && dictCap && mic.on) { dictCap.stop().catch(() => {}); }
   else if (mic.rec && mic.on) { try { mic.rec.stop(); } catch (e) { /* ignore */ } }
 }
+const micEl = id => $('#' + (view === 'ustoz' ? 'u' + id[0].toUpperCase() + id.slice(1) : id));
 function updateMicBtn(s) {
-  const b = $('#micBtn'); if (!b) return;
+  const b = micEl('micBtn'); if (!b) return;
   const on = s && s !== 'idle';
   b.classList.toggle('on', on);
   b.innerHTML = on ? ICON.stop : ICON.mic;
   b.setAttribute('aria-label', on ? 'Toʻxtatish' : 'Gapirishni boshlash');
-  const l = $('#micLbl'); if (l) l.textContent = s === 'starting' ? 'Ulanmoqda…' : s === 'finishing' ? 'Yakunlanmoqda…' : on ? 'Gapiring… tugatgach toʻxtatish tugmasini bosing' : 'Mikrofonni bosib gapiring';
+  const l = micEl('micLbl'); if (l) l.textContent = s === 'starting' ? 'Ulanmoqda…' : s === 'finishing' ? 'Yakunlanmoqda…' : on ? 'Gapiring… tugatgach toʻxtatish tugmasini bosing' : 'Mikrofonni bosib gapiring';
 }
 function updateLive() {
-  const l = $('#live'); if (!l) return;
+  const l = micEl('live'); if (!l) return;
   clear(l);
   if (!mic.text && !mic.partial) { l.append(h('em', { text: mic.on ? 'Tinglanmoqda…' : '' })); return; }
   l.append(mic.text.trim(), mic.partial ? h('em', { text: ' ' + mic.partial }) : null);
@@ -1575,6 +1614,7 @@ function updateLive() {
 function finishSpeech() {
   const said = (mic.text + ' ' + mic.partial).trim();
   mic.partial = '';
+  if (mic.onDone) { const cb = mic.onDone; mic.onDone = null; cb(said); return; }
   const st = mods.talaffuz.st; if (!st) return;
   if (!said) { renderTalaffuzResult(); return; }
   evaluateSpeech(said);
@@ -1698,6 +1738,468 @@ function renderTalaffuzResult() {
   else box.append(h('p', { class: 'note', text: 'Talaffuz va grammatika xatolarini batafsil tushuntirish Claude tahlili yoqilganda ishlaydi.' }));
 }
 
+/* ================= Ustoz bilan dars ================= */
+// Bitta dars = ustoz olib boradigan toʻliq mashgʻulot (PPP: tanishtirish → mashq → ishlatish):
+// isinish → yangi soʻzlar (5 tadan) va har guruhdan keyin tekshiruv → grammatika → tinglash → boʻsh joy →
+// gap tuzish → tarjima → gapirish → yakun va uyga vazifa.
+let GRAM = [];
+const gSpoken = q => q[0].replace('___', q[1][q[2]]).split('→').pop().replace(/\s*\([^)]*\)/g, '').trim();
+const topicOf = li => GRAM.length ? GRAM[Math.min(GRAM.length - 1, Math.floor(li / 5))] : null;
+const tch = { li: -1, steps: [], k: 0, st: null, tally: {}, miss: new Set(), done: false, pinned: false, ask: null, result: null };
+let tTimer = null;
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const PRAISE = ['Barakalla!', 'Zoʻr!', 'Toʻppa-toʻgʻri!', 'Ajoyib!', 'Juda yaxshi!', 'Aʼlo!'];
+const SOFT = ['Hechqisi yoʻq, xato — oʻrganishning bir qismi.', 'Yaxshi urinish! Toʻgʻri javobni eslab qoling.', 'Shoshilmang: bu soʻz shu tekshiruv oxirida yana chiqadi.'];
+const STEP_NAME = { salom: 'Salomlashish', isinish: 'Isinish', tanish: 'Yangi soʻzlar', tekshir: 'Tekshiruv', gram: 'Grammatika', tinglash: 'Tinglash', cloze: 'Boʻsh joy', tuzish: 'Gap tuzish', tarjima: 'Tarjima', gapirish: 'Gapirish', yakun: 'Yakun' };
+const TALLY_NAME = { isinish: 'Isinish: eski soʻzlar', tekshir: 'Yangi soʻzlar', gram: 'Grammatika', cloze: 'Boʻsh joyni toʻldirish', tuzish: 'Gap tuzish', tarjima: 'Tarjima', gapirish: 'Gapirish' };
+const METHODS = [
+  ['Faol eslash', 'Har bir qismdan keyin savol beriladi. Javobni xotiradan «chiqarib olish» soʻzni qayta oʻqishdan koʻra ancha mustahkam eslab qolishga yordam beradi.'],
+  ['Oraliqli takrorlash', 'Ebbinghausning «unutish egri chizigʻi» va Leitner qutilari: soʻz 1, 3, 7, 16 va 35 kundan keyin, aynan unutilay deb turganda qaytadi.'],
+  ['Kichik boʻlaklar', '20 ta soʻz 5 tadan beriladi. Ishchi xotira bir vaqtda faqat bir nechta yangi narsani yaxshi ushlaydi.'],
+  ['Ikki kanal', 'Soʻz bir vaqtda eshitiladi, yozuvi, talaffuz belgisi va misoli bilan koʻrsatiladi. Ovoz va koʻrinish birga xotirada mustahkamroq qoladi.'],
+  ['Tushunarli kontekst', 'Stiven Krashen gʻoyasi: til tushunarli matnni koʻp eshitish orqali oʻzlashtiriladi. Shuning uchun har bir soʻz gap ichida beriladi.'],
+  ['PPP tuzilishi', 'Tanishtirish → mashq → mustaqil ishlatish. Tajribali oʻqituvchilar darsni aynan shunday tuzadi (J. Harmer, J. Scrivener).'],
+  ['Toʻrt yoʻnalish', 'Pol Neyshn (Paul Nation): tinglash va oʻqish, gapirish va yozish, til shakli (grammatika, talaffuz) hamda ravonlik. Har darsda toʻrttalasi bor.'],
+  ['Xatolar bilan ishlash', 'Xato qilingan soʻz shu darsning oʻzida yana soʻraladi va ertaga takrorlashga qaytadi.'],
+  ['Talaffuz', 'Namunani tinglab qaytarish (shadowing) va oʻzbek tilida yoʻq tovushlar uchun maxsus maslahatlar.'],
+  ['Ijobiy fikr', 'Har bir javobga darhol aniq javob va tushuntirish. Xato — oʻrganishning tabiiy qismi.']
+];
+const TANISH_LINES = ['Tinglang va ovoz chiqarib qaytaring. Urgʻuli boʻgʻinni kuchliroq ayting.', 'Soʻzni misol gap bilan birga eslab qolish osonroq.', 'Ovoz chiqarib ayting: ogʻzingiz ham oʻrgansin.', 'Talaffuz maslahatiga eʼtibor bering.', 'Soʻzni koʻz oldingizga keltiring: u nimani anglatadi?'];
+
+function say(text, why) {
+  return h('div', { class: 'ustoz' },
+    h('div', { class: 'av', svg: ICON.cap }),
+    h('div', { class: 'bub' }, h('p', { text }), why ? h('p', { class: 'why', text: why }) : null));
+}
+function mark(kind, ok) { const t = tch.tally[kind] || (tch.tally[kind] = [0, 0]); t[1]++; if (ok) t[0]++; }
+// Gapdagi shu dars soʻzlarini ajratib koʻrsatadi
+function hlSentence(en, ids, cls) {
+  const set = new Set(ids);
+  return h('div', { class: cls || 'ens', lang: 'en' }, en.split(/(\s+)/).map(p => /^\s+$/.test(p) || !p ? p : set.has(lemma(p.replace(/[^A-Za-z'-]/g, ''))) ? h('b', { class: 'hl', text: p }) : p));
+}
+function exampleFor(w, li) { return BANK.find(s => s.lesson === li + 1 && s.idxs.includes(w)) || BANK.find(s => s.idxs.includes(w)) || null; }
+// Talaffuz yozuvidan oʻzbek oʻquvchisi uchun maslahatlar
+function sayTips(w) {
+  const ipa = String(W[w][3] || '').replace(/^\/|\/$/g, ''), en = W[w][0].toLowerCase(), out = [];
+  const add = (c, t) => { if (c && out.length < 3) out.push(t); };
+  add(/θ/.test(ipa), 'th (θ): tilning uchini tishlar orasiga qoʻyib, ovozsiz puflang. «s» demang.');
+  add(/ð/.test(ipa), 'th (ð): til tishlar orasida, ovoz bilan aytiladi. «z» ham, «d» ham emas.');
+  add(/w/.test(ipa), 'w: lablarni yumaloqlab oldinga choʻzing. «v» demang, tishlar labga tegmaydi.');
+  add(/æ/.test(ipa), 'æ: ogʻizni keng ochib, «a» bilan «e» orasidagi tovushni ayting.');
+  add(/ŋ/.test(ipa), 'ŋ: «tong» soʻzidagi «ng» kabi. Oxirida «g» alohida aytilmaydi.');
+  add(/ʒ/.test(ipa.replace(/dʒ/g, '')), 'ʒ: «jurnal» soʻzidagi yumshoq «j» kabi.');
+  add(/[ɝɚ]/.test(ipa), 'ɝ / ɚ: yumshoq «r». Til tanglayga tegmaydi va titramaydi.');
+  add(/^kn/.test(en), 'kn: boshidagi k oʻqilmaydi.');
+  add(/^wr/.test(en), 'wr: boshidagi w oʻqilmaydi.');
+  add(/mb$/.test(en), 'mb: oxiridagi b oʻqilmaydi.');
+  add(/gh/.test(en) && !/[ɡf]/.test(ipa), 'gh: bu harflar oʻqilmaydi.');
+  add(/^ps/.test(en), 'ps: boshidagi p oʻqilmaydi.');
+  add(/^h/.test(en) && ipa && !/^ˈ?ˌ?h/.test(ipa), 'h: boshidagi h oʻqilmaydi.');
+  const nuc = /aɪ|aʊ|ɔɪ|eɪ|oʊ|ɑː|ɔː|iː|uː|ɝː|[aeiouæɑɔəɚɝɪʊʌ]/g;
+  const syl = (ipa.match(nuc) || []).length, p = ipa.indexOf('ˈ');
+  if (syl > 1 && p >= 0) out.push('Urgʻu ' + ((ipa.slice(0, p).match(nuc) || []).length + 1) + '-boʻgʻinga tushadi: shu boʻgʻinni kuchliroq va uzunroq ayting.');
+  return out;
+}
+function warmIds(li) {
+  if (li <= 0) return [];
+  const due = dueList().filter(i => i < li * LESSON);
+  return [...new Set([...due.slice(0, 3), ...shuffle(lessonIds(li - 1))])].slice(0, 5);
+}
+function makeCloze(li, sents) {
+  const ids = lessonIds(li), set = new Set(ids), items = [], used = new Set();
+  for (const s of sents) {
+    const parts = s.en.split(/\s+/);
+    for (let k = 0; k < parts.length; k++) {
+      const core = parts[k].replace(/^[^A-Za-z']+|[^A-Za-z']+$/g, '');
+      const wi = lemma(core);
+      if (!set.has(wi) || used.has(wi) || /\s/.test(W[wi][0])) continue;
+      used.add(wi);
+      const same = shuffle(ids.filter(i => i !== wi && W[i][2] === W[wi][2])), other = shuffle(ids.filter(i => i !== wi && W[i][2] !== W[wi][2]));
+      items.push({ s, k, core, w: wi, opts: shuffle([wi, ...same.concat(other).slice(0, 3)]) });
+      break;
+    }
+    if (items.length >= 5) break;
+  }
+  return items;
+}
+function buildTeach(li) {
+  const ids = lessonIds(li);
+  const own = shuffle(BANK.filter(s => s.lesson === li + 1));
+  const listen = own.slice(0, 4);
+  const rest = own.length > 7 ? own.slice(4) : own;
+  const byLen = rest.slice().sort((a, b) => a.en.split(/\s+/).length - b.en.split(/\s+/).length);
+  const build = byLen.slice(0, 2), trans = byLen.find(s => !build.includes(s)) || own[0];
+  const steps = [{ t: 'salom' }];
+  const warm = warmIds(li);
+  if (warm.length) steps.push({ t: 'quiz', kind: 'isinish', q: warm.map(w => makeQ(w, Math.random() < 0.5 ? 'en2uz' : 'uz2en')), due: new Set(dueList()) });
+  const types = isBeg() ? ['en2uz', 'en2uz', 'uz2en', 'listen', 'uz2en'] : ['uz2en', 'en2uz', 'listen', 'uz2en', 'en2uz'];
+  for (let g = 0; g * 5 < ids.length; g++) {
+    const grp = ids.slice(g * 5, g * 5 + 5);
+    steps.push({ t: 'tanish', g, ids: grp });
+    steps.push({ t: 'quiz', kind: 'tekshir', g, q: shuffle(grp).map((w, k) => makeQ(w, types[k] === 'listen' && !canSpeak() ? 'uz2en' : types[k])) });
+  }
+  if (topicOf(li)) steps.push({ t: 'gram' });
+  if (listen.length) steps.push({ t: 'tinglash', sents: listen });
+  const cz = makeCloze(li, rest.concat(listen));
+  if (cz.length) steps.push({ t: 'cloze', items: cz });
+  if (build.length) steps.push({ t: 'tuzish', sents: build });
+  if (trans) steps.push({ t: 'tarjima', s: trans });
+  if (listen.length) steps.push({ t: 'gapirish', sents: listen.slice(0, 2) });
+  steps.push({ t: 'yakun' });
+  clearTimeout(tTimer); stopMic();
+  Object.assign(tch, { li, steps, k: 0, st: null, tally: {}, miss: new Set(), done: false, ask: null, result: null });
+  prefetchWords(ids);
+}
+function tGo(k) { stopMic(); clearTimeout(tTimer); tch.k = clamp(k, 0, tch.steps.length - 1); tch.st = null; tch.ask = null; renderUstoz(); window.scrollTo(0, 0); }
+const tNext = () => tGo(tch.k + 1);
+const nextBtn = (label, fn) => h('button', { class: 'btn primary', type: 'button', text: label, onclick: fn || tNext });
+const stepLabel = s => STEP_NAME[s.t === 'quiz' ? s.kind : s.t] + (s.g != null ? ' · ' + (s.g + 1) + '/4-guruh' : '');
+
+function renderUstoz() {
+  if (!N) return;
+  if (tch.li < 0 || (!tch.pinned && tch.k === 0 && tch.li !== state.cur)) buildTeach(state.cur);
+  const li = tch.li, L = levelOfLesson(li), step = tch.steps[tch.k];
+  $('#uEyebrow').textContent = L.code + ' · ' + L.uz;
+  $('#uTitle').textContent = (li + 1) + '-dars · Ustoz bilan';
+  const body = clear($('#uBody'));
+  if (step.t !== 'salom') {
+    const n = tch.steps.length - 1;
+    body.append(h('div', { class: 'tprog' },
+      h('div', { class: 'lbl' }, h('span', { text: stepLabel(step) }), h('span', { text: tch.k + ' / ' + n })),
+      h('div', { class: 'qbar' }, h('i', { style: 'width:' + Math.round(100 * tch.k / n) + '%' }))));
+  }
+  ({ salom: tSalom, quiz: tQuiz, tanish: tTanish, gram: tGram, tinglash: tTinglash, cloze: tCloze, tuzish: tTuzish, tarjima: tTarjima, gapirish: tGapirish, yakun: tYakun })[step.t](body, step);
+  if (step.t !== 'salom' && step.t !== 'yakun') body.append(h('div', { class: 'row' },
+    h('button', { class: 'btn ghost sm', type: 'button', text: '‹ Oldingi qism', disabled: tch.k <= 1, onclick: () => tGo(tch.k - 1) }),
+    h('button', { class: 'btn ghost sm', type: 'button', text: 'Bu qismni oʻtkazib yuborish', onclick: tNext })));
+}
+
+function tSalom(body) {
+  const li = tch.li, ids = lessonIds(li), topic = topicOf(li), prev = state.teach[li];
+  body.append(say('Assalomu alaykum! Men sizning ustozingizman. Bugun ' + (li + 1) + '-dars: ' + ids.length + ' ta yangi soʻz' + (topic ? ', «' + topic.t + '» grammatikasi' : '') + ' va shu soʻzlar bilan gaplar. Dars 15–20 daqiqa davom etadi.',
+    'Maslahat: tinch joyda oʻtiring, iloji boʻlsa quloqchin taqing va har bir soʻzni ovoz chiqarib qaytaring.'));
+  const total = Math.ceil(N / LESSON);
+  const sel = h('select', { id: 'uPick', 'aria-label': 'Darsni tanlash' });
+  for (let k = 0; k < Math.min(total, state.cur + 1); k++) sel.append(h('option', { value: k, text: (k + 1) + '-dars' + (state.teach[k] != null ? ' · ' + state.teach[k] + '%' : '') }));
+  if (li > state.cur) sel.append(h('option', { value: li, text: (li + 1) + '-dars' }));
+  sel.value = String(li);
+  sel.addEventListener('change', () => { buildTeach(+sel.value); tch.pinned = true; renderUstoz(); });
+  const plan = [];
+  if (tch.steps.some(s => s.kind === 'isinish')) plan.push('Isinish: oldingi soʻzlarni eslash (1 daqiqa)');
+  plan.push('Yangi soʻzlar: 4 guruh, har birida 5 ta soʻz, har guruhdan keyin qisqa tekshiruv (8 daqiqa)');
+  if (topic) plan.push('Grammatika: «' + topic.t + '» (3 daqiqa)');
+  plan.push('Tinglash: soʻzlar gap ichida (2 daqiqa)', 'Mashq: boʻsh joy, gap tuzish va tarjima (4 daqiqa)', 'Gapirish: gaplarni ovoz chiqarib aytish (2 daqiqa)', 'Yakun: natija va uyga vazifa');
+  body.append(h('div', { class: 'card' },
+    h('div', { class: 'prompt-lbl', text: 'Bugungi soʻzlar' }),
+    h('div', { class: 'chips' }, ids.map(i => h('button', { class: 'chip blue', type: 'button', lang: 'en', title: 'Eshitish', text: W[i][0], onclick: () => speak(W[i][0]) }))),
+    h('div', { class: 'prompt-lbl', text: 'Dars rejasi' }),
+    h('ol', { class: 'steps' }, plan.map(t => h('li', null, h('span', { text: t })))),
+    prev != null ? h('p', { class: 'note', text: 'Bu darsni oldin ustoz bilan oʻtgansiz, natijangiz ' + prev + '%. Qayta oʻtish ham foydali: takrorlash xotirani mustahkamlaydi.' }) : null,
+    h('div', { class: 'row' }, h('button', { class: 'btn primary lg', type: 'button', text: 'Darsni boshlash', onclick: tNext }), h('label', { class: 'small muted', for: 'uPick', text: 'Boshqa dars:' }), sel)));
+  body.append(h('details', { class: 'rules' },
+    h('summary', null, h('span', null, 'Bu dars qanday usullarga asoslangan?', h('span', { class: 'small muted', text: ' · dunyodagi eng samarali oʻqitish usullari' }))),
+    h('ol', null, METHODS.map(([t, d]) => h('li', null, h('b', { text: t }), h('span', { class: 'small', text: d }))))));
+}
+
+function tQuiz(body, step) {
+  const st = tch.st || (tch.st = { q: step.q.slice(), pos: 0, ans: null, again: new Set(), first: new Set() });
+  const it = st.q[st.pos], w = W[it.w], kind = step.kind;
+  if (st.pos === 0 && st.ans == null) body.append(kind === 'isinish'
+    ? say('Avval oldingi darslardagi soʻzlarni eslaymiz. Variantlarga qarashdan oldin javobni oʻzingiz eslashga harakat qiling.', 'Usul: faol eslash. Soʻzni xotiradan «chiqarib olish» uni uzoq muddatli xotiraga oʻtkazadi.')
+    : say('Endi shu ' + step.q.length + ' ta soʻzni tekshiramiz. Xato qilsangiz, qoʻrqmang: oʻsha soʻz tekshiruv oxirida yana chiqadi.', 'Usul: darhol tekshirish va xato ustida ishlash.'));
+  const showEn = it.type === 'uz2en';
+  let prompt, label;
+  if (it.type === 'en2uz') { label = 'Bu soʻz nimani anglatadi?'; prompt = h('div', { class: 'qword' }, h('div', null, h('span', { class: 'w', lang: 'en', text: w[0] }), w[3] ? h('div', { class: 'ipa lg', text: w[3] }) : null), spkBtn(w[0], 'Eshitish')); }
+  else if (it.type === 'uz2en') { label = 'Inglizchasini toping'; prompt = h('div', { class: 'qword' }, h('span', { class: 'w uz', text: w[1] })); }
+  else { label = 'Eshiting va maʼnosini toping'; prompt = h('div', { class: 'qword' }, h('button', { class: 'listen-big', type: 'button', 'aria-label': 'Soʻzni eshitish', svg: ICON.speak, onclick: () => speak(w[0]) })); }
+  const answer = o => {
+    if (st.ans != null) return;
+    const ok = o === it.w; st.ans = o;
+    if (!st.first.has(it.w)) {
+      st.first.add(it.w); mark(kind, ok);
+      const cur = wget(it.w);
+      if (kind === 'isinish' && step.due.has(it.w)) { const c = cur || [1, 0, 0, 0]; if (ok) { const box = Math.min(5, c[0] + 1); wset(it.w, box, today() + INTERVAL[box], 1, 0); } else wset(it.w, 1, today() + 1, 1, 1); }
+      else { const c = cur || [0, 0, 0, 0]; wset(it.w, c[0], c[1], 1, ok ? 0 : 1); }
+    }
+    const rec = dayRec(); rec.a++; if (ok) rec.c++;
+    if (!ok) { tch.miss.add(it.w); if (!st.again.has(it.w)) { st.again.add(it.w); st.q.push(makeQ(it.w, it.type === 'listen' ? 'en2uz' : it.type)); } }
+    touch();
+    if (!ok || it.type !== 'en2uz') speak(w[0]);
+    renderUstoz();
+    if (ok) tTimer = setTimeout(() => { if (tch.st === st && st.ans === o) qNext(); }, 1100);
+  };
+  const qNext = () => { clearTimeout(tTimer); st.pos++; st.ans = null; if (st.pos >= st.q.length) tNext(); else renderUstoz(); };
+  const done = st.ans != null, ok = st.ans === it.w;
+  const opts = h('div', { class: 'opts' }, it.opts.map((o, k) => h('button', {
+    class: 'opt' + (done ? (o === it.w ? ' ok' : o === st.ans ? ' no' : ' dim') : ''), type: 'button', disabled: done, lang: showEn ? 'en' : null, onclick: () => answer(o)
+  }, h('span', { class: 'k', text: k + 1 }), h('span', { text: showEn ? W[o][0] : W[o][1] }))));
+  body.append(h('div', { class: 'card' },
+    h('div', { class: 'qtop' }, h('span', { class: 'prompt-lbl', text: label }), h('span', { class: 'qcount', text: (st.pos + 1) + ' / ' + st.q.length })),
+    prompt, opts,
+    done ? h('p', { class: 'feedback ' + (ok ? 'ok' : 'no'), text: (ok ? pick(PRAISE) + ' ' : 'Toʻgʻri javob: ') + w[0] + (w[3] ? ' ' + w[3] : '') + ' — ' + w[1] }) : null,
+    done && !ok ? h('p', { class: 'small muted', text: pick(SOFT) }) : null,
+    done ? h('div', { class: 'row' }, nextBtn('Davom etish ›', qNext)) : null));
+  if (!done && (it.type === 'listen' || (it.type === 'en2uz' && isBeg()))) tTimer = setTimeout(() => { if (tch.st === st && st.ans == null && st.q[st.pos] === it) speak(w[0]); }, 300);
+}
+
+function tTanish(body, step) {
+  const st = tch.st || (tch.st = { i: 0, said: -1 });
+  const w = step.ids[st.i], d = W[w], n = step.g * 5 + st.i + 1, ex = exampleFor(w, tch.li), tips = sayTips(w);
+  body.append(st.i === 0
+    ? say('Endi ' + step.ids.length + ' ta yangi soʻz bilan tanishamiz (' + (step.g + 1) + '-guruh). Har bir soʻzni eshiting va ovoz chiqarib 2–3 marta qaytaring.', 'Usul: kichik boʻlaklar va ikki kanal. 5 tadan oʻrganilgan soʻz yaxshiroq esda qoladi. Soʻz bir vaqtda eshitiladi, yoziladi va misolda koʻrsatiladi.')
+    : say(TANISH_LINES[(n - 1) % TANISH_LINES.length]));
+  const last = st.i >= step.ids.length - 1;
+  body.append(h('div', { class: 'card' },
+    h('div', { class: 'row between' }, h('span', { class: 'chip teal', text: 'Yangi soʻz ' + n + ' / ' + lessonIds(tch.li).length }), h('span', { class: 'chip', text: POS[d[2]] || '' })),
+    h('div', { class: 'qword' }, h('div', null, h('span', { class: 'w', lang: 'en', text: d[0] }), d[3] ? h('div', { class: 'ipa lg', text: d[3] }) : null), spkBtn(d[0], 'Eshitish'), spkBtn(d[0], 'Sekin eshitish', 0.75)),
+    h('div', { class: 'uzs', text: d[1] }),
+    tips.length ? h('div', { class: 'tipbox' }, h('div', { class: 'prompt-lbl', text: 'Talaffuz maslahati' }), h('ul', { class: 'tips' }, tips.map(t => h('li', { text: t })))) : null,
+    ex ? h('div', { class: 'tipbox' }, h('div', { class: 'prompt-lbl', text: 'Misol' }), h('div', { class: 'row' }, hlSentence(ex.en, [w]), spkBtn(ex.en, 'Misolni eshitish')), h('div', { class: 'small muted', text: ex.uz })) : null,
+    askBox('word', w, 'Ustozdan soʻrash: bu soʻz qanday ishlatiladi?'),
+    h('div', { class: 'row' },
+      h('button', { class: 'btn', type: 'button', text: 'Sekin, keyin tez eshitish', onclick: () => { speak(d[0], 0.75); clearTimeout(tTimer); tTimer = setTimeout(() => speak(d[0]), 1600); } }),
+      st.i > 0 ? h('button', { class: 'btn ghost', type: 'button', text: '‹ Oldingi soʻz', onclick: () => { st.i--; renderUstoz(); } }) : null,
+      nextBtn(last ? 'Tekshiruvga oʻtish ›' : 'Keyingi soʻz ›', last ? tNext : () => { st.i++; tch.ask = null; renderUstoz(); window.scrollTo(0, 0); }))));
+  if (st.said !== st.i) { st.said = st.i; tTimer = setTimeout(() => { if (tch.st === st) speak(d[0]); }, 300); }
+}
+
+function tGram(body) {
+  const topic = topicOf(tch.li), pos = tch.li % 5;
+  const st = tch.st || (tch.st = { qi: 0, ans: null, items: [topic.q[(2 * pos) % 4], topic.q[(2 * pos + 1) % 4]] });
+  body.append(say(pos === 0
+    ? 'Grammatika daqiqasi. Yangi mavzu: «' + topic.t + '». Avval misollarni tinglang, keyin qoidani oʻqing va ikkita savolga javob bering.'
+    : 'Grammatika: «' + topic.t + '» mavzusini mustahkamlaymiz (' + (pos + 1) + '/5-dars). Qoidani yana bir koʻzdan kechiring.',
+  'Usul: qoida misollar orqali. Avval misol, keyin qoida, keyin oʻzingiz qoʻllaysiz.'));
+  body.append(h('div', { class: 'card' },
+    h('div', { class: 'prompt-lbl', text: 'Mavzu' }), h('h3', { text: topic.t }),
+    h('p', { class: 'gtext', text: topic.d }),
+    h('div', { class: 'formula', text: topic.f }),
+    h('div', { class: 'gex' }, topic.ex.map(([en, uz]) => h('div', { class: 'ex' }, spkBtn(en, 'Eshitish'), h('div', null, h('div', { class: 'en', lang: 'en', text: en }), h('div', { class: 'small muted', text: uz }))))),
+    askBox('gram', tch.li, 'Ustozdan boshqacha tushuntirishni soʻrash')));
+  if (st.qi >= st.items.length) { body.append(h('div', { class: 'row' }, nextBtn('Davom etish ›'))); return; }
+  const q = st.items[st.qi], done = st.ans != null, ok = st.ans === q[2];
+  const [a, b] = q[0].split('___');
+  body.append(h('div', { class: 'card' },
+    h('div', { class: 'qtop' }, h('span', { class: 'prompt-lbl', text: 'Mashq: toʻgʻri variantni tanlang' }), h('span', { class: 'qcount', text: (st.qi + 1) + ' / ' + st.items.length })),
+    h('div', { class: 'ens', lang: 'en' }, a, h('span', { class: 'blank', text: done ? q[1][q[2]] : '' }), b),
+    h('div', { class: 'opts' }, q[1].map((o, k) => h('button', {
+      class: 'opt' + (done ? (k === q[2] ? ' ok' : k === st.ans ? ' no' : ' dim') : ''), type: 'button', lang: 'en', disabled: done,
+      onclick: () => { if (st.ans != null) return; st.ans = k; mark('gram', k === q[2]); touch(); speak(gSpoken(q)); renderUstoz(); }
+    }, h('span', { class: 'k', text: k + 1 }), h('span', { text: o })))),
+    done ? h('p', { class: 'feedback ' + (ok ? 'ok' : 'no'), text: (ok ? pick(PRAISE) + ' ' : 'Toʻgʻri javob: ' + q[1][q[2]] + '. ') + q[3] }) : null,
+    done ? h('div', { class: 'row' }, nextBtn(st.qi < st.items.length - 1 ? 'Keyingi savol ›' : 'Davom etish ›', () => { st.qi++; st.ans = null; if (st.qi >= st.items.length) tNext(); else renderUstoz(); })) : null));
+}
+
+function tTinglash(body, step) {
+  const st = tch.st || (tch.st = { i: 0, open: false, said: -1 });
+  const s = step.sents[st.i], last = st.i >= step.sents.length - 1;
+  body.append(st.i === 0
+    ? say('Endi bugungi soʻzlarni gap ichida eshitamiz. Avval tinglang va maʼnosini oʻzingiz tushunishga harakat qiling, keyin tarjimani oching.', 'Usul: tushunarli kontekst (Krashen). Soʻzni gap ichida eshitish uni tabiiy oʻzlashtirishga yordam beradi.')
+    : say(pick(['Yana tinglang. Ajratilgan soʻzlarga eʼtibor bering.', 'Gapni ichingizda takrorlab koʻring.', 'Tarjimani ochishdan oldin maʼnosini taxmin qiling.'])));
+  body.append(h('div', { class: 'card' },
+    h('div', { class: 'row between' }, h('span', { class: 'chip teal', text: 'Gap ' + (st.i + 1) + ' / ' + step.sents.length }), spkBtn(s.en, 'Sekin eshitish', 0.75)),
+    h('div', { class: 'row' }, h('button', { class: 'listen-big', type: 'button', 'aria-label': 'Gapni eshitish', svg: ICON.speak, onclick: () => speak(s.en) }), hlSentence(s.en, lessonIds(tch.li))),
+    st.open ? h('div', { class: 'uzs', text: s.uz }) : h('button', { class: 'btn', type: 'button', text: 'Tarjimasini koʻrish', onclick: () => { st.open = true; renderUstoz(); } }),
+    h('div', { class: 'row' },
+      st.i > 0 ? h('button', { class: 'btn ghost', type: 'button', text: '‹ Oldingi gap', onclick: () => { st.i--; st.open = false; renderUstoz(); } }) : null,
+      nextBtn(last ? 'Davom etish ›' : 'Keyingi gap ›', last ? tNext : () => { st.i++; st.open = false; renderUstoz(); }))));
+  if (st.said !== st.i) { st.said = st.i; tTimer = setTimeout(() => { if (tch.st === st) speak(s.en); }, 300); }
+}
+
+function tCloze(body, step) {
+  const st = tch.st || (tch.st = { i: 0, ans: null, hint: false });
+  const it = step.items[st.i], parts = it.s.en.split(/\s+/), raw = parts[it.k];
+  const m = raw.match(/^([^A-Za-z']*)(.*?)([^A-Za-z']*)$/), done = st.ans != null, ok = st.ans === it.w, last = st.i >= step.items.length - 1;
+  if (st.i === 0 && !done) body.append(say('Endi gaplardagi boʻsh joyni bugungi soʻzlar bilan toʻldiramiz. Avval gapni oʻqing, keyin mos soʻzni tanlang.', 'Usul: boshqariladigan mashq. Soʻzni toʻgʻri joyda ishlatishni oʻrganamiz.'));
+  const before = parts.slice(0, it.k).join(' '), after = parts.slice(it.k + 1).join(' ');
+  body.append(h('div', { class: 'card' },
+    h('div', { class: 'qtop' }, h('span', { class: 'prompt-lbl', text: 'Boʻsh joyga mos soʻz' }), h('span', { class: 'qcount', text: (st.i + 1) + ' / ' + step.items.length })),
+    h('div', { class: 'ens', lang: 'en' }, before ? before + ' ' : '', m[1], h('span', { class: 'blank', text: done ? m[2] : '' }), m[3], after ? ' ' + after : ''),
+    it.core.toLowerCase() !== W[it.w][0].toLowerCase() && !done ? h('p', { class: 'small muted', text: 'Eslatma: gapda soʻz oʻzgargan shaklda boʻlishi mumkin (masalan -s, -ed, -ing).' }) : null,
+    st.hint || done ? h('div', { class: 'small muted', text: it.s.uz }) : h('button', { class: 'btn ghost sm', type: 'button', text: 'Yordam: tarjimasini koʻrish', onclick: () => { st.hint = true; renderUstoz(); } }),
+    h('div', { class: 'opts' }, it.opts.map((o, k) => h('button', {
+      class: 'opt' + (done ? (o === it.w ? ' ok' : o === st.ans ? ' no' : ' dim') : ''), type: 'button', lang: 'en', disabled: done,
+      onclick: () => { if (st.ans != null) return; st.ans = o; const good = o === it.w; mark('cloze', good); if (!good) tch.miss.add(it.w); const r = dayRec(); r.a++; if (good) r.c++; touch(); speak(it.s.en); renderUstoz(); }
+    }, h('span', { class: 'k', text: k + 1 }), h('span', { text: W[o][0] })))),
+    done ? h('p', { class: 'feedback ' + (ok ? 'ok' : 'no'), text: (ok ? pick(PRAISE) + ' ' : 'Toʻgʻri javob: ') + W[it.w][0] + ' — ' + W[it.w][1] }) : null,
+    done ? h('div', { class: 'row' }, nextBtn(last ? 'Davom etish ›' : 'Keyingi gap ›', last ? tNext : () => { st.i++; st.ans = null; st.hint = false; renderUstoz(); })) : null));
+}
+
+function tTuzish(body, step) {
+  const mk = i => {
+    const s = step.sents[i], words = tileWords(s.en);
+    const extra = isBeg() ? [] : shuffle(lessonIds(tch.li).map(x => W[x][0]).filter(x => !/\s/.test(x) && !words.some(w => sameWord(w, x)))).slice(0, 2).map(x => x.toLowerCase());
+    return { i, s, words, tiles: shuffle([...words, ...extra]).map((t, k) => ({ t, k, used: false })), placed: [], done: false, ok: false, marked: false };
+  };
+  const st = tch.st || (tch.st = mk(0));
+  const s = st.s, last = st.i >= step.sents.length - 1;
+  if (st.i === 0 && !st.done && !st.placed.length) body.append(say('Endi oʻzingiz gap tuzasiz. Oʻzbekcha gapni oʻqing va inglizcha soʻzlarni toʻgʻri tartibda bosing. Eslatma: inglizchada feʼl egadan keyin darhol keladi.', 'Usul: PPP tuzilishi. Hozir «mashq» bosqichi: soʻz va grammatikani xatosiz ishlatishni oʻrganamiz.'));
+  const slots = h('div', { class: 'slots' + (st.done ? (st.ok ? ' ok' : ' no') : '') });
+  if (!st.placed.length) slots.append(h('span', { class: 'ph', text: 'Pastdagi soʻzlarni tartib bilan bosing' }));
+  st.placed.forEach((k, p) => slots.append(h('button', { class: 'tile', type: 'button', lang: 'en', disabled: st.done, text: st.tiles[k].t, onclick: () => { st.placed.splice(p, 1); st.tiles[k].used = false; renderUstoz(); } })));
+  const check = () => {
+    if (st.placed.length < st.words.length) { toast('Gap hali toʻliq emas: unda ' + st.words.length + ' ta soʻz bor, siz ' + st.placed.length + ' tasini qoʻydingiz.'); return; }
+    const said = st.placed.map(k => st.tiles[k].t);
+    st.ok = said.every((w, i) => sameWord(w, st.words[i])); st.done = true;
+    if (!st.marked) { st.marked = true; mark('tuzish', st.ok); }
+    dayRec().s++; touch(); speak(s.en); renderUstoz();
+  };
+  const reveal = () => {
+    st.tiles.forEach(t => { t.used = false; }); st.placed = [];
+    for (const w of st.words) { const t = st.tiles.find(x => !x.used && x.t === w); if (t) { t.used = true; st.placed.push(t.k); } }
+    if (!st.marked) { st.marked = true; mark('tuzish', false); }
+    st.done = true; st.ok = false; speak(s.en); renderUstoz();
+  };
+  body.append(h('div', { class: 'card' },
+    h('div', { class: 'qtop' }, h('span', { class: 'prompt-lbl', text: 'Inglizcha tuzing' }), h('span', { class: 'qcount', text: (st.i + 1) + ' / ' + step.sents.length })),
+    h('div', { class: 'uzs', text: s.uz }),
+    slots,
+    st.done ? null : h('div', { class: 'tiles' }, st.tiles.map(tl => h('button', { class: 'tile' + (tl.used ? ' used' : ''), type: 'button', lang: 'en', disabled: tl.used, text: tl.t, onclick: () => { tl.used = true; st.placed.push(tl.k); renderUstoz(); } }))),
+    st.done ? h('p', { class: 'feedback ' + (st.ok ? 'ok' : 'no'), text: st.ok ? pick(PRAISE) : 'Toʻgʻri tartib:' }) : null,
+    st.done && !st.ok ? diffView(s.en, align(toks(s.en), toks(st.placed.map(k => st.tiles[k].t).join(' '))).tm, 'miss') : null,
+    st.done ? h('div', { class: 'row' }, hlSentence(s.en, lessonIds(tch.li)), spkBtn(s.en, 'Eshitish')) : null,
+    h('div', { class: 'row' },
+      st.done ? nextBtn(last ? 'Davom etish ›' : 'Keyingi gap ›', last ? tNext : () => { tch.st = mk(st.i + 1); renderUstoz(); }) : h('button', { class: 'btn primary', type: 'button', text: 'Tekshirish', onclick: check }),
+      st.done && !st.ok ? h('button', { class: 'btn', type: 'button', text: 'Qayta urinish', onclick: () => { const n = mk(st.i); n.marked = true; tch.st = n; renderUstoz(); } }) : null,
+      !st.done ? h('button', { class: 'btn ghost', type: 'button', text: 'Tozalash', disabled: !st.placed.length, onclick: () => { st.placed = []; st.tiles.forEach(t => { t.used = false; }); renderUstoz(); } }) : null,
+      !st.done ? h('button', { class: 'btn ghost', type: 'button', text: 'Javobni koʻrsatish', onclick: reveal }) : null)));
+}
+
+function tTarjima(body, step) {
+  const s = step.s, st = tch.st || (tch.st = { val: '', res: null, tries: 0, help: false });
+  body.append(say('Endi tarjima: oʻzbekcha gapni inglizchaga yozing. Xato boʻlsa ham qoʻrqmang, men qayerda xato qilganingizni koʻrsataman.', 'Usul: mustaqil ishlatish (PPP: «ishlatish» bosqichi). Soʻz va grammatikani oʻzingiz qoʻllaysiz.'));
+  const help = s.idxs.filter(i => lessonIds(tch.li).includes(i) || (wget(i) && wget(i)[0] >= 1)).slice(0, 6);
+  const ta = h('textarea', { id: 'uTr', lang: 'en', spellcheck: 'false', autocapitalize: 'sentences', placeholder: 'Inglizcha tarjimani shu yerga yozing…', 'aria-label': 'Inglizcha tarjima' });
+  ta.value = st.val;
+  ta.addEventListener('input', () => { st.val = ta.value; });
+  const check = () => {
+    const typed = ta.value.trim();
+    if (!typed) { toast('Avval inglizcha tarjimani yozing.'); ta.focus(); return; }
+    const al = align(toks(s.en), toks(typed)), ok = al.score >= 90;
+    if (!st.tries) mark('tarjima', ok);
+    st.tries++; st.res = { al, ok, typed };
+    dayRec().s++; touch(); speak(s.en); renderUstoz();
+  };
+  const r = st.res;
+  body.append(h('div', { class: 'card' },
+    h('div', { class: 'prompt-lbl', text: 'Inglizchaga tarjima qiling' }),
+    h('div', { class: 'uzs', text: s.uz }),
+    st.help && help.length ? h('div', { class: 'chips' }, help.map(i => h('span', { class: 'chip teal', text: W[i][0] + ' — ' + W[i][1] }))) : null,
+    r && r.ok ? null : ta,
+    r ? h('div', null,
+      h('p', { class: 'feedback ' + (r.ok ? 'ok' : 'no'), text: r.ok ? pick(PRAISE) + ' Tarjimangiz toʻgʻri.' : 'Deyarli! Qizil rang bilan belgilangan soʻzlarga eʼtibor bering:' }),
+      r.ok ? null : diffView(s.en, r.al.tm, 'miss'),
+      h('div', { class: 'row' }, h('span', { class: 'ens', lang: 'en', text: s.en }), spkBtn(s.en, 'Eshitish'))) : null,
+    h('div', { class: 'row' },
+      r ? nextBtn('Davom etish ›') : h('button', { class: 'btn primary', type: 'button', text: 'Tekshirish', onclick: check }),
+      r && !r.ok ? h('button', { class: 'btn', type: 'button', text: 'Yana urinish', onclick: () => { st.res = null; renderUstoz(); } }) : null,
+      !r && help.length && !st.help ? h('button', { class: 'btn ghost', type: 'button', text: 'Yordam: soʻzlar', onclick: () => { st.help = true; renderUstoz(); } }) : null)));
+}
+
+function tGapirish(body, step) {
+  const st = tch.st || (tch.st = { i: 0, res: null, show: isBeg(), marked: new Set() });
+  const s = step.sents[st.i], last = st.i >= step.sents.length - 1;
+  body.append(st.i === 0 && !st.res
+    ? say('Endi gapiramiz! Avval namunani tinglang, keyin mikrofonni bosib xuddi shunday ayting. Shoshilmang, aniq va baland ovozda gapiring.', 'Usul: tinglab qaytarish (shadowing). Talaffuz va ravonlikni eng tez rivojlantiradigan mashq.')
+    : say(pick(['Yana bir gap. Avval tinglang, keyin ayting.', 'Urgʻuli soʻzlarni kuchliroq ayting.', 'Gapni bir nafasda, bir tekis aytishga harakat qiling.'])));
+  const next = () => { st.i++; st.res = null; st.show = isBeg(); renderUstoz(); };
+  const r = st.res;
+  const heard = said => {
+    if (tch.st !== st) return;
+    if (!said) { toast('Ovoz eshitilmadi. Yana urinib koʻring.'); renderUstoz(); return; }
+    const al = align(toks(s.en), toks(said)), ok = al.score >= 80;
+    if (!st.marked.has(st.i)) { st.marked.add(st.i); mark('gapirish', ok); }
+    const T = toks(s.en);
+    for (let i = 0; i < T.length; i++) if (!al.tm[i] && T[i].length > 2 && !STOP.has(T[i])) state.pron[T[i]] = (state.pron[T[i]] || 0) + 1;
+    dayRec().p++; st.res = { said, al, ok }; touch(); renderUstoz();
+  };
+  const canMic = micMode !== 'none';
+  body.append(h('div', { class: 'card' },
+    h('div', { class: 'qtop' }, h('span', { class: 'prompt-lbl', text: 'Ovoz chiqarib ayting' }), h('span', { class: 'qcount', text: (st.i + 1) + ' / ' + step.sents.length })),
+    h('div', { class: 'uzs', text: s.uz }),
+    st.show || r ? h('div', { class: 'row' }, hlSentence(s.en, lessonIds(tch.li)), spkBtn(s.en, 'Namunani eshitish'), spkBtn(s.en, 'Sekin eshitish', 0.75))
+      : h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', text: 'Inglizchasini koʻrish', onclick: () => { st.show = true; renderUstoz(); } }), spkBtn(s.en, 'Namunani eshitish')),
+    r ? h('div', null,
+      h('p', { class: 'feedback ' + (r.ok ? 'ok' : 'no'), text: r.ok ? pick(PRAISE) + ' Talaffuzingiz tushunarli (' + r.al.score + '%).' : 'Natija: ' + r.al.score + '%. Qizil soʻzlar eshitilmadi, ularni sekinroq va aniqroq ayting:' }),
+      diffView(s.en, r.al.tm, 'miss'),
+      h('p', { class: 'small muted', text: 'Siz aytdingiz: ' + r.said })) : null,
+    !r && canMic ? h('div', { class: 'micwrap' },
+      h('button', { id: 'uMicBtn', class: 'mic' + (mic.on ? ' on' : ''), type: 'button', 'aria-label': mic.on ? 'Toʻxtatish' : 'Gapirishni boshlash', svg: mic.on ? ICON.stop : ICON.mic, onclick: () => { if (mic.on) stopMic(); else startMic(heard); } }),
+      h('div', { id: 'uMicLbl', class: 'small muted', text: mic.on ? 'Gapiring… tugatgach toʻxtatish tugmasini bosing' : 'Mikrofonni bosib gapiring' }),
+      h('div', { id: 'uLive', class: 'live', lang: 'en' })) : null,
+    !r && !canMic ? h('p', { class: 'note', text: 'Bu qurilmada mikrofon orqali tekshirish ishlamaydi. Namunani tinglang va gapni ovoz chiqarib 3 marta ayting, keyin «Aytdim» ni bosing.' }) : null,
+    h('div', { class: 'row' },
+      r ? h('button', { class: 'btn', type: 'button', text: 'Yana aytish', onclick: () => { st.res = null; renderUstoz(); } }) : null,
+      !r && !canMic ? h('button', { class: 'btn primary', type: 'button', text: 'Aytdim ✓', onclick: () => { if (!st.marked.has(st.i)) { st.marked.add(st.i); mark('gapirish', true); } dayRec().p++; touch(); if (last) tNext(); else next(); } }) : null,
+      r || !canMic ? null : h('button', { class: 'btn ghost', type: 'button', text: last ? 'Oʻtkazib yuborish' : 'Keyingi gapga oʻtish', onclick: () => { stopMic(); if (last) tNext(); else next(); } }),
+      r ? nextBtn(last ? 'Darsni yakunlash ›' : 'Keyingi gap ›', last ? tNext : next) : null)));
+}
+
+function finishTeach() {
+  const li = tch.li;
+  let right = 0, total = 0;
+  for (const [k, [a, b]] of Object.entries(tch.tally)) { if (k === 'isinish') continue; right += a; total += b; }
+  const score = total ? Math.round(100 * right / total) : 100;
+  const ids = lessonIds(li);
+  for (const i of ids) { const cur = wget(i) || [0, 0, 0, 0]; wset(i, Math.max(cur[0], 1), tch.miss.has(i) ? today() : today() + 1, 0, 0); }
+  state.lessons[li] = Math.max(state.lessons[li] || 0, score);
+  state.teach[li] = Math.max(state.teach[li] || 0, score);
+  if (li === state.cur && state.cur < Math.ceil(N / LESSON) - 1) state.cur++;
+  state.settings.focus = li;
+  touch();
+  tch.done = true; tch.result = { score, missed: ids.filter(i => tch.miss.has(i)) };
+}
+function tYakun(body) {
+  if (!tch.done) finishTeach();
+  const r = tch.result, li = tch.li, n = lessonIds(li).length;
+  body.append(say(r.score >= 90 ? 'Aʼlo natija! Bugun ' + n + ' ta yangi soʻz oʻrgandingiz. Ertaga takrorlashni unutmang: shunda ular uzoq esda qoladi.'
+    : r.score >= 70 ? 'Yaxshi ishladingiz! Xato qilingan soʻzlarni pastda koʻring: ular ertaga takrorlashda yana chiqadi.'
+      : 'Bugun qiyinroq boʻldi, bu mutlaqo normal holat. Bu darsni ertaga ustoz bilan yana bir marta oʻting: ikkinchi marta ancha oson boʻladi.',
+  'Usul: oraliqli takrorlash. Bugungi soʻzlar ertaga, keyin 3, 7, 16 va 35 kundan keyin qaytadi.'));
+  const homework = ['Ertaga ilovani ochib, bosh sahifada «Takrorlash» ni bosing: bugungi soʻzlar qaytadi.', 'Bugungi 3 ta soʻz bilan oʻzingiz bittadan gap tuzing va ularni ovoz chiqarib ayting.',
+    r.missed.length ? 'Xato qilingan soʻzlarni (pastda) bugun kechqurun yana bir marta eshiting.' : '«Gaplar» boʻlimida shu darsning boshqa gaplarini ham tuzib koʻring.'];
+  body.append(h('div', { class: 'card' },
+    h('div', { class: 'prompt-lbl', text: (li + 1) + '-dars yakunlandi' }),
+    h('div', { class: 'score ' + (r.score >= 80 ? 'good' : r.score >= 50 ? 'mid' : 'low') }, h('b', { text: r.score + '%' }), h('span', { class: 'muted', text: 'birinchi urinishdagi toʻgʻri javoblar' })),
+    h('div', { class: 'tally' }, Object.keys(TALLY_NAME).filter(k => tch.tally[k]).map(k => [h('span', { text: TALLY_NAME[k] }), h('b', { text: tch.tally[k][0] + ' / ' + tch.tally[k][1] })])),
+    r.missed.length ? h('div', null, h('p', { class: 'small muted', text: 'Qayta koʻrish kerak boʻlgan soʻzlar:' }), h('div', { class: 'chips' }, r.missed.map(i => h('button', { class: 'chip saffron', type: 'button', text: W[i][0] + ' — ' + W[i][1], onclick: () => speak(W[i][0]) })))) : h('p', { class: 'feedback ok', text: 'Yangi soʻzlarda birorta ham xato yoʻq!' }),
+    h('div', { class: 'prompt-lbl', text: 'Uyga vazifa' }),
+    h('ol', { class: 'steps' }, homework.map(t => h('li', null, h('span', { text: t })))),
+    h('div', { class: 'row' },
+      state.cur !== li ? h('button', { class: 'btn primary', type: 'button', text: 'Keyingi dars: ' + (state.cur + 1) + '-dars ›', onclick: () => { buildTeach(state.cur); tch.pinned = false; renderUstoz(); window.scrollTo(0, 0); } }) : null,
+      h('button', { class: 'btn', type: 'button', text: 'Bu darsni qayta oʻtish', onclick: () => { buildTeach(li); tch.pinned = true; renderUstoz(); window.scrollTo(0, 0); } }),
+      h('button', { class: 'btn ghost', type: 'button', text: 'Bosh sahifa', onclick: () => go('bosh') }))));
+}
+
+// Claude ochiq boʻlsa (claude.ai): ustoz soʻz yoki mavzuni boshqacha tushuntirib beradi
+async function tAsk(kind, arg) {
+  if (!sampleCap || (tch.ask && tch.ask.busy)) return;
+  const key = kind + ':' + arg;
+  tch.ask = { key, busy: true }; renderUstoz();
+  const lvl = isBeg() ? 'an absolute beginner' : 'a CEFR ' + levelOfLesson(tch.li).code + ' learner';
+  const topic = topicOf(tch.li);
+  const prompt = (kind === 'word'
+    ? 'You are a warm, expert English teacher for ' + lvl + ' whose native language is Uzbek. Explain the English word "' + W[arg][0] + '" (Uzbek: ' + W[arg][1] + ') in simple Uzbek: what it means, how and when it is used, common word partners, and one memory tip.'
+    : 'You are a warm, expert English teacher for ' + lvl + ' whose native language is Uzbek. Explain this grammar topic again in simple Uzbek, differently from the textbook, comparing it with Uzbek grammar where helpful. Topic: "' + topic.t + '". Textbook explanation: "' + topic.d + '".') +
+    ' Write Uzbek in Latin script and use oʻ, gʻ and ʼ correctly. Keep the explanation under 90 words. Then give 3 new short, natural example sentences with Uzbek translations. Reply with ONLY JSON: {"explain":"...","examples":[{"en":"...","uz":"..."}]}';
+  let res;
+  try {
+    const r = await askClaude(prompt);
+    res = { key, explain: str(r && r.explain, 1200), examples: (r && Array.isArray(r.examples) ? r.examples : []).slice(0, 4).map(x => ({ en: str(x && x.en, 200), uz: str(x && x.uz, 240) })).filter(x => x.en) };
+    if (!res.explain) throw { code: 'invalid_json' };
+  } catch (e) { res = { key, err: sampleErr(e) || 'Ustoz hozir javob bera olmadi. Keyinroq urinib koʻring.' }; }
+  if (tch.ask && tch.ask.key === key) { tch.ask = res; renderUstoz(); }
+}
+function askBox(kind, arg, label) {
+  if (!sampleCap) return null;
+  const a = tch.ask && tch.ask.key === kind + ':' + arg ? tch.ask : null;
+  if (!a) return h('button', { class: 'btn sm', type: 'button', svg: ICON.spark, onclick: () => tAsk(kind, arg) }, label);
+  if (a.busy) return h('p', { class: 'note', text: 'Ustoz javob yozmoqda…' });
+  if (a.err) return h('p', { class: 'note warn', text: a.err });
+  return h('div', { class: 'tipbox' }, h('div', { class: 'prompt-lbl', text: 'Ustoz tushuntiradi' }), h('p', { class: 'gtext', text: a.explain }),
+    a.examples.map(x => h('div', { class: 'ex' }, spkBtn(x.en, 'Eshitish'), h('div', null, h('div', { class: 'en', lang: 'en', text: x.en }), h('div', { class: 'small muted', text: x.uz })))));
+}
+
 /* ================= boot ================= */
 async function boot() {
   loadLocal();
@@ -1705,7 +2207,9 @@ async function boot() {
   route();
   initCaps();
   try {
-    const [w, s] = await Promise.all([fetch('words.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }), fetch('sentences.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })]);
+    const [w, s, gm] = await Promise.all([fetch('words.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }), fetch('sentences.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+      fetch('grammatika.json').then(r => r.ok ? r.json() : []).catch(() => [])]);
+    GRAM = Array.isArray(gm) ? gm : [];
     W = w; N = W.length;
     W.forEach((x, i) => { const k = x[0].toLowerCase(); if (!IDX.has(k)) IDX.set(k, i); });
     BANK = s.map(([en, uz, lesson], i) => ({ en, uz, lesson: +lesson || 0, src: 'bank', id: 'b' + i, ...analyze(en) }));
@@ -1731,7 +2235,7 @@ boot();
 <button class="install-btn" id="installBtn" type="button" hidden>⬇ Ilovani oʻrnatish</button>
 <script>
 (() => {
-  // App version 38ce9c0344
+  // App version 8850beaf2f
   let deferred = null;
   const btn = document.getElementById('installBtn');
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; btn.hidden = false; });
