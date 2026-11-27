@@ -171,6 +171,42 @@ button.chip { cursor: pointer; }
 .livescore .bump { animation: bump .35s ease; }
 @keyframes bump { 40% { transform: scale(1.18); } }
 .livescore.lg span { font-size: 1rem; padding: 6px 14px; }
+.livescore .p-good { background: var(--good-soft); color: var(--good-ink); }
+.livescore .p-mid { background: var(--saffron-soft); color: var(--saffron-ink); }
+.livescore .p-low { background: var(--bad-soft); color: var(--bad-ink); }
+/* Oʻzlashtirish reytingi (bosh sahifa) */
+.rating .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.rating .pct { font-family: var(--f-display); font-weight: 700; font-size: 2.6rem; line-height: 1.05; font-variant-numeric: tabular-nums; margin-top: 4px; }
+.rating .pct small { font-size: 1.2rem; color: var(--muted); margin-left: 2px; }
+.lvlchip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 999px; font-weight: 800; font-size: .85rem; white-space: nowrap; }
+.lvlchip.good { background: var(--good-soft); color: var(--good-ink); }
+.lvlchip.mid { background: var(--saffron-soft); color: var(--saffron-ink); }
+.lvlchip.low { background: var(--bad-soft); color: var(--bad-ink); }
+.lvlchip.none { background: var(--surface-2); color: var(--muted); }
+.meterbar { height: 10px; border-radius: 5px; overflow: hidden; background: var(--surface-2); }
+.meterbar.good { background: var(--good-soft); } .meterbar.mid { background: var(--saffron-soft); } .meterbar.low { background: var(--bad-soft); }
+.meterbar i { display: block; height: 100%; border-radius: 5px; transition: width .4s; }
+.meterbar.good i { background: var(--good); } .meterbar.mid i { background: var(--saffron); } .meterbar.low i { background: var(--bad); }
+.submetrics { display: grid; gap: 12px; }
+.subm { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; align-items: baseline; font-size: .9rem; }
+.subm .lbl { font-weight: 700; }
+.subm .lbl small { display: block; color: var(--muted); font-weight: 600; font-size: .78rem; }
+.subm b { font-family: var(--f-display); font-weight: 600; font-variant-numeric: tabular-nums; }
+.subm .bar { grid-column: 1 / -1; height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
+.subm .bar i { display: block; height: 100%; border-radius: 3px; }
+.week { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; height: 112px; padding-top: 22px; }
+.week .d { position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 0; border-radius: 6px; }
+.week .d:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.week .col { flex: 1; width: 100%; max-width: 22px; display: flex; align-items: flex-end; background: var(--surface-2); border-radius: 4px; overflow: hidden; }
+.week .col i { display: block; width: 100%; background: var(--violet); border-radius: 4px 4px 0 0; }
+.week .day { font-size: .72rem; font-weight: 700; color: var(--muted); white-space: nowrap; }
+.week .d.today .day { color: var(--ink); }
+.week .val { position: absolute; top: -20px; font-size: .72rem; font-weight: 800; color: var(--ink); font-variant-numeric: tabular-nums; }
+.week .tip { position: absolute; bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); font-size: .75rem; font-weight: 700; padding: 4px 8px; border-radius: 6px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .12s; z-index: 3; }
+.week .d:first-child .tip, .week .d:nth-child(2) .tip { left: 0; transform: none; }
+.week .d:last-child .tip, .week .d:nth-child(6) .tip { left: auto; right: 0; transform: none; }
+.week .d:hover .tip, .week .d:focus .tip { opacity: 1; }
+.week .d:hover .val, .week .d:focus .val { opacity: 0; }
 .decknav { display: flex; align-items: center; gap: 6px; }
 .steps { margin: 0; padding: 10px 12px; list-style: none; display: flex; flex-direction: column; gap: 6px; background: var(--surface-2); border-radius: 10px; counter-reset: st; font-size: .88rem; color: var(--muted); }
 .steps li { counter-increment: st; display: flex; gap: 8px; align-items: flex-start; }
@@ -294,7 +330,7 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4
 .ustoz .bub p { margin: 0; }
 .ustoz .bub .why { margin-top: 6px; font-size: .8rem; color: var(--muted); }
 .tprog { display: flex; flex-direction: column; gap: 6px; }
-.tprog .lbl { display: flex; justify-content: space-between; gap: 10px; font-size: .8rem; font-weight: 800; color: var(--muted); }
+.tprog .lbl { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 10px; font-size: .8rem; font-weight: 800; color: var(--muted); }
 .hl { color: var(--teal); background: var(--teal-soft); border-radius: 5px; padding: 0 3px; font-weight: inherit; }
 .formula { font-family: var(--f-display); font-weight: 600; font-size: .95rem; line-height: 1.45; background: var(--accent-soft); color: var(--ink); border-left: 4px solid var(--accent); border-radius: 8px; padding: 10px 12px; overflow-wrap: anywhere; }
 .blank { display: inline-block; min-width: 4.5em; min-height: 1.2em; border-bottom: 3px solid var(--accent); margin: 0 4px; text-align: center; color: var(--good-ink); vertical-align: baseline; }
@@ -344,6 +380,7 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4
     <button class="btn lg" id="hLesson" type="button">Faqat soʻz testi<small>20 ta yangi soʻz · 4 variantli test</small></button>
     <button class="btn lg" id="hReview" type="button">Takrorlash<small>Bugun takrorlanadigan soʻz yoʻq</small></button>
   </div>
+  <div class="card rating" id="hRating" aria-label="Oʻzlashtirish reytingi"></div>
   <div class="plan" id="hPlan" aria-label="Bugungi reja"></div>
   <div class="stats" id="hStats">
     <div class="stat"><b id="sToday">0</b><span>Bugungi javoblar</span></div>
@@ -449,8 +486,10 @@ const clear = el => { while (el.firstChild) el.removeChild(el.firstChild); retur
 function liveScore(right, wrong, big) {
   return h('div', { class: 'livescore' + (big ? ' lg' : ''), role: 'status', 'aria-label': 'Toʻgʻri: ' + right + ', xato: ' + wrong },
     h('span', { class: 'ok', title: 'Toʻgʻri javoblar' }, '✓ ', h('b', { text: right })),
-    h('span', { class: 'no', title: 'Xato javoblar' }, '✗ ', h('b', { text: wrong })));
+    h('span', { class: 'no', title: 'Xato javoblar' }, '✗ ', h('b', { text: wrong })),
+    right + wrong ? h('span', { class: 'p-' + pctLevel(Math.round(100 * right / (right + wrong))), title: 'Natija: toʻgʻri javoblar ulushi', text: Math.round(100 * right / (right + wrong)) + '%' }) : null);
 }
+const pctLevel = p => p >= 80 ? 'good' : p >= 50 ? 'mid' : 'low';
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
 const today = () => Math.floor((Date.now() - new Date().getTimezoneOffset() * 60000) / 86400000);
@@ -900,7 +939,54 @@ function renderPlan(d) {
   })));
 }
 
+/* ---------- Oʻzlashtirish reytingi ---------- */
+const DAYS_UZ = ['Yakshanba', 'Dushanba', 'Seshanba', 'Chorshanba', 'Payshanba', 'Juma', 'Shanba'];
+// Reyting = soʻnggi 14 kundagi toʻgʻri javoblar ulushi (60%) + oʻrganilgan soʻzlarning mustahkamligi (40%)
+function ratingData() {
+  const t = today();
+  let a = 0, c = 0;
+  for (let d = t - 13; d <= t; d++) { const r = state.days[d]; if (r) { a += r.a || 0; c += r.c || 0; } }
+  const acc = a ? Math.round(100 * c / a) : null;
+  const ws = Object.values(state.words).filter(w => w[0] >= 1);
+  const mem = ws.length ? Math.round(100 * ws.reduce((n, w) => n + Math.min(5, w[0]), 0) / (5 * ws.length)) : null;
+  const total = acc == null ? mem : mem == null ? acc : Math.round(0.6 * acc + 0.4 * mem);
+  const week = [];
+  for (let d = t - 6; d <= t; d++) { const r = state.days[d] || {}; week.push({ d, a: r.a || 0, c: r.c || 0 }); }
+  return { acc, mem, total, answers: a, words: ws.length, week };
+}
+const ratingLevel = p => p == null ? ['none', 'Hali baholanmagan'] : p >= 85 ? ['good', '★ Aʼlo'] : p >= 70 ? ['good', 'Yaxshi'] : p >= 50 ? ['mid', 'Oʻrtacha'] : ['low', 'Koʻproq mashq kerak'];
+function renderRating() {
+  const box = $('#hRating'); if (!box) return;
+  clear(box);
+  const r = ratingData(), [cls, name] = ratingLevel(r.total), t = today();
+  const sub = (label, note, pct, color) => h('div', { class: 'subm' },
+    h('span', { class: 'lbl' }, label, h('small', { text: note })),
+    h('b', { text: pct == null ? '–' : pct + '%' }),
+    h('span', { class: 'bar' }, h('i', { style: 'width:' + (pct || 0) + '%;background:' + color })));
+  box.append(
+    h('div', { class: 'top' },
+      h('div', null, h('div', { class: 'prompt-lbl', text: 'Oʻzlashtirish reytingi' }), h('div', { class: 'pct' }, r.total == null ? '–' : String(r.total), r.total == null ? null : h('small', { text: '%' }))),
+      h('span', { class: 'lvlchip ' + cls, text: name })),
+    h('div', { class: 'meterbar ' + cls, role: 'meter', 'aria-valuemin': 0, 'aria-valuemax': 100, 'aria-valuenow': r.total || 0, 'aria-label': 'Oʻzlashtirish reytingi: ' + (r.total == null ? 'hali yoʻq' : r.total + '%') }, h('i', { style: 'width:' + (r.total || 0) + '%' })),
+    h('div', { class: 'submetrics' },
+      sub('Testlarda toʻgʻri javoblar', r.answers ? 'soʻnggi 14 kun · ' + r.answers + ' ta javob' : 'soʻnggi 14 kunda hali javob yoʻq', r.acc, 'var(--cyan)'),
+      sub('Soʻzlar mustahkamligi', r.words ? r.words + ' ta soʻz · har toʻgʻri takrorlashda oshadi' : 'hali soʻz oʻrganilmagan', r.mem, 'var(--violet)')),
+    h('div', null,
+      h('div', { class: 'prompt-lbl', text: 'Soʻnggi 7 kun: toʻgʻri javoblar ulushi' }),
+      h('div', { class: 'week', role: 'list' }, r.week.map(x => {
+        const p = x.a ? Math.round(100 * x.c / x.a) : null, dn = DAYS_UZ[(x.d + 4) % 7], isT = x.d === t;
+        const label = (isT ? 'Bugun' : dn) + ': ' + (p == null ? 'mashq qilinmagan' : p + '% toʻgʻri · ' + x.a + ' ta javob');
+        return h('div', { class: 'd' + (isT ? ' today' : ''), role: 'listitem', tabindex: 0, 'aria-label': label },
+          h('span', { class: 'tip', text: label }),
+          isT && p != null ? h('span', { class: 'val', text: p + '%' }) : null,
+          h('span', { class: 'col' }, h('i', { style: 'height:' + (p || 0) + '%' })),
+          h('span', { class: 'day', text: isT ? 'Bugun' : dn.slice(0, 2) }));
+      }))),
+    h('p', { class: 'small muted', text: 'Reyting soʻnggi 14 kundagi toʻgʻri javoblaringiz (60%) va oʻrgangan soʻzlaringiz qanchalik mustahkam esda qolganidan (40%) hisoblanadi.' }));
+}
+
 function renderHome() {
+  renderRating();
   const n = learnedCount();
   $('#hCount').textContent = n;
   const lv = levelOfLesson(state.cur);
