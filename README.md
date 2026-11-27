@@ -70,7 +70,7 @@ Oʻrnatilgan ilovada mikrofon Android'dagi Chrome orqali ishlaydi. Claude tahlil
   - `talaffuz.txt` — har soʻzning talaffuz yozuvi (IPA, AQSh talaffuzi);
   - `grammatika.json` — grammatika dasturining manbasi (oʻzbekcha matnda oddiy apostrof yoziladi);
   - `build.js` — JSON fayllarni qayta yigʻadi va grammatika dasturini tekshiradi;
-  - `ovoz.py` — ovoz fayllarini va talaffuz yozuvini yaratadi (Piper TTS, `en_US-lessac-medium` ochiq ovoz modeli; talaffuz CMU Pronouncing Dictionary asosida).
+  - `ovoz.py` — ovoz fayllarini va talaffuz yozuvini yaratadi (Piper TTS, `en_US-ljspeech-high` ovoz modeli; talaffuz CMU Pronouncing Dictionary asosida).
 
 ## Soʻz yoki tarjimani tuzatish
 
@@ -89,3 +89,13 @@ Oʻrnatilgan ilovada mikrofon Android'dagi Chrome orqali ishlaydi. Claude tahlil
 5. Yangilangan fayllarni commit qiling.
 
 Turkum belgilari: `n` ot, `v` feʼl, `a` sifat, `d` ravish, `p` olmosh, `r` predlog, `c` bogʻlovchi, `x` boshqa.
+
+## Mualliflik va litsenziyalar
+
+Ilovani boshqalarga bepul ham, pullik ham tarqatish mumkin. Ishlatilgan materiallar:
+
+- **Dastur, soʻzlar roʻyxati, tarjimalar, gaplar va grammatika dasturi** — shu loyiha uchun yozilgan.
+- **Inglizcha ovozlar** (`audio/`) — [Piper TTS](https://github.com/rhasspy/piper) (MIT) va [`en_US-ljspeech-high`](https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/ljspeech/high) ovoz modeli (rhasspy/piper-voices, MIT). Model [LJ Speech](https://keithito.com/LJ-Speech-Dataset/) yozuvlarida oʻqitilgan, ular jamoat mulki (public domain), shuning uchun ovozlarni tijoratda ham cheklovsiz ishlatish mumkin.
+- **Talaffuz yozuvi** (`manba/talaffuz.txt`) — [CMU Pronouncing Dictionary](https://github.com/cmusphinx/cmudict) asosida (Carnegie Mellon University, BSD uslubidagi erkin litsenziya).
+- **Shriftlar** — Unbounded, Manrope va Charis SIL ([SIL Open Font License](https://openfontlicense.org)).
+- **Ilova belgisi** — shu loyihada `manba/ikonka.py` bilan chizilgan.

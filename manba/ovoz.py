@@ -11,7 +11,8 @@ Natija:
     audio/*.mp3, audio/index.json  — dastur ishlatadigan ovozlar
     manba/talaffuz.txt             — har soʻzning IPA yozuvi (build.js uni words.json ga qoʻshadi)
 
-Ovoz: Piper TTS, en_US-lessac-medium (ochiq model, birinchi ishga tushganda yuklab olinadi).
+Ovoz: Piper TTS (MIT), en_US-ljspeech-high ovoz modeli (rhasspy/piper-voices, MIT; birinchi ishga tushganda yuklab olinadi).
+Model LJ Speech yozuvlarida oʻqitilgan, ular jamoat mulki (public domain): ovozlarni tijoratda ham erkin ishlatish mumkin.
 Talaffuz yozuvi: CMU Pronouncing Dictionary (AQSh talaffuzi).
 """
 import json
@@ -27,8 +28,8 @@ from piper import PiperVoice, SynthesisConfig
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODEL_DIR = os.environ.get('PIPER_MODEL_DIR', os.path.join(ROOT, '.venv', 'voices'))
-MODEL = 'en_US-lessac-medium'
-MODEL_URL = 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/'
+MODEL = 'en_US-ljspeech-high'
+MODEL_URL = 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ljspeech/high/'
 RATE = 22050
 WORDS_PER_FILE = 40       # har bir soʻz fayli = 2 ta dars (kichik fayl telefonda tez ochiladi)
 SENTENCES_PER_FILE = 50
