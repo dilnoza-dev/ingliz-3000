@@ -207,6 +207,26 @@ button.chip { cursor: pointer; }
 .week .d:last-child .tip, .week .d:nth-child(6) .tip { left: auto; right: 0; transform: none; }
 .week .d:hover .tip, .week .d:focus .tip { opacity: 1; }
 .week .d:hover .val, .week .d:focus .val { opacity: 0; }
+/* Reyting tarixi */
+.hist .top { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.hist-facts { display: flex; flex-wrap: wrap; gap: 8px; }
+.trend { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 999px; font-weight: 800; font-size: .82rem; font-variant-numeric: tabular-nums; }
+.trend.up { background: var(--good-soft); color: var(--good-ink); }
+.trend.down { background: var(--bad-soft); color: var(--bad-ink); }
+.trend.flat { background: var(--surface-2); color: var(--muted); }
+.hist-chart { position: relative; touch-action: pan-y; }
+.hist-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.hist-chart .grid { stroke: var(--line); stroke-width: 1; }
+.hist-chart .axis { fill: var(--muted); font-size: 10px; font-family: var(--f-body); font-weight: 700; }
+.hist-chart .line { fill: none; stroke: var(--violet); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.hist-chart .area { fill: var(--violet); opacity: .14; }
+.hist-chart .dot { fill: var(--violet); stroke: var(--surface); stroke-width: 2; }
+.hist-chart .cross { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; }
+.hist-tip { position: absolute; transform: translate(-50%, calc(-100% - 10px)); background: var(--ink); color: var(--bg); font-size: .78rem; font-weight: 700; padding: 4px 8px; border-radius: 6px; white-space: nowrap; pointer-events: none; z-index: 3; }
+.hist table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.hist td { padding: 6px 4px; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.hist td:last-child { text-align: right; font-weight: 800; }
+.hist details summary { cursor: pointer; font-weight: 700; font-size: .85rem; color: var(--accent); }
 .decknav { display: flex; align-items: center; gap: 6px; }
 .steps { margin: 0; padding: 10px 12px; list-style: none; display: flex; flex-direction: column; gap: 6px; background: var(--surface-2); border-radius: 10px; counter-reset: st; font-size: .88rem; color: var(--muted); }
 .steps li { counter-increment: st; display: flex; gap: 8px; align-items: flex-start; }
@@ -381,6 +401,7 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4
     <button class="btn lg" id="hReview" type="button">Takrorlash<small>Bugun takrorlanadigan soʻz yoʻq</small></button>
   </div>
   <div class="card rating" id="hRating" aria-label="Oʻzlashtirish reytingi"></div>
+  <div class="card hist" id="hHist" aria-label="Reyting tarixi"></div>
   <div class="plan" id="hPlan" aria-label="Bugungi reja"></div>
   <div class="stats" id="hStats">
     <div class="stat"><b id="sToday">0</b><span>Bugungi javoblar</span></div>
@@ -489,6 +510,12 @@ function liveScore(right, wrong, big) {
     h('span', { class: 'no', title: 'Xato javoblar' }, '✗ ', h('b', { text: wrong })),
     right + wrong ? h('span', { class: 'p-' + pctLevel(Math.round(100 * right / (right + wrong))), title: 'Natija: toʻgʻri javoblar ulushi', text: Math.round(100 * right / (right + wrong)) + '%' }) : null);
 }
+// Natija sahifalarida: Oʻzlashtirish reytingi 73% ↑ +2% (oldingi kunga nisbatan)
+function ratingLine() {
+  const [now, prev] = ratingDelta();
+  if (now == null) return null;
+  return h('div', { class: 'row' }, h('span', { class: 'small muted' }, 'Oʻzlashtirish reytingi: ', h('b', { text: now + '%' })), deltaText(now, prev, 'oldingi kunga nisbatan'));
+}
 const pctLevel = p => p >= 80 ? 'good' : p >= 50 ? 'mid' : 'low';
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
@@ -570,7 +597,7 @@ function renderRules(id) {
 
 /* ================= state ================= */
 const LSKEY = 'ingliz3000:v1';
-const DEF = () => ({ v: 1, updated: 0, cur: 0, words: {}, lessons: {}, days: {}, pron: {}, notes: [], gen: {}, teach: {}, settings: { voice: 'auto', pmode: 'translate', tdir: 'uz2en', focus: -1, lvl: 'beginner' } });
+const DEF = () => ({ v: 1, updated: 0, cur: 0, words: {}, lessons: {}, days: {}, pron: {}, notes: [], gen: {}, teach: {}, hist: {}, settings: { voice: 'auto', pmode: 'translate', tdir: 'uz2en', focus: -1, lvl: 'beginner' } });
 let state = DEF();
 function normalizeState(s) {
   const d = DEF();
@@ -578,13 +605,14 @@ function normalizeState(s) {
   for (const k of Object.keys(d)) if (s[k] !== undefined && typeof s[k] === typeof d[k]) d[k] = s[k];
   d.settings = Object.assign(DEF().settings, s.settings || {});
   if (!Array.isArray(d.notes)) d.notes = [];
+  if (!d.hist || Array.isArray(d.hist)) d.hist = {};
   d.cur = clamp(Number(d.cur) || 0, 0, 999); // the real upper bound is checked in boot(), once the word list is loaded
   return d;
 }
 function loadLocal() { try { const raw = localStorage.getItem(LSKEY); if (raw) state = normalizeState(JSON.parse(raw)); } catch (e) { /* storage unavailable */ } }
 function saveLocal() { try { localStorage.setItem(LSKEY, JSON.stringify(state)); } catch (e) { /* ignore */ } }
 let docRef = null, saving = false, saveAgain = false, saveT = null;
-function touch() { state.updated = Date.now(); saveLocal(); if (docRef) { clearTimeout(saveT); saveT = setTimeout(flush, 1800); } }
+function touch() { snapRating(); state.updated = Date.now(); saveLocal(); if (docRef) { clearTimeout(saveT); saveT = setTimeout(flush, 1800); } }
 async function flush() {
   if (!docRef) return;
   if (saving) { saveAgain = true; return; }
@@ -985,8 +1013,95 @@ function renderRating() {
     h('p', { class: 'small muted', text: 'Reyting soʻnggi 14 kundagi toʻgʻri javoblaringiz (60%) va oʻrgangan soʻzlaringiz qanchalik mustahkam esda qolganidan (40%) hisoblanadi.' }));
 }
 
+// Bugungi reytingni tarixga yozadi (oʻzgargan boʻlsa true qaytaradi)
+function snapRating() {
+  const r = ratingData().total;
+  if (r == null) return false;
+  const k = String(today());
+  if (state.hist[k] === r) return false;
+  state.hist[k] = r;
+  const ks = Object.keys(state.hist);
+  if (ks.length > 400) ks.sort((a, b) => a - b).slice(0, ks.length - 400).forEach(x => delete state.hist[x]);
+  return true;
+}
+const MON_UZ = ['yanvar', 'fevral', 'mart', 'aprel', 'may', 'iyun', 'iyul', 'avgust', 'sentabr', 'oktabr', 'noyabr', 'dekabr'];
+const dayName = (d, short) => { const x = new Date(d * 86400000); return x.getUTCDate() + '-' + (short ? MON_UZ[x.getUTCMonth()].slice(0, 3) : MON_UZ[x.getUTCMonth()]); };
+const histList = () => Object.entries(state.hist).map(([d, v]) => [+d, v]).sort((a, b) => a[0] - b[0]);
+// Oldingi kunga nisbatan oʻzgarish: [hozir, oldingi yoki null]
+function ratingDelta() {
+  const now = ratingData().total, t = today();
+  const prev = histList().filter(([d]) => d < t).pop();
+  return [now, prev ? prev[1] : null];
+}
+function deltaText(now, prev, words) {
+  if (now == null || prev == null) return null;
+  const d = now - prev;
+  return h('span', { class: 'trend ' + (d > 0 ? 'up' : d < 0 ? 'down' : 'flat') }, (d > 0 ? '↑ +' : d < 0 ? '↓ −' : '→ ') + Math.abs(d) + '%' + (words ? ' ' + words : ''));
+}
+let histRange = 30;
+function renderHistory() {
+  const box = $('#hHist'); if (!box) return;
+  clear(box);
+  const t = today(), all = histList();
+  const seg = h('div', { class: 'seg', role: 'group', 'aria-label': 'Davr' }, [[7, '7 kun'], [30, '30 kun'], [0, 'Hammasi']].map(([v, l]) => h('button', { type: 'button', 'aria-pressed': String(histRange === v), text: l, onclick: () => { histRange = v; renderHistory(); } })));
+  box.append(h('div', { class: 'top' }, h('div', { class: 'prompt-lbl', text: 'Reyting tarixi' }), seg));
+  if (!all.length) { box.append(h('p', { class: 'note', text: 'Tarix hali yoʻq. Test yoki darsni boshlang: reytingingiz har kuni avtomatik saqlanib boradi.' })); return; }
+  const last = all[all.length - 1], weekAgo = all.filter(([d]) => d <= t - 7).pop(), best = all.reduce((m, x) => x[1] > m[1] ? x : m, all[0]);
+  box.append(h('div', { class: 'hist-facts' },
+    weekAgo ? deltaText(last[1], weekAgo[1], 'bir haftada') : null,
+    h('span', { class: 'trend flat', text: 'Eng yuqori: ' + best[1] + '% · ' + dayName(best[0]) }),
+    h('span', { class: 'trend flat', text: all.length + ' kunlik tarix' })));
+  const from = histRange ? t - histRange + 1 : Math.min(all[0][0], t - 6);
+  const pts = all.filter(([d]) => d >= from);
+  // chiziqli diagramma: 0–100%, bitta qator
+  const VW = 320, VH = 150, L = 34, R = 10, T = 12, B = 24, PW = VW - L - R, PH = VH - T - B;
+  const X = d => L + (t === from ? PW : (d - from) / (t - from) * PW), Y = v => T + (1 - v / 100) * PH;
+  const NS = 'http://www.w3.org/2000/svg';
+  const el = (tag, attrs, text) => { const e = document.createElementNS(NS, tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); if (text != null) e.textContent = text; return e; };
+  const svg = el('svg', { viewBox: '0 0 ' + VW + ' ' + VH, role: 'img', 'aria-label': 'Reyting tarixi: ' + (pts.length ? dayName(pts[0][0]) + ' ' + pts[0][1] + '%, ' + dayName(pts[pts.length - 1][0]) + ' ' + pts[pts.length - 1][1] + '%' : 'bu davrda maʼlumot yoʻq') });
+  for (const v of [0, 50, 100]) { svg.append(el('line', { class: 'grid', x1: L, x2: VW - R, y1: Y(v), y2: Y(v) })); svg.append(el('text', { class: 'axis', x: L - 6, y: Y(v) + 3.5, 'text-anchor': 'end' }, v + '%')); }
+  svg.append(el('text', { class: 'axis', x: L, y: VH - 6, 'text-anchor': 'start' }, dayName(from, true)));
+  svg.append(el('text', { class: 'axis', x: VW - R, y: VH - 6, 'text-anchor': 'end' }, 'bugun'));
+  if (pts.length) {
+    const d = pts.map(([dd, v], i) => (i ? 'L' : 'M') + X(dd).toFixed(1) + ' ' + Y(v).toFixed(1)).join(' ');
+    if (pts.length > 1) {
+      svg.append(el('path', { class: 'area', d: d + ' L' + X(pts[pts.length - 1][0]).toFixed(1) + ' ' + Y(0) + ' L' + X(pts[0][0]).toFixed(1) + ' ' + Y(0) + ' Z' }));
+      svg.append(el('path', { class: 'line', d }));
+    }
+    for (const [dd, v] of pts) svg.append(el('circle', { class: 'dot', cx: X(dd), cy: Y(v), r: 4 }));
+  }
+  const cross = el('line', { class: 'cross', y1: T, y2: T + PH, x1: -10, x2: -10, visibility: 'hidden' });
+  svg.append(cross);
+  const tip = h('div', { class: 'hist-tip', hidden: true });
+  const wrap = h('div', { class: 'hist-chart' }, svg, tip);
+  // sichqoncha yoki barmoq bilan: eng yaqin kun
+  const show = ev => {
+    if (!pts.length) return;
+    const r = svg.getBoundingClientRect(), x = (ev.clientX - r.left) / r.width * VW;
+    let best2 = pts[0];
+    for (const pt of pts) if (Math.abs(X(pt[0]) - x) < Math.abs(X(best2[0]) - x)) best2 = pt;
+    const cx = X(best2[0]);
+    cross.setAttribute('x1', cx); cross.setAttribute('x2', cx); cross.setAttribute('visibility', 'visible');
+    tip.textContent = (best2[0] === t ? 'Bugun' : dayName(best2[0])) + ': ' + best2[1] + '%';
+    tip.hidden = false;
+    tip.style.left = Math.min(Math.max(cx / VW * r.width, 50), r.width - 50) + 'px';
+    tip.style.top = (Y(best2[1]) / VH * r.height) + 'px';
+  };
+  const hide = () => { tip.hidden = true; cross.setAttribute('visibility', 'hidden'); };
+  svg.addEventListener('pointermove', show); svg.addEventListener('pointerdown', show); svg.addEventListener('pointerleave', hide);
+  box.append(wrap);
+  if (pts.length < 2) box.append(h('p', { class: 'small muted', text: 'Reyting har kuni saqlanadi. Bir necha kun mashq qilganingizdan keyin bu yerda oʻsish chizigʻi koʻrinadi.' }));
+  // jadval koʻrinishi (yangisi tepada)
+  box.append(h('details', null, h('summary', { text: 'Jadval koʻrinishida' }),
+    h('table', null, h('tbody', null, all.slice().reverse().slice(0, 60).map(([dd, v], i, arr) => {
+      const prev = arr[i + 1];
+      return h('tr', null, h('td', { text: dd === t ? 'Bugun' : dayName(dd) }), h('td', null, prev ? deltaText(v, prev[1]) : null), h('td', { text: v + '%' }));
+    })))));
+}
+
 function renderHome() {
   renderRating();
+  renderHistory();
   const n = learnedCount();
   $('#hCount').textContent = n;
   const lv = levelOfLesson(state.cur);
@@ -1250,6 +1365,7 @@ function renderResult(body) {
     h('div', { class: 'prompt-lbl', text: q.kind === 'lesson' ? (q.lesson + 1) + '-dars yakunlandi' : 'Takrorlash yakunlandi' }),
     h('div', { class: 'score ' + (q.score >= 80 ? 'good' : q.score >= 50 ? 'mid' : 'low') }, h('b', { text: q.score + '%' }), h('span', { class: 'muted', text: 'soʻz birinchi urinishda toʻgʻri topildi' })),
     h('div', { class: 'row' }, liveScore(q.right, q.wrong || 0, true), h('span', { class: 'small muted', text: 'jami ' + (q.right + (q.wrong || 0)) + ' ta javob' })),
+    ratingLine(),
     missed.length ? h('div', null, h('p', { class: 'small muted', text: 'Xato qilingan soʻzlar (ular tezroq takrorlanadi):' }), h('div', { class: 'chips' }, missed.map(i => h('button', { class: 'chip saffron', type: 'button', text: W[i][0] + ' — ' + W[i][1], onclick: () => speak(W[i][0]) })))) : h('p', { class: 'feedback ok', text: 'Birorta ham xato yoʻq. Zoʻr!' }),
     h('div', { class: 'row' },
       q.kind === 'lesson' ? h('button', { class: 'btn primary', type: 'button', text: 'Shu soʻzlar bilan gap tuzish', onclick: () => { state.settings.focus = q.lesson; touch(); mods.gaplar.li = -2; go('gaplar'); } }) : null,
@@ -2237,6 +2353,7 @@ function tYakun(body) {
     h('div', { class: 'prompt-lbl', text: (li + 1) + '-dars yakunlandi' }),
     h('div', { class: 'score ' + (r.score >= 80 ? 'good' : r.score >= 50 ? 'mid' : 'low') }, h('b', { text: r.score + '%' }), h('span', { class: 'muted', text: 'birinchi urinishdagi toʻgʻri javoblar' })),
     h('div', { class: 'row' }, liveScore(...teachScore(), true), h('span', { class: 'small muted', text: 'butun dars boʻyicha' })),
+    ratingLine(),
     h('div', { class: 'tally' }, Object.keys(TALLY_NAME).filter(k => tch.tally[k]).map(k => [h('span', { text: TALLY_NAME[k] }), h('b', { text: tch.tally[k][0] + ' / ' + tch.tally[k][1] })])),
     r.missed.length ? h('div', null, h('p', { class: 'small muted', text: 'Qayta koʻrish kerak boʻlgan soʻzlar:' }), h('div', { class: 'chips' }, r.missed.map(i => h('button', { class: 'chip saffron', type: 'button', text: W[i][0] + ' — ' + W[i][1], onclick: () => speak(W[i][0]) })))) : h('p', { class: 'feedback ok', text: 'Yangi soʻzlarda birorta ham xato yoʻq!' }),
     h('div', { class: 'prompt-lbl', text: 'Uyga vazifa' }),
@@ -2296,6 +2413,7 @@ async function boot() {
     const fill = (k, v) => document.querySelectorAll('[data-n="' + k + '"]').forEach(e => { e.textContent = v; });
     fill('words', N); fill('lessons', Math.ceil(N / LESSON)); fill('sents', BANK.length);
     state.cur = Math.min(state.cur, Math.ceil(N / LESSON) - 1);
+    if (snapRating()) touch();
     sz.lesson = state.cur;
     renderGuides();
     refreshView();
