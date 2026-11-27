@@ -48,7 +48,16 @@ button { cursor: pointer; }
 .brand .n { font-family: var(--f-display); font-weight: 700; font-size: 1.35rem; letter-spacing: -.01em; }
 .brand .t { font-family: var(--f-display); font-weight: 500; font-size: 1rem; color: var(--cyan); }
 .brand small { display: block; font-family: var(--f-body); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--band-muted); }
-.meter { text-align: right; font-variant-numeric: tabular-nums; min-width: 120px; }
+.meter { text-align: right; font-variant-numeric: tabular-nums; min-width: 112px; }
+.band-right { display: flex; align-items: center; gap: 12px; }
+.gear { display: grid; place-items: center; width: 40px; height: 40px; flex: none; border-radius: 12px; color: var(--band-ink); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); transition: background-color .15s, transform .3s; }
+.gear svg { width: 22px; height: 22px; }
+.gear:hover { background: rgba(255,255,255,.16); }
+.gear[aria-current="page"] { background: var(--violet); border-color: transparent; }
+.gear:active { transform: rotate(45deg); }
+.set-card { gap: 12px; }
+.set-card h2 { margin: 0; font-size: 1rem; }
+.set-head { display: flex; align-items: center; gap: 12px; }
 .meter b { font-family: var(--f-display); font-weight: 600; font-size: 1rem; }
 .meter span { color: var(--band-muted); font-size: .85rem; }
 .mbar { height: 6px; border-radius: 3px; background: rgba(255,255,255,.14); overflow: hidden; margin-top: 4px; }
@@ -370,7 +379,10 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4
 <header class="band">
   <div class="gut"><div class="wrap band-top">
     <div class="brand"><span class="n">4000</span><span class="t">B2<small>ingliz tili</small></span></div>
-    <div class="meter" aria-label="Oʻrganilgan soʻzlar"><b id="mCount">0</b><span> / <span data-n="words">4000</span></span><div class="mbar"><i id="mBar"></i></div></div>
+    <div class="band-right">
+      <div class="meter" aria-label="Oʻrganilgan soʻzlar"><b id="mCount">0</b><span> / <span data-n="words">4000</span></span><div class="mbar"><i id="mBar"></i></div></div>
+      <a class="gear" id="gearBtn" href="#sozlamalar" aria-label="Sozlamalar" title="Sozlamalar"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.4 13a7.6 7.6 0 0 0 0-2l2.1-1.6a.5.5 0 0 0 .1-.6l-2-3.5a.5.5 0 0 0-.6-.2l-2.5 1a7.4 7.4 0 0 0-1.7-1l-.4-2.6a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 0-.5.4l-.4 2.7a7.4 7.4 0 0 0-1.7 1l-2.5-1a.5.5 0 0 0-.6.2l-2 3.5a.5.5 0 0 0 .1.6L4.6 11a7.6 7.6 0 0 0 0 2l-2.1 1.6a.5.5 0 0 0-.1.6l2 3.5a.5.5 0 0 0 .6.2l2.5-1a7.4 7.4 0 0 0 1.7 1l.4 2.6a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.4l.4-2.7a7.4 7.4 0 0 0 1.7-1l2.5 1a.5.5 0 0 0 .6-.2l2-3.5a.5.5 0 0 0-.1-.6L19.4 13zM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/></svg></a>
+    </div>
   </div></div>
   <nav class="gut" aria-label="Boʻlimlar"><div class="wrap tabs">
     <a href="#bosh" data-v="bosh">Bosh</a>
@@ -423,20 +435,6 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4
   <h2>Kamchiliklarim</h2>
   <div class="weak" id="hWeak"><p class="muted">Mashq qilganingiz sari bu yerda xato qiladigan soʻzlaringiz, talaffuzda qiynalgan soʻzlaringiz va grammatik eslatmalar paydo boʻladi.</p></div>
 
-  <h2>Sozlamalar</h2>
-  <div class="settings">
-    <p class="small muted"><span data-n="words">4000</span> ta soʻz va tayyor gaplar oldindan yozib olingan ovoz bilan aytiladi, bu telefonda ham ishlaydi. Claude tuzgan yangi gaplar esa quyida tanlangan ovoz bilan aytiladi.</p>
-    <div class="row"><span class="small muted" style="min-width:120px">Yangi gaplar ovozi</span>
-      <div class="seg" role="group" aria-label="Ovoz manbai"><button type="button" data-voice="auto" aria-pressed="true">Claude ovozi</button><button type="button" data-voice="browser" aria-pressed="false">Brauzer ovozi</button></div>
-    </div>
-    <div class="row"><span class="small muted" style="min-width:120px">Darajam</span>
-      <div class="seg" role="group" aria-label="Mening darajam"><button type="button" data-lvl="beginner" aria-pressed="true">Boshlangʻich</button><button type="button" data-lvl="intermediate" aria-pressed="false">Oʻrta</button></div>
-    </div>
-    <p class="small muted">Boshlangʻich rejimda gaplar qisqa va oddiy boʻladi, ovoz sekinroq chiqadi, testda avval inglizcha soʻz koʻrsatilib, oʻzi ham eshittiriladi.</p>
-    <div class="caps" id="caps"></div>
-    <p class="small muted" id="syncNote">Natijalar shu brauzerda saqlanadi.</p>
-    <p class="small muted">Ovozlar: Piper TTS va LJ Speech ovozi (jamoat mulki, erkin ishlatiladi). Talaffuz yozuvi: CMU Pronouncing Dictionary. Shriftlar: SIL Open Font License.</p>
-  </div>
 </section>
 
 <section id="v-sozlar" class="view" hidden>
@@ -478,6 +476,36 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4
 <section id="v-ustoz" class="view" hidden>
   <div><div class="eyebrow" id="uEyebrow">Ustoz bilan dars</div><h1 id="uTitle">Ustoz bilan dars</h1></div>
   <div id="uBody"><div class="loading">Yuklanmoqda…</div></div>
+</section>
+
+<section id="v-sozlamalar" class="view" hidden>
+  <div class="set-head"><button class="btn ghost sm" id="setBack" type="button">‹ Orqaga</button><h1>Sozlamalar</h1></div>
+  <div class="card set-card">
+    <h2>Darajam</h2>
+    <div class="row">
+      <div class="seg" role="group" aria-label="Mening darajam"><button type="button" data-lvl="beginner" aria-pressed="true">Boshlangʻich</button><button type="button" data-lvl="intermediate" aria-pressed="false">Oʻrta</button></div>
+    </div>
+    <p class="small muted">Boshlangʻich rejimda gaplar qisqa va oddiy boʻladi, ovoz sekinroq chiqadi, testda avval inglizcha soʻz koʻrsatilib, oʻzi ham eshittiriladi.</p>
+  </div>
+  <div class="card set-card">
+    <h2>Ovoz</h2>
+    <p class="small muted"><span data-n="words">4000</span> ta soʻz va tayyor gaplar oldindan yozib olingan ovoz bilan aytiladi, bu telefonda internetsiz ham ishlaydi.</p>
+    <div id="voiceRow" hidden>
+      <p class="small muted" style="margin-bottom:8px">Claude tuzgan yangi gaplar esa shu yerda tanlangan ovoz bilan aytiladi.</p>
+      <div class="row"><span class="small muted" style="min-width:120px">Yangi gaplar ovozi</span>
+      <div class="seg" role="group" aria-label="Ovoz manbai"><button type="button" data-voice="auto" aria-pressed="true">Claude ovozi</button><button type="button" data-voice="browser" aria-pressed="false">Brauzer ovozi</button></div>
+    </div>
+    </div>
+  </div>
+  <div class="card set-card">
+    <h2>Holat</h2>
+    <div class="caps" id="caps"></div>
+    <p class="small muted" id="syncNote">Natijalar shu brauzerda saqlanadi.</p>
+  </div>
+  <div class="card set-card">
+    <h2>Mualliflik va litsenziyalar</h2>
+    <p class="small muted">Ovozlar: Piper TTS va LJ Speech ovozi (jamoat mulki, erkin ishlatiladi). Talaffuz yozuvi: CMU Pronouncing Dictionary. Shriftlar: SIL Open Font License. Soʻzlar, tarjimalar, gaplar va grammatika shu ilova uchun yozilgan.</p>
+  </div>
 </section>
 
 </div></main>
@@ -900,7 +928,8 @@ function spkBtn(text, label, rate) {
 }
 
 /* ================= router ================= */
-const VIEWS = ['bosh', 'ustoz', 'sozlar', 'gaplar', 'tarjima', 'talaffuz'];
+const VIEWS = ['bosh', 'ustoz', 'sozlar', 'gaplar', 'tarjima', 'talaffuz', 'sozlamalar'];
+let prevView = 'bosh';
 let view = 'bosh';
 function route() {
   let v = (location.hash || '').replace('#', '');
@@ -910,9 +939,12 @@ function route() {
     if (state.settings.tdir !== d) { state.settings.tdir = d; mods.tarjima.st = null; touch(); }
     v = 'tarjima';
   }
-  view = VIEWS.includes(v) ? v : 'bosh';
+  const next = VIEWS.includes(v) ? v : 'bosh';
+  if (next !== view && view !== 'sozlamalar') prevView = view;
+  view = next;
   for (const id of VIEWS) $('#v-' + id).hidden = id !== view;
   $$('.tabs a').forEach(a => a.setAttribute('aria-current', a.dataset.v === view ? 'page' : 'false'));
+  $('#gearBtn').setAttribute('aria-current', view === 'sozlamalar' ? 'page' : 'false');
   stopMic();
   refreshView();
   window.scrollTo(0, 0);
@@ -928,6 +960,7 @@ function refreshView() {
   else if (view === 'tarjima') renderTarjima();
   else if (view === 'talaffuz') renderTalaffuz();
   else if (view === 'ustoz') renderUstoz();
+  else if (view === 'sozlamalar') renderSettings();
 }
 function renderAll() { refreshView(); }
 
@@ -937,6 +970,11 @@ function renderHeader() {
   $('#mCount').textContent = n;
   $('#mBar').style.width = (N ? 100 * n / N : 0) + '%';
 }
+function renderSettings() {
+  renderCaps();
+  $('#voiceRow').hidden = !(sampleCap || ttsCap); // Claude ovozi faqat claude.ai ichida kerak
+}
+$('#setBack').addEventListener('click', () => go(prevView && prevView !== 'sozlamalar' ? prevView : 'bosh'));
 function renderCaps() {
   const box = $('#caps'); if (!box) return;
   clear(box);
