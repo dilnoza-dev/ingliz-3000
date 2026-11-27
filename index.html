@@ -459,6 +459,7 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4
     <p class="small muted">Boshlangʻich rejimda gaplar qisqa va oddiy boʻladi, ovoz sekinroq chiqadi, testda avval inglizcha soʻz koʻrsatilib, oʻzi ham eshittiriladi.</p>
     <div class="caps" id="caps"></div>
     <p class="small muted" id="syncNote">Natijalar shu brauzerda saqlanadi.</p>
+    <p class="small muted">Ovozlar: Piper TTS va LJ Speech ovozi (jamoat mulki, erkin ishlatiladi). Talaffuz yozuvi: CMU Pronouncing Dictionary. Shriftlar: SIL Open Font License.</p>
   </div>
 </section>
 
@@ -2453,7 +2454,7 @@ boot();
 <button class="install-btn" id="installBtn" type="button" hidden>⬇ Ilovani oʻrnatish</button>
 <script>
 (() => {
-  // App version f63383b648
+  // App version f0de2150b3
   let deferred = null;
   const btn = document.getElementById('installBtn');
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; btn.hidden = false; });
