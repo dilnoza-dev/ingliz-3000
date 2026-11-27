@@ -82,6 +82,46 @@ button { cursor: pointer; }
 .set-card { gap: 12px; }
 .set-card h2 { margin: 0; font-size: 1rem; }
 .set-head { display: flex; align-items: center; gap: 12px; }
+/* Uy vazifalari */
+.tabs a { position: relative; }
+.tabs a[data-count]::after { content: ""; position: absolute; top: 7px; right: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--bad); box-shadow: 0 0 0 2px var(--band); }
+.hwlist { display: flex; flex-direction: column; gap: 10px; }
+.hwitem { display: flex; justify-content: space-between; align-items: center; gap: 12px; width: 100%; text-align: left; padding: 14px 16px; border-radius: var(--r); border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); color: inherit; }
+.hwitem:hover { border-color: var(--accent); }
+.hwitem b { display: block; overflow-wrap: anywhere; }
+.hwhome .hwitem { background: var(--surface-2); box-shadow: none; }
+.chip.good { background: var(--good-soft); color: var(--good-ink); border-color: transparent; }
+.chip.mid { background: var(--saffron-soft); color: var(--saffron-ink); border-color: transparent; }
+.chip.low { background: var(--bad-soft); color: var(--bad-ink); border-color: transparent; }
+.hwtitle { font-size: 1.3rem; margin-top: 2px; }
+.hwtask { gap: 12px; }
+.hwtask.res-ok { border-color: var(--good); } .hwtask.res-part { border-color: var(--saffron); } .hwtask.res-no, .hwtask.res-empty { border-color: var(--bad); }
+input[type="text"], input[type="date"], input[type="number"] { width: 100%; min-height: 46px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); padding: 10px 12px; font-size: 1.02rem; }
+input:focus, select:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4px var(--accent-soft); }
+.hwtask textarea { min-height: 76px; }
+.opt.sel { border-color: var(--accent); background: var(--accent-soft); }
+.opt.sel .k { background: var(--accent); color: var(--accent-ink); }
+.verdict { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 999px; font-weight: 800; font-size: .8rem; white-space: nowrap; }
+.verdict.ok { background: var(--good-soft); color: var(--good-ink); } .verdict.part { background: var(--saffron-soft); color: var(--saffron-ink); }
+.verdict.no { background: var(--bad-soft); color: var(--bad-ink); } .verdict.empty { background: var(--surface-2); color: var(--muted); }
+.hwmsgs { margin: 0; padding-left: 18px; font-size: .9rem; display: flex; flex-direction: column; gap: 4px; }
+.agent .av { background: var(--band); color: var(--good); box-shadow: 0 0 0 2px var(--cyan); }
+.agent .av svg { width: 26px; height: 26px; }
+.agent .bub { background: var(--surface-2); }
+.agent .who { display: block; font-size: .75rem; font-weight: 800; letter-spacing: .04em; color: var(--cyan); margin-bottom: 2px; }
+.alog { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: .92rem; }
+.alog li { display: flex; gap: 10px; align-items: flex-start; }
+.alog .ic { flex: none; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--good-soft); color: var(--good-ink); font-weight: 800; font-size: .8rem; }
+.alog li.run .ic { background: var(--accent-soft); color: var(--accent); animation: blink 1.2s infinite; }
+.hwform { gap: 14px; }
+.hwform label { display: flex; flex-direction: column; gap: 6px; font-weight: 700; font-size: .88rem; }
+.hwform label > span { color: var(--muted); }
+.hwform select { width: 100%; }
+.hwdraft { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: .9rem; }
+.hwdraft li > * { vertical-align: middle; }
+.hwdraft li { overflow-wrap: anywhere; }
+.hwdraft .navbtn { width: 28px; height: 28px; font-size: 1rem; margin-left: 8px; display: inline-grid; }
+.sharebox input { font-size: .82rem; }
 .meter b { font-family: var(--f-display); font-weight: 600; font-size: 1rem; }
 .meter span { color: var(--band-muted); font-size: .85rem; }
 .mbar { height: 6px; border-radius: 3px; background: rgba(255,255,255,.14); overflow: hidden; margin-top: 4px; }
@@ -396,7 +436,7 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4
 .gex .ex, .tipbox .ex { display: flex; align-items: center; gap: 10px; }
 .gex .en, .tipbox .ex .en { font-weight: 800; color: var(--accent); }
 #uBody .card > .btn, #uBody .tipbox > .btn { align-self: flex-start; }
-@media (max-width: 420px) { .tabs a { padding-inline: 6px; font-size: .82rem; } }
+@media (max-width: 420px) { .tabs a { padding-inline: 4px; font-size: .78rem; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
 </style>
 
@@ -411,6 +451,7 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4
   <nav class="gut" aria-label="Boʻlimlar"><div class="wrap tabs">
     <a href="#bosh" data-v="bosh">Bosh</a>
     <a href="#ustoz" data-v="ustoz">Ustoz</a>
+    <a href="#vazifalar" data-v="vazifalar">Vazifa</a>
     <a href="#sozlar" data-v="sozlar">Soʻzlar</a>
     <a href="#gaplar" data-v="gaplar">Gaplar</a>
     <a href="#tarjima" data-v="tarjima">Tarjima</a>
@@ -436,6 +477,7 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4
     <button class="btn lg" id="hLesson" type="button">Faqat soʻz testi<small>20 ta yangi soʻz · 4 variantli test</small></button>
     <button class="btn lg" id="hReview" type="button">Takrorlash<small>Bugun takrorlanadigan soʻz yoʻq</small></button>
   </div>
+  <div class="card hwhome" id="hHw" aria-label="Uy vazifalari"></div>
   <div class="card rating" id="hRating" aria-label="Oʻzlashtirish reytingi"></div>
   <div class="card hist" id="hHist" aria-label="Reyting tarixi"></div>
   <div class="plan" id="hPlan" aria-label="Bugungi reja"></div>
@@ -500,6 +542,11 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4
 <section id="v-ustoz" class="view" hidden>
   <div><div class="eyebrow" id="uEyebrow">Ustoz bilan dars</div><h1 id="uTitle">Ustoz bilan dars</h1></div>
   <div id="uBody"><div class="loading">Yuklanmoqda…</div></div>
+</section>
+
+<section id="v-vazifalar" class="view" hidden>
+  <div><div class="eyebrow">Uy vazifalari</div><h1>Vazifalar</h1><p class="muted small">Har bir darsdan keyin uyga vazifa beriladi. Oʻzingiz ham vazifa tuzib, havola orqali boshqalarga yuborishingiz mumkin. Javoblarni tekshiruvchi agent avtomatik tekshiradi.</p></div>
+  <div id="vzBody"><div class="loading">Yuklanmoqda…</div></div>
 </section>
 
 <section id="v-sozlamalar" class="view" hidden>
@@ -582,6 +629,7 @@ const ICON = {
   slow: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.2v5.6h3.6L12.5 19V5L7.6 9.2H4z" fill="currentColor"/><path d="M16 10.5a2.2 2.2 0 0 1 0 3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>',
   mic: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3" fill="currentColor"/><path d="M5.5 11.2a6.5 6.5 0 0 0 13 0M12 17.7V21" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>',
   stop: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="6.5" width="11" height="11" rx="2.5" fill="currentColor"/></svg>',
+  check: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 14.4 4.1l3.2-.3.9 3.1 2.8 1.6-1 3 1 3-2.8 1.6-.9 3.1-3.2-.3L12 22l-2.4-2.1-3.2.3-.9-3.1-2.8-1.6 1-3-1-3 2.8-1.6.9-3.1 3.2.3z"/><path d="m8.2 12.3 2.6 2.6 5-5.2" fill="none" stroke="#0B1020" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   spark: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" fill="currentColor"/></svg>',
   cap: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 1.5 9 12 14l8.5-4.05V16H22V9L12 4z" fill="currentColor"/><path d="M5.5 12.3v3.5c0 1.7 2.9 3.2 6.5 3.2s6.5-1.5 6.5-3.2v-3.5L12 15.4l-6.5-3.1z" fill="currentColor"/></svg>'
 };
@@ -650,7 +698,7 @@ function renderRules(id) {
 
 /* ================= state ================= */
 const LSKEY = 'ingliz3000:v1';
-const DEF = () => ({ v: 1, updated: 0, cur: 0, words: {}, lessons: {}, days: {}, pron: {}, notes: [], gen: {}, teach: {}, hist: {}, settings: { voice: 'auto', pmode: 'translate', tdir: 'uz2en', focus: -1, lvl: 'beginner' } });
+const DEF = () => ({ v: 1, updated: 0, cur: 0, words: {}, lessons: {}, days: {}, pron: {}, notes: [], gen: {}, teach: {}, hist: {}, hw: [], settings: { voice: 'auto', pmode: 'translate', tdir: 'uz2en', focus: -1, lvl: 'beginner' } });
 let state = DEF();
 function normalizeState(s) {
   const d = DEF();
@@ -659,6 +707,7 @@ function normalizeState(s) {
   d.settings = Object.assign(DEF().settings, s.settings || {});
   if (!Array.isArray(d.notes)) d.notes = [];
   if (!d.hist || Array.isArray(d.hist)) d.hist = {};
+  if (!Array.isArray(d.hw)) d.hw = [];
   d.cur = clamp(Number(d.cur) || 0, 0, 999); // the real upper bound is checked in boot(), once the word list is loaded
   return d;
 }
@@ -952,11 +1001,13 @@ function spkBtn(text, label, rate) {
 }
 
 /* ================= router ================= */
-const VIEWS = ['bosh', 'ustoz', 'sozlar', 'gaplar', 'tarjima', 'talaffuz', 'sozlamalar'];
+const VIEWS = ['bosh', 'ustoz', 'vazifalar', 'sozlar', 'gaplar', 'tarjima', 'talaffuz', 'sozlamalar'];
 let prevView = 'bosh';
 let view = 'bosh';
 function route() {
   let v = (location.hash || '').replace('#', '');
+  // #vazifa=… — birov yuborgan uy vazifasi havolasi
+  if (v.startsWith('vazifa=')) { const data = v.slice(7); v = 'vazifalar'; try { history.replaceState(null, '', '#vazifalar'); } catch (e) { /* ignore */ } importHw(data); }
   // #tarjima-uz and #tarjima-en open the translation stage in a given direction
   if (v === 'tarjima-uz' || v === 'tarjima-en') {
     const d = v === 'tarjima-uz' ? 'en2uz' : 'uz2en';
@@ -985,6 +1036,7 @@ function refreshView() {
   else if (view === 'talaffuz') renderTalaffuz();
   else if (view === 'ustoz') renderUstoz();
   else if (view === 'sozlamalar') renderSettings();
+  else if (view === 'vazifalar') renderVazifa();
 }
 function renderAll() { refreshView(); }
 
@@ -993,6 +1045,8 @@ function renderHeader() {
   const n = learnedCount();
   $('#mCount').textContent = n;
   $('#mBar').style.width = (N ? 100 * n / N : 0) + '%';
+  const pend = state.hw.filter(x => !x.sub).length, tab = $('.tabs a[data-v="vazifalar"]');
+  if (tab) { if (pend) tab.setAttribute('data-count', pend); else tab.removeAttribute('data-count'); }
 }
 function renderSettings() {
   renderCaps();
@@ -1163,6 +1217,7 @@ function renderHistory() {
 }
 
 function renderHome() {
+  renderHwHome();
   renderRating();
   renderHistory();
   const n = learnedCount();
@@ -1411,6 +1466,7 @@ function finishQuiz() {
     q.score = score;
     state.lessons[q.lesson] = Math.max(state.lessons[q.lesson] || 0, score);
     if (q.lesson === state.cur && state.cur < Math.ceil(N / LESSON) - 1) state.cur++;
+    makeLessonHw(q.lesson);
     state.settings.focus = q.lesson;
     touch();
   } else if (q.kind === 'review' && !q.finished) {
@@ -1431,6 +1487,7 @@ function renderResult(body) {
     ratingLine(),
     missed.length ? h('div', null, h('p', { class: 'small muted', text: 'Xato qilingan soʻzlar (ular tezroq takrorlanadi):' }), h('div', { class: 'chips' }, missed.map(i => h('button', { class: 'chip saffron', type: 'button', text: W[i][0] + ' — ' + W[i][1], onclick: () => speak(W[i][0]) })))) : h('p', { class: 'feedback ok', text: 'Birorta ham xato yoʻq. Zoʻr!' }),
     h('div', { class: 'row' },
+      q.kind === 'lesson' ? h('button', { class: 'btn', type: 'button', text: 'Uyga vazifani bajarish', onclick: () => openHwForLesson(q.lesson) }) : null,
       q.kind === 'lesson' ? h('button', { class: 'btn primary', type: 'button', text: 'Shu soʻzlar bilan gap tuzish', onclick: () => { state.settings.focus = q.lesson; touch(); mods.gaplar.li = -2; go('gaplar'); } }) : null,
       q.kind === 'lesson' ? h('button', { class: 'btn', type: 'button', text: (state.cur + 1) + '-darsga oʻtish', onclick: () => { sz.lesson = state.cur; sz.mode = 'intro'; sz.quiz = null; renderSozlar(); window.scrollTo(0, 0); } }) : null,
       h('button', { class: 'btn', type: 'button', text: 'Qayta ishlash', onclick: () => { if (q.kind === 'lesson') startLesson(q.lesson); else startReview(); renderSozlar(); } })
@@ -2401,6 +2458,7 @@ function finishTeach() {
   if (li === state.cur && state.cur < Math.ceil(N / LESSON) - 1) state.cur++;
   state.settings.focus = li;
   touch();
+  makeLessonHw(li);
   tch.done = true; tch.result = { score, missed: ids.filter(i => tch.miss.has(i)) };
 }
 function tYakun(body) {
@@ -2423,6 +2481,7 @@ function tYakun(body) {
     h('ol', { class: 'steps' }, homework.map(t => h('li', null, h('span', { text: t })))),
     h('div', { class: 'row' },
       state.cur !== li ? h('button', { class: 'btn primary', type: 'button', text: 'Keyingi dars: ' + (state.cur + 1) + '-dars ›', onclick: () => { buildTeach(state.cur); tch.pinned = false; renderUstoz(); window.scrollTo(0, 0); } }) : null,
+      h('button', { class: 'btn', type: 'button', text: 'Uyga vazifani bajarish', onclick: () => openHwForLesson(li) }),
       h('button', { class: 'btn', type: 'button', text: 'Bu darsni qayta oʻtish', onclick: () => { buildTeach(li); tch.pinned = true; renderUstoz(); window.scrollTo(0, 0); } }),
       h('button', { class: 'btn ghost', type: 'button', text: 'Bosh sahifa', onclick: () => go('bosh') }))));
 }
@@ -2454,6 +2513,412 @@ function askBox(kind, arg, label) {
   if (a.err) return h('p', { class: 'note warn', text: a.err });
   return h('div', { class: 'tipbox' }, h('div', { class: 'prompt-lbl', text: 'Ustoz tushuntiradi' }), h('p', { class: 'gtext', text: a.explain }),
     a.examples.map(x => h('div', { class: 'ex' }, spkBtn(x.en, 'Eshitish'), h('div', null, h('div', { class: 'en', lang: 'en', text: x.en }), h('div', { class: 'small muted', text: x.uz })))));
+}
+
+/* ================= Uy vazifalari ================= */
+// Vazifa: { id, title, src: 'dars' | 'ozim' | 'qabul', lesson, created, due, note, tasks: [...], sub: null | natija }
+// Topshiriq turlari: dict (eshitib yozish), uz2en, en2uz (tarjima), gap (boʻsh joy), choice (variant), write (erkin gap).
+// «Tekshiruvchi agent»: avval qoidalar asosida tekshiradi (hamma joyda ishlaydi), Claude ochiq boʻlsa — Claude bilan chuqur tahlil.
+const HW_T = { dict: 'Eshitib yozing', uz2en: 'Inglizchaga tarjima qiling', en2uz: 'Oʻzbekchaga tarjima qiling', gap: 'Boʻsh joyni toʻldiring', choice: 'Toʻgʻri javobni tanlang', write: 'Oʻzingiz gap tuzing' };
+const HW_SRC = { dars: 'Dars vazifasi', ozim: 'Oʻzim joyladim', qabul: 'Havola orqali olindi' };
+const VERDICT = { ok: '✓ Toʻgʻri', part: '½ Qisman toʻgʻri', no: '✗ Xato', empty: '— Javob yoʻq' };
+const SITE_URL = 'https://dilnoza-dev.github.io/ingliz-3000/';
+const hwv = { mode: 'list', id: null, answers: {}, redo: false, busy: false, steps: [], stepsFor: null, draft: null, saved: null, del: null };
+const wait = ms => new Promise(r => setTimeout(r, ms));
+const escapeRe = s => String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const hwFind = id => state.hw.find(x => x.id === id);
+const hwPending = () => state.hw.filter(x => !x.sub);
+const dueText = d => d == null ? '' : d < today() ? 'muddati oʻtgan' : d === today() ? 'bugun' : d === today() + 1 ? 'ertaga' : dayName(d);
+const normEn = s => String(s).toLowerCase().replace(/[’‘`´]/g, "'").replace(/[^a-z0-9' ]/g, ' ').replace(/\s+/g, ' ').trim();
+
+function agentSay(text) {
+  return h('div', { class: 'ustoz agent' }, h('div', { class: 'av', svg: ICON.check }),
+    h('div', { class: 'bub' }, h('span', { class: 'who', text: 'Tekshiruvchi agent' }), h('p', { text })));
+}
+
+// ---------- vazifa tuzish
+function gapFrom(s, ids) {
+  const parts = s.en.split(/\s+/), set = new Set(ids);
+  for (let k = 0; k < parts.length; k++) {
+    const m = parts[k].match(/^([^A-Za-z']*)([A-Za-z'-]+)([^A-Za-z']*)$/);
+    if (!m) continue;
+    const wi = lemma(m[2]);
+    if (!set.has(wi) || /\s/.test(W[wi][0])) continue;
+    return { t: 'gap', text: [...parts.slice(0, k), m[1] + '___' + m[3], ...parts.slice(k + 1)].join(' '), ans: m[2], uz: s.uz };
+  }
+  return null;
+}
+function lessonTasks(li) {
+  const ids = lessonIds(li), own = shuffle(BANK.filter(s => s.lesson === li + 1));
+  if (own.length < 6) return [];
+  const tasks = [{ t: 'dict', en: own[0].en }, { t: 'dict', en: own[1].en }, { t: 'uz2en', uz: own[2].uz, en: own[2].en }, { t: 'uz2en', uz: own[3].uz, en: own[3].en }, { t: 'en2uz', en: own[4].en, uz: own[4].uz }];
+  let gaps = 0;
+  for (const s of own.slice(5)) { if (gaps >= 2) break; const g = gapFrom(s, ids); if (g) { tasks.push(g); gaps++; } }
+  tasks.push({ t: 'write', words: shuffle(ids.filter(i => !/\s/.test(W[i][0]) && W[i][0].length >= 3)).slice(0, 3).map(i => W[i][0]), min: isBeg() ? 4 : 6, note: '' });
+  return tasks;
+}
+// Dars tugaganda avtomatik beriladigan vazifa (har darsga bitta)
+function makeLessonHw(li) {
+  if (li == null || li < 0 || !N) return null;
+  const have = state.hw.find(x => x.src === 'dars' && x.lesson === li);
+  if (have) return have;
+  const tasks = lessonTasks(li);
+  if (!tasks.length) return null;
+  const hw = { id: 'd' + li + '-' + Date.now().toString(36), title: (li + 1) + '-dars: uyga vazifa', src: 'dars', lesson: li, created: today(), due: today() + 1, note: '', tasks, sub: null };
+  state.hw.unshift(hw);
+  if (state.hw.length > 60) state.hw.length = 60;
+  touch();
+  return hw;
+}
+const lastDoneLesson = () => { const ks = [...Object.keys(state.lessons), ...Object.keys(state.teach)].map(Number).filter(n => n >= 0); return ks.length ? Math.max(...ks) : null; };
+function openHw(id) { const hw = hwFind(id); if (!hw) return; Object.assign(hwv, { mode: 'do', id, redo: false, del: null, answers: hw.sub ? Object.fromEntries(hw.sub.answers.map((a, i) => [i, a])) : {} }); if (hwv.stepsFor !== id) hwv.steps = []; }
+function openHwForLesson(li) { const hw = makeLessonHw(li); if (!hw) { toast('Bu dars uchun vazifa tuzib boʻlmadi.'); return; } openHw(hw.id); go('vazifalar'); }
+
+// ---------- havola orqali ulashish
+const b64e = s => btoa(unescape(encodeURIComponent(s))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+const b64d = s => decodeURIComponent(escape(atob(s.replace(/-/g, '+').replace(/_/g, '/'))));
+function cleanTasks(arr) {
+  const s = (x, n = 300) => typeof x === 'string' ? x.trim().slice(0, n) : '';
+  return (Array.isArray(arr) ? arr : []).slice(0, 30).map(t => {
+    if (!t || typeof t !== 'object') return null;
+    if (t.t === 'dict') return s(t.en) ? { t: 'dict', en: s(t.en) } : null;
+    if (t.t === 'uz2en') return s(t.uz) && s(t.en) ? { t: 'uz2en', uz: s(t.uz), en: s(t.en) } : null;
+    if (t.t === 'en2uz') return s(t.en) && s(t.uz) ? { t: 'en2uz', en: s(t.en), uz: s(t.uz) } : null;
+    if (t.t === 'gap') return s(t.text).split('___').length === 2 && s(t.ans, 60) ? { t: 'gap', text: s(t.text), ans: s(t.ans, 60), uz: s(t.uz) } : null;
+    if (t.t === 'choice') { const o = (Array.isArray(t.opts) ? t.opts : []).map(x => s(x, 120)).filter(Boolean).slice(0, 6), c = Number(t.c); return s(t.q) && o.length >= 2 && c >= 0 && c < o.length ? { t: 'choice', q: s(t.q), opts: o, c } : null; }
+    if (t.t === 'write') return { t: 'write', words: (Array.isArray(t.words) ? t.words : []).map(x => s(x, 40)).filter(Boolean).slice(0, 6), min: clamp(Math.round(Number(t.min) || 4), 1, 40), note: s(t.note) };
+    return null;
+  }).filter(Boolean);
+}
+function hwLink(hw) {
+  const data = b64e(JSON.stringify({ v: 1, id: hw.id, title: hw.title, note: hw.note || '', due: hw.due, tasks: hw.tasks }));
+  const base = /github\.io$/.test(location.hostname) ? location.origin + location.pathname : SITE_URL;
+  return base + '#vazifa=' + data;
+}
+function importHw(data) {
+  let o;
+  try { o = JSON.parse(b64d(data)); } catch (e) { toast('Vazifa havolasi buzilgan.'); return; }
+  const tasks = cleanTasks(o && o.tasks);
+  if (!tasks.length) { toast('Vazifa havolasida topshiriq topilmadi.'); return; }
+  const id = 'q-' + String(o.id || '').replace(/[^\w-]/g, '').slice(0, 40);
+  if (!hwFind(id)) {
+    const due = Number(o.due);
+    state.hw.unshift({ id, title: String(o.title || 'Uy vazifasi').slice(0, 120), src: 'qabul', lesson: null, created: today(), due: Number.isFinite(due) ? due : null, note: String(o.note || '').slice(0, 600), tasks, sub: null });
+    if (state.hw.length > 60) state.hw.length = 60;
+    touch();
+    toast('Yangi uy vazifasi qabul qilindi.');
+  }
+  openHw(id);
+}
+async function shareText(text, okMsg) {
+  try { if (navigator.share) { await navigator.share({ text }); return; } } catch (e) { if (e && e.name === 'AbortError') return; }
+  try { await navigator.clipboard.writeText(text); toast(okMsg); } catch (e) { toast('Nusxalab boʻlmadi: matnni belgilab, oʻzingiz nusxalang.'); }
+}
+
+// ---------- tekshiruvchi agent: qoidalar asosida
+function grammarHints(text) {
+  const t = ' ' + normEn(text) + ' ', out = [];
+  const rules = [
+    [/ i (is|are) /, 'I bilan am ishlatiladi: I am.'],
+    [/ (he|she|it) (are|am) /, 'he / she / it bilan is ishlatiladi.'],
+    [/ (you|we|they) (is|am) /, 'you / we / they bilan are ishlatiladi.'],
+    [/ (he|she|it) (have|do) /, 'he / she / it bilan has / does ishlatiladi.'],
+    [/ (he|she|it) don't /, 'he / she / it bilan doesn’t ishlatiladi.'],
+    [/ (i|you|we|they) (has|does) /, 'I / you / we / they bilan have / do ishlatiladi.'],
+    [/ (i|you|we|they) doesn't /, 'I / you / we / they bilan don’t ishlatiladi.'],
+    [/ a [aeio][a-z]/, 'Unli tovushdan oldin a emas, an qoʻyiladi: an apple.'],
+    [/ (can|will|must|should|could) to /, 'can / will / must dan keyin to qoʻyilmaydi.'],
+    [/ (didn't|did not) [a-z]+ed /, 'didn’t dan keyin feʼl oddiy shaklda boʻladi: didn’t go.'],
+    [/ (doesn't|does not) [a-z]+s /, 'doesn’t dan keyin feʼlga -s qoʻshilmaydi.']
+  ];
+  for (const [re, msg] of rules) if (re.test(t)) out.push(msg);
+  return out;
+}
+function checkTask(task, raw) {
+  const ans = String(raw == null ? '' : raw).trim();
+  const r = { score: 0, v: 'no', msgs: [], expected: null };
+  if (task.t === 'choice') {
+    if (ans === '') return Object.assign(r, { v: 'empty', expected: task.opts[task.c], msgs: ['Javob tanlanmagan.'] });
+    const ok = +ans === task.c;
+    return Object.assign(r, { score: ok ? 1 : 0, v: ok ? 'ok' : 'no', expected: task.opts[task.c], msgs: ok ? [] : ['Toʻgʻri javob: ' + task.opts[task.c] + '.'] });
+  }
+  if (!ans) return Object.assign(r, { v: 'empty', expected: task.t === 'en2uz' ? task.uz : task.en || task.ans || null, msgs: ['Javob yozilmagan.'] });
+  if (task.t === 'gap') {
+    const a = normEn(ans), e = normEn(task.ans);
+    r.expected = task.ans;
+    if (a === e) return Object.assign(r, { score: 1, v: 'ok' });
+    if (lemma(a) >= 0 && lemma(a) === lemma(e)) return Object.assign(r, { score: 0.5, v: 'part', msgs: ['Soʻz toʻgʻri, lekin shakli boshqacha: ' + task.ans + '.'] });
+    return Object.assign(r, { msgs: ['Toʻgʻri soʻz: ' + task.ans + '.'] });
+  }
+  if (task.t === 'dict' || task.t === 'uz2en' || task.t === 'en2uz') {
+    const toUz = task.t === 'en2uz', exp = toUz ? task.uz : task.en, tk = toUz ? toksUz : toks;
+    const T = tk(exp), U = tk(ans), al = align(T, U);
+    r.score = al.score / 100; r.expected = exp;
+    r.v = al.score >= 92 ? 'ok' : al.score >= 60 ? 'part' : 'no';
+    if (r.v !== 'ok') {
+      const miss = T.filter((x, i) => !al.tm[i]), extra = U.filter((x, i) => !al.um[i]);
+      if (T.length === U.length && [...T].sort().join(' ') === [...U].sort().join(' ')) r.msgs.push('Soʻzlar toʻgʻri, lekin tartibi xato.');
+      else {
+        if (miss.length) r.msgs.push('Tushib qolgan yoki xato yozilgan: ' + miss.slice(0, 6).join(', ') + '.');
+        if (extra.length) r.msgs.push('Ortiqcha yoki notoʻgʻri: ' + extra.slice(0, 6).join(', ') + '.');
+      }
+      if (!toUz && miss.some(x => /^(a|an|the)$/.test(x))) r.msgs.push('Artikl (a / an / the) ni unutmang.');
+      if (task.t === 'uz2en' && r.v === 'part') r.msgs.push('Boshqacha, lekin toʻgʻri tarjima ham boʻlishi mumkin.');
+    }
+    if (!toUz) r.msgs.push(...grammarHints(ans).slice(0, 2));
+    return r;
+  }
+  if (task.t === 'write') {
+    const idxs = new Set(analyze(ans).idxs);
+    const used = task.words.filter(w => { const i = IDX.get(String(w).toLowerCase()); return i != null ? idxs.has(i) : new RegExp('\\b' + escapeRe(w) + '\\b', 'i').test(ans); });
+    const words = ans.split(/\s+/).filter(Boolean), tokens = toks(ans);
+    const english = tokens.length > 0 && tokens.filter(x => lemma(x) >= 0 || STOP.has(x)).length / tokens.length >= 0.6;
+    const fmt = /^["']?[A-Z]/.test(ans) && /[.!?]["']?$/.test(ans);
+    const gram = grammarHints(ans);
+    r.score = clamp((task.words.length ? (used.length ? 0.5 : 0) : 0.5) + (words.length >= task.min ? 0.2 : 0) + (english ? 0.2 : 0) + (fmt ? 0.1 : 0) - 0.15 * gram.length, 0, 1);
+    r.v = r.score >= 0.85 ? 'ok' : r.score >= 0.5 ? 'part' : 'no';
+    if (task.words.length && !used.length) r.msgs.push('Berilgan soʻzlardan birortasi ishlatilmagan: ' + task.words.join(', ') + '.');
+    else if (used.length) r.msgs.push('Ishlatilgan soʻz: ' + used.join(', ') + ' ✓');
+    if (words.length < task.min) r.msgs.push('Gap juda qisqa: kamida ' + task.min + ' ta soʻz yozing.');
+    if (!english) r.msgs.push('Gap inglizcha emasga oʻxshaydi yoki notanish soʻzlar koʻp.');
+    if (!fmt) r.msgs.push('Gapni bosh harf bilan boshlang va oxiriga nuqta qoʻying.');
+    r.msgs.push(...gram);
+    return r;
+  }
+  return r;
+}
+// ---------- tekshiruvchi agent: Claude bilan chuqur tahlil (faqat claude.ai ichida)
+async function aiReview(hw, answers, res) {
+  const items = [];
+  hw.tasks.forEach((t, i) => {
+    if (!['write', 'uz2en', 'en2uz'].includes(t.t) || res[i].v === 'empty' || (res[i].v === 'ok' && t.t !== 'write')) return;
+    items.push({ i, type: t.t,
+      task: t.t === 'write' ? 'Write an English sentence' + (t.words.length ? ' using at least one of: ' + t.words.join(', ') : '') + (t.note ? '. Teacher note: ' + t.note : '') : t.t === 'uz2en' ? 'Translate into English: ' + t.uz : 'Translate into Uzbek: ' + t.en,
+      model_answer: t.t === 'uz2en' ? t.en : t.t === 'en2uz' ? t.uz : null, student_answer: String(answers[i]).slice(0, 400) });
+  });
+  if (!items.length) return 0;
+  const prompt = 'You are a fair, encouraging English teacher checking the homework of an Uzbek learner (' + (isBeg() ? 'beginner' : 'intermediate') + '). ' +
+    'For each item judge the student_answer. Accept any natural, correct translation or sentence even if it differs from model_answer. ' +
+    'Give score 0-100 (meaning and grammar), a corrected version (in the target language), and a short explanation in Uzbek (Latin script, use oʻ, gʻ and ʼ correctly; max 35 words). ' +
+    'Items: ' + JSON.stringify(items) + ' Reply with ONLY a JSON array: [{"i":0,"score":90,"corrected":"...","uz":"..."}]';
+  const out = await askClaude(prompt);
+  const arr = Array.isArray(out) ? out : out && Array.isArray(out.items) ? out.items : [];
+  let n = 0;
+  for (const x of arr) {
+    const i = Number(x && x.i);
+    if (!items.some(it => it.i === i)) continue;
+    const sc = clamp(Number(x.score) || 0, 0, 100) / 100, r = res[i];
+    r.score = sc; r.v = sc >= 0.85 ? 'ok' : sc >= 0.5 ? 'part' : 'no';
+    r.ai = { uz: str(x.uz, 400), corrected: str(x.corrected, 300) };
+    n++;
+  }
+  return n;
+}
+async function submitHw(hw) {
+  if (hwv.busy) return;
+  const answers = hw.tasks.map((t, i) => hwv.answers[i] == null ? '' : String(hwv.answers[i]));
+  if (answers.every(a => a.trim() === '')) { toast('Avval javoblarni yozing.'); return; }
+  hwv.busy = true; hwv.stepsFor = hw.id; hwv.steps = ['Javoblar qabul qilindi: ' + answers.filter(a => a.trim()).length + ' / ' + answers.length];
+  renderVazifa();
+  await wait(400);
+  const res = hw.tasks.map((t, i) => checkTask(t, answers[i]));
+  hwv.steps.push('Har bir topshiriq tekshirildi: soʻzlar, tartib va grammatika');
+  renderVazifa();
+  await wait(400);
+  let ai = false;
+  if (sampleCap) {
+    hwv.steps.push('Claude bilan chuqur tahlil…'); renderVazifa();
+    try { ai = (await aiReview(hw, answers, res)) > 0; hwv.steps[hwv.steps.length - 1] = ai ? 'Claude javoblarni chuqur tahlil qildi' : 'Claude tahlili kerak boʻlmadi'; }
+    catch (e) { hwv.steps[hwv.steps.length - 1] = 'Claude tahlili ishlamadi, oddiy tekshiruv natijasi koʻrsatiladi'; }
+  }
+  const score = Math.round(100 * res.reduce((s, r) => s + r.score, 0) / res.length);
+  hw.sub = { answers, res: res.map(r => ({ score: Math.round(r.score * 100), v: r.v, msgs: r.msgs, expected: r.expected, ai: r.ai || null })), score, day: today(), ai, tries: ((hw.sub && hw.sub.tries) || 0) + 1 };
+  const rec = dayRec(); rec.a += res.length; rec.c += res.filter(r => r.v === 'ok').length;
+  hwv.steps.push('Natija tayyor: ' + score + '%');
+  hwv.busy = false; hwv.redo = false;
+  touch(); renderVazifa();
+  window.scrollTo(0, 0);
+}
+
+// ---------- koʻrinish
+function renderVazifa() {
+  const body = clear($('#vzBody'));
+  if (!N) return;
+  body.append(h('div', { class: 'seg', role: 'group', 'aria-label': 'Boʻlim' },
+    h('button', { type: 'button', 'aria-pressed': String(hwv.mode !== 'create'), text: 'Vazifalarim', onclick: () => { hwv.mode = 'list'; renderVazifa(); } }),
+    h('button', { type: 'button', 'aria-pressed': String(hwv.mode === 'create'), text: 'Vazifa joylash', onclick: () => { hwv.mode = 'create'; renderVazifa(); } })));
+  if (hwv.mode === 'create') return hwCreate(body);
+  if (hwv.mode === 'do') { const hw = hwFind(hwv.id); if (hw) return hwDo(body, hw); hwv.mode = 'list'; }
+  hwList(body);
+}
+function hwStatus(hw) {
+  if (!hw.sub) return h('span', { class: 'chip blue', text: hw.due != null && hw.due < today() ? 'Muddati oʻtgan' : 'Yangi' });
+  return h('span', { class: 'chip ' + pctLevel(hw.sub.score), text: '✓ ' + hw.sub.score + '%' });
+}
+function hwList(body) {
+  const pend = hwPending();
+  body.append(agentSay(pend.length
+    ? 'Sizda ' + pend.length + ' ta bajarilmagan vazifa bor. Javoblarni yozib, «Topshirish» ni bosing: men darhol tekshirib, xatolarni oʻzbekcha tushuntiraman.'
+    : 'Hozir bajarilmagan vazifa yoʻq. Darsni tugatsangiz, uyga vazifa avtomatik beriladi. «Vazifa joylash» boʻlimida oʻzingiz yoki oʻquvchilaringiz uchun ham vazifa tuzishingiz mumkin.'));
+  const last = lastDoneLesson();
+  if (last != null && !state.hw.some(x => x.src === 'dars' && x.lesson === last)) body.append(h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', text: (last + 1) + '-dars uchun vazifa olish', onclick: () => { const hw = makeLessonHw(last); if (hw) { openHw(hw.id); renderVazifa(); } } })));
+  if (!state.hw.length) return;
+  body.append(h('div', { class: 'hwlist' }, state.hw.map(hw => h('button', { class: 'hwitem', type: 'button', onclick: () => { openHw(hw.id); renderVazifa(); window.scrollTo(0, 0); } },
+    h('div', { style: 'min-width:0' }, h('b', { text: hw.title }), h('span', { class: 'small muted', text: HW_SRC[hw.src] + ' · ' + hw.tasks.length + ' ta topshiriq' + (hw.due != null && !hw.sub ? ' · muddati: ' + dueText(hw.due) : '') })),
+    hwStatus(hw)))));
+}
+function agentLog() {
+  return h('div', { class: 'card agentlog', 'aria-live': 'polite' }, h('div', { class: 'prompt-lbl', text: 'Tekshiruvchi agent' }),
+    h('ol', { class: 'alog' }, hwv.steps.map((s, i) => { const run = hwv.busy && i === hwv.steps.length - 1; return h('li', { class: run ? 'run' : 'done' }, h('span', { class: 'ic', text: run ? '…' : '✓' }), h('span', { text: s })); })));
+}
+function taskCard(t, i) {
+  const set = v => { hwv.answers[i] = v; };
+  const val = hwv.answers[i] == null ? '' : hwv.answers[i];
+  const area = (lang, ph) => { const e = h('textarea', { lang, spellcheck: 'false', autocapitalize: 'sentences', placeholder: ph, 'aria-label': (i + 1) + '-topshiriq javobi' }); e.value = val; e.addEventListener('input', () => set(e.value)); return e; };
+  let body;
+  if (t.t === 'dict') body = [h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', svg: ICON.speak, onclick: () => speak(t.en) }, 'Eshitish'), h('button', { class: 'btn ghost', type: 'button', svg: ICON.slow, onclick: () => speak(t.en, 0.75) }, 'Sekin')), area('en', 'Eshitganingizni inglizcha yozing…')];
+  else if (t.t === 'uz2en') body = [h('div', { class: 'uzs', text: t.uz }), area('en', 'Inglizcha tarjimasi…')];
+  else if (t.t === 'en2uz') body = [h('div', { class: 'row' }, h('span', { class: 'ens', lang: 'en', text: t.en }), spkBtn(t.en, 'Eshitish')), area('uz', 'Oʻzbekcha tarjimasi…')];
+  else if (t.t === 'gap') {
+    const [a, b] = t.text.split('___');
+    const inp = h('input', { type: 'text', lang: 'en', autocapitalize: 'off', spellcheck: 'false', placeholder: 'Soʻzni yozing', 'aria-label': (i + 1) + '-topshiriq javobi' });
+    inp.value = val; inp.addEventListener('input', () => set(inp.value));
+    body = [h('div', { class: 'ens', lang: 'en' }, a, h('span', { class: 'blank' }), b), inp, t.uz ? h('div', { class: 'small muted', text: 'Tarjimasi: ' + t.uz }) : null];
+  } else if (t.t === 'choice') {
+    body = [h('div', { class: 'gtext', text: t.q }), h('div', { class: 'opts' }, t.opts.map((o, k) => h('button', { class: 'opt' + (String(val) === String(k) ? ' sel' : ''), type: 'button', onclick: ev => { set(String(k)); ev.currentTarget.parentNode.querySelectorAll('.opt').forEach(x => x.classList.toggle('sel', x === ev.currentTarget)); } }, h('span', { class: 'k', text: k + 1 }), h('span', { text: o }))))];
+  } else {
+    body = [h('div', { class: 'gtext', text: t.note || 'Quyidagi soʻzlardan kamida bittasini ishlatib, inglizcha gap yozing.' }),
+      t.words.length ? h('div', { class: 'chips' }, t.words.map(w => h('button', { class: 'chip blue', type: 'button', lang: 'en', text: w, onclick: () => speak(w) }))) : null,
+      h('div', { class: 'small muted', text: 'Kamida ' + t.min + ' ta soʻz. Bosh harf bilan boshlab, nuqta bilan tugating.' }), area('en', 'Gapingizni shu yerga yozing…')];
+  }
+  return h('div', { class: 'card hwtask' }, h('div', { class: 'prompt-lbl', text: (i + 1) + '. ' + HW_T[t.t] }), ...body);
+}
+function hwDo(body, hw) {
+  const showRes = hw.sub && !hwv.redo;
+  body.append(h('div', { class: 'row between' },
+    h('button', { class: 'btn ghost sm', type: 'button', text: '‹ Vazifalar', onclick: () => { hwv.mode = 'list'; hwv.redo = false; renderVazifa(); } }),
+    hwv.del === hw.id
+      ? h('span', { class: 'row', style: 'gap:6px' }, h('button', { class: 'btn sm', type: 'button', text: 'Ha, oʻchirish', onclick: () => { state.hw = state.hw.filter(x => x !== hw); hwv.mode = 'list'; hwv.del = null; touch(); renderVazifa(); } }), h('button', { class: 'btn ghost sm', type: 'button', text: 'Yoʻq', onclick: () => { hwv.del = null; renderVazifa(); } }))
+      : h('button', { class: 'btn ghost sm', type: 'button', text: 'Oʻchirish', onclick: () => { hwv.del = hw.id; renderVazifa(); } })));
+  body.append(h('div', null, h('div', { class: 'eyebrow', text: HW_SRC[hw.src] + (hw.due != null ? ' · muddati: ' + dueText(hw.due) : '') }), h('h2', { class: 'hwtitle', text: hw.title }), hw.note ? h('p', { class: 'small muted', text: hw.note }) : null));
+  if (hwv.stepsFor === hw.id && hwv.steps.length) body.append(agentLog());
+  if (showRes) return hwResults(body, hw);
+  if (!hwv.busy) body.append(agentSay(hw.sub ? 'Qaytadan bajaring: oldingi javoblaringiz turibdi, xatolarini tuzatib, yana topshiring.' : 'Har bir topshiriqni bajaring va pastdagi «Topshirish» ni bosing. Hammasini birdan tekshirib, natijani koʻrsataman.'));
+  hw.tasks.forEach((t, i) => body.append(taskCard(t, i)));
+  body.append(h('div', { class: 'row' }, h('button', { class: 'btn primary lg', type: 'button', disabled: hwv.busy, text: hwv.busy ? 'Tekshirilmoqda…' : 'Topshirish', onclick: () => submitHw(hw) })));
+}
+function resultText(hw) {
+  const s = hw.sub, n = k => s.res.filter(r => r.v === k).length;
+  return '📋 ' + hw.title + '\nNatija: ' + s.score + '% (✓' + n('ok') + ' ½' + n('part') + ' ✗' + (n('no') + n('empty')) + ') · ' + dayName(s.day) + '\n' +
+    hw.tasks.map((t, i) => (i + 1) + ') ' + VERDICT[s.res[i].v].split(' ')[0] + ' ' + HW_T[t.t] + ': ' + (t.t === 'choice' ? (t.opts[+s.answers[i]] || '—') : (s.answers[i] || '—'))).join('\n') + '\n— 4000 B2 ilovasi';
+}
+function hwResults(body, hw) {
+  const s = hw.sub, n = k => s.res.filter(r => r.v === k).length;
+  body.append(h('div', { class: 'card' },
+    h('div', { class: 'prompt-lbl', text: 'Natija' + (s.tries > 1 ? ' · ' + s.tries + '-urinish' : '') }),
+    h('div', { class: 'score ' + pctLevel(s.score) }, h('b', { text: s.score + '%' }), h('span', { class: 'muted', text: dayName(s.day) + ' kuni topshirildi' })),
+    h('div', { class: 'livescore lg' }, h('span', { class: 'ok', text: '✓ ' + n('ok') }), h('span', { class: 'p-mid', text: '½ ' + n('part') }), h('span', { class: 'no', text: '✗ ' + (n('no') + n('empty')) })),
+    s.ai ? h('span', { class: 'chip blue', text: 'Claude ham tekshirdi' }) : null,
+    agentSay(s.score >= 90 ? 'Aʼlo! Deyarli hammasi toʻgʻri. Shunday davom eting.' : s.score >= 70 ? 'Yaxshi ish! Pastda xato va qisman toʻgʻri javoblarni koʻrib chiqing.' : 'Xatolar bor, bu normal holat. Har bir topshiriq ostidagi izohni oʻqing va «Qayta bajarish» ni bosing.'),
+    h('div', { class: 'row' },
+      h('button', { class: 'btn primary', type: 'button', text: 'Qayta bajarish', onclick: () => { hwv.redo = true; hwv.steps = []; renderVazifa(); window.scrollTo(0, 0); } }),
+      h('button', { class: 'btn', type: 'button', text: 'Natijani ulashish', onclick: () => shareText(resultText(hw), 'Natija nusxalandi: uni Telegram yoki SMS orqali yuboring.') }))));
+  hw.tasks.forEach((t, i) => {
+    const r = s.res[i], a = s.answers[i];
+    const tk = t.t === 'en2uz' ? toksUz : toks;
+    const showDiff = ['dict', 'uz2en', 'en2uz'].includes(t.t) && r.expected && r.v !== 'ok' && a;
+    body.append(h('div', { class: 'card hwtask res-' + r.v },
+      h('div', { class: 'row between' }, h('span', { class: 'prompt-lbl', text: (i + 1) + '. ' + HW_T[t.t] }), h('span', { class: 'verdict ' + r.v, text: VERDICT[r.v] + (r.v === 'part' ? ' · ' + r.score + '%' : '') })),
+      t.t === 'uz2en' ? h('div', { class: 'small muted', text: t.uz }) : t.t === 'en2uz' ? h('div', { class: 'small muted', lang: 'en', text: t.en }) : t.t === 'gap' ? h('div', { class: 'small muted', lang: 'en', text: t.text }) : t.t === 'choice' ? h('div', { class: 'small muted', text: t.q }) : null,
+      h('div', null, h('span', { class: 'small muted', text: 'Javobingiz: ' }), h('b', { text: t.t === 'choice' ? (t.opts[+a] || '—') : (a || '—') })),
+      showDiff ? h('div', null, h('div', { class: 'small muted', text: 'Toʻgʻri javob (qizil — siz yozmagan yoki xato yozgan soʻzlar):' }), diffView(r.expected, align(tk(r.expected), tk(a)).tm, 'miss', tk)) : null,
+      !showDiff && r.expected && r.v !== 'ok' ? h('div', null, h('span', { class: 'small muted', text: 'Toʻgʻri javob: ' }), h('b', { text: r.expected })) : null,
+      t.t === 'dict' || t.t === 'uz2en' ? h('div', { class: 'row' }, spkBtn(t.en, 'Toʻgʻri javobni eshitish')) : null,
+      r.msgs.length ? h('ul', { class: 'hwmsgs' }, r.msgs.map(m => h('li', { text: m }))) : null,
+      r.ai ? h('div', { class: 'tipbox' }, h('div', { class: 'prompt-lbl', text: 'Claude izohi' }), r.ai.uz ? h('p', { class: 'gtext', text: r.ai.uz }) : null, r.ai.corrected ? h('div', null, h('span', { class: 'small muted', text: 'Toʻgʻrilangan: ' }), h('b', { text: r.ai.corrected })) : null) : null));
+  });
+}
+
+// ---------- vazifa joylash
+const newDraft = () => ({ title: '', due: '', note: '', tasks: [], type: 'uz2en', f: {} });
+function hwCreate(body) {
+  const d = hwv.draft || (hwv.draft = newDraft());
+  if (hwv.saved) {
+    const hw = hwFind(hwv.saved);
+    if (hw) {
+      const link = hwLink(hw);
+      const inp = h('input', { type: 'text', readonly: true, value: link, 'aria-label': 'Ulashish havolasi', onfocus: e => e.target.select() });
+      body.append(agentSay('Vazifa saqlandi va «Vazifalarim» roʻyxatiga qoʻshildi. Quyidagi havolani oʻquvchilaringizga yuboring: ular ochganda vazifa ularning ilovasiga tushadi, javoblarini esa men avtomatik tekshiraman. Natijasini ular sizga «Natijani ulashish» tugmasi bilan yuboradi.'),
+        h('div', { class: 'card sharebox' }, h('div', { class: 'prompt-lbl', text: 'Ulashish havolasi' }), inp,
+          h('div', { class: 'row' },
+            h('button', { class: 'btn primary', type: 'button', text: 'Havolani ulashish', onclick: () => shareText(hw.title + ' — uy vazifasi: ' + link, 'Havola nusxalandi.') }),
+            h('button', { class: 'btn', type: 'button', text: 'Vazifani ochish', onclick: () => { openHw(hw.id); hwv.saved = null; renderVazifa(); } }),
+            h('button', { class: 'btn ghost', type: 'button', text: 'Yangi vazifa tuzish', onclick: () => { hwv.saved = null; hwv.draft = newDraft(); renderVazifa(); } })),
+          h('p', { class: 'small muted', text: 'Havola ilovaning internetdagi sayti orqali ochiladi. Oʻquvchi ilovani oʻrnatmagan boʻlsa ham ishlaydi.' })));
+      return;
+    }
+    hwv.saved = null;
+  }
+  const field = (label, el) => h('label', null, h('span', { text: label }), el);
+  const inp = (key, attrs, obj = d) => { const e = h(attrs.tag || 'input', Object.assign({ type: 'text' }, attrs, { tag: null })); e.value = obj[key] || ''; e.addEventListener('input', () => { obj[key] = e.value; }); return e; };
+  body.append(agentSay('Bu yerda oʻzingiz yoki oʻquvchilaringiz uchun uy vazifasi tuzasiz. Topshiriqlarni qoʻshing, saqlang, keyin havolani yuboring. Javoblarni men tekshiraman.'));
+  body.append(h('div', { class: 'card hwform' },
+    field('Vazifa nomi', inp('title', { placeholder: 'Masalan: 3-hafta takrorlash' })),
+    field('Muddati (ixtiyoriy)', inp('due', { type: 'date' })),
+    field('Izoh (ixtiyoriy)', inp('note', { tag: 'textarea', placeholder: 'Oʻquvchilarga qisqa koʻrsatma' }))));
+  // yangi topshiriq
+  const f = d.f;
+  const typeSel = h('select', { 'aria-label': 'Topshiriq turi' }, Object.entries(HW_T).map(([k, v]) => h('option', { value: k, text: v })));
+  typeSel.value = d.type;
+  typeSel.addEventListener('change', () => { d.type = typeSel.value; d.f = {}; renderVazifa(); });
+  const fin = (key, label, attrs = {}) => field(label, inp(key, attrs, f));
+  const F = {
+    uz2en: () => [fin('uz', 'Oʻzbekcha gap'), fin('en', 'Toʻgʻri inglizcha tarjima', { lang: 'en' })],
+    en2uz: () => [fin('en', 'Inglizcha gap', { lang: 'en' }), fin('uz', 'Toʻgʻri oʻzbekcha tarjima')],
+    dict: () => [fin('en', 'Inglizcha gap (ovoz chiqarib oʻqib beriladi)', { lang: 'en' })],
+    gap: () => [fin('text', 'Gap (boʻsh joy oʻrniga ___ yozing)', { lang: 'en', placeholder: 'I ___ tea every morning.' }), fin('ans', 'Toʻgʻri soʻz', { lang: 'en' }), fin('uz', 'Oʻzbekcha tarjimasi (ixtiyoriy)')],
+    choice: () => [fin('q', 'Savol'), fin('opts', 'Variantlar (har birini yangi qatorga yozing)', { tag: 'textarea' }), fin('c', 'Toʻgʻri variant raqami', { type: 'number', min: 1, max: 6 })],
+    write: () => [fin('note', 'Topshiriq matni', { placeholder: 'Masalan: Oilangiz haqida bitta gap yozing.' }), fin('words', 'Ishlatilishi kerak soʻzlar (vergul bilan, ixtiyoriy)', { lang: 'en' }), fin('min', 'Kamida nechta soʻz', { type: 'number', min: 1, max: 40 })]
+  };
+  const addTask = () => {
+    const t = { t: d.type };
+    if (d.type === 'choice') { t.q = f.q; t.opts = String(f.opts || '').split('\n'); t.c = Number(f.c) - 1; }
+    else if (d.type === 'write') { t.note = f.note; t.words = String(f.words || '').split(',').map(x => x.trim()); t.min = f.min || 4; }
+    else Object.assign(t, f);
+    const ok = cleanTasks([t]);
+    if (!ok.length) { toast(d.type === 'gap' ? 'Gapda bitta ___ boʻlishi va toʻgʻri soʻz yozilishi kerak.' : d.type === 'choice' ? 'Savol, kamida 2 ta variant va toʻgʻri variant raqamini yozing.' : 'Barcha maydonlarni toʻldiring.'); return; }
+    d.tasks.push(ok[0]); d.f = {}; renderVazifa();
+  };
+  const total = Math.ceil(N / LESSON);
+  const lsel = h('select', { 'aria-label': 'Dars' });
+  for (let k = 0; k < total; k++) lsel.append(h('option', { value: k, text: (k + 1) + '-dars' }));
+  lsel.value = String(Math.max(0, Math.min(total - 1, state.cur)));
+  body.append(h('div', { class: 'card hwform' },
+    h('div', { class: 'prompt-lbl', text: 'Topshiriq qoʻshish' }),
+    field('Turi', typeSel), ...F[d.type](),
+    h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', text: '+ Qoʻshish', onclick: addTask })),
+    h('div', { class: 'prompt-lbl', text: 'Yoki darsdan avtomatik' }),
+    h('div', { class: 'row' }, lsel, h('button', { class: 'btn', type: 'button', text: 'Shu dars soʻzlaridan 8 ta topshiriq', onclick: () => { const ts = lessonTasks(+lsel.value); if (!ts.length) { toast('Bu darsdan topshiriq tuzib boʻlmadi.'); return; } d.tasks.push(...ts); if (!d.title) d.title = (+lsel.value + 1) + '-dars boʻyicha vazifa'; renderVazifa(); } }))));
+  body.append(h('div', { class: 'card' },
+    h('div', { class: 'prompt-lbl', text: 'Qoʻshilgan topshiriqlar: ' + d.tasks.length }),
+    d.tasks.length ? h('ol', { class: 'hwdraft' }, d.tasks.map((t, i) => h('li', null,
+      h('span', { style: 'min-width:0' }, h('b', { text: HW_T[t.t] + ': ' }), t.t === 'choice' ? t.q : t.t === 'write' ? (t.note || t.words.join(', ')) : t.t === 'gap' ? t.text : t.t === 'en2uz' || t.t === 'dict' ? t.en : t.uz),
+      h('button', { class: 'navbtn', type: 'button', 'aria-label': 'Olib tashlash', text: '×', onclick: () => { d.tasks.splice(i, 1); renderVazifa(); } })))) : h('p', { class: 'small muted', text: 'Hali topshiriq yoʻq.' }),
+    h('div', { class: 'row' }, h('button', { class: 'btn primary', type: 'button', text: 'Saqlash', disabled: !d.tasks.length, onclick: () => {
+      const due = /^\d{4}-\d{2}-\d{2}$/.test(d.due) ? Math.round(Date.UTC(+d.due.slice(0, 4), +d.due.slice(5, 7) - 1, +d.due.slice(8, 10)) / 86400000) : null;
+      const hw = { id: 'o' + Date.now().toString(36), title: (d.title || 'Uy vazifasi').trim().slice(0, 120), src: 'ozim', lesson: null, created: today(), due, note: (d.note || '').trim().slice(0, 600), tasks: d.tasks.slice(0, 30), sub: null };
+      state.hw.unshift(hw); if (state.hw.length > 60) state.hw.length = 60;
+      touch(); hwv.saved = hw.id; hwv.draft = newDraft(); renderVazifa(); window.scrollTo(0, 0);
+    } }))));
+}
+function renderHwHome() {
+  const box = $('#hHw'); if (!box) return;
+  clear(box);
+  const pend = hwPending();
+  box.append(h('div', { class: 'row between' }, h('div', { class: 'prompt-lbl', text: 'Uy vazifalari' }), pend.length ? h('span', { class: 'chip blue', text: pend.length + ' ta yangi' }) : null),
+    pend.length ? h('div', { class: 'hwlist' }, pend.slice(0, 2).map(hw => h('button', { class: 'hwitem', type: 'button', onclick: () => { openHw(hw.id); go('vazifalar'); } }, h('div', { style: 'min-width:0' }, h('b', { text: hw.title }), h('span', { class: 'small muted', text: hw.tasks.length + ' ta topshiriq' + (hw.due != null ? ' · muddati: ' + dueText(hw.due) : '') })), hwStatus(hw))))
+      : h('p', { class: 'small muted', text: 'Bajarilmagan vazifa yoʻq. Darsni tugatsangiz, uyga vazifa avtomatik beriladi.' }),
+    h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', text: 'Barcha vazifalar', onclick: () => { hwv.mode = 'list'; go('vazifalar'); } })));
 }
 
 /* ================= boot ================= */
@@ -2492,7 +2957,7 @@ boot();
 <button class="install-btn" id="installBtn" type="button" hidden>⬇ Ilovani oʻrnatish</button>
 <script>
 (() => {
-  // App version 52c00bcdfe
+  // App version f287bb351c
   let deferred = null;
   const btn = document.getElementById('installBtn');
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; btn.hidden = false; });

@@ -1,5 +1,5 @@
 // Avtomatik yaratilgan: node manba/ilova.js. Qoʻlda tahrir qilmang.
-const CORE = 'ingliz3000-core-52c00bcdfe';
+const CORE = 'ingliz3000-core-f287bb351c';
 const AUDIO = 'ingliz3000-audio-2cd2df96a8';
 // Telefon xotirasini band qilmaslik uchun faqat oxirgi eshitilgan shuncha ovoz fayli saqlanadi (bir necha MB).
 const AUDIO_KEEP = 16;

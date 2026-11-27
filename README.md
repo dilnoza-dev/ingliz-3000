@@ -26,6 +26,8 @@ claude.ai havolasida «Ustozdan soʻrash» tugmasi ham bor: Claude soʻz yoki gr
 3. **Tarjima.** Ikki yoʻnalishda: oʻzbekcha gapni inglizchaga yoki inglizcha gapni oʻzbekchaga tarjima qilasiz. Xatolar rangda koʻrsatiladi, Claude ularni oʻzbekcha tushuntiradi.
 4. **Talaffuz.** Mikrofonni bosib, gapni inglizcha aytasiz. Dastur nima eshitganini koʻrsatadi va qaysi tovushda qiynalayotganingizni aytadi.
 
+**Uy vazifalari («Vazifa» boʻlimi).** Har bir dars tugaganda shu darsdan 8 ta topshiriqli uyga vazifa avtomatik beriladi: eshitib yozish, ikki tomonga tarjima, boʻsh joyni toʻldirish va berilgan soʻzlar bilan gap tuzish. «Vazifa joylash» qismida oʻzingiz vazifa tuzasiz (6 xil topshiriq turi yoki darsdan avtomatik) va havola orqali yuborasiz: havolani ochgan odamning ilovasiga vazifa tushadi. «Topshirish» bosilganda **tekshiruvchi agent** javoblarni tekshiradi: soʻz tartibi, tushib qolgan soʻzlar, artikllar va asosiy grammatika xatolarini topib, ball qoʻyadi va oʻzbekcha tushuntiradi. Claude ichida ochilganda Claude ham chuqur tahlil qiladi (boshqacha, lekin toʻgʻri tarjimalarni ham qabul qiladi). Natijani «Natijani ulashish» tugmasi bilan oʻqituvchiga yuborish mumkin.
+
 Bosh sahifada kunlik reja, oʻrganilgan soʻzlar soni va «Kamchiliklarim» boʻlimi bor. U yerda koʻp xato qilinadigan soʻzlar, talaffuzda qiynalgan soʻzlar va grammatik eslatmalar yigʻilib boradi.
 
 Dastur avtomatik ravishda **boshlangʻich rejimda** ishlaydi: gaplar oddiy boʻladi, ovoz sekinroq chiqadi, tarjima va talaffuzda «Yordam» tugmasi bor. Sozlamalarda darajani «Oʻrta» ga oʻtkazish mumkin.
