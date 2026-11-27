@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="4000 ta inglizcha soʻzni (A1 dan B2 gacha) oʻzbek tilida oʻrgatadigan ilova: 4 variantli test, gap tuzish, tarjima va talaffuz.">
-<meta name="theme-color" content="#6C5CE7">
+<meta name="theme-color" content="#0B1020">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;600;700;800&family=Charis+SIL&display=swap">
 <style>
-:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); color-scheme: light; }
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); color-scheme: dark; }
 body { margin: 0; font-size: 14px; }
 img { max-width: 100%; }
 [hidden] { display: none !important; }
@@ -24,50 +24,29 @@ img { max-width: 100%; }
   position: fixed; left: 50%; transform: translateX(-50%); z-index: 30;
   bottom: calc(16px + env(safe-area-inset-bottom, 0px));
   display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border: 0; border-radius: 999px;
-  background: #6C5CE7; color: #fff; font: 700 15px/1 system-ui, sans-serif; box-shadow: 0 6px 20px rgba(108,92,231,.35);
+  background: #8B5CF6; color: #fff; font: 700 15px/1 system-ui, sans-serif; box-shadow: 0 6px 20px rgba(0,0,0,.45);
 }
 </style>
 </head>
 <body>
 <style>
-/* Layout: one-column workbook (max 760px) under a sticky purple band carrying the brand, progress and stage tabs.
-   Design system: purple = brand and actions, sky blue = statistics and secondary, green / rose = correct / wrong. */
+/* Layout: one-column workbook (max 760px) under a sticky band carrying the brand, progress and stage tabs.
+   Design system (the app icon's colours, always dark): navy band with violet and cyan glows and a cyan → violet ring line,
+   violet = actions, cyan / sky = progress and statistics, green / rose = correct / wrong. */
 :root {
-  --bg: #F8FAFC; --surface: #FFFFFF; --surface-2: #F1F5F9; --ink: #172033; --muted: #64748B; --faint: #94A3B8; --line: #E2E8F0;
-  --band: #6C5CE7; --band-2: #5A4BD1; --band-ink: #FFFFFF; --band-muted: rgba(255,255,255,.78); --band-line: rgba(255,255,255,.18);
-  --accent: #6C5CE7; --accent-hover: #5A4BD1; --accent-ink: #FFFFFF; --accent-soft: #EDE9FE;
-  --sky: #38BDF8; --sky-soft: #E0F2FE;
-  --teal: #0369A1; --teal-soft: #E0F2FE;
-  --saffron: #F59E0B; --saffron-soft: #FEF3C7; --saffron-ink: #B45309;
-  --good: #22C55E; --good-soft: #DCFCE7; --good-ink: #15803D; --bad: #F43F5E; --bad-soft: #FFE4E6; --bad-ink: #E11D48;
-  --shadow: 0 1px 2px rgba(23,32,51,.04), 0 6px 20px rgba(23,32,51,.06);
-  --shadow-accent: 0 6px 16px rgba(108,92,231,.28);
+  --bg: #0F1426; --surface: #171D33; --surface-2: #1E2540; --ink: #E8EBF5; --muted: #A1ABC2; --faint: #6E7891; --line: #2A3150;
+  --band: #0B1020; --band-ink: #FFFFFF; --band-muted: rgba(246,248,255,.7); --band-line: rgba(255,255,255,.12);
+  --cyan: #22D3EE; --violet: #8B5CF6; --ring: linear-gradient(90deg, #22D3EE, #8B5CF6);
+  --accent: #8B7EF0; --accent-hover: #9D92F3; --accent-ink: #FFFFFF; --accent-soft: #29245A;
+  --sky: #38BDF8; --sky-soft: #0B2A3F;
+  --teal: #7DD3FC; --teal-soft: #0B2A3F;
+  --saffron: #F59E0B; --saffron-soft: #3A2A0B; --saffron-ink: #FBBF24;
+  --good: #22C55E; --good-soft: #0F2E1C; --good-ink: #4ADE80; --bad: #F43F5E; --bad-soft: #3B1420; --bad-ink: #FB7185;
+  --shadow: 0 1px 2px rgba(0,0,0,.35), 0 10px 28px rgba(0,0,0,.3);
+  --shadow-accent: 0 6px 16px rgba(0,0,0,.35);
   --f-display: 'Unbounded', 'Manrope', system-ui, sans-serif;
   --f-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --r: 16px;
-}
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #0F1426; --surface: #171D33; --surface-2: #1E2540; --ink: #E8EBF5; --muted: #A1ABC2; --faint: #6E7891; --line: #2A3150;
-  --band: #5A4BD1; --band-2: #4A3DB8; --band-ink: #FFFFFF; --band-muted: rgba(255,255,255,.75); --band-line: rgba(255,255,255,.12);
-  --accent: #8B7EF0; --accent-hover: #9D92F3; --accent-ink: #FFFFFF; --accent-soft: #29245A;
-  --sky: #38BDF8; --sky-soft: #0B2A3F;
-  --teal: #7DD3FC; --teal-soft: #0B2A3F;
-  --saffron: #F59E0B; --saffron-soft: #3A2A0B; --saffron-ink: #FBBF24;
-  --good: #22C55E; --good-soft: #0F2E1C; --good-ink: #4ADE80; --bad: #F43F5E; --bad-soft: #3B1420; --bad-ink: #FB7185;
-  --shadow: 0 1px 2px rgba(0,0,0,.35), 0 10px 28px rgba(0,0,0,.3);
-  --shadow-accent: 0 6px 16px rgba(0,0,0,.35);
-  color-scheme: dark;
-} }
-:root[data-theme="dark"] {
-  --bg: #0F1426; --surface: #171D33; --surface-2: #1E2540; --ink: #E8EBF5; --muted: #A1ABC2; --faint: #6E7891; --line: #2A3150;
-  --band: #5A4BD1; --band-2: #4A3DB8; --band-ink: #FFFFFF; --band-muted: rgba(255,255,255,.75); --band-line: rgba(255,255,255,.12);
-  --accent: #8B7EF0; --accent-hover: #9D92F3; --accent-ink: #FFFFFF; --accent-soft: #29245A;
-  --sky: #38BDF8; --sky-soft: #0B2A3F;
-  --teal: #7DD3FC; --teal-soft: #0B2A3F;
-  --saffron: #F59E0B; --saffron-soft: #3A2A0B; --saffron-ink: #FBBF24;
-  --good: #22C55E; --good-soft: #0F2E1C; --good-ink: #4ADE80; --bad: #F43F5E; --bad-soft: #3B1420; --bad-ink: #FB7185;
-  --shadow: 0 1px 2px rgba(0,0,0,.35), 0 10px 28px rgba(0,0,0,.3);
-  --shadow-accent: 0 6px 16px rgba(0,0,0,.35);
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -83,28 +62,28 @@ button { cursor: pointer; }
 
 /* ---------- Band ---------- */
 .band {
-  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
-  background-color: var(--band); color: var(--band-ink);
-  background-image: linear-gradient(135deg, var(--band) 0%, var(--band-2) 100%);
-  box-shadow: 0 4px 18px rgba(90,75,209,.22);
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; color: var(--band-ink);
+  background: radial-gradient(120% 140% at 0% 0%, rgba(139,92,246,.55) 0%, rgba(139,92,246,0) 55%),
+    radial-gradient(120% 160% at 100% 100%, rgba(34,211,238,.42) 0%, rgba(34,211,238,0) 55%), var(--band);
 }
+.band::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--ring); }
 .band-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 12px 6px; }
 .brand { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
 .brand .n { font-family: var(--f-display); font-weight: 700; font-size: 1.35rem; letter-spacing: -.01em; }
-.brand .t { font-family: var(--f-display); font-weight: 500; font-size: 1rem; }
+.brand .t { font-family: var(--f-display); font-weight: 500; font-size: 1rem; color: var(--cyan); }
 .brand small { display: block; font-family: var(--f-body); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--band-muted); }
 .meter { text-align: right; font-variant-numeric: tabular-nums; min-width: 120px; }
 .meter b { font-family: var(--f-display); font-weight: 600; font-size: 1rem; }
 .meter span { color: var(--band-muted); font-size: .85rem; }
-.mbar { height: 6px; border-radius: 3px; background: rgba(255,255,255,.24); overflow: hidden; margin-top: 4px; }
-.mbar i { display: block; height: 100%; width: 0; background: var(--sky); border-radius: 3px; transition: width .4s; }
+.mbar { height: 6px; border-radius: 3px; background: rgba(255,255,255,.14); overflow: hidden; margin-top: 4px; }
+.mbar i { display: block; height: 100%; width: 0; background: var(--ring); border-radius: 3px; transition: width .4s; }
 .tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
 .tabs::-webkit-scrollbar { display: none; }
 .tabs a {
   flex: 1 0 auto; text-align: center; text-decoration: none; color: var(--band-muted);
   padding: 9px 10px 11px; font-weight: 700; font-size: .88rem; border-bottom: 3px solid transparent; white-space: nowrap;
 }
-.tabs a[aria-current="page"] { color: var(--band-ink); border-bottom-color: #FFFFFF; }
+.tabs a[aria-current="page"] { color: var(--band-ink); border-bottom-color: var(--cyan); }
 .tabs a:hover { color: var(--band-ink); }
 
 /* ---------- Base ---------- */
@@ -148,13 +127,13 @@ button.chip { cursor: pointer; }
 
 /* ---------- Home ---------- */
 .hero { display: flex; flex-direction: column; gap: 10px; }
-.hero .big { color: var(--accent); font-family: var(--f-display); font-weight: 700; font-size: clamp(2.6rem, 10vw, 3.8rem); line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.hero .big { background: var(--ring); -webkit-background-clip: text; background-clip: text; color: transparent; font-family: var(--f-display); font-weight: 700; font-size: clamp(2.6rem, 10vw, 3.8rem); line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
 .hero .of { font-family: var(--f-display); font-weight: 500; font-size: 1.05rem; color: var(--muted); margin-left: 8px; }
 .levels { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
 .lv { display: flex; flex-direction: column; gap: 5px; }
 .lv .track { height: 10px; border-radius: 5px; background: var(--surface-2); overflow: hidden; }
-.lv .track i { display: block; height: 100%; width: 0; background: var(--sky); border-radius: 5px; transition: width .4s; }
-.lv:nth-child(2) .track i { background: var(--accent); }
+.lv .track i { display: block; height: 100%; width: 0; background: var(--cyan); border-radius: 5px; transition: width .4s; }
+.lv:nth-child(2) .track i { background: var(--violet); }
 .lv:nth-child(3) .track i { background: var(--saffron); }
 .lv:nth-child(4) .track i { background: var(--good); }
 .lv span { font-size: .72rem; color: var(--muted); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -206,7 +185,7 @@ button.chip { cursor: pointer; }
 .wlist .pos { font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--teal); margin-left: 6px; }
 .qtop { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 .qbar { height: 8px; border-radius: 4px; background: var(--surface-2); overflow: hidden; flex: 1; }
-.qbar i { display: block; height: 100%; background: var(--accent); border-radius: 4px; width: 0; transition: width .3s; }
+.qbar i { display: block; height: 100%; background: var(--ring); border-radius: 4px; width: 0; transition: width .3s; }
 .qcount { font-size: .85rem; color: var(--muted); font-weight: 700; font-variant-numeric: tabular-nums; }
 .decknav { display: flex; align-items: center; gap: 6px; }
 .steps { margin: 0; padding: 10px 12px; list-style: none; display: flex; flex-direction: column; gap: 6px; background: var(--surface-2); border-radius: 10px; counter-reset: st; font-size: .88rem; color: var(--muted); }
@@ -302,7 +281,7 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4
 .plan-i .small { color: var(--muted); font-weight: 700; line-height: 1.25; }
 .plan-i b { font-family: var(--f-display); font-weight: 600; font-variant-numeric: tabular-nums; }
 .plan-i .track { display: block; height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
-.plan-i .track i { display: block; height: 100%; background: var(--sky); border-radius: 3px; }
+.plan-i .track i { display: block; height: 100%; background: var(--ring); border-radius: 3px; }
 .plan-i.done { border-color: var(--good); background: var(--good-soft); }
 .plan-i.done .track i { background: var(--good); }
 .rules { border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); box-shadow: var(--shadow); }
@@ -325,7 +304,7 @@ textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4
 .loading { padding: 40px 0; text-align: center; color: var(--muted); }
 /* ---------- Ustoz bilan dars ---------- */
 .ustoz { display: flex; gap: 10px; align-items: flex-start; }
-.ustoz .av { flex: none; width: 42px; height: 42px; border-radius: 50%; background: var(--accent); color: #FFFFFF; box-shadow: var(--shadow-accent); display: grid; place-items: center; }
+.ustoz .av { flex: none; width: 42px; height: 42px; border-radius: 50%; background: var(--band); color: var(--cyan); box-shadow: 0 0 0 2px var(--violet); display: grid; place-items: center; }
 .ustoz .av svg { width: 24px; height: 24px; }
 .ustoz .bub { background: var(--accent-soft); color: var(--ink); border-radius: 4px 14px 14px 14px; padding: 10px 14px; font-size: .95rem; line-height: 1.45; min-width: 0; }
 .ustoz .bub p { margin: 0; }
@@ -2249,7 +2228,7 @@ boot();
 <button class="install-btn" id="installBtn" type="button" hidden>⬇ Ilovani oʻrnatish</button>
 <script>
 (() => {
-  // App version 6b815a3479
+  // App version be5ebef966
   let deferred = null;
   const btn = document.getElementById('installBtn');
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; btn.hidden = false; });

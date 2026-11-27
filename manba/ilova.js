@@ -29,7 +29,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="4000 ta inglizcha soʻzni (A1 dan B2 gacha) oʻzbek tilida oʻrgatadigan ilova: 4 variantli test, gap tuzish, tarjima va talaffuz.">
-<meta name="theme-color" content="#6C5CE7">
+<meta name="theme-color" content="#0B1020">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -38,7 +38,7 @@ const html = `<!doctype html>
 <meta name="apple-mobile-web-app-title" content="4000 B2">
 ${preamble}
 <style>
-:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); color-scheme: light; }
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); color-scheme: dark; }
 body { margin: 0; font-size: 14px; }
 img { max-width: 100%; }
 [hidden] { display: none !important; }
@@ -46,7 +46,7 @@ img { max-width: 100%; }
   position: fixed; left: 50%; transform: translateX(-50%); z-index: 30;
   bottom: calc(16px + env(safe-area-inset-bottom, 0px));
   display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border: 0; border-radius: 999px;
-  background: #6C5CE7; color: #fff; font: 700 15px/1 system-ui, sans-serif; box-shadow: 0 6px 20px rgba(108,92,231,.35);
+  background: #8B5CF6; color: #fff; font: 700 15px/1 system-ui, sans-serif; box-shadow: 0 6px 20px rgba(0,0,0,.45);
 }
 </style>
 </head>
